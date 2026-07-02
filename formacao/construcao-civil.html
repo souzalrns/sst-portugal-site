@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Segurança na Construção Civil em Portugal: Guia Completo 2026 | SST Portugal</title>
+<meta name="description" content="Guia completo de segurança na construção civil em Portugal: formação obrigatória por plano, fiscalização da ACT, certificação de equipamentos e documentação legal. DL 273/2003 explicado, com a leitura jurídica que falta na maioria dos guias técnicos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0E1B2C;
+    --paper: #F4EFE6;
+    --paper-deep: #EAE3D5;
+    --bordeaux: #7A2233;
+    --bordeaux-tint: #F7ECEE;
+    --sage: #4C5B4A;
+    --sage-tint: #EEF1EE;
+    --brass: #B08A3E;
+    --brass-tint: #FAF3E6;
+    --rule: rgba(14,27,44,0.16);
+    --ink-70: rgba(14,27,44,0.72);
+    --ink-55: rgba(14,27,44,0.55);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    font-size: 16.5px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { font-family: 'Fraunces', serif; font-weight: 500; letter-spacing: -0.01em; line-height: 1.1; color: var(--ink); }
+  em { font-style: italic; color: var(--bordeaux); }
+  a { color: inherit; text-decoration: none; }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+  .label-tech { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-55); }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+  .rule-h { height: 1px; background: var(--rule); width: 100%; }
+  p { color: var(--ink-70); margin-bottom: 18px; }
+  p strong { color: var(--ink); font-weight: 600; }
+
+  /* HEADER — same system as homepage */
+  header { background: var(--paper); border-bottom: 1px solid var(--rule); position: sticky; top: 0; z-index: 100; }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand-text { line-height: 1.2; }
+  .brand-name { font-family: 'Fraunces', serif; font-size: 16px; color: var(--ink); }
+  .brand-tag { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; color: var(--ink-55); }
+  nav ul { list-style: none; display: flex; gap: 28px; font-size: 13.5px; }
+  nav a:hover { color: var(--bordeaux); }
+  .btn-nav { background: var(--ink); color: var(--paper); padding: 9px 18px; font-size: 12.5px; font-weight: 500; border-radius: 2px; }
+  .btn-nav:hover { background: var(--bordeaux); }
+  .nav-links-desktop { display: flex; align-items: center; gap: 28px; }
+  .crumb { font-size: 12px; color: var(--ink-55); padding: 10px 0; border-bottom: 1px solid var(--rule); }
+  .crumb a:hover { color: var(--bordeaux); }
+
+  /* HERO */
+  .hero { border-bottom: 1px solid var(--rule); padding: 54px 0 44px; }
+  .hero-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+  .hero-tag { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.06em; color: var(--bordeaux); border: 1px solid rgba(122,34,51,0.3); padding: 4px 10px; }
+  .hero h1 { font-size: clamp(30px, 4vw, 48px); max-width: 18ch; }
+  .hero-sub { font-size: 16.5px; color: var(--ink-70); max-width: 70ch; margin: 22px 0 0; }
+  .hero-meta { display: flex; gap: 22px; flex-wrap: wrap; font-size: 12.5px; color: var(--ink-55); border-top: 1px solid var(--rule); padding-top: 20px; margin-top: 28px; }
+  .hero-meta .mono { font-size: 12px; }
+
+  /* STATS */
+  .stats-section { padding: 46px 0 6px; }
+  .stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin: 28px 0 36px; }
+  .stat-item { background: var(--paper); padding: 24px 20px; }
+  .stat-number { font-family: 'Fraunces', serif; font-size: 34px; font-weight: 600; color: var(--bordeaux); line-height: 1; display: block; margin-bottom: 8px; }
+  .stat-label { font-size: 12px; color: var(--ink-70); line-height: 1.4; }
+  .pull-quote { border-left: 2px solid var(--bordeaux); padding: 20px 28px; background: var(--bordeaux-tint); margin: 32px 0; }
+  .pull-quote p { font-family: 'Fraunces', serif; font-style: italic; font-size: clamp(16px, 1.8vw, 20px); color: var(--ink); margin: 0; }
+
+  /* LAYOUT */
+  .page-wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: 1fr 300px; gap: 56px; align-items: start; }
+  article { padding: 50px 0 20px; }
+
+  /* SIDEBAR */
+  .sidebar { position: sticky; top: 76px; padding: 50px 0; }
+  .toc-title { font-size: 10.5px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-55); margin-bottom: 14px; font-family: 'JetBrains Mono', monospace; }
+  .toc { list-style: none; }
+  .toc-section { margin-bottom: 2px; }
+  .toc-section > a { display: flex; gap: 10px; padding: 9px 0; font-size: 13px; font-weight: 600; color: var(--ink); text-decoration: none; border-top: 1px solid var(--rule); line-height: 1.4; }
+  .toc-section > a:hover { color: var(--bordeaux); }
+  .toc-num { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: var(--bordeaux); min-width: 18px; padding-top: 2px; }
+  .toc-sub { list-style: none; padding-left: 28px; }
+  .toc-sub li a { display: block; font-size: 12px; color: var(--ink-55); padding: 4px 0; }
+  .toc-sub li a:hover { color: var(--bordeaux); }
+  .sidebar-box { background: var(--ink); color: var(--paper); padding: 22px; margin-top: 30px; }
+  .sidebar-box-title { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brass); margin-bottom: 10px; font-family: 'JetBrains Mono', monospace; }
+  .sidebar-box p { font-size: 12.5px; color: rgba(244,239,230,0.72); margin-bottom: 14px; }
+  .sidebar-box a.btn-primary { display: block; text-align: center; }
+  .sidebar-law { background: var(--sage-tint); border: 1px solid rgba(76,91,74,0.2); padding: 18px; margin-top: 18px; }
+  .sidebar-law-title { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin-bottom: 10px; font-family: 'JetBrains Mono', monospace; }
+  .sidebar-law ul { list-style: none; }
+  .sidebar-law ul li { font-size: 11.5px; color: var(--sage); padding: 4px 0; border-bottom: 1px solid rgba(76,91,74,0.12); }
+
+  /* SECTIONS */
+  .section { margin-bottom: 72px; }
+  .section-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--bordeaux); display: block; margin-bottom: 10px; }
+  h2 { font-size: clamp(24px, 2.8vw, 34px); margin-bottom: 12px; }
+  h3 { font-size: clamp(18px, 2vw, 23px); font-weight: 600; margin: 36px 0 14px; }
+  h4 { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink); margin: 26px 0 10px; padding-bottom: 8px; border-bottom: 1px solid var(--rule); }
+  .lead { font-size: clamp(15.5px, 1.6vw, 17.5px); color: var(--ink-70); max-width: 74ch; margin-bottom: 30px; }
+  .section-sep { display: flex; align-items: center; gap: 16px; margin: 64px 0 46px; }
+  .section-sep-line { flex: 1; height: 1px; background: var(--rule); }
+  .section-sep-tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-55); white-space: nowrap; }
+
+  /* BOXES */
+  .box { border-left: 3px solid; padding: 20px 24px; margin: 28px 0; position: relative; }
+  .box-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; display: block; }
+  .box p:last-child { margin-bottom: 0; }
+  .box-legal { border-color: var(--bordeaux); background: var(--bordeaux-tint); }
+  .box-legal .box-label { color: var(--bordeaux); }
+  .box-legal p { color: #5c1a26; }
+  .box-legal ul { list-style: none; margin-top: 6px; }
+  .box-legal ul li { font-size: 13.5px; color: #5c1a26; padding: 4px 0 4px 16px; position: relative; }
+  .box-legal ul li::before { content: '§'; position: absolute; left: 0; font-weight: 700; }
+  .box-alerta { border-color: var(--ink); background: var(--paper-deep); }
+  .box-alerta .box-label { color: var(--ink); }
+  .box-alerta p { color: var(--ink); }
+  .box-pratica { border-color: var(--sage); background: var(--sage-tint); }
+  .box-pratica .box-label { color: var(--sage); }
+  .box-pratica p { color: #2e392c; }
+  .box-nota { border-color: var(--brass); background: var(--brass-tint); }
+  .box-nota .box-label { color: var(--brass); }
+  .box-nota p { color: #6b5124; }
+
+  /* LISTS */
+  ul.styled, ol.styled { list-style: none; padding: 0; margin: 18px 0 26px; }
+  ul.styled li { position: relative; padding-left: 20px; margin-bottom: 9px; color: var(--ink-70); }
+  ul.styled li::before { content: '—'; position: absolute; left: 0; color: var(--bordeaux); font-weight: 700; }
+  ul.styled li strong { color: var(--ink); }
+  ol.styled { counter-reset: item; }
+  ol.styled li { position: relative; padding-left: 36px; margin-bottom: 12px; color: var(--ink-70); counter-increment: item; }
+  ol.styled li::before { content: counter(item, decimal-leading-zero); position: absolute; left: 0; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; color: var(--bordeaux); top: 3px; }
+  ol.styled li strong { color: var(--ink); }
+  .checklist { list-style: none; margin: 18px 0; }
+  .checklist li { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--rule); font-size: 14.5px; color: var(--ink-70); align-items: flex-start; }
+  .checklist li::before { content: '□'; color: var(--ink-55); font-size: 15px; flex-shrink: 0; line-height: 1.6; }
+
+  /* TABLES */
+  .table-wrap { overflow-x: auto; margin: 28px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  thead th { background: var(--ink); color: var(--paper); font-weight: 600; font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; padding: 12px 14px; text-align: left; font-family: 'JetBrains Mono', monospace; }
+  tbody tr { border-bottom: 1px solid var(--rule); }
+  tbody tr:nth-child(even) { background: var(--paper-deep); }
+  td { padding: 12px 14px; color: var(--ink-70); vertical-align: top; line-height: 1.5; }
+  td strong { color: var(--ink); }
+  td.badge { font-size: 10.5px; font-weight: 700; letter-spacing: 0.05em; white-space: nowrap; font-family: 'JetBrains Mono', monospace; }
+
+  /* CARD GRIDS reused across sections */
+  .doc-grid, .equip-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin: 28px 0; }
+  .equip-grid { grid-template-columns: repeat(2, 1fr); }
+  .doc-card, .equip-card { background: var(--paper); padding: 22px; }
+  .doc-card h5, .equip-card h5 { font-family: 'Fraunces', serif; font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
+  .doc-card-detail, .equip-detail-value { font-size: 12.5px; color: var(--ink-70); line-height: 1.55; }
+  .doc-card-detail strong { color: var(--bordeaux); display: block; margin-top: 8px; font-size: 10.5px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; font-family: 'JetBrains Mono', monospace; }
+  .equip-card-title { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+  .equip-idx { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--ink-55); }
+  .equip-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 4px; }
+  .equip-detail-item { background: var(--paper-deep); padding: 10px 12px; }
+  .equip-detail-label { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-55); margin-bottom: 4px; }
+
+  /* FORMAÇÃO CARDS */
+  .formacao-card { border: 1px solid var(--rule); background: var(--paper); padding: 30px; margin-bottom: 22px; }
+  .formacao-card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 6px; flex-wrap: wrap; }
+  .formacao-card h3 { font-size: 21px; margin: 8px 0 6px; }
+  .formacao-badge { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 11px; white-space: nowrap; }
+  .badge-obrig { background: var(--bordeaux); color: var(--paper); }
+  .badge-cargo { background: var(--sage); color: var(--paper); }
+  .badge-horas { background: var(--ink); color: var(--paper); }
+  .formacao-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 18px; }
+  .formacao-col h6 { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-55); margin-bottom: 10px; }
+  .formacao-col ul { list-style: none; padding: 0; }
+  .formacao-col ul li { font-size: 13px; color: var(--ink-70); padding: 5px 0; border-bottom: 1px solid var(--rule); display: flex; gap: 8px; }
+  .formacao-col ul li::before { content: '→'; color: var(--bordeaux); font-size: 11px; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+  .formacao-col ul li strong { color: var(--ink); }
+
+  /* TIMELINE */
+  .fisca-timeline { margin: 28px 0; }
+  .fisca-item { display: flex; gap: 22px; position: relative; }
+  .fisca-item::before { content: ''; position: absolute; left: 18px; top: 44px; bottom: -28px; width: 1px; background: var(--rule); }
+  .fisca-item:last-child::before { display: none; }
+  .fisca-dot { width: 38px; height: 38px; border: 1px solid var(--ink); background: var(--paper); color: var(--ink); font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 500; display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 1; }
+  .fisca-content { flex: 1; padding-bottom: 30px; }
+  .fisca-content h5 { font-family: 'Fraunces', serif; font-size: 16.5px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+  .fisca-content p { font-size: 13.5px; margin: 0 0 6px; }
+  .fisca-tag { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 10px; margin-top: 4px; }
+  .fisca-tag-a { background: var(--bordeaux-tint); color: var(--bordeaux); }
+  .fisca-tag-b { background: var(--brass-tint); color: #6b5124; }
+  .fisca-tag-c { background: var(--sage-tint); color: var(--sage); }
+
+  /* STEPS */
+  .steps { display: flex; flex-direction: column; margin: 28px 0; }
+  .step-item { display: flex; gap: 22px; padding: 20px 0; border-bottom: 1px solid var(--rule); }
+  .step-num { font-family: 'Fraunces', serif; font-size: 32px; font-weight: 600; color: rgba(122,34,51,0.18); line-height: 1; flex-shrink: 0; min-width: 44px; }
+  .step-content h5 { font-family: 'Fraunces', serif; font-size: 15.5px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+  .step-content p { font-size: 13.5px; margin: 0; }
+
+  /* CTA INLINE */
+  .cta-inline { background: var(--ink); color: var(--paper); padding: 28px 32px; margin: 44px 0; display: flex; justify-content: space-between; align-items: center; gap: 22px; flex-wrap: wrap; }
+  .cta-inline p { color: rgba(244,239,230,0.72); font-size: 14px; margin: 0; }
+  .cta-inline strong { display: block; font-family: 'Fraunces', serif; font-size: 18px; font-weight: 600; margin-bottom: 6px; color: var(--paper); }
+  .btn-primary { display: inline-block; background: var(--ink); color: var(--paper); font-size: 13px; font-weight: 500; padding: 12px 22px; white-space: nowrap; border-radius: 2px; }
+  .btn-primary:hover { background: var(--bordeaux); }
+  .cta-inline .btn-primary { background: var(--brass); color: var(--ink); }
+
+  footer { background: var(--paper); border-top: 1px solid var(--rule); padding: 32px 0; }
+  .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+  .footer-inner .mono { font-size: 12px; color: var(--ink-55); }
+
+  @media (max-width: 900px) {
+    .page-wrap { grid-template-columns: 1fr; }
+    .sidebar { display: none; }
+    .formacao-grid, .equip-grid, .doc-grid, .stat-row { grid-template-columns: 1fr; }
+    .nav-links-desktop { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <a href="/" class="brand">
+      <svg width="28" height="28" viewBox="0 0 40 40" aria-hidden="true">
+        <rect x="4" y="4" width="32" height="32" rx="3" fill="none" stroke="#0E1B2C" stroke-width="1.1"/>
+        <line x1="20" y1="4" x2="20" y2="36" stroke="#0E1B2C" stroke-width="0.7"/>
+        <line x1="9" y1="13" x2="17" y2="13" stroke="#0E1B2C" stroke-width="1.3"/>
+        <line x1="9" y1="18" x2="16" y2="18" stroke="#0E1B2C" stroke-width="1.3"/>
+        <line x1="9" y1="23" x2="17" y2="23" stroke="#0E1B2C" stroke-width="1.3"/>
+        <line x1="9" y1="28" x2="14" y2="28" stroke="#0E1B2C" stroke-width="1.3"/>
+        <circle cx="25" cy="13" r="1.2" fill="#0E1B2C"/><circle cx="30" cy="13" r="1.2" fill="#0E1B2C"/>
+        <circle cx="25" cy="19" r="1.2" fill="#0E1B2C"/><circle cx="30" cy="19" r="1.2" fill="#0E1B2C"/>
+        <circle cx="25" cy="25" r="1.2" fill="#0E1B2C"/><circle cx="30" cy="25" r="1.2" fill="#0E1B2C"/>
+      </svg>
+      <div class="brand-text">
+        <div class="brand-name">SST Portugal</div>
+        <div class="brand-tag">DIREITO &middot; T&Eacute;CNICA</div>
+      </div>
+    </a>
+    <div class="nav-links-desktop">
+      <nav><ul>
+        <li><a href="/#servicos">Serviços</a></li>
+        <li><a href="/#sectores">Sectores</a></li>
+        <li><a href="/#guia">Guia SST</a></li>
+        <li><a href="/#sobre">Sobre</a></li>
+      </ul></nav>
+      <a href="/#contacto" class="btn-nav">Marcar Consulta</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap crumb">
+  <a href="/">Início</a> / <a href="/#sectores">Formação por Sector</a> / <span class="mono" style="color:var(--ink)">Construção Civil</span>
+</div>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-tags">
+      <span class="hero-tag">DL 273/2003</span>
+      <span class="hero-tag">Lei 102/2009</span>
+      <span class="hero-tag">DL 50/2005</span>
+      <span class="hero-tag">Guia 2026</span>
+    </div>
+    <h1>Segurança na Construção Civil: <em>o guia completo</em> para 2026</h1>
+    <p class="hero-sub">Formação obrigatória por plano, fiscalização da ACT e o que verifica em estaleiro, certificação de equipamentos passo a passo, documentação legal com prazos e locais de afixação — e o que acontece juridicamente quando algo corre mal. Escrito por quem lê a legislação e aplica o processo no terreno.</p>
+    <div class="hero-meta">
+      <span class="mono">≈ 8 500 PALAVRAS</span>
+      <span class="mono">ACTUALIZADO 2026</span>
+      <span class="mono">SECTOR: CONSTRUÇÃO CIVIL</span>
+      <span class="mono">LEGISLAÇÃO PORTUGUESA</span>
+    </div>
+  </div>
+</section>
+
+<section class="stats-section">
+  <div class="wrap">
+    <span class="section-eyebrow">Contexto · Portugal 2024</span>
+    <h2 style="max-width: 24ch;">Porque a construção civil é o sector prioritário da ACT</h2>
+    <p class="lead">Os dados do Gabinete de Estratégia e Planeamento (GEP) do Ministério do Trabalho são inequívocos: a construção civil é, sistematicamente, o sector onde morrem mais trabalhadores em Portugal — e onde a fiscalização é mais intensa.</p>
+
+    <div class="stat-row">
+      <div class="stat-item"><span class="stat-number">30,1%</span><span class="stat-label">dos acidentes mortais em Portugal ocorrem na construção</span></div>
+      <div class="stat-item"><span class="stat-number">41</span><span class="stat-label">mortes na construção em 2023 — o valor mais alto de todos os sectores</span></div>
+      <div class="stat-item"><span class="stat-number">8 366</span><span class="stat-label">acidentes por 100 000 trabalhadores — a taxa de incidência mais elevada</span></div>
+      <div class="stat-item"><span class="stat-number">66,9%</span><span class="stat-label">dos acidentes mortais ocorreram em empresas com menos de 50 trabalhadores</span></div>
+    </div>
+
+    <div class="pull-quote"><p>A falta de formação, equipamentos não certificados e documentação incompleta têm, na construção, consequências mais imediatas e mais graves do que em qualquer outro sector. A ACT sabe isso — e organiza a fiscalização em conformidade.</p></div>
+
+    <p>É por isto que a ACT dedica inspecções programadas específicas ao sector, com equipas especializadas e poderes reforçados. E é por isto que as obrigações legais para estaleiros são mais exigentes do que em qualquer outra actividade económica em Portugal.</p>
+  </div>
+</section>
+
+<div class="page-wrap">
+<article>
+
+<div class="section" id="formacao">
+  <span class="section-eyebrow">§ I · Formação Obrigatória</span>
+  <h2>Formação na construção civil: três planos, obrigações distintas</h2>
+  <p class="lead">A formação na construção não é uniforme. O que é obrigatório para um servente de obra é diferente do que é exigido a um encarregado, a um trabalhador em altura ou a um coordenador de segurança. Esta distinção é fundamental — e é a que a ACT verifica em primeiro lugar.</p>
+
+  <div class="box box-legal">
+    <span class="box-label">Base legal principal</span>
+    <ul>
+      <li>Decreto-Lei n.º 273/2003, de 29 de outubro — segurança em estaleiros temporários ou móveis</li>
+      <li>Lei n.º 102/2009, de 10 de setembro — lei-quadro de SST (art.º 20.º, formação específica)</li>
+      <li>Código do Trabalho, art.º 131.º — 40 horas anuais de formação contínua</li>
+      <li>Decreto-Lei n.º 50/2005, de 25 de fevereiro — utilização de equipamentos de trabalho</li>
+      <li>Decreto-Lei n.º 41 820, de 11 de agosto de 1958 — Regulamento de Segurança no Trabalho da Construção Civil (RSTCC)</li>
+    </ul>
+  </div>
+
+  <div class="formacao-card">
+    <div class="formacao-card-header">
+      <div>
+        <span class="formacao-badge badge-obrig">Obrigatório para todos</span>
+        <h3>Plano 1 — Formação de base em SST para trabalhadores de obra</h3>
+        <p style="font-size:13.5px;color:var(--ink-55);margin:6px 0 0">Todo o trabalhador que entre num estaleiro pela primeira vez, ou que inicie funções num novo estaleiro, deve receber esta formação.</p>
+      </div>
+      <span class="formacao-badge badge-horas">Mínimo 8h</span>
+    </div>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Legislação de SST aplicável à construção (DL 273/2003, RSTCC)</li>
+          <li>Riscos específicos do estaleiro: quedas em altura, atropelamentos, soterramento, contacto eléctrico</li>
+          <li>Organização do estaleiro: áreas de circulação, sinalização, vias de evacuação</li>
+          <li>EPIs — selecção, uso, manutenção e armazenamento</li>
+          <li>EPCs — guardas periféricos, redes de segurança, balizamento</li>
+          <li>Movimentação manual de cargas: técnicas correctas e limites</li>
+          <li>Primeiros socorros básicos e procedimentos de emergência</li>
+          <li>Direitos e deveres do trabalhador em SST; reporte de condições inseguras</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos e condições</h6>
+        <ul>
+          <li>Ministrada antes do início de funções ou nas primeiras 48 horas</li>
+          <li>Formador com Certificado de Competências Pedagógicas (CCP) válido</li>
+          <li>Componente presencial obrigatória no próprio estaleiro</li>
+          <li>Certificado individual com formador, data, conteúdos e duração</li>
+          <li>Registo em folha de presença assinada pelo trabalhador</li>
+          <li>Repetida sempre que o trabalhador mude para estaleiro com riscos substancialmente diferentes</li>
+          <li>Prestada em língua que o trabalhador compreenda efectivamente</li>
+          <li>Repetição obrigatória após acidente com baixa superior a 30 dias</li>
+        </ul>
+      </div>
+    </div>
+    <div class="box box-nota" style="margin-top:18px">
+      <span class="box-label">Trabalhadores estrangeiros</span>
+      <p>Portugal tem um número crescente de trabalhadores na construção vindos do Brasil, Nepal, Bangladesh e países africanos. O empregador é obrigado a garantir que a formação é efectivamente compreendida — em português com tradução, ou na língua do trabalhador. A ACT verifica este ponto activamente: um certificado em português para quem não compreende português não constitui cumprimento legal.</p>
+    </div>
+  </div>
+
+  <div class="formacao-card">
+    <div class="formacao-card-header">
+      <div>
+        <span class="formacao-badge badge-obrig">Obrigatório por actividade</span>
+        <h3>Plano 2 — Formações específicas por actividade de risco</h3>
+        <p style="font-size:13.5px;color:var(--ink-55);margin:6px 0 0">Determinadas actividades exigem formação certificada específica, independentemente da formação de base já recebida.</p>
+      </div>
+    </div>
+
+    <h4>Trabalho em altura — obrigatório acima de 2 metros</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Legislação aplicável (DL 50/2005, EN 363, normas de EPIs anticaída)</li>
+          <li>Avaliação de riscos específica para trabalho em altura</li>
+          <li>Protecção colectiva: guardas periféricos EN standard, redes EN 1263, plataformas</li>
+          <li>Protecção individual: arneses EN 361, absorvedores EN 355, retráteis EN 360</li>
+          <li>Pontos de ancoragem: identificação, capacidade mínima 12 kN, ancoragem dupla</li>
+          <li>Procedimento de permissão de trabalho em altura</li>
+          <li>Síndrome de suspensão e tempos máximos suspenso</li>
+          <li>Plano de salvamento e resgate após queda suspensa</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li><strong>Duração mínima: 8 horas</strong> (teoria + componente prática obrigatória)</li>
+          <li>Prática inclui: colocação e ajuste do arnês, ancoragem, ensaio de movimentos</li>
+          <li>Não é válida formação 100% online para trabalho em altura</li>
+          <li>Reciclagem recomendada: anual, ou após qualquer queda mesmo detida</li>
+          <li>EPI anticaída inspeccionado por pessoa competente após qualquer queda</li>
+          <li>Autorização escrita do empregador após a formação</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Andaimes — montagem, utilização e desmontagem</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Tipos de andaime: tubular, multidireccional, de quadro, suspenso, sobre rodas</li>
+          <li>Capacidade e distribuição de cargas</li>
+          <li>Inspecção do solo e fundações antes da montagem</li>
+          <li>Sequência de montagem/desmontagem, travamentos e ancoragens à fachada</li>
+          <li>Guardas periféricas: travessão superior (1 m), intermédio, guarda-rodapé (0,15 m)</li>
+          <li>Acesso seguro e condições de utilização; inspecção inicial e semanal</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li><strong>16 horas</strong> para supervisores de montagem; <strong>8 horas</strong> para utilizadores</li>
+          <li>Distinção entre <em>utilizador</em> e <em>montador/desmontador</em> — requisitos mais exigentes para o segundo</li>
+          <li>Montagem/desmontagem só por trabalhadores com formação específica, sob supervisão competente</li>
+          <li>Registo de inspecção semanal obrigatório; placa de identificação obrigatória</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Operação de equipamentos de elevação — gruas, MEWP, dumpers</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>DL 50/2005, Directiva Máquinas 2006/42/CE, normas EN específicas</li>
+          <li>Leitura do diagrama de cargas (gruas) e check-list de inspecção diária</li>
+          <li>Operação segura: velocidades, manobras proibidas, raios de acção</li>
+          <li>Comunicação operador-sinaleiro (linguagem gestual padronizada)</li>
+          <li>Procedimentos de emergência e LOTO antes de manutenção</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li><strong>16 horas para gruas</strong>, <strong>8 horas para MEWP</strong></li>
+          <li>Formação específica por tipo — grua torre não habilita para grua móvel</li>
+          <li>Inspecção periódica anual do equipamento por pessoa competente</li>
+          <li>Diário de bordo actualizado no próprio equipamento</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Escavações, demolições e trabalhos em vala</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Reconhecimento de instabilidade do terreno; risco de soterramento</li>
+          <li>Escoramento: metálico, madeira, pneumático; ângulos de talude por tipo de solo</li>
+          <li>Entrada e saída segura de valas; deteção de infra-estruturas enterradas</li>
+          <li>Sequência de demolição e protecção de estruturas adjacentes</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li><strong>Duração mínima: 8 horas</strong></li>
+          <li>Avaliação obrigatória de estabilidade antes de escavação superior a 1,20 m</li>
+          <li>Escavações acima de 1,20 m exigem escoramento ou taludes adequados — sem excepção</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Produtos químicos em obra — impermeabilizações, tintas, solventes</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Fichas de Dados de Segurança (FDS) e pictogramas CLP/GHS</li>
+          <li>Risco de inalação em espaços fechados (caves, túneis)</li>
+          <li>Selecção de EPI respiratório: FFP2/FFP3 vs semimáscara com filtro A</li>
+          <li>Ventilação e armazenamento seguro de inflamáveis</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li><strong>4 a 8 horas</strong>, integrada ou autónoma</li>
+          <li>FDS de todos os produtos acessível aos trabalhadores e ao CSO</li>
+          <li>Especial atenção em reabilitação: possível presença de amianto, tintas com chumbo, PCBs</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="formacao-card">
+    <div class="formacao-card-header">
+      <div>
+        <span class="formacao-badge badge-cargo">Obrigatório por cargo</span>
+        <h3>Plano 3 — Coordenadores, encarregados e técnicos de SST</h3>
+        <p style="font-size:13.5px;color:var(--ink-55);margin:6px 0 0">Os cargos de responsabilidade têm requisitos substancialmente mais exigentes — a sua ausência invalida o exercício das funções.</p>
+      </div>
+    </div>
+
+    <h4>Coordenador de Segurança em Projecto (CSP) e em Obra (CSO)</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>DL 273/2003 em profundidade: responsabilidades e limites da coordenação</li>
+          <li>Elaboração do Plano de Segurança e Saúde (PSS) e das Fichas de Procedimentos (FPS)</li>
+          <li>Comunicação Prévia à ACT e Compilação Técnica da obra</li>
+          <li>Coordenação entre empreiteiro geral, subempreiteiros e independentes</li>
+          <li>Auditorias, investigação de acidentes e gestão de subcontratados</li>
+          <li>Poderes de suspensão de trabalhos em caso de risco grave e iminente</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos — DL 273/2003 + Portaria n.º 101/1996</h6>
+        <ul>
+          <li><strong>Formação mínima de 50 horas</strong> em SST na construção — obrigatória para exercer a função</li>
+          <li>Habilitação superior em engenharia, arquitectura ou área afim, ou 5 anos de experiência em SST na construção</li>
+          <li>Não há certificação formal ACT para CSP/CSO — mas a formação de 50h deve estar documentada em estaleiro</li>
+          <li>Reciclagem recomendada a cada 3 anos</li>
+        </ul>
+      </div>
+    </div>
+    <div class="box box-alerta" style="margin-top:6px">
+      <span class="box-label">Presença efectiva</span>
+      <p>O CSO deve estar efectivamente presente em estaleiro com frequência adequada — a função não pode ser nominal. A ACT verifica a efectividade da presença, não apenas o nome no papel.</p>
+    </div>
+
+    <h4>Encarregados e chefes de equipa</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Liderança e comunicação de segurança em obra</li>
+          <li>Implementação prática das medidas do PSS</li>
+          <li>Verificação do uso correcto de EPIs pela equipa</li>
+          <li>Toolbox talks — reuniões de 5 a 10 minutos antes de tarefas de risco</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li><strong>16 horas</strong> — sem diploma específico, mas indispensável na prática</li>
+          <li>Registo em ficha individual e no dossier de obra</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Técnico de SST em estaleiro</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Legislação de SST aplicável à construção; avaliação de riscos específica</li>
+          <li>Elaboração de PSS, FPS e Comunicação Prévia</li>
+          <li>Higiene ocupacional: poeiras de sílica, ruído, vibrações</li>
+          <li>Investigação de acidentes e interacção com a ACT em inspecções</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li>Certificação ACT como TSST ou TSSST — obrigatória para exercer</li>
+          <li>Renovação: mínimo 48 horas em 5 anos (TSST) ou 60 horas (TSSST)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box box-legal" style="margin-top:20px">
+      <span class="box-label">CSO vs. Técnico de SST — não confundir</span>
+      <p style="color:#5c1a26;margin:0">São funções com bases legais diferentes. O CSO (DL 273/2003) coordena a segurança entre os vários empreiteiros e subempreiteiros. O Técnico de SST (Lei 102/2009) apoia o empregador na gestão interna de SST dos seus trabalhadores. Uma obra pode ter ambos — em obras de grande dimensão, frequentemente tem. A confusão entre as duas funções é uma das falhas mais comuns detectadas pela ACT.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ II</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="fiscalizacao">
+  <span class="section-eyebrow">§ II · Fiscalização da ACT</span>
+  <h2>O que a ACT verifica em estaleiro — e quando aparece</h2>
+  <p class="lead">A Autoridade para as Condições do Trabalho fiscaliza estaleiros de forma programada e inopinada. Saber o que verificam, com que frequência, e que poderes têm é essencial para estar em conformidade sempre — não apenas quando a visita está anunciada.</p>
+
+  <h3>Quando e como a ACT inspecciona</h3>
+  <div class="fisca-timeline">
+    <div class="fisca-item">
+      <div class="fisca-dot">01</div>
+      <div class="fisca-content">
+        <h5>Inspecções programadas anuais ao sector</h5>
+        <p>A ACT elabora anualmente planos de inspecção que incidem sobre os sectores com maior sinistralidade. A construção é invariavelmente um foco prioritário — campanhas que envolvem dezenas a centenas de inspectores em todo o país. Em setembro de 2021, uma única acção nacional envolveu 136 inspectores e abrangeu 659 locais de trabalho.</p>
+        <span class="fisca-tag fisca-tag-b">Anual · Sem aviso prévio obrigatório</span>
+      </div>
+    </div>
+    <div class="fisca-item">
+      <div class="fisca-dot">02</div>
+      <div class="fisca-content">
+        <h5>Após a Comunicação Prévia de abertura</h5>
+        <p>Enviar a Comunicação Prévia coloca automaticamente a obra no radar da ACT. Estaleiros com mais de 20 trabalhadores em simultâneo, ou mais de 500 dias-homem, têm probabilidade significativamente superior de ser visitados — sem prazo legal definido para a primeira visita.</p>
+        <span class="fisca-tag fisca-tag-b">Qualquer momento após o início de obra</span>
+      </div>
+    </div>
+    <div class="fisca-item">
+      <div class="fisca-dot">03</div>
+      <div class="fisca-content">
+        <h5>Após acidente de trabalho</h5>
+        <p>Acidente mortal ou com incapacidade superior a 3 dias úteis obriga a comunicar à ACT em 24 horas — o que quase sempre desencadeia inspecção imediata. O local deve estar preservado, e toda a documentação acessível e actualizada.</p>
+        <span class="fisca-tag fisca-tag-a">Obrigatória em 24-48h após acidente grave</span>
+      </div>
+    </div>
+    <div class="fisca-item">
+      <div class="fisca-dot">04</div>
+      <div class="fisca-content">
+        <h5>Por denúncia ou queixa</h5>
+        <p>Qualquer trabalhador, sindicato, vizinho ou terceiro pode apresentar queixa. Desencadeia inspecção não programada, tipicamente nos dias seguintes, sem aviso ao empregador.</p>
+        <span class="fisca-tag fisca-tag-a">Sem aviso prévio · Urgente</span>
+      </div>
+    </div>
+    <div class="fisca-item">
+      <div class="fisca-dot">05</div>
+      <div class="fisca-content">
+        <h5>Inspecção de seguimento</h5>
+        <p>Quando são detectadas infracções e emitida intimação com prazo, segue-se segunda visita de verificação. Se as infracções persistirem, os autos de notícia são lavrados com sanções agravadas.</p>
+        <span class="fisca-tag fisca-tag-b">No prazo fixado na intimação anterior</span>
+      </div>
+    </div>
+  </div>
+
+  <h3>O que verificam em estaleiro — em detalhe</h3>
+  <p>Os inspectores seguem listas de verificação estruturadas. Conhecer o conteúdo é a melhor preparação possível.</p>
+
+  <h4>1 · Documentação de obra — o que pedem primeiro</h4>
+  <div class="checklist">
+    <li>Comunicação Prévia afixada em local visível (obrigatória acima de 30 dias e 20 trabalhadores, ou 500 dias-homem)</li>
+    <li>Plano de Segurança e Saúde (PSS) fisicamente presente e actualizado no estaleiro</li>
+    <li>Fichas de Procedimentos de Segurança (FPS) quando não há PSS completo</li>
+    <li>Compilação Técnica da obra, quando aplicável</li>
+    <li>Identificação dos coordenadores de segurança em projecto e em obra</li>
+    <li>Registo de subempreiteiros e trabalhadores independentes acima de 24 horas no estaleiro</li>
+    <li>Apólices de seguro de acidentes de trabalho de todos os presentes, incluindo subempreiteiros</li>
+  </div>
+
+  <h4>2 · Formação dos trabalhadores — verificação individual</h4>
+  <div class="checklist">
+    <li>Certificados de formação de base de cada trabalhador presente</li>
+    <li>Certificados de formação específica para as actividades em curso (altura, andaimes, gruas, escavações, químicos)</li>
+    <li>Comprovativo das 50 horas dos coordenadores de segurança</li>
+    <li>Certificação ACT do técnico de SST responsável</li>
+    <li>Formação adequada ao perfil linguístico dos trabalhadores estrangeiros</li>
+  </div>
+
+  <h4>3 · Equipamentos de Protecção Colectiva — inspecção visual e documental</h4>
+  <div class="checklist">
+    <li>Guardas periféricas em bordas de laje, varandas e aberturas — 1,00 m com travessão, intermédio e rodapé de 0,15 m</li>
+    <li>Redes de segurança quando as guardas não são exequíveis</li>
+    <li>Aberturas de pavimento devidamente fechadas ou protegidas</li>
+    <li>Sinalização de segurança conforme DL 141/95; vedação perimetral do estaleiro</li>
+  </div>
+
+  <h4>4 · Equipamentos de Protecção Individual — uso efectivo</h4>
+  <div class="checklist">
+    <li>Capacete (EN 397) em todos os trabalhadores sem excepção</li>
+    <li>Calçado de segurança S1P mínimo; colete de alta visibilidade em zonas com veículos</li>
+    <li>Arnês anticaída EN 361 em trabalho em altura — nunca apenas cinto de posicionamento</li>
+    <li>EPI com marcação CE válida e estado de conservação adequado</li>
+  </div>
+
+  <h4>5 · Equipamentos de trabalho — certificação e uso seguro</h4>
+  <div class="checklist">
+    <li>Marcação CE e Declaração de Conformidade de máquinas e equipamentos</li>
+    <li>Manual de instruções em português disponível no estaleiro</li>
+    <li>Certificado de inspecção periódica válido para gruas, MEWP e equipamentos de elevação</li>
+    <li>Operadores habilitados, com autorização escrita do empregador</li>
+  </div>
+
+  <h4>6 · Instalações de estaleiro — requisitos mínimos</h4>
+  <div class="checklist">
+    <li>Sanitários: mínimo 1 retrete por 10 trabalhadores; 1 lavatório por 5</li>
+    <li>Vestiários com cacifos individuais, separados por sexo</li>
+    <li>Refeitório coberto com electricidade e água potável; local de primeiros socorros acessível</li>
+  </div>
+
+  <h3>Poderes dos inspectores em estaleiro</h3>
+  <ul class="styled">
+    <li><strong>Acesso livre</strong> ao estaleiro em qualquer momento do horário de trabalho, sem aviso prévio</li>
+    <li><strong>Identificação individual</strong> de trabalhadores e verificação da sua formação</li>
+    <li><strong>Exigir documentação</strong> no acto da visita — PSS, registos, certificados, apólices</li>
+    <li><strong>Recolher amostras e efectuar medições</strong> de ruído, poeiras e químicos</li>
+    <li><strong>Entrevistar trabalhadores separadamente</strong>, com garantia de confidencialidade</li>
+    <li><strong>Lavrar auto de notícia</strong> imediatamente e no local</li>
+    <li><strong>Determinar suspensão imediata</strong> de trabalhos em caso de perigo grave e iminente</li>
+    <li><strong>Participar ao Ministério Público</strong> em acidente grave ou infracção de carácter criminal</li>
+  </ul>
+
+  <div class="box box-alerta">
+    <span class="box-label">Obstaculização à inspecção</span>
+    <p>Recusar acesso, esconder documentação ou impedir a fala com trabalhadores constitui infracção autónoma, punível com coima agravada — e pode resultar em participação criminal por desobediência.</p>
+  </div>
+
+  <h3>Coimas aplicáveis — valores reais</h3>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Infracção</th><th>Classificação</th><th>Coima (pessoa colectiva)</th><th>Diploma</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Falta de Comunicação Prévia</strong></td><td class="badge" style="color:var(--bordeaux)">Muito Grave</td><td>2 040 € a 9 690 €</td><td class="mono">DL 273/2003</td></tr>
+      <tr><td><strong>Ausência ou inadequação do PSS</strong></td><td class="badge" style="color:var(--bordeaux)">Muito Grave</td><td>2 040 € a 9 690 €</td><td class="mono">DL 273/2003</td></tr>
+      <tr><td><strong>Falta de coordenador em obra</strong></td><td class="badge" style="color:var(--bordeaux)">Muito Grave</td><td>2 040 € a 9 690 €</td><td class="mono">DL 273/2003</td></tr>
+      <tr><td><strong>Trabalhador sem EPI obrigatório</strong></td><td class="badge" style="color:var(--bordeaux)">Muito Grave</td><td>2 040 € a 9 690 € / trabalhador</td><td class="mono">Lei 102/2009</td></tr>
+      <tr><td><strong>Ausência de formação SST</strong></td><td class="badge" style="color:var(--bordeaux)">Muito Grave</td><td>2 040 € a 9 690 € / trabalhador</td><td class="mono">Lei 102/2009</td></tr>
+      <tr><td><strong>Falta de guardas periféricas</strong></td><td class="badge" style="color:var(--bordeaux)">Muito Grave</td><td>2 040 € a 9 690 €</td><td class="mono">DL 50/2005</td></tr>
+      <tr><td><strong>Equipamento sem inspecção válida</strong></td><td class="badge" style="color:#6b5124">Grave</td><td>1 020 € a 4 845 €</td><td class="mono">DL 50/2005</td></tr>
+      <tr><td><strong>Operador de grua sem habilitação</strong></td><td class="badge" style="color:var(--bordeaux)">Muito Grave</td><td>2 040 € a 9 690 €</td><td class="mono">DL 50/2005</td></tr>
+      <tr><td><strong>Escavação sem escoramento</strong></td><td class="badge" style="color:var(--bordeaux)">Muito Grave</td><td>2 040 € a 9 690 € + suspensão</td><td class="mono">RSTCC</td></tr>
+      <tr><td><strong>Obstaculização à inspecção</strong></td><td class="badge" style="color:var(--bordeaux)">Muito Grave</td><td>2 040 € a 9 690 € + participação criminal</td><td class="mono">Lei 102/2009</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="box box-pratica">
+    <span class="box-label">Reincidência</span>
+    <p>As coimas são agravadas em 50% em caso de reincidência no prazo de 2 anos. A sanção pode também ser publicitada no portal da ACT, com impacto directo na reputação comercial da empresa.</p>
+  </div>
+
+  <div class="cta-inline">
+    <div><strong>A sua empresa aguenta uma visita da ACT amanhã?</strong><p>Se não tem a certeza, é sinal de que há trabalho a fazer. Diagnóstico de conformidade sem compromisso.</p></div>
+    <a href="/#contacto" class="btn-primary">Pedir diagnóstico</a>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ III</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="equipamentos">
+  <span class="section-eyebrow">§ III · Certificação de Equipamentos</span>
+  <h2>Certificação e inspecção de equipamentos em estaleiro</h2>
+  <p class="lead">Um equipamento sem certificação válida é, simultaneamente, uma infracção legal e um risco grave para quem o opera. A ACT verifica os certificados e pode determinar a paragem imediata de qualquer equipamento cujas condições de segurança não estejam demonstradas.</p>
+
+  <div class="box box-legal">
+    <span class="box-label">Base legal para equipamentos</span>
+    <ul>
+      <li>DL n.º 50/2005 — prescrições mínimas de segurança na utilização de equipamentos de trabalho</li>
+      <li>DL n.º 103/2008 — colocação no mercado de máquinas (Directiva Máquinas 2006/42/CE)</li>
+      <li>Regulamento (UE) 2023/1230 — nova Directiva Máquinas, aplicável a partir de 2027</li>
+      <li>EN 1263-1 — redes de segurança; EN 12810 e EN 12811 — andaimes de fachada</li>
+    </ul>
+  </div>
+
+  <h3>Tipos de equipamento e requisitos de certificação</h3>
+  <div class="equip-grid">
+    <div class="equip-card">
+      <div class="equip-card-title"><span class="equip-idx">EQ · 01</span><h5>Gruas torre e automontantes</h5></div>
+      <div class="equip-detail">
+        <div class="equip-detail-item"><div class="equip-detail-label">Inspecção inicial</div><div class="equip-detail-value">Antes de entrar em serviço, em cada novo local de instalação</div></div>
+        <div class="equip-detail-item"><div class="equip-detail-label">Periodicidade</div><div class="equip-detail-value"><strong>Anual</strong>, por organismo acreditado NP EN ISO/IEC 17020</div></div>
+        <div class="equip-detail-item" style="grid-column:1/-1"><div class="equip-detail-label">O que verifica</div><div class="equip-detail-value">Estrutura metálica, cabos de aço, ganchos, limitadores de carga, fim-de-cursos, aterramento eléctrico</div></div>
+        <div class="equip-detail-item" style="grid-column:1/-1"><div class="equip-detail-label">Documentação exigida</div><div class="equip-detail-value">Declaração CE, manual em português, relatório de inspecção actualizado, diário de manutenção — tudo disponível no estaleiro</div></div>
+      </div>
+    </div>
+    <div class="equip-card">
+      <div class="equip-card-title"><span class="equip-idx">EQ · 02</span><h5>Plataformas elevatórias (MEWP)</h5></div>
+      <div class="equip-detail">
+        <div class="equip-detail-item"><div class="equip-detail-label">Inspecção inicial</div><div class="equip-detail-value">Antes de entrada em serviço; repetida após remontagem</div></div>
+        <div class="equip-detail-item"><div class="equip-detail-label">Periodicidade</div><div class="equip-detail-value"><strong>Anual</strong>, conforme manual do fabricante</div></div>
+        <div class="equip-detail-item" style="grid-column:1/-1"><div class="equip-detail-label">O que verifica</div><div class="equip-detail-value">Sistema hidráulico, estabilizadores, limitadores de inclinação, protecções do cesto, paragem de emergência</div></div>
+        <div class="equip-detail-item" style="grid-column:1/-1"><div class="equip-detail-label">Operador</div><div class="equip-detail-value">Formação específica obrigatória (mín. 8h com prática) — não pode ser operada sem formação</div></div>
+      </div>
+    </div>
+    <div class="equip-card">
+      <div class="equip-card-title"><span class="equip-idx">EQ · 03</span><h5>Andaimes de fachada e suspensos</h5></div>
+      <div class="equip-detail">
+        <div class="equip-detail-item"><div class="equip-detail-label">Inspecção inicial</div><div class="equip-detail-value">Obrigatória antes da primeira utilização</div></div>
+        <div class="equip-detail-item"><div class="equip-detail-label">Periodicidade</div><div class="equip-detail-value"><strong>Semanal</strong> (registo obrigatório) e após eventos excepcionais</div></div>
+        <div class="equip-detail-item" style="grid-column:1/-1"><div class="equip-detail-label">O que verifica</div><div class="equip-detail-value">Integridade estrutural, ancoragens, guardas periféricas, pranchas do piso, placa de capacidade de carga</div></div>
+        <div class="equip-detail-item" style="grid-column:1/-1"><div class="equip-detail-label">Placa obrigatória</div><div class="equip-detail-value">Capacidade de carga (kg/m²), data da última inspecção, responsável — ausência é incumprimento imediato</div></div>
+      </div>
+    </div>
+    <div class="equip-card">
+      <div class="equip-card-title"><span class="equip-idx">EQ · 04</span><h5>Instalações eléctricas de estaleiro</h5></div>
+      <div class="equip-detail">
+        <div class="equip-detail-item"><div class="equip-detail-label">Inspecção inicial</div><div class="equip-detail-value">Antes de entrada em serviço, por electricista qualificado</div></div>
+        <div class="equip-detail-item"><div class="equip-detail-label">Periodicidade</div><div class="equip-detail-value">Obrigatória em toda extensão ou alteração</div></div>
+        <div class="equip-detail-item" style="grid-column:1/-1"><div class="equip-detail-label">Requisitos mínimos</div><div class="equip-detail-value">Quadros protegidos, diferenciais residuais, cablagem protegida contra danos mecânicos</div></div>
+        <div class="equip-detail-item" style="grid-column:1/-1"><div class="equip-detail-label">Atenção</div><div class="equip-detail-value">Instalações provisórias são frequente fonte de electrocussão — a ACT pode determinar desligação imediata</div></div>
+      </div>
+    </div>
+    <div class="equip-card">
+      <div class="equip-card-title"><span class="equip-idx">EQ · 05</span><h5>Acessórios de elevação</h5></div>
+      <div class="equip-detail">
+        <div class="equip-detail-item"><div class="equip-detail-label">Inspecção</div><div class="equip-detail-value">Visual antes de cada uso + inspecção periódica formal</div></div>
+        <div class="equip-detail-item"><div class="equip-detail-label">Periodicidade</div><div class="equip-detail-value"><strong>Anual</strong> ou conforme fabricante</div></div>
+        <div class="equip-detail-item" style="grid-column:1/-1"><div class="equip-detail-label">O que verifica</div><div class="equip-detail-value">Deformações, fissuras, corrosão, estado dos olhais, funcionamento do trinco do gancho</div></div>
+        <div class="equip-detail-item" style="grid-column:1/-1"><div class="equip-detail-label">Retirar de imediato</div><div class="equip-detail-value">Qualquer acessório com deformação, corte, nó ou gancho defeituoso — deve ser destruído, não reutilizado</div></div>
+      </div>
+    </div>
+    <div class="equip-card">
+      <div class="equip-card-title"><span class="equip-idx">EQ · 06</span><h5>EPI anticaída — arneses e retráteis</h5></div>
+      <div class="equip-detail">
+        <div class="equip-detail-item"><div class="equip-detail-label">Inspecção inicial</div><div class="equip-detail-value">Antes de cada uso pelo próprio trabalhador</div></div>
+        <div class="equip-detail-item"><div class="equip-detail-label">Formal periódica</div><div class="equip-detail-value"><strong>Mínimo anual</strong>, com registo documentado</div></div>
+        <div class="equip-detail-item" style="grid-column:1/-1"><div class="equip-detail-label">Após queda</div><div class="equip-detail-value">Retirada de serviço imediata e obrigatória — mesmo queda detida invalida o equipamento</div></div>
+        <div class="equip-detail-item" style="grid-column:1/-1"><div class="equip-detail-label">Prazo de vida</div><div class="equip-detail-value">Máx. 10 anos desde fabrico / 5 anos desde 1.ª utilização — prevalece o mais restritivo</div></div>
+      </div>
+    </div>
+  </div>
+
+  <h3>O processo de inspecção, passo a passo</h3>
+  <div class="steps">
+    <div class="step-item"><div class="step-num">01</div><div class="step-content"><h5>Inventário actualizado de equipamentos</h5><p>Número de série, data de fabrico, última inspecção e prazo da próxima — mantido no dossier de estaleiro e actualizado a cada entrada/saída.</p></div></div>
+    <div class="step-item"><div class="step-num">02</div><div class="step-content"><h5>Verificar CE antes de colocar em serviço</h5><p>Equipamento novo ou usado deve chegar com Declaração de Conformidade CE e manual em português. Sem estes documentos, não entra em serviço.</p></div></div>
+    <div class="step-item"><div class="step-num">03</div><div class="step-content"><h5>Inspecção inicial em cada novo estaleiro</h5><p>Equipamentos desmontáveis (gruas, andaimes) inspeccionados após cada montagem — a segurança depende das condições de instalação, não só do equipamento isolado.</p></div></div>
+    <div class="step-item"><div class="step-num">04</div><div class="step-content"><h5>Inspecções periódicas por pessoa competente</h5><p>Empresa acreditada ou pessoa competente interna. Relatório com resultado, anomalias e data da próxima inspecção.</p></div></div>
+    <div class="step-item"><div class="step-num">05</div><div class="step-content"><h5>Verificação diária pelo operador</h5><p>Check-list antes de iniciar trabalho, registada mesmo que de forma simplificada. Anomalia = equipamento fora de serviço e sinalizado.</p></div></div>
+    <div class="step-item"><div class="step-num">06</div><div class="step-content"><h5>Arquivo organizado no dossier de estaleiro</h5><p>Todos os relatórios, declarações e registos acessíveis à ACT em qualquer momento da obra.</p></div></div>
+  </div>
+
+  <div class="box box-alerta">
+    <span class="box-label">Equipamento de segunda mão importado</span>
+    <p>Um equipamento adquirido fora da UE, ou usado sem documentação, pode ser considerado "nova máquina" para efeitos da Directiva Máquinas — exigindo avaliação de conformidade completa antes de entrar em serviço. É mais comum do que parece em estaleiros portugueses, e é um ponto que a ACT verifica.</p>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ IV</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="documentacao">
+  <span class="section-eyebrow">§ IV · Documentação Legal</span>
+  <h2>Documentação obrigatória: quando, o quê, onde e por quanto tempo</h2>
+  <p class="lead">Em caso de inspecção ou acidente, é a documentação que determina se a empresa estava em conformidade. Saber o que deve existir, onde deve estar e por quanto tempo deve ser conservado é tão importante quanto garantir as condições físicas de segurança.</p>
+
+  <h3>A — Documentação de obra</h3>
+  <div class="doc-grid">
+    <div class="doc-card"><h5>Comunicação Prévia</h5><div class="doc-card-detail">Enviada à ACT antes do início dos trabalhos, quando aplicável (>30 dias e >20 trabalhadores, ou >500 dias-homem).<strong>Afixar em local visível · actualizar em 48h</strong></div></div>
+    <div class="doc-card"><h5>Plano de Segurança e Saúde (PSS)</h5><div class="doc-card-detail">Elaborado em projecto e desenvolvido para execução. Obrigatório em obras com riscos especiais.<strong>No estaleiro · conservar 5 anos</strong></div></div>
+    <div class="doc-card"><h5>Fichas de Procedimentos (FPS)</h5><div class="doc-card-detail">Substituem o PSS em obras de menor dimensão, detalhando procedimentos por actividade.<strong>Elaboradas antes de cada actividade de risco</strong></div></div>
+    <div class="doc-card"><h5>Compilação Técnica da obra</h5><div class="doc-card-detail">Telas finais, especificações e localização de infra-estruturas, para manutenção futura.<strong>Conservada pelo dono de obra, durante a vida do edifício</strong></div></div>
+    <div class="doc-card"><h5>Registo de subempreiteiros</h5><div class="doc-card-detail">Para cada subempreiteiro ou independente com >24h no estaleiro.<strong>Actualizado mensalmente e comunicado à ACT</strong></div></div>
+    <div class="doc-card"><h5>Livro de obra / registo de coordenação</h5><div class="doc-card-detail">Registo das actividades do CSO — visitas, reuniões, anomalias, medidas determinadas.<strong>Conservar 5 anos após conclusão</strong></div></div>
+  </div>
+
+  <h3>B — Formação e pessoal</h3>
+  <div class="doc-grid">
+    <div class="doc-card"><h5>Certificados de formação SST</h5><div class="doc-card-detail">Identificam formador, entidade, data, duração e conteúdos.<strong>Conservar mín. 5 anos · disponível em estaleiro</strong></div></div>
+    <div class="doc-card"><h5>Folhas de presença</h5><div class="doc-card-detail">Assinadas por cada participante — sem elas, o certificado tem valor limitado.<strong>Conservar com o certificado</strong></div></div>
+    <div class="doc-card"><h5>Certificação ACT do técnico de SST</h5><div class="doc-card-detail">Comprovativo TSST/TSSST com n.º de registo e prazo de validade.<strong>Disponível em estaleiro</strong></div></div>
+    <div class="doc-card"><h5>Habilitação dos coordenadores</h5><div class="doc-card-detail">Comprovativo das 50h e das habilitações académicas exigidas.<strong>Integrado na Comunicação Prévia</strong></div></div>
+    <div class="doc-card"><h5>Habilitação de operadores</h5><div class="doc-card-detail">Formação certificada e autorização escrita, específica por tipo de equipamento.<strong>Disponível para apresentação imediata</strong></div></div>
+    <div class="doc-card"><h5>Fichas de aptidão médica</h5><div class="doc-card-detail">Confirmam aptidão para as funções, incluindo avaliação de vertigens para altura.<strong>Dados de saúde — não exibir sem autorização</strong></div></div>
+  </div>
+
+  <h3>C — Equipamentos e instalações</h3>
+  <div class="doc-grid">
+    <div class="doc-card"><h5>Declarações de Conformidade CE</h5><div class="doc-card-detail">Emitida pelo fabricante, acompanha o equipamento durante toda a vida útil.<strong>No dossier do equipamento</strong></div></div>
+    <div class="doc-card"><h5>Relatórios de inspecção periódica</h5><div class="doc-card-detail">Identificam anomalias, acções correctivas e próxima data.<strong>Conservar durante a vida útil</strong></div></div>
+    <div class="doc-card"><h5>Manuais em português</h5><div class="doc-card-detail">Obrigatórios para todo o equipamento com marcação CE. Ausência = infracção imediata.<strong>Junto ao equipamento</strong></div></div>
+    <div class="doc-card"><h5>Registo semanal de andaimes</h5><div class="doc-card-detail">Data, estado, anomalias, assinado pelo responsável designado.<strong>Afixado no andaime ou no escritório de obra</strong></div></div>
+    <div class="doc-card"><h5>Verificação eléctrica</h5><div class="doc-card-detail">Por electricista qualificado, antes de entrada em serviço e após alterações.<strong>No dossier de estaleiro</strong></div></div>
+    <div class="doc-card"><h5>Fichas de EPI anticaída</h5><div class="doc-card-detail">Data de fabrico, 1.ª utilização, histórico de inspecções, utilizador actual.<strong>Mantidas pelo responsável de SST</strong></div></div>
+  </div>
+
+  <h3>D — Emergência e saúde</h3>
+  <div class="doc-grid">
+    <div class="doc-card"><h5>Plano de emergência</h5><div class="doc-card-detail">Integrado no PSS — acidentes, incêndio, evacuação, primeiros socorros.<strong>Afixado em local visível · testado em simulacro</strong></div></div>
+    <div class="doc-card"><h5>Contactos de emergência</h5><div class="doc-card-detail">INEM, bombeiros, hospital, médico do trabalho, CSO.<strong>Afixados junto aos primeiros socorros</strong></div></div>
+    <div class="doc-card"><h5>Registo de acidentes e near-misses</h5><div class="doc-card-detail">Data, descrição, causas apuradas, medidas correctivas.<strong>Conservar 5 anos</strong></div></div>
+    <div class="doc-card"><h5>Registo de vigilância da saúde</h5><div class="doc-card-detail">Exames de admissão e periódicos, sem dados clínicos.<strong>Relação laboral + 5 anos</strong></div></div>
+    <div class="doc-card"><h5>Investigação de acidentes</h5><div class="doc-card-detail">Obrigatória em acidente mortal ou grave.<strong>Comunicar à ACT em 24h · conservar 5 anos</strong></div></div>
+    <div class="doc-card"><h5>Relatório anual de SST</h5><div class="doc-card-detail">Acidentes, formação, vigilância da saúde, avaliações de risco.<strong>Elaborado anualmente · conservar 5 anos</strong></div></div>
+  </div>
+
+  <h3>O que deve estar afixado — e onde</h3>
+  <p>Alguns documentos não devem apenas existir: devem estar visíveis e acessíveis. A ausência de afixação é infracção, mesmo que o documento exista no arquivo.</p>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Documento</th><th>Onde afixar</th><th>Quando actualizar</th><th>Base legal</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Comunicação Prévia</strong></td><td>Entrada do estaleiro, protegida das intempéries</td><td>48h após qualquer alteração</td><td class="mono">Art.º 15.º DL 273/2003</td></tr>
+      <tr><td><strong>Contactos de emergência</strong></td><td>Primeiros socorros, entrada, refeitório</td><td>Sempre que mudem os contactos</td><td class="mono">Lei 102/2009 / PSS</td></tr>
+      <tr><td><strong>Sinalização de segurança</strong></td><td>Entrada de cada zona de risco</td><td>Sempre que os riscos se alterem</td><td class="mono">DL 141/95</td></tr>
+      <tr><td><strong>Placa do andaime</strong></td><td>Bem visível no andaime</td><td>Após cada inspecção semanal</td><td class="mono">DL 50/2005 / EN 12811</td></tr>
+      <tr><td><strong>Regulamento interno de segurança</strong></td><td>Entrada, vestiários, refeitório</td><td>Alteração de procedimentos</td><td class="mono">PSS / DL 273/2003</td></tr>
+      <tr><td><strong>Identificação do CSO</strong></td><td>Entrada do estaleiro</td><td>Mudança de pessoa</td><td class="mono">DL 273/2003</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Prazos de conservação</h3>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Documento</th><th>Prazo</th><th>Onde conservar</th></tr></thead>
+    <tbody>
+      <tr><td><strong>PSS, FPS e documentação de obra</strong></td><td>Mín. 5 anos após conclusão</td><td>Arquivo da empresa / dono de obra</td></tr>
+      <tr><td><strong>Registos de formação SST</strong></td><td>Mín. 5 anos</td><td>Arquivo da empresa</td></tr>
+      <tr><td><strong>Registos de acidentes</strong></td><td>Mín. 5 anos; 40 anos se exposição a cancerígenos</td><td>Arquivo da empresa</td></tr>
+      <tr><td><strong>Fichas de aptidão médica</strong></td><td>Vida laboral + 5 anos</td><td>Médico do trabalho / empresa</td></tr>
+      <tr><td><strong>Certificados de inspecção de equipamento</strong></td><td>Vida útil do equipamento</td><td>Dossier do equipamento</td></tr>
+      <tr><td><strong>Exposição a agentes biológicos (grupo 3-4)</strong></td><td>10 anos após última exposição</td><td>Arquivo de SST</td></tr>
+      <tr><td><strong>Compilação Técnica</strong></td><td>Vida do edifício</td><td>Dono de obra</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="box box-pratica">
+    <span class="box-label">Digitalização</span>
+    <p>A ACT aceita documentação digital, desde que acessível e legível no momento da inspecção. Um sistema de gestão documental com alertas automáticos para renovações e validades a expirar poupa tempo e evita não-conformidades por esquecimento.</p>
+  </div>
+
+  <h3>Quando a documentação está incompleta no dia da inspecção</h3>
+  <p>Não há tolerância. A ACT não aceita "está no escritório" ou "já está a tratar". O que não está disponível no momento da inspecção, para efeitos legais, não existe.</p>
+  <ul class="styled">
+    <li><strong>Ausente:</strong> auto de notícia e intimação para regularização num prazo; em segunda visita, se persistir, as coimas são aplicadas</li>
+    <li><strong>Desactualizada:</strong> certificados expirados ou fichas desactualizadas equivalem a ausência de documentação</li>
+    <li><strong>Em caso de acidente:</strong> a ausência é presumida como incumprimento, e pode agravar o processo criminal e civil</li>
+  </ul>
+
+  <div class="cta-inline">
+    <div><strong>Toda a documentação do seu estaleiro está em ordem?</strong><p>Diagnóstico de conformidade documental antes que a ACT o faça primeiro.</p></div>
+    <a href="/#contacto" class="btn-primary">Pedir diagnóstico</a>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ V</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="mais">
+  <span class="section-eyebrow">§ V · Aspectos críticos adicionais</span>
+  <h2>O que mais é crítico saber em segurança na construção</h2>
+
+  <h3>Reabilitação e demolição — riscos acrescidos</h3>
+  <p>As obras de reabilitação têm especificidades que tornam a gestão de segurança mais complexa do que em construção nova. Com um parque edificado envelhecido e uma aposta crescente na reabilitação urbana, este tipo de obra é cada vez mais frequente em Portugal.</p>
+  <ul class="styled">
+    <li><strong>Amianto:</strong> edifícios anteriores a 1995 podem ter amianto em coberturas, isolamentos e pavimentos. Qualquer reabilitação deve incluir avaliação prévia; se confirmado, a remoção exige plano aprovado pela ACT e empresa especializada</li>
+    <li><strong>Chumbo e PCB:</strong> tintas antigas e equipamentos eléctricos antigos podem conter substâncias que expõem gravemente os trabalhadores em demolição sem avaliação prévia</li>
+    <li><strong>Instabilidade estrutural:</strong> demolição fora de sequência pode causar colapso não controlado — exige plano elaborado por engenheiro estrutural, integrado no PSS</li>
+    <li><strong>Espaços confinados:</strong> caves e condutas de edifícios antigos apresentam frequentemente atmosferas deficientes em oxigénio — exigem avaliação atmosférica antes de entrada</li>
+  </ul>
+
+  <h3>Trabalhadores independentes em estaleiro</h3>
+  <p>Os trabalhadores independentes (recibos verdes) são frequentes na construção portuguesa, e levantam questões específicas que muitos empreiteiros desconhecem.</p>
+  <ul class="styled">
+    <li>São responsáveis pela sua própria segurança — mas a entidade executante coordena a sua actividade com as normas do estaleiro</li>
+    <li>Registo obrigatório sempre que a actividade ultrapasse 24 horas no estaleiro</li>
+    <li>Devem receber informação sobre riscos e o PSS antes de iniciar trabalho</li>
+    <li>Em caso de acidente, a responsabilidade da entidade executante pode ser accionada se não cumpriu as suas obrigações de coordenação</li>
+  </ul>
+
+  <h3>Obras em via pública</h3>
+  <p>Obras em espaço público têm obrigações adicionais de sinalização, reguladas pelo Decreto Regulamentar n.º 22-A/98:</p>
+  <ul class="styled">
+    <li>Projecto de sinalização temporária aprovado pela entidade gestora da via antes do início dos trabalhos</li>
+    <li>Vedação com baias ou painéis contíguos, impedindo acesso não autorizado</li>
+    <li>Vestuário de alta visibilidade obrigatório para trabalhadores expostos ao tráfego</li>
+    <li>Verificação diária da sinalização e reposição imediata em caso de dano</li>
+  </ul>
+
+  <h3>Gestão de resíduos de construção e demolição</h3>
+  <p>Regulados pelo Decreto-Lei n.º 46/2008:</p>
+  <ul class="styled">
+    <li>Plano de Prevenção e Gestão de RCD integrado no PSS em obras de maior dimensão</li>
+    <li>Separação por categoria em contentores identificados; resíduos perigosos por operador licenciado</li>
+    <li>Guias de acompanhamento de resíduos para transporte de resíduos perigosos</li>
+    <li>Proibição de queima em estaleiro; registo de resíduos auditável pelas entidades licenciadoras</li>
+  </ul>
+
+  <h3>Ruído e vibração — a exposição que raramente é avaliada</h3>
+  <p>O ruído e a vibração em obra são riscos de higiene ocupacional frequentemente subestimados, porque os efeitos — perda auditiva induzida por ruído, síndrome de vibração mão-braço — são cumulativos e só se manifestam clinicamente anos depois da exposição. Ao contrário de uma queda ou um esmagamento, não há um acidente único que force a empresa a reagir. É precisamente por isto que a ausência de avaliação é uma das não-conformidades mais comuns em auditorias, mesmo em empresas que cumprem rigorosamente as obrigações de segurança física.</p>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Nível de exposição diária</th><th>Obrigação</th><th>Base legal</th></tr></thead>
+    <tbody>
+      <tr><td><strong>≥ 80 dB(A)</strong></td><td>Disponibilização de protectores auriculares; informação e formação sobre riscos</td><td class="mono">DL 182/2006</td></tr>
+      <tr><td><strong>≥ 85 dB(A)</strong></td><td>Uso obrigatório de protecção auditiva; sinalização da zona; exames audiométricos periódicos</td><td class="mono">DL 182/2006</td></tr>
+      <tr><td><strong>≥ 87 dB(A) (valor limite, com protecção)</strong></td><td>Nunca pode ser excedido — medidas correctivas imediatas se ultrapassado</td><td class="mono">DL 182/2006</td></tr>
+      <tr><td><strong>Vibração mão-braço ≥ 2,5 m/s²</strong></td><td>Avaliação, rotação de tarefas, vigilância médica específica</td><td class="mono">DL 46/2006</td></tr>
+      <tr><td><strong>Vibração corpo inteiro ≥ 0,5 m/s²</strong></td><td>Aplicável a operadores de máquinas de terraplanagem e equipamento pesado</td><td class="mono">DL 46/2006</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Equipamentos como martelos demolidores, compactadores, serras de disco e betoneiras de obra ultrapassam frequentemente os 85 dB(A) de exposição diária. A medição deve ser feita por técnico competente com equipamento calibrado, e o resultado integrado no PSS ou na avaliação de riscos da empresa — não é suficiente "assumir" que o ruído está dentro dos limites porque não há queixas dos trabalhadores.</p>
+
+  <h3>Trabalho nocturno e por turnos em obra</h3>
+  <p>Obras em via pública com restrições de tráfego diurno, ou fases críticas de betonagem, obrigam frequentemente a trabalho nocturno. Além das obrigações gerais de SST, o trabalho nocturno acrescenta exigências específicas: iluminação artificial adequada às tarefas (com níveis mínimos de lux definidos por tipo de actividade), vigilância da saúde reforçada para trabalhadores nocturnos habituais, e sinalização luminosa reforçada em obras na via pública. A fadiga associada a trabalho nocturno prolongado é também um factor de risco documentado para acidentes, pelo que a escala de turnos deve prever descansos compensatórios adequados nos termos do Código do Trabalho.</p>
+
+  <h3>Seguros — o que cobre e o que não cobre</h3>
+  <p>A apólice de seguro de acidentes de trabalho é obrigatória para todos os trabalhadores, sem excepção — incluindo trabalhadores de subempreiteiros e, nalgumas configurações contratuais, trabalhadores independentes. É um dos primeiros documentos que a ACT verifica, porque a sua ausência significa que, em caso de acidente, o trabalhador fica sem cobertura imediata e a empresa fica directamente exposta ao pagamento de indemnizações e prestações que normalmente seriam suportadas pela seguradora.</p>
+  <ul class="styled">
+    <li><strong>Seguro de acidentes de trabalho:</strong> obrigatório por lei, cobre despesas médicas, indemnizações por incapacidade e pensões por morte relacionadas com acidente de trabalho. Deve ser verificado antes do início de cada trabalhador em obra, não apenas no momento da contratação da empresa</li>
+    <li><strong>Seguro de responsabilidade civil de exploração:</strong> não é legalmente obrigatório na generalidade dos casos, mas cobre danos causados a terceiros (por exemplo, queda de material sobre viatura estacionada, ou dano a propriedade vizinha) — frequentemente exigido contratualmente por donos de obra de maior dimensão</li>
+    <li><strong>Seguro de responsabilidade civil profissional do CSO e do técnico de SST:</strong> cobre erros ou omissões no exercício da função de coordenação ou de assessoria técnica — relevante porque a responsabilidade pessoal destes profissionais pode ser accionada separadamente da responsabilidade da empresa</li>
+    <li><strong>O que nenhum seguro cobre:</strong> a coima administrativa aplicada pela ACT nunca é segurável — é uma sanção pessoal ao infractor, não um dano indemnizável. Isto reforça que prevenção e conformidade documental não são substituíveis por transferência de risco para uma seguradora</li>
+  </ul>
+  <div class="box box-nota">
+    <span class="box-label">Verificação prática</span>
+    <p>Antes de qualquer subempreiteiro iniciar actividade em estaleiro, deve ser exigida cópia da apólice de acidentes de trabalho em vigor, com identificação nominal ou por categoria dos trabalhadores cobertos. Uma apólice genérica da empresa subempreiteira, sem correspondência clara aos trabalhadores efectivamente presentes em obra, é uma das falhas mais frequentes detectadas apenas depois de um acidente — quando já é tarde para corrigir.</p>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ VI</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="defesa">
+  <span class="section-eyebrow">§ VI · Quando a conformidade falha</span>
+  <h2>Auto de notícia, contra-ordenação e defesa jurídica</h2>
+  <p class="lead">A maioria dos guias de SST pára na lista de coimas. Falta a parte que decide se a coima aplicada é definitiva ou contestável — e essa é precisamente a leitura jurídica que falta na maioria das consultoras técnicas.</p>
+
+  <h3>O que acontece depois do auto de notícia</h3>
+  <p>Um auto de notícia não é uma coima definitiva — é o início de um processo contra-ordenacional, com direitos processuais concretos para a empresa. Muitas empresas pagam coimas que poderiam ter sido reduzidas ou anuladas por vício processual, simplesmente por desconhecerem os seus direitos nesta fase.</p>
+
+  <div class="steps">
+    <div class="step-item"><div class="step-num">01</div><div class="step-content"><h5>Auto de notícia lavrado em estaleiro</h5><p>O inspector regista a infracção, a norma violada e as circunstâncias. É a partir deste documento que corre o prazo de defesa — normalmente 15 a 20 dias úteis.</p></div></div>
+    <div class="step-item"><div class="step-num">02</div><div class="step-content"><h5>Direito de resposta e defesa escrita</h5><p>A empresa pode apresentar defesa escrita, juntar prova documental e testemunhal, e contestar a qualificação da infracção. Um erro na tipificação legal do auto — norma errada, factos mal descritos — é fundamento de anulação.</p></div></div>
+    <div class="step-item"><div class="step-num">03</div><div class="step-content"><h5>Decisão da ACT</h5><p>A ACT decide manter, reduzir ou anular a coima com base na defesa apresentada. Circunstâncias atenuantes — correcção imediata da situação, ausência de antecedentes, colaboração na inspecção — podem reduzir substancialmente o valor.</p></div></div>
+    <div class="step-item"><div class="step-num">04</div><div class="step-content"><h5>Recurso judicial</h5><p>Da decisão da ACT cabe recurso para o tribunal do trabalho competente, com efeito suspensivo mediante prestação de garantia. É a última instância para contestar o mérito da infracção.</p></div></div>
+  </div>
+
+  <div class="box box-legal">
+    <span class="box-label">Responsabilidade civil e criminal do empregador</span>
+    <p style="color:#5c1a26;margin:0">Além da coima administrativa, um acidente grave ou mortal pode desencadear responsabilidade civil (indemnização à vítima ou família) e, em caso de negligência grosseira, responsabilidade criminal do empregador ou de quem exercia funções de coordenação. A fronteira entre contra-ordenação e crime depende da gravidade da culpa e do nexo causal com o acidente — uma análise que exige leitura jurídica, não apenas técnica.</p>
+  </div>
+
+  <h3>Onde o rigor técnico não chega</h3>
+  <p>Um técnico de SST identifica correctamente o risco e implementa a medida de prevenção. Mas a defesa perante um auto de notícia, a negociação de um plano de regularização com a ACT, ou a resposta a um processo após acidente exigem leitura processual e jurídica — que a maioria das consultoras técnicas não tem internamente, e que normalmente implica contratar, à parte, um advogado que desconhece o histórico técnico do caso.</p>
+
+  <div class="box box-pratica">
+    <span class="box-label">Um único interlocutor</span>
+    <p>É esta a lacuna que a combinação advocacia + TSST resolve: quem elabora o PSS e acompanha a obra é a mesma pessoa que responde ao auto de notícia, se necessário. Sem perda de informação entre técnico e advogado, sem duplicação de honorários, sem o histórico do caso a repetir-se a um terceiro que nunca esteve em estaleiro.</p>
+  </div>
+
+  <h3>Checklist final de conformidade — antes de abrir o estaleiro</h3>
+  <p>Cada ponto não verificado representa uma potencial infracção ou um risco real para os trabalhadores.</p>
+  <div class="checklist">
+    <li>PSS elaborado e aprovado pelo dono de obra — ninguém começa a trabalhar sem isto</li>
+    <li>Coordenador de Segurança em Obra designado por declaração escrita, com qualificações comprovadas</li>
+    <li>Comunicação Prévia enviada à ACT (se aplicável) e afixada no estaleiro</li>
+    <li>Todos os trabalhadores com formação de base SST antes de entrar em estaleiro</li>
+    <li>Trabalhadores com actividades específicas com formação certificada correspondente</li>
+    <li>Todos os equipamentos com marcação CE, manual em português e inspecção actualizada</li>
+    <li>Apólices de seguro de acidentes de trabalho verificadas, incluindo subempreiteiros</li>
+    <li>Instalações sociais montadas: sanitários, vestiários, refeitório, primeiros socorros</li>
+    <li>Sinalização e vedação perimetral instaladas</li>
+    <li>Procedimento de emergência comunicado a todos antes do início dos trabalhos</li>
+    <li>Registo de subempreiteiros iniciado, com actualização mensal estabelecida</li>
+    <li>Para reabilitação: avaliação de amianto e outros materiais perigosos realizada</li>
+    <li>Para obras em via pública: projecto de sinalização aprovado e instalado</li>
+  </div>
+</div>
+
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ VII</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="faq">
+  <span class="section-eyebrow">§ VII · Perguntas Frequentes</span>
+  <h2>Dúvidas recorrentes de empreiteiros e responsáveis de obra</h2>
+  <p class="lead">Perguntas que surgem repetidamente em diagnósticos de conformidade — cada uma com resposta directa, sem remeter para "consulte um advogado" sem explicar porquê.</p>
+
+  <h3>A empresa é pequena. As mesmas obrigações aplicam-se na mesma medida?</h3>
+  <p>Sim, com uma nuance importante: a dimensão da empresa não reduz as obrigações legais de SST, mas pode determinar se é exigido serviço interno ou externo de SST, e influencia a extensão da documentação exigida — por exemplo, a obrigatoriedade de PSS completo depende da dimensão da obra, não da empresa. Uma microempresa com um único trabalhador em obra continua sujeita a formação, EPIs certificados e seguro de acidentes de trabalho. Os dados da ACT mostram precisamente o oposto do que muitos empreiteiros assumem: quase 67% dos acidentes mortais em construção ocorrem em empresas com menos de 50 trabalhadores, exactamente onde a percepção de risco de fiscalização costuma ser mais baixa.</p>
+
+  <h3>Posso usar formação online para cumprir os requisitos legais?</h3>
+  <p>Depende da actividade. A formação de base em SST admite componente online combinada com uma visita presencial ao estaleiro para identificação real dos riscos. Já a formação para trabalho em altura, andaimes e operação de equipamentos de elevação exige componente prática presencial obrigatória — não é aceite formação 100% à distância para estas actividades. Uma empresa que apresente apenas certificados online para trabalho em altura está, na prática, sem formação válida para efeitos de fiscalização, mesmo tendo pago e recebido um certificado.</p>
+
+  <h3>O que é exactamente o PSS e quando é obrigatório ter um?</h3>
+  <p>O Plano de Segurança e Saúde é o documento central de gestão de risco de uma obra — identifica os perigos previsíveis, as medidas de prevenção e a organização da segurança entre os diferentes intervenientes. É obrigatório sempre que a obra esteja sujeita a comunicação prévia (duração superior a 30 dias com mais de 20 trabalhadores em simultâneo, ou mais de 500 dias-homem de trabalho previsto) ou envolva riscos especiais elencados no anexo II do DL 273/2003 — como trabalhos com risco de soterramento, exposição a agentes químicos ou biológicos perigosos, ou proximidade de linhas eléctricas de alta tensão. Para obras de menor dimensão sem estes riscos, as Fichas de Procedimentos de Segurança substituem o PSS completo, com exigências mais simplificadas mas ainda assim obrigatórias.</p>
+
+  <h3>Quem paga a coima quando há vários subempreiteiros em obra?</h3>
+  <p>A responsabilidade contra-ordenacional recai, em regra, sobre o empregador do trabalhador em situação de incumprimento — mas a entidade executante (o empreiteiro geral) pode ser responsabilizada solidariamente por falhas de coordenação de segurança entre os vários intervenientes, nomeadamente se não assegurou a nomeação de coordenador de segurança ou não integrou os subempreiteiros no PSS. Na prática, a ACT frequentemente notifica tanto o subempreiteiro directamente envolvido como o empreiteiro geral, cabendo depois a cada um demonstrar o cumprimento das suas obrigações específicas. É por isto que o registo de subempreiteiros e a prova de que cada um recebeu informação sobre os riscos do estaleiro são documentos que protegem especificamente a entidade executante.</p>
+
+  <h3>Um acidente sem baixa médica precisa de ser comunicado à ACT?</h3>
+  <p>Não na generalidade dos casos — a comunicação obrigatória em 24 a 48 horas aplica-se a acidentes mortais e a acidentes com incapacidade previsível para o trabalho superior a 3 dias úteis. No entanto, é boa prática, e cada vez mais expectativa da ACT em inspecções de seguimento, manter um registo interno de todos os acidentes e near-misses, independentemente da gravidade — este registo demonstra um sistema de gestão de segurança activo. Um padrão de pequenos incidentes não registados, se descoberto após um acidente grave, é frequentemente interpretado como negligência sistemática.</p>
+
+  <h3>A formação de 40 horas anuais do Código do Trabalho é a mesma coisa que a formação SST?</h3>
+  <p>Não. As 40 horas anuais de formação contínua previstas no art.º 131.º do Código do Trabalho são um direito genérico do trabalhador a formação profissional, que pode incluir mas não se esgota em formação de SST. A formação específica de SST — formação de base, formação por actividade de risco, reciclagens — tem requisitos e conteúdos próprios definidos pela legislação de SST, e deve ser complementar, não pode ser apresentada como substituto das 40 horas gerais, nem vice-versa. Confundir estas duas obrigações é um erro comum em pequenas empresas que tentam simplificar a gestão de formação.</p>
+
+  <h3>Uma queda de menos de 2 metros exige EPI anticaída?</h3>
+  <p>O limiar de 2 metros do DL 50/2005 é uma referência geral, mas a avaliação de risco concreta do estaleiro pode determinar a obrigatoriedade de protecção anticaída em alturas inferiores, sobretudo quando existe risco agravado no ponto de impacto — por exemplo, queda sobre superfície irregular, armaduras salientes ou vãos abertos. A leitura correcta não é "está abaixo de 2 metros, logo não é obrigatório", mas sim "qual é o risco real de lesão grave nesta situação concreta". A ACT avalia a adequação da protecção ao risco real, não apenas o cumprimento mecânico de um número.</p>
+
+  <h3>Que diferença faz ter advogada e TSST na mesma pessoa, na prática do dia-a-dia?</h3>
+  <p>Na maioria dos casos, significa que a mesma pessoa que elabora o PSS e acompanha a obra consegue também redigir a defesa de um auto de notícia sem repetir a explicação técnica do caso a um terceiro, avaliar antecipadamente se uma cláusula contratual com um subempreiteiro expõe a empresa a responsabilidade solidária indevida, e determinar com mais precisão se uma situação de incumprimento tem exposição predominantemente administrativa (coima) ou se, dada a gravidade, há risco de exposição criminal — o que muda completamente a estratégia de resposta desde o primeiro dia.</p>
+</div>
+
+</article>
+
+<aside class="sidebar">
+  <div class="toc-title">Índice do Guia</div>
+  <ul class="toc">
+    <li class="toc-section"><a href="#formacao"><span class="toc-num">I</span>Formação Obrigatória</a>
+      <ul class="toc-sub"><li><a href="#formacao">Plano 1 — Base para todos</a></li><li><a href="#formacao">Plano 2 — Por actividade de risco</a></li><li><a href="#formacao">Plano 3 — Coordenadores e técnicos</a></li></ul></li>
+    <li class="toc-section"><a href="#fiscalizacao"><span class="toc-num">II</span>Fiscalização da ACT</a>
+      <ul class="toc-sub"><li><a href="#fiscalizacao">Quando e como aparecem</a></li><li><a href="#fiscalizacao">O que verificam em detalhe</a></li><li><a href="#fiscalizacao">Tabela de coimas</a></li></ul></li>
+    <li class="toc-section"><a href="#equipamentos"><span class="toc-num">III</span>Certificação de Equipamentos</a>
+      <ul class="toc-sub"><li><a href="#equipamentos">Gruas e plataformas</a></li><li><a href="#equipamentos">Andaimes e acessórios</a></li><li><a href="#equipamentos">Processo passo a passo</a></li></ul></li>
+    <li class="toc-section"><a href="#documentacao"><span class="toc-num">IV</span>Documentação Legal</a>
+      <ul class="toc-sub"><li><a href="#documentacao">O que afixar e onde</a></li><li><a href="#documentacao">Prazos de conservação</a></li></ul></li>
+    <li class="toc-section"><a href="#mais"><span class="toc-num">V</span>Aspectos Críticos</a>
+      <ul class="toc-sub"><li><a href="#mais">Reabilitação e demolição</a></li><li><a href="#mais">Via pública e RCD</a></li></ul></li>
+    <li class="toc-section"><a href="#defesa"><span class="toc-num">VI</span>Defesa Jurídica</a>
+      <ul class="toc-sub"><li><a href="#defesa">Auto de notícia e recurso</a></li><li><a href="#defesa">Checklist final</a></li></ul></li>
+  </ul>
+
+  <div class="sidebar-box">
+    <div class="sidebar-box-title">Precisa de apoio?</div>
+    <p><strong>Diagnóstico de conformidade sem compromisso.</strong> Analisamos a situação da sua obra e dizemos exactamente o que falta regularizar — do PSS à defesa de um auto, se necessário.</p>
+    <a href="/#contacto" class="btn-primary">Pedir diagnóstico</a>
+  </div>
+
+  <div class="sidebar-law">
+    <div class="sidebar-law-title">Base legal principal</div>
+    <ul>
+      <li>DL n.º 273/2003 — Estaleiros</li>
+      <li>Lei n.º 102/2009 — SST geral</li>
+      <li>DL n.º 50/2005 — Equipamentos</li>
+      <li>DL n.º 103/2008 — Directiva Máquinas</li>
+      <li>DL n.º 141/95 — Sinalização</li>
+      <li>DL n.º 46/2008 — RCD</li>
+      <li>CT art.º 131.º — Formação</li>
+      <li>DL n.º 41 820/1958 — RSTCC</li>
+    </ul>
+  </div>
+</aside>
+
+</div>
+
+<section class="cta-final" style="background:var(--ink);color:var(--paper);padding:70px 0;text-align:center" id="contacto">
+  <div class="wrap" style="max-width:720px">
+    <h2 style="color:var(--paper);font-size:clamp(26px,3.6vw,42px);margin-bottom:18px">A sua obra começa em segurança — ou começa a correr riscos.</h2>
+    <p style="color:rgba(244,239,230,0.72);font-size:16px;margin-bottom:30px">Desde o PSS ao último certificado de equipamento — e à defesa de um auto de notícia, se for necessário. Diagnóstico sem compromisso.</p>
+    <a href="/#contacto" class="btn-primary" style="background:var(--brass);color:var(--ink);padding:14px 30px;font-size:14px">Marcar Consulta</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="mono">SST PORTUGAL · sstportugal.pt · © 2026</div>
+    <div class="mono">Cédula OA 56666P · TSST nv.6</div>
+  </div>
+</footer>
+
+</body>
+</html>

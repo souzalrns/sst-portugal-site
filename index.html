@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SST Portugal — Direito e técnica, no mesmo dossier</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0E1B2C;
+    --paper: #F4EFE6;
+    --paper-deep: #EAE3D5;
+    --bordeaux: #7A2233;
+    --sage: #4C5B4A;
+    --brass: #B08A3E;
+    --rule: rgba(14,27,44,0.16);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    line-height: 1.08;
+  }
+
+  em { font-style: italic; color: var(--bordeaux); }
+
+  .mono { font-family: 'JetBrains Mono', monospace; }
+
+  .label-tech {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(14,27,44,0.65);
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+
+  .paper-grain {
+    background-image: radial-gradient(rgba(14,27,44,0.035) 1px, transparent 1.2px);
+    background-size: 3px 3px;
+  }
+
+  header {
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand-text { line-height: 1.2; }
+  .brand-name { font-family: 'Fraunces', serif; font-size: 17px; color: var(--ink); }
+  .brand-tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: rgba(14,27,44,0.55); }
+
+  nav ul { list-style: none; display: flex; gap: 32px; font-size: 14px; }
+  nav a:hover { color: var(--bordeaux); }
+  .btn-nav {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 2px;
+  }
+  .btn-nav:hover { background: var(--bordeaux); }
+  .nav-links-desktop { display: flex; align-items: center; gap: 32px; }
+
+  .hero { border-bottom: 1px solid var(--rule); }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 60px;
+    align-items: center;
+    padding: 100px 0 90px;
+  }
+  .dossier-tag { display: flex; align-items: center; gap: 16px; margin-bottom: 26px; }
+  .dossier-tag .divider { height: 1px; width: 60px; background: rgba(14,27,44,0.3); }
+  .hero h1 { font-size: clamp(38px, 5vw, 66px); }
+  .hero-lead { font-size: 18px; color: rgba(14,27,44,0.75); max-width: 44ch; margin: 30px 0 40px; }
+  .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 15px 26px;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 2px;
+  }
+  .btn-primary:hover { background: var(--bordeaux); }
+  .btn-secondary {
+    padding: 15px 26px;
+    font-weight: 500;
+    font-size: 14px;
+    border: 1px solid rgba(14,27,44,0.4);
+    border-radius: 2px;
+  }
+  .btn-secondary:hover { border-color: var(--ink); }
+
+  .credentials-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    border-top: 1px solid var(--rule);
+    padding-top: 24px;
+    margin-top: 56px;
+  }
+  .credentials-row .k { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(14,27,44,0.55); }
+  .credentials-row .v { font-family: 'JetBrains Mono', monospace; font-size: 14px; margin-top: 4px; }
+
+  .selo-wrap { display: flex; justify-content: center; position: relative; }
+  .selo-wrap svg { max-width: 100%; height: auto; }
+
+  .dualidade { background: var(--ink); color: var(--paper); border-bottom: 1px solid var(--rule); }
+  .dualidade-inner { padding: 90px 0; }
+  .dualidade-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 60px; }
+  .dualidade-head .label-tech { color: rgba(244,239,230,0.55); }
+  .dualidade-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+  .dualidade-col { border-left: 2px solid; padding-left: 30px; }
+  .dualidade-col.legal { border-color: var(--brass); }
+  .dualidade-col.tecnico { border-color: var(--sage); }
+  .dualidade-col .eyebrow-small { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 14px; }
+  .dualidade-col.legal .eyebrow-small { color: var(--brass); }
+  .dualidade-col.tecnico .eyebrow-small { color: var(--sage); }
+  .dualidade-col h3 { font-size: clamp(22px, 2.6vw, 30px); color: var(--paper); font-weight: 500; }
+  .dualidade-col p { margin-top: 18px; color: rgba(244,239,230,0.68); font-size: 15px; }
+
+  .sectores { padding: 90px 0; border-bottom: 1px solid var(--rule); }
+  .sectores-head { display: grid; grid-template-columns: 1fr 1.3fr; gap: 40px; margin-bottom: 50px; align-items: end; }
+  .sectores-head h2 { font-size: clamp(28px, 3.2vw, 42px); }
+  .sectores-head p { color: rgba(14,27,44,0.72); font-size: 15.5px; }
+
+  .sector-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .sector-card {
+    background: var(--paper);
+    padding: 30px;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background 0.15s;
+  }
+  .sector-card:hover { background: var(--paper-deep); }
+  .sector-card .idx { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: rgba(14,27,44,0.45); }
+  .sector-card .nome { font-family: 'Fraunces', serif; font-size: 21px; margin-top: 34px; }
+  .sector-card .nota { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: rgba(14,27,44,0.5); margin-top: 6px; }
+
+  .sectores-foot { margin-top: 22px; font-size: 14.5px; color: rgba(14,27,44,0.6); }
+  .sectores-foot a { color: var(--bordeaux); font-weight: 600; }
+
+  .servicos { padding: 90px 0; background: var(--paper-deep); border-bottom: 1px solid var(--rule); }
+  .servicos-head { display: flex; justify-content: space-between; align-items: end; margin-bottom: 50px; }
+  .servicos-head h2 { font-size: clamp(28px, 3.2vw, 42px); }
+  .servicos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+  .servico-card { background: var(--paper); border: 1px solid rgba(14,27,44,0.15); padding: 30px; display: flex; flex-direction: column; }
+  .servico-card:hover { border-color: var(--ink); }
+  .servico-top { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--rule); padding-bottom: 16px; }
+  .servico-top .code { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: var(--bordeaux); }
+  .servico-card h3 { font-size: 21px; margin-top: 22px; }
+  .servico-card p { font-size: 14px; color: rgba(14,27,44,0.72); margin-top: 12px; }
+  .servico-list { list-style: none; margin-top: 20px; border-top: 1px solid var(--rule); padding-top: 16px; display: flex; flex-direction: column; gap: 8px; }
+  .servico-list li { font-size: 13.5px; display: flex; gap: 10px; align-items: flex-start; color: rgba(14,27,44,0.8); }
+  .servico-list li::before { content: ''; width: 12px; height: 1px; background: rgba(14,27,44,0.4); margin-top: 8px; flex-shrink: 0; }
+
+  .guia { padding: 90px 0; border-bottom: 1px solid var(--rule); }
+  .guia-inner { display: grid; grid-template-columns: 1.3fr 1fr; gap: 60px; align-items: center; }
+  .guia h2 { font-size: clamp(28px, 3.4vw, 44px); }
+  .guia p { color: rgba(14,27,44,0.72); font-size: 16px; max-width: 46ch; margin: 22px 0 30px; }
+  .guia-cover {
+    aspect-ratio: 3/4;
+    background: var(--paper);
+    border: 1px solid rgba(14,27,44,0.2);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 4px 4px 0 var(--rule);
+  }
+  .guia-cover-top { display: flex; justify-content: space-between; align-items: start; }
+  .guia-cover-mid .eyebrow-small { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--bordeaux); letter-spacing: 0.06em; text-transform: uppercase; }
+  .guia-cover-mid h3 { font-size: 26px; margin-top: 10px; }
+  .guia-cover-bottom { border-top: 1px solid var(--rule); padding-top: 14px; display: flex; justify-content: space-between; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: rgba(14,27,44,0.55); letter-spacing: 0.04em; }
+
+  .sobre { background: var(--ink); color: var(--paper); padding: 90px 0; border-bottom: 1px solid var(--rule); }
+  .sobre-inner { display: grid; grid-template-columns: 0.8fr 1.3fr; gap: 60px; align-items: center; }
+  .sobre h2 { font-size: clamp(26px, 3.2vw, 40px); color: var(--paper); }
+  .sobre-lead { color: rgba(244,239,230,0.72); font-size: 16px; max-width: 50ch; margin: 22px 0 34px; }
+  .sobre-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; border-top: 1px solid rgba(244,239,230,0.16); padding-top: 26px; }
+  .sobre-grid .k { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(244,239,230,0.5); }
+  .sobre-grid .v { font-family: 'Fraunces', serif; font-size: 18px; margin-top: 6px; }
+
+  .cta-final { padding: 100px 0; text-align: center; }
+  .cta-final h2 { font-size: clamp(30px, 4.4vw, 52px); max-width: 22ch; margin: 0 auto 20px; }
+  .cta-final p { color: rgba(14,27,44,0.72); font-size: 16px; max-width: 50ch; margin: 0 auto 34px; }
+  .cta-final .hero-ctas { justify-content: center; }
+
+  footer { background: var(--paper); border-top: 1px solid var(--rule); padding: 32px 0; }
+  .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+  .footer-inner .mono { font-size: 12px; color: rgba(14,27,44,0.55); }
+
+  @media (max-width: 900px) {
+    .hero-grid, .dualidade-grid, .sectores-head, .servicos-head, .guia-inner, .sobre-inner { grid-template-columns: 1fr; }
+    .sector-grid { grid-template-columns: 1fr; }
+    .servicos-grid { grid-template-columns: 1fr; }
+    .credentials-row { grid-template-columns: 1fr; gap: 14px; }
+    .nav-links-desktop { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <a href="/" class="brand">
+      <svg width="30" height="30" viewBox="0 0 40 40" aria-hidden="true">
+        <rect x="4" y="4" width="32" height="32" rx="3" fill="none" stroke="#0E1B2C" stroke-width="1.1"/>
+        <line x1="20" y1="4" x2="20" y2="36" stroke="#0E1B2C" stroke-width="0.7"/>
+        <line x1="9" y1="13" x2="17" y2="13" stroke="#0E1B2C" stroke-width="1.3"/>
+        <line x1="9" y1="18" x2="16" y2="18" stroke="#0E1B2C" stroke-width="1.3"/>
+        <line x1="9" y1="23" x2="17" y2="23" stroke="#0E1B2C" stroke-width="1.3"/>
+        <line x1="9" y1="28" x2="14" y2="28" stroke="#0E1B2C" stroke-width="1.3"/>
+        <circle cx="25" cy="13" r="1.2" fill="#0E1B2C"/>
+        <circle cx="30" cy="13" r="1.2" fill="#0E1B2C"/>
+        <circle cx="25" cy="19" r="1.2" fill="#0E1B2C"/>
+        <circle cx="30" cy="19" r="1.2" fill="#0E1B2C"/>
+        <circle cx="25" cy="25" r="1.2" fill="#0E1B2C"/>
+        <circle cx="30" cy="25" r="1.2" fill="#0E1B2C"/>
+      </svg>
+      <div class="brand-text">
+        <div class="brand-name">SST Portugal</div>
+        <div class="brand-tag">DIREITO &middot; T&Eacute;CNICA</div>
+      </div>
+    </a>
+    <div class="nav-links-desktop">
+      <nav>
+        <ul>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#sectores">Sectores</a></li>
+          <li><a href="#guia">Guia SST</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+        </ul>
+      </nav>
+      <a href="#contacto" class="btn-nav">Marcar Consulta</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero paper-grain">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="dossier-tag">
+        <span class="label-tech">Dossier &middot; 001</span>
+        <span class="divider"></span>
+        <span class="label-tech">SST &middot; PT</span>
+      </div>
+      <h1>Direito e técnica,<br><em>no mesmo dossier.</em></h1>
+      <p class="hero-lead">Consultoria e formação em Segurança e Saúde no Trabalho para PMEs portuguesas. Um único interlocutor que lê a lei e desenha o processo — do papel à prática, em qualquer sector.</p>
+      <div class="hero-ctas">
+        <a href="#servicos" class="btn-primary">Ver Serviços</a>
+        <a href="#guia" class="btn-secondary">Guia SST gratuito →</a>
+      </div>
+      <div class="credentials-row">
+        <div>
+          <div class="k">Ordem dos Advogados</div>
+          <div class="v">Cédula 56666P</div>
+        </div>
+        <div>
+          <div class="k">Formação técnica</div>
+          <div class="v">TSST · Nível 6</div>
+        </div>
+        <div>
+          <div class="k">Cobertura</div>
+          <div class="v">Portugal Continental</div>
+        </div>
+      </div>
+    </div>
+    <div class="selo-wrap">
+      <svg viewBox="0 0 240 240" width="320" height="320" role="img" aria-label="Selo Duplo SST Portugal — dossier jurídico e avaliação técnica">
+        <circle cx="120" cy="120" r="112" fill="none" stroke="#0E1B2C" stroke-width="1"/>
+        <circle cx="120" cy="120" r="104" fill="none" stroke="#0E1B2C" stroke-width="0.5"/>
+        <line x1="120" y1="46" x2="120" y2="194" stroke="#0E1B2C" stroke-width="0.7"/>
+        <!-- metade esquerda: linhas de dossier -->
+        <g stroke="#0E1B2C" stroke-width="2.2" stroke-linecap="round">
+          <line x1="52" y1="94" x2="102" y2="94"/>
+          <line x1="52" y1="107" x2="98" y2="107"/>
+          <line x1="52" y1="120" x2="102" y2="120"/>
+          <line x1="52" y1="133" x2="94" y2="133"/>
+          <line x1="52" y1="146" x2="100" y2="146"/>
+        </g>
+        <!-- metade direita: grelha de avaliação técnica -->
+        <g fill="#0E1B2C">
+          <circle cx="146" cy="94" r="3"/><circle cx="163" cy="94" r="3"/><circle cx="180" cy="94" r="3"/>
+          <circle cx="146" cy="111" r="3"/><circle cx="163" cy="111" r="3"/><circle cx="180" cy="111" r="3"/>
+          <circle cx="146" cy="128" r="3"/><circle cx="163" cy="128" r="3"/><circle cx="180" cy="128" r="3"/>
+          <circle cx="146" cy="145" r="3"/><circle cx="163" cy="145" r="3"/><circle cx="180" cy="145" r="3"/>
+        </g>
+        <defs>
+          <path id="topArc" d="M 30 120 A 90 90 0 0 1 210 120" fill="none"/>
+          <path id="botArc" d="M 30 120 A 90 90 0 0 0 210 120" fill="none"/>
+        </defs>
+        <text font-family="JetBrains Mono, monospace" font-size="8" letter-spacing="4" fill="#0E1B2C">
+          <textPath href="#topArc" startOffset="50%" text-anchor="middle">DOSSIER · DADOS · CONFORMIDADE</textPath>
+        </text>
+        <text font-family="JetBrains Mono, monospace" font-size="7" letter-spacing="6" fill="#0E1B2C" opacity="0.7">
+          <textPath href="#botArc" startOffset="50%" text-anchor="middle">SST · PORTUGAL · MMXXVI</textPath>
+        </text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="dualidade">
+  <div class="wrap dualidade-inner">
+    <div class="dualidade-head">
+      <span class="label-tech">§ 02 · A dualidade</span>
+      <span class="label-tech">/ diferenciação</span>
+    </div>
+    <div class="dualidade-grid">
+      <div class="dualidade-col legal">
+        <div class="eyebrow-small">Metade jurídica</div>
+        <h3>Advocacia inscrita na Ordem, com leitura viva do Código do Trabalho e da Lei 102/2009.</h3>
+        <p>Sabemos onde a ACT olha primeiro, o que faz caducar uma contra-ordenação e como redigir um plano que resiste a inspecção.</p>
+      </div>
+      <div class="dualidade-col tecnico">
+        <div class="eyebrow-small">Metade técnica</div>
+        <h3>TSST nível 6 — avaliação de riscos, plano de prevenção e formação obrigatória por sector.</h3>
+        <p>O documento não fica na secretária: implementa-se, mede-se e actualiza-se. Papel que se traduz em prática de terreno.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sectores" id="sectores">
+  <div class="wrap">
+    <div class="sectores-head">
+      <div>
+        <span class="label-tech">§ 03 · Sectores</span>
+        <h2 style="margin-top:12px;">A SST não é uma indústria — é uma <em>obrigação transversal.</em></h2>
+      </div>
+      <p>Servimos qualquer empresa com trabalhadores em Portugal. O rigor é o mesmo; o que muda é a matriz de risco e o programa de formação.</p>
+    </div>
+    <div class="sector-grid">
+      <a href="/formacao/construcao-civil" class="sector-card" style="text-decoration:none;color:inherit;display:flex;">
+        <span class="idx">01</span>
+        <div>
+          <div class="nome">Construção civil</div>
+          <div class="nota">OBRA E REABILITAÇÃO</div>
+        </div>
+      </a>
+      <div class="sector-card">
+        <span class="idx">02</span>
+        <div>
+          <div class="nome">Indústria e fabril</div>
+          <div class="nota">LINHAS DE PRODUÇÃO</div>
+        </div>
+      </div>
+      <div class="sector-card">
+        <span class="idx">03</span>
+        <div>
+          <div class="nome">Escritórios</div>
+          <div class="nota">SERVIÇOS E ADMINISTRATIVO</div>
+        </div>
+      </div>
+      <div class="sector-card">
+        <span class="idx">04</span>
+        <div>
+          <div class="nome">Comércio e retalho</div>
+          <div class="nota">LOJA E ARMAZÉM</div>
+        </div>
+      </div>
+      <div class="sector-card">
+        <span class="idx">05</span>
+        <div>
+          <div class="nome">Saúde e cuidados</div>
+          <div class="nota">CLÍNICAS E LARES</div>
+        </div>
+      </div>
+      <div class="sector-card">
+        <span class="idx">06</span>
+        <div>
+          <div class="nome">Hotelaria e restauração</div>
+          <div class="nota">HORECA</div>
+        </div>
+      </div>
+    </div>
+    <p class="sectores-foot">Não encontra o seu sector? <a href="#contacto">Fale connosco</a> — a formação é preparada para a actividade real da sua empresa.</p>
+  </div>
+</section>
+
+<section class="servicos" id="servicos">
+  <div class="wrap">
+    <div class="servicos-head">
+      <div>
+        <span class="label-tech">§ 04 · Serviços</span>
+        <h2 style="margin-top:12px;">Três eixos, um único responsável.</h2>
+      </div>
+    </div>
+    <div class="servicos-grid">
+      <div class="servico-card">
+        <div class="servico-top"><span class="code">S · 01</span></div>
+        <h3>Consultoria SST</h3>
+        <p>Avaliação de riscos, plano de prevenção, auditoria de conformidade ACT e serviço externo de SST.</p>
+        <ul class="servico-list">
+          <li>Diagnóstico inicial</li>
+          <li>Documentação obrigatória</li>
+          <li>Acompanhamento contínuo</li>
+        </ul>
+      </div>
+      <div class="servico-card">
+        <div class="servico-top"><span class="code">S · 02</span></div>
+        <h3>Formação por sector</h3>
+        <p>Programas de formação obrigatória adaptados à realidade de cada sector, presenciais ou em regime misto.</p>
+        <ul class="servico-list">
+          <li>Formação inicial na admissão</li>
+          <li>Formação contínua (40h/ano)</li>
+          <li>Formação específica por sector</li>
+        </ul>
+      </div>
+      <div class="servico-card">
+        <div class="servico-top"><span class="code">S · 03</span></div>
+        <h3>Parecer jurídico</h3>
+        <p>Análise legal de processos, contratos e resposta a autos de notícia da ACT, com base advocatícia.</p>
+        <ul class="servico-list">
+          <li>Contra-ordenações</li>
+          <li>Contratação e SST</li>
+          <li>Litígio e defesa</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="guia" id="guia">
+  <div class="wrap guia-inner">
+    <div>
+      <span class="label-tech">§ 05 · Publicação de autoridade</span>
+      <h2 style="margin-top:12px;">O Guia SST.<br><em>128 secções. Cerca de 18.000 palavras. Gratuito.</em></h2>
+      <p>Um manual de referência escrito para quem tem de aplicar a lei sem ter formação jurídica — feito para RH, gestores e responsáveis operacionais.</p>
+      <div class="hero-ctas">
+        <a href="#" class="btn-primary">Consultar o Guia</a>
+      </div>
+    </div>
+    <div class="guia-cover">
+      <div class="guia-cover-top">
+        <div><div class="label-tech">Vol. I · Ed. 2026</div></div>
+        <svg width="26" height="26" viewBox="0 0 40 40" aria-hidden="true">
+          <rect x="4" y="4" width="32" height="32" rx="3" fill="none" stroke="#0E1B2C" stroke-width="1.1"/>
+          <line x1="20" y1="4" x2="20" y2="36" stroke="#0E1B2C" stroke-width="0.7"/>
+          <line x1="9" y1="13" x2="17" y2="13" stroke="#0E1B2C" stroke-width="1.3"/>
+          <line x1="9" y1="18" x2="16" y2="18" stroke="#0E1B2C" stroke-width="1.3"/>
+          <line x1="9" y1="23" x2="17" y2="23" stroke="#0E1B2C" stroke-width="1.3"/>
+          <line x1="9" y1="28" x2="14" y2="28" stroke="#0E1B2C" stroke-width="1.3"/>
+          <circle cx="25" cy="13" r="1.2" fill="#0E1B2C"/>
+          <circle cx="30" cy="13" r="1.2" fill="#0E1B2C"/>
+          <circle cx="25" cy="19" r="1.2" fill="#0E1B2C"/>
+          <circle cx="30" cy="19" r="1.2" fill="#0E1B2C"/>
+          <circle cx="25" cy="25" r="1.2" fill="#0E1B2C"/>
+          <circle cx="30" cy="25" r="1.2" fill="#0E1B2C"/>
+        </svg>
+      </div>
+      <div class="guia-cover-mid">
+        <div class="eyebrow-small">Manual</div>
+        <h3>Guia SST para PMEs em Portugal</h3>
+      </div>
+      <div class="guia-cover-bottom">
+        <span>128 SECÇÕES</span>
+        <span>≈ 18.000 PALAVRAS</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sobre" id="sobre">
+  <div class="wrap sobre-inner">
+    <svg viewBox="0 0 240 240" width="200" height="200" role="img" aria-label="Selo Duplo — dossier jurídico e avaliação técnica">
+      <circle cx="120" cy="120" r="112" fill="none" stroke="#F4EFE6" stroke-width="1"/>
+      <line x1="120" y1="46" x2="120" y2="194" stroke="#F4EFE6" stroke-width="0.7"/>
+      <g stroke="#F4EFE6" stroke-width="2.2" stroke-linecap="round">
+        <line x1="52" y1="94" x2="102" y2="94"/>
+        <line x1="52" y1="107" x2="98" y2="107"/>
+        <line x1="52" y1="120" x2="102" y2="120"/>
+        <line x1="52" y1="133" x2="94" y2="133"/>
+        <line x1="52" y1="146" x2="100" y2="146"/>
+      </g>
+      <g fill="#F4EFE6">
+        <circle cx="146" cy="94" r="3"/><circle cx="163" cy="94" r="3"/><circle cx="180" cy="94" r="3"/>
+        <circle cx="146" cy="111" r="3"/><circle cx="163" cy="111" r="3"/><circle cx="180" cy="111" r="3"/>
+        <circle cx="146" cy="128" r="3"/><circle cx="163" cy="128" r="3"/><circle cx="180" cy="128" r="3"/>
+        <circle cx="146" cy="145" r="3"/><circle cx="163" cy="145" r="3"/><circle cx="180" cy="145" r="3"/>
+      </g>
+    </svg>
+    <div>
+      <span class="label-tech" style="color: rgba(244,239,230,0.55);">§ 06 · Responsável técnica</span>
+      <h2 style="margin-top:12px;">Uma pessoa que fala as duas linguagens — a do tribunal e a do terreno.</h2>
+      <p class="sobre-lead">Advogada inscrita na Ordem dos Advogados (cédula 56666P), a concluir Técnico Superior de Segurança e Saúde no Trabalho (nível 6). É esta dualidade que permite entregar um dossier que resiste à leitura da ACT e, ao mesmo tempo, se implementa na prática.</p>
+      <div class="sobre-grid">
+        <div><div class="k">Formação</div><div class="v">Direito · Universidade portuguesa</div></div>
+        <div><div class="k">Certificação</div><div class="v">TSST · Nível 6</div></div>
+        <div><div class="k">Ordem</div><div class="v mono" style="font-size:15px;">OA · 56666P</div></div>
+        <div><div class="k">Idioma</div><div class="v mono" style="font-size:15px;">PT · EN</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final" id="contacto">
+  <div class="wrap">
+    <span class="label-tech">§ 07 · Consulta inicial</span>
+    <h2 style="margin-top:16px;">Um dossier começa sempre por uma <em>conversa de 30 minutos.</em></h2>
+    <p>Sem compromisso. Levantamos a situação da empresa e devolvemos um mapa claro do que falta, do que está bem e do que urge.</p>
+    <div class="hero-ctas">
+      <a href="#" class="btn-primary">Marcar Consulta</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="mono">SST PORTUGAL · sstportugal.pt · © 2026</div>
+    <div class="mono">Cédula OA 56666P · TSST nv.6</div>
+  </div>
+</footer>
+
+</body>
+</html>
