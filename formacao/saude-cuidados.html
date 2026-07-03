@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Segurança e Saúde no Trabalho em Clínicas e Lares: Guia Completo 2026 | SST Portugal</title>
+<meta name="description" content="Guia completo de SST em clínicas, lares e unidades de saúde em Portugal: riscos biológicos, movimentação de doentes, violência contra profissionais, formação obrigatória, fiscalização da ACT e documentação legal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0E1B2C;
+    --paper: #F4EFE6;
+    --paper-deep: #EAE3D5;
+    --bordeaux: #7A2233;
+    --bordeaux-tint: #F7ECEE;
+    --sage: #4C5B4A;
+    --sage-tint: #EEF1EE;
+    --brass: #B08A3E;
+    --brass-tint: #FAF3E6;
+    --rule: rgba(14,27,44,0.16);
+    --ink-70: rgba(14,27,44,0.72);
+    --ink-55: rgba(14,27,44,0.55);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    font-size: 16.5px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { font-family: 'Fraunces', serif; font-weight: 500; letter-spacing: -0.01em; line-height: 1.1; color: var(--ink); }
+  em { font-style: italic; color: var(--bordeaux); }
+  a { color: inherit; text-decoration: none; }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+  .label-tech { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-55); }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+  .rule-h { height: 1px; background: var(--rule); width: 100%; }
+  p { color: var(--ink-70); margin-bottom: 18px; }
+  p strong { color: var(--ink); font-weight: 600; }
+
+  /* HEADER — same system as homepage */
+  header { background: var(--paper); border-bottom: 1px solid var(--rule); position: sticky; top: 0; z-index: 100; }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand-text { line-height: 1.2; }
+  .brand-name { font-family: 'Fraunces', serif; font-size: 16px; color: var(--ink); }
+  .brand-tag { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; color: var(--ink-55); }
+  nav ul { list-style: none; display: flex; gap: 28px; font-size: 13.5px; }
+  nav a:hover { color: var(--bordeaux); }
+  .btn-nav { background: var(--ink); color: var(--paper); padding: 9px 18px; font-size: 12.5px; font-weight: 500; border-radius: 2px; }
+  .btn-nav:hover { background: var(--bordeaux); }
+  .nav-links-desktop { display: flex; align-items: center; gap: 28px; }
+  .crumb { font-size: 12px; color: var(--ink-55); padding: 10px 0; border-bottom: 1px solid var(--rule); }
+  .crumb a:hover { color: var(--bordeaux); }
+
+  /* HERO */
+  .hero { border-bottom: 1px solid var(--rule); padding: 54px 0 44px; }
+  .hero-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+  .hero-tag { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.06em; color: var(--bordeaux); border: 1px solid rgba(122,34,51,0.3); padding: 4px 10px; }
+  .hero h1 { font-size: clamp(30px, 4vw, 48px); max-width: 18ch; }
+  .hero-sub { font-size: 16.5px; color: var(--ink-70); max-width: 70ch; margin: 22px 0 0; }
+  .hero-meta { display: flex; gap: 22px; flex-wrap: wrap; font-size: 12.5px; color: var(--ink-55); border-top: 1px solid var(--rule); padding-top: 20px; margin-top: 28px; }
+  .hero-meta .mono { font-size: 12px; }
+
+  /* STATS */
+  .stats-section { padding: 46px 0 6px; }
+  .stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin: 28px 0 36px; }
+  .stat-item { background: var(--paper); padding: 24px 20px; }
+  .stat-number { font-family: 'Fraunces', serif; font-size: 34px; font-weight: 600; color: var(--bordeaux); line-height: 1; display: block; margin-bottom: 8px; }
+  .stat-label { font-size: 12px; color: var(--ink-70); line-height: 1.4; }
+  .pull-quote { border-left: 2px solid var(--bordeaux); padding: 20px 28px; background: var(--bordeaux-tint); margin: 32px 0; }
+  .pull-quote p { font-family: 'Fraunces', serif; font-style: italic; font-size: clamp(16px, 1.8vw, 20px); color: var(--ink); margin: 0; }
+
+  /* LAYOUT */
+  .page-wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: 1fr 300px; gap: 56px; align-items: start; }
+  article { padding: 50px 0 20px; }
+
+  /* SIDEBAR */
+  .sidebar { position: sticky; top: 76px; padding: 50px 0; }
+  .toc-title { font-size: 10.5px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-55); margin-bottom: 14px; font-family: 'JetBrains Mono', monospace; }
+  .toc { list-style: none; }
+  .toc-section { margin-bottom: 2px; }
+  .toc-section > a { display: flex; gap: 10px; padding: 9px 0; font-size: 13px; font-weight: 600; color: var(--ink); text-decoration: none; border-top: 1px solid var(--rule); line-height: 1.4; }
+  .toc-section > a:hover { color: var(--bordeaux); }
+  .toc-num { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: var(--bordeaux); min-width: 18px; padding-top: 2px; }
+  .toc-sub { list-style: none; padding-left: 28px; }
+  .toc-sub li a { display: block; font-size: 12px; color: var(--ink-55); padding: 4px 0; }
+  .toc-sub li a:hover { color: var(--bordeaux); }
+  .sidebar-box { background: var(--ink); color: var(--paper); padding: 22px; margin-top: 30px; }
+  .sidebar-box-title { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brass); margin-bottom: 10px; font-family: 'JetBrains Mono', monospace; }
+  .sidebar-box p { font-size: 12.5px; color: rgba(244,239,230,0.72); margin-bottom: 14px; }
+  .sidebar-box a.btn-primary { display: block; text-align: center; }
+  .sidebar-law { background: var(--sage-tint); border: 1px solid rgba(76,91,74,0.2); padding: 18px; margin-top: 18px; }
+  .sidebar-law-title { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin-bottom: 10px; font-family: 'JetBrains Mono', monospace; }
+  .sidebar-law ul { list-style: none; }
+  .sidebar-law ul li { font-size: 11.5px; color: var(--sage); padding: 4px 0; border-bottom: 1px solid rgba(76,91,74,0.12); }
+
+  /* SECTIONS */
+  .section { margin-bottom: 72px; }
+  .section-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--bordeaux); display: block; margin-bottom: 10px; }
+  h2 { font-size: clamp(24px, 2.8vw, 34px); margin-bottom: 12px; }
+  h3 { font-size: clamp(18px, 2vw, 23px); font-weight: 600; margin: 36px 0 14px; }
+  h4 { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink); margin: 26px 0 10px; padding-bottom: 8px; border-bottom: 1px solid var(--rule); }
+  .lead { font-size: clamp(15.5px, 1.6vw, 17.5px); color: var(--ink-70); max-width: 74ch; margin-bottom: 30px; }
+  .section-sep { display: flex; align-items: center; gap: 16px; margin: 64px 0 46px; }
+  .section-sep-line { flex: 1; height: 1px; background: var(--rule); }
+  .section-sep-tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-55); white-space: nowrap; }
+
+  /* BOXES */
+  .box { border-left: 3px solid; padding: 20px 24px; margin: 28px 0; position: relative; }
+  .box-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; display: block; }
+  .box p:last-child { margin-bottom: 0; }
+  .box-legal { border-color: var(--bordeaux); background: var(--bordeaux-tint); }
+  .box-legal .box-label { color: var(--bordeaux); }
+  .box-legal p { color: #5c1a26; }
+  .box-legal ul { list-style: none; margin-top: 6px; }
+  .box-legal ul li { font-size: 13.5px; color: #5c1a26; padding: 4px 0 4px 16px; position: relative; }
+  .box-legal ul li::before { content: '§'; position: absolute; left: 0; font-weight: 700; }
+  .box-alerta { border-color: var(--ink); background: var(--paper-deep); }
+  .box-alerta .box-label { color: var(--ink); }
+  .box-alerta p { color: var(--ink); }
+  .box-pratica { border-color: var(--sage); background: var(--sage-tint); }
+  .box-pratica .box-label { color: var(--sage); }
+  .box-pratica p { color: #2e392c; }
+  .box-nota { border-color: var(--brass); background: var(--brass-tint); }
+  .box-nota .box-label { color: var(--brass); }
+  .box-nota p { color: #6b5124; }
+
+  /* LISTS */
+  ul.styled, ol.styled { list-style: none; padding: 0; margin: 18px 0 26px; }
+  ul.styled li { position: relative; padding-left: 20px; margin-bottom: 9px; color: var(--ink-70); }
+  ul.styled li::before { content: '—'; position: absolute; left: 0; color: var(--bordeaux); font-weight: 700; }
+  ul.styled li strong { color: var(--ink); }
+  ol.styled { counter-reset: item; }
+  ol.styled li { position: relative; padding-left: 36px; margin-bottom: 12px; color: var(--ink-70); counter-increment: item; }
+  ol.styled li::before { content: counter(item, decimal-leading-zero); position: absolute; left: 0; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; color: var(--bordeaux); top: 3px; }
+  ol.styled li strong { color: var(--ink); }
+  .checklist { list-style: none; margin: 18px 0; }
+  .checklist li { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--rule); font-size: 14.5px; color: var(--ink-70); align-items: flex-start; }
+  .checklist li::before { content: '□'; color: var(--ink-55); font-size: 15px; flex-shrink: 0; line-height: 1.6; }
+
+  /* TABLES */
+  .table-wrap { overflow-x: auto; margin: 28px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  thead th { background: var(--ink); color: var(--paper); font-weight: 600; font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; padding: 12px 14px; text-align: left; font-family: 'JetBrains Mono', monospace; }
+  tbody tr { border-bottom: 1px solid var(--rule); }
+  tbody tr:nth-child(even) { background: var(--paper-deep); }
+  td { padding: 12px 14px; color: var(--ink-70); vertical-align: top; line-height: 1.5; }
+  td strong { color: var(--ink); }
+  td.badge { font-size: 10.5px; font-weight: 700; letter-spacing: 0.05em; white-space: nowrap; font-family: 'JetBrains Mono', monospace; }
+
+  /* CARD GRIDS reused across sections */
+  .doc-grid, .equip-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin: 28px 0; }
+  .equip-grid { grid-template-columns: repeat(2, 1fr); }
+  .doc-card, .equip-card { background: var(--paper); padding: 22px; }
+  .doc-card h5, .equip-card h5 { font-family: 'Fraunces', serif; font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
+  .doc-card-detail, .equip-detail-value { font-size: 12.5px; color: var(--ink-70); line-height: 1.55; }
+  .doc-card-detail strong { color: var(--bordeaux); display: block; margin-top: 8px; font-size: 10.5px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; font-family: 'JetBrains Mono', monospace; }
+  .equip-card-title { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+  .equip-idx { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--ink-55); }
+  .equip-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 4px; }
+  .equip-detail-item { background: var(--paper-deep); padding: 10px 12px; }
+  .equip-detail-label { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-55); margin-bottom: 4px; }
+
+  /* FORMAÇÃO CARDS */
+  .formacao-card { border: 1px solid var(--rule); background: var(--paper); padding: 30px; margin-bottom: 22px; }
+  .formacao-card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 6px; flex-wrap: wrap; }
+  .formacao-card h3 { font-size: 21px; margin: 8px 0 6px; }
+  .formacao-badge { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 11px; white-space: nowrap; }
+  .badge-obrig { background: var(--bordeaux); color: var(--paper); }
+  .badge-cargo { background: var(--sage); color: var(--paper); }
+  .badge-horas { background: var(--ink); color: var(--paper); }
+  .formacao-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 18px; }
+  .formacao-col h6 { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-55); margin-bottom: 10px; }
+  .formacao-col ul { list-style: none; padding: 0; }
+  .formacao-col ul li { font-size: 13px; color: var(--ink-70); padding: 5px 0; border-bottom: 1px solid var(--rule); display: flex; gap: 8px; }
+  .formacao-col ul li::before { content: '→'; color: var(--bordeaux); font-size: 11px; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+  .formacao-col ul li strong { color: var(--ink); }
+
+  /* TIMELINE */
+  .fisca-timeline { margin: 28px 0; }
+  .fisca-item { display: flex; gap: 22px; position: relative; }
+  .fisca-item::before { content: ''; position: absolute; left: 18px; top: 44px; bottom: -28px; width: 1px; background: var(--rule); }
+  .fisca-item:last-child::before { display: none; }
+  .fisca-dot { width: 38px; height: 38px; border: 1px solid var(--ink); background: var(--paper); color: var(--ink); font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 500; display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 1; }
+  .fisca-content { flex: 1; padding-bottom: 30px; }
+  .fisca-content h5 { font-family: 'Fraunces', serif; font-size: 16.5px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+  .fisca-content p { font-size: 13.5px; margin: 0 0 6px; }
+  .fisca-tag { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 10px; margin-top: 4px; }
+  .fisca-tag-a { background: var(--bordeaux-tint); color: var(--bordeaux); }
+  .fisca-tag-b { background: var(--brass-tint); color: #6b5124; }
+  .fisca-tag-c { background: var(--sage-tint); color: var(--sage); }
+
+  /* STEPS */
+  .steps { display: flex; flex-direction: column; margin: 28px 0; }
+  .step-item { display: flex; gap: 22px; padding: 20px 0; border-bottom: 1px solid var(--rule); }
+  .step-num { font-family: 'Fraunces', serif; font-size: 32px; font-weight: 600; color: rgba(122,34,51,0.18); line-height: 1; flex-shrink: 0; min-width: 44px; }
+  .step-content h5 { font-family: 'Fraunces', serif; font-size: 15.5px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+  .step-content p { font-size: 13.5px; margin: 0; }
+
+  /* CTA INLINE */
+  .cta-inline { background: var(--ink); color: var(--paper); padding: 28px 32px; margin: 44px 0; display: flex; justify-content: space-between; align-items: center; gap: 22px; flex-wrap: wrap; }
+  .cta-inline p { color: rgba(244,239,230,0.72); font-size: 14px; margin: 0; }
+  .cta-inline strong { display: block; font-family: 'Fraunces', serif; font-size: 18px; font-weight: 600; margin-bottom: 6px; color: var(--paper); }
+  .btn-primary { display: inline-block; background: var(--ink); color: var(--paper); font-size: 13px; font-weight: 500; padding: 12px 22px; white-space: nowrap; border-radius: 2px; }
+  .btn-primary:hover { background: var(--bordeaux); }
+  .cta-inline .btn-primary { background: var(--brass); color: var(--ink); }
+
+  footer { background: var(--paper); border-top: 1px solid var(--rule); padding: 32px 0; }
+  .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+  .footer-inner .mono { font-size: 12px; color: var(--ink-55); }
+
+  @media (max-width: 900px) {
+    .page-wrap { grid-template-columns: 1fr; }
+    .sidebar { display: none; }
+    .formacao-grid, .equip-grid, .doc-grid, .stat-row { grid-template-columns: 1fr; }
+    .nav-links-desktop { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <a href="/" class="brand">
+      <svg width="28" height="28" viewBox="0 0 40 40" aria-hidden="true">
+        <rect x="4" y="4" width="32" height="32" rx="3" fill="none" stroke="#0E1B2C" stroke-width="1.1"/>
+        <line x1="20" y1="4" x2="20" y2="36" stroke="#0E1B2C" stroke-width="0.7"/>
+        <line x1="9" y1="13" x2="17" y2="13" stroke="#0E1B2C" stroke-width="1.3"/>
+        <line x1="9" y1="18" x2="16" y2="18" stroke="#0E1B2C" stroke-width="1.3"/>
+        <line x1="9" y1="23" x2="17" y2="23" stroke="#0E1B2C" stroke-width="1.3"/>
+        <line x1="9" y1="28" x2="14" y2="28" stroke="#0E1B2C" stroke-width="1.3"/>
+        <circle cx="25" cy="13" r="1.2" fill="#0E1B2C"/><circle cx="30" cy="13" r="1.2" fill="#0E1B2C"/>
+        <circle cx="25" cy="19" r="1.2" fill="#0E1B2C"/><circle cx="30" cy="19" r="1.2" fill="#0E1B2C"/>
+        <circle cx="25" cy="25" r="1.2" fill="#0E1B2C"/><circle cx="30" cy="25" r="1.2" fill="#0E1B2C"/>
+      </svg>
+      <div class="brand-text">
+        <div class="brand-name">SST Portugal</div>
+        <div class="brand-tag">DIREITO &middot; T&Eacute;CNICA</div>
+      </div>
+    </a>
+    <div class="nav-links-desktop">
+      <nav><ul>
+        <li><a href="/#servicos">Serviços</a></li>
+        <li><a href="/#sectores">Sectores</a></li>
+        <li><a href="/#guia">Guia SST</a></li>
+        <li><a href="/#sobre">Sobre</a></li>
+      </ul></nav>
+      <a href="/#contacto" class="btn-nav">Marcar Consulta</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap crumb">
+  <a href="/">Início</a> / <a href="/#sectores">Formação por Sector</a> / <span class="mono" style="color:var(--ink)">Saúde e Cuidados</span>
+</div>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-tags">
+      <span class="hero-tag">Lei 102/2009</span>
+      <span class="hero-tag">DL 84/97 (Biológicos)</span>
+      <span class="hero-tag">DL 330/1993</span>
+      <span class="hero-tag">Guia 2026</span>
+    </div>
+    <h1>Segurança e Saúde no Trabalho em <em>Clínicas e Lares</em>: o guia completo</h1>
+    <p class="hero-sub">Riscos biológicos, movimentação de doentes, violência contra profissionais de saúde, formação obrigatória, fiscalização da ACT e documentação legal — e o que acontece juridicamente quando algo corre mal. Escrito por quem lê a legislação e aplica o processo no terreno.</p>
+    <div class="hero-meta">
+      <span class="mono">≈ 3 000 PALAVRAS</span>
+      <span class="mono">ACTUALIZADO 2026</span>
+      <span class="mono">SECTOR: SAÚDE E CUIDADOS</span>
+      <span class="mono">LEGISLAÇÃO PORTUGUESA</span>
+    </div>
+  </div>
+</section>
+
+<section class="stats-section">
+  <div class="wrap">
+    <span class="section-eyebrow">Contexto · Portugal</span>
+    <h2 style="max-width: 26ch;">Os dois riscos que definem o sector: exposição biológica e violência</h2>
+    <p class="lead">Estudos em instituições de saúde portuguesas mostram um padrão consistente: a maioria dos acidentes de trabalho com risco biológico é subnotificada, e a violência contra profissionais de saúde tem aumentado, sobretudo em urgências e psiquiatria — dois riscos que raramente aparecem juntos noutro sector de actividade.</p>
+
+    <div class="stat-row">
+      <div class="stat-item"><span class="stat-number">80,1%</span><span class="stat-label">das exposições ocupacionais a risco biológico em estudo hospitalar português foram causadas por lesões percutâneas, sobretudo com agulhas</span></div>
+      <div class="stat-item"><span class="stat-number">71,7%</span><span class="stat-label">dos profissionais inquiridos reportaram pelo menos 1-2 exposições ocupacionais a agentes biológicos nos últimos 5 anos</span></div>
+      <div class="stat-item"><span class="stat-number">5 251</span><span class="stat-label">eventos de violência contra trabalhadores de saúde registados no sistema NOTIFICA em Portugal (2014 a 2019)</span></div>
+      <div class="stat-item"><span class="stat-number">80,9%</span><span class="stat-label">é a taxa estimada de subnotificação de acidentes com lesão mucocutânea — a maioria nunca chega a ser registada</span></div>
+    </div>
+
+    <div class="pull-quote"><p>O maior risco em saúde não é o acidente que acontece — é o que nunca é registado. Um picada de agulha sem sintomas imediatos é frequentemente ignorada; um episódio de agressão verbal é tratado como "faz parte do trabalho". Ambos são, legalmente, acidentes de trabalho a documentar.</p></div>
+
+    <p>A subnotificação sistemática destes dois riscos tem uma consequência jurídica directa: sem registo, não há prova de exposição, e sem prova de exposição, o reconhecimento de doença profissional ou de nexo causal com um problema de saúde posterior torna-se muito mais difícil — tanto para o trabalhador como para a defesa da instituição perante uma inspecção.</p>
+  </div>
+</section>
+
+<div class="page-wrap">
+<article>
+
+<div class="section" id="formacao">
+  <span class="section-eyebrow">§ I · Formação Obrigatória</span>
+  <h2>Formação em clínicas e lares: três planos, obrigações distintas</h2>
+  <p class="lead">Numa unidade de saúde ou lar, o que é obrigatório para um assistente operacional é diferente do que é exigido a um enfermeiro exposto a risco biológico directo, ou a um responsável clínico. Esta distinção é a primeira coisa que a ACT verifica.</p>
+
+  <div class="box box-legal">
+    <span class="box-label">Base legal principal</span>
+    <ul>
+      <li>Lei n.º 102/2009, de 10 de setembro — lei-quadro de SST</li>
+      <li>Decreto-Lei n.º 84/97 — protecção contra riscos de exposição a agentes biológicos</li>
+      <li>Decreto-Lei n.º 330/1993 — prescrições mínimas de segurança nos locais de trabalho</li>
+      <li>Código do Trabalho, art.º 131.º — 40 horas anuais de formação contínua</li>
+    </ul>
+  </div>
+
+  <div class="formacao-card">
+    <div class="formacao-card-header">
+      <div>
+        <span class="formacao-badge badge-obrig">Obrigatório para todos</span>
+        <h3>Plano 1 — Formação de base em SST para profissionais de saúde e cuidados</h3>
+        <p style="font-size:13.5px;color:var(--ink-55);margin:6px 0 0">Todo o trabalhador que entre em funções, seja clínico ou de apoio, deve receber esta formação antes de contacto directo com doentes ou utentes.</p>
+      </div>
+      <span class="formacao-badge badge-horas">Mínimo 8h</span>
+    </div>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Legislação de SST aplicável a unidades de saúde (Lei 102/2009, DL 84/97)</li>
+          <li>Precauções básicas de controlo de infecção — higienização das mãos, uso correcto de EPI</li>
+          <li>Procedimento em caso de picada de agulha ou exposição a fluidos biológicos</li>
+          <li>Técnicas seguras de movimentação e transferência de doentes/utentes</li>
+          <li>Procedimentos de emergência e evacuação da unidade</li>
+          <li>Reconhecimento precoce de sinais de agitação ou agressividade em doentes/utentes e procedimento de desescalada</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos e condições</h6>
+        <ul>
+          <li>Ministrada antes do início de funções com contacto directo com doentes</li>
+          <li>Formador com Certificado de Competências Pedagógicas (CCP) válido</li>
+          <li>Certificado individual e registo de presença</li>
+          <li>Repetida sempre que o trabalhador mude para serviço com riscos substancialmente diferentes — por exemplo, de ambulatório para urgência</li>
+        </ul>
+      </div>
+    </div>
+    <div class="box box-nota" style="margin-top:18px">
+      <span class="box-label">Trabalhadores de empresas prestadoras</span>
+      <p>Limpeza hospitalar, segurança e manutenção subcontratadas em unidades de saúde estão expostas aos mesmos riscos biológicos que o pessoal clínico, e precisam de formação equivalente sobre precauções de controlo de infecção — a entidade contratante mantém a obrigação de os informar sobre os riscos concretos do espaço.</p>
+    </div>
+  </div>
+
+  <div class="formacao-card">
+    <div class="formacao-card-header">
+      <div>
+        <span class="formacao-badge badge-obrig">Obrigatório por actividade</span>
+        <h3>Plano 2 — Formações específicas por actividade de risco</h3>
+        <p style="font-size:13.5px;color:var(--ink-55);margin:6px 0 0">Determinadas actividades exigem formação certificada específica, além da formação de base.</p>
+      </div>
+    </div>
+
+    <h4>Exposição a agentes biológicos e material cortoperfurante</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>DL 84/97 e classificação de agentes biológicos por grupo de risco</li>
+          <li>Uso de dispositivos cortoperfurantes com sistema de segurança incorporado</li>
+          <li>Sequência correcta de descarte de material perfurocortante</li>
+          <li>Procedimento pós-exposição: lavagem imediata, comunicação, avaliação de risco, eventual profilaxia</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li><strong>Duração mínima: 8 horas</strong>, com prática de técnica segura de manuseamento</li>
+          <li>Registo obrigatório de cada exposição, mesmo sem sintomas imediatos</li>
+          <li>Vacinação da hepatite B disponibilizada e documentada para trabalhadores expostos</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Movimentação e transferência de doentes/utentes</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Técnicas de transferência com e sem equipamento de apoio (gruas de transferência, cintos)</li>
+          <li>Avaliação da mobilidade do doente antes de qualquer movimentação</li>
+          <li>Postura correcta do profissional para prevenir lesão lombar</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li><strong>Duração mínima: 8 horas</strong>, com componente prática obrigatória</li>
+          <li>Particularmente relevante em lares e unidades de cuidados continuados, onde a movimentação manual é diária e repetida</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Gestão de comportamentos agressivos e prevenção de violência</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Reconhecimento de sinais precoces de escalada — em doentes, familiares ou acompanhantes</li>
+          <li>Técnicas de desescalada verbal e distanciamento seguro</li>
+          <li>Procedimento de alerta e apoio de colegas em caso de agressão iminente</li>
+          <li>Registo obrigatório de qualquer episódio, mesmo sem lesão física</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li><strong>Duração mínima: 6 horas</strong>, reforçada em serviços de urgência e psiquiatria</li>
+          <li>Meio de alerta silencioso disponível em postos de maior risco</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Trabalho por turnos e nocturno</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Gestão de fadiga em turnos rotativos e nocturnos</li>
+          <li>Reconhecimento de sinais de sonolência crítica em horários de maior risco de erro</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li><strong>2 a 4 horas</strong>, integrada na formação de base</li>
+          <li>Vigilância da saúde reforçada para trabalhadores nocturnos habituais</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="formacao-card">
+    <div class="formacao-card-header">
+      <div>
+        <span class="formacao-badge badge-cargo">Obrigatório por cargo</span>
+        <h3>Plano 3 — Responsáveis clínicos, direcção técnica e técnico de SST</h3>
+        <p style="font-size:13.5px;color:var(--ink-55);margin:6px 0 0">Os cargos de responsabilidade têm exigências reforçadas, em particular pela sobreposição com obrigações de qualidade e segurança do doente.</p>
+      </div>
+    </div>
+
+    <h4>Director técnico / responsável clínico</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Coordenação entre segurança do trabalhador e segurança do doente — frequentemente tratadas separadamente, mas juridicamente interligadas</li>
+          <li>Investigação de acidentes de trabalho e de incidentes de exposição biológica</li>
+          <li>Gestão do plano de prevenção da violência no local de trabalho</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li><strong>Duração mínima: 16 horas</strong></li>
+          <li>Registo em ficha individual e no dossier de SST da unidade</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Técnico de SST</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Avaliação de riscos específica: biológico, ergonómico, psicossocial e de violência</li>
+          <li>Articulação com a comissão de controlo de infecção da unidade, quando exista</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li>Certificação ACT como TSST ou TSSST — obrigatória para exercer</li>
+          <li>Renovação: mínimo 48 horas em 5 anos (TSST) ou 60 horas (TSSST)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box box-legal" style="margin-top:20px">
+      <span class="box-label">Segurança do trabalhador vs. segurança do doente — não confundir</span>
+      <p style="color:#5c1a26;margin:0">Muitas unidades de saúde têm processos robustos de segurança do doente (protocolos clínicos, gestão de risco assistencial), mas tratam a segurança do próprio trabalhador como assunto secundário. São obrigações legais distintas, com bases jurídicas diferentes — e a ACT fiscaliza especificamente a segunda, independentemente da qualidade da primeira.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ II</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="fiscalizacao">
+  <span class="section-eyebrow">§ II · Fiscalização da ACT</span>
+  <h2>O que a ACT verifica em clínicas e lares — e quando aparece</h2>
+  <p class="lead">A fiscalização em unidades de saúde cruza-se frequentemente com a de outras entidades (ERS, IGAS), mas a ACT mantém competência própria sobre as condições de trabalho dos profissionais — distinta da fiscalização da qualidade assistencial.</p>
+
+  <h3>Quando e como a ACT inspecciona</h3>
+  <div class="fisca-timeline">
+    <div class="fisca-item">
+      <div class="fisca-dot">01</div>
+      <div class="fisca-content">
+        <h5>Após exposição biológica com incapacidade</h5>
+        <p>Uma picada de agulha ou exposição a fluidos com incapacidade superior a 3 dias úteis obriga a comunicar à ACT em 24-48 horas, tal como qualquer outro acidente de trabalho.</p>
+        <span class="fisca-tag fisca-tag-a">Obrigatória em 24-48h após acidente grave</span>
+      </div>
+    </div>
+    <div class="fisca-item">
+      <div class="fisca-dot">02</div>
+      <div class="fisca-content">
+        <h5>Após agressão a profissional com lesão relevante</h5>
+        <p>Um episódio de violência física com incapacidade para o trabalho é acidente de trabalho para todos os efeitos, incluindo comunicação obrigatória.</p>
+        <span class="fisca-tag fisca-tag-a">Obrigatória em 24-48h após acidente grave</span>
+      </div>
+    </div>
+    <div class="fisca-item">
+      <div class="fisca-dot">03</div>
+      <div class="fisca-content">
+        <h5>Por denúncia de profissional</h5>
+        <p>Frequentemente relacionada com ausência de EPI adequado, falta de meios de alerta em episódios de violência, ou sobrecarga sistemática em turnos.</p>
+        <span class="fisca-tag fisca-tag-a">Sem aviso prévio · Urgente</span>
+      </div>
+    </div>
+    <div class="fisca-item">
+      <div class="fisca-dot">04</div>
+      <div class="fisca-content">
+        <h5>Inspecção de seguimento</h5>
+        <p>Após intimação com prazo, segue-se segunda visita de verificação. Persistindo a infracção, aplicam-se coimas agravadas.</p>
+        <span class="fisca-tag fisca-tag-b">No prazo fixado na intimação anterior</span>
+      </div>
+    </div>
+  </div>
+
+  <h3>O que verificam — em detalhe</h3>
+
+  <h4>1 · Precauções de controlo biológico</h4>
+  <div class="checklist">
+    <li>EPI adequado disponível e efectivamente usado — luvas, batas, máscaras conforme o procedimento</li>
+    <li>Dispositivos cortoperfurantes com sistema de segurança incorporado, quando disponíveis no mercado</li>
+    <li>Contentores de descarte de material perfurocortante em conformidade e nunca cheios acima do limite</li>
+    <li>Vacinação de hepatite B disponibilizada e documentada para trabalhadores expostos</li>
+  </div>
+
+  <h4>2 · Registo de exposições e acidentes</h4>
+  <div class="checklist">
+    <li>Registo de todas as exposições biológicas, incluindo sem sintomas imediatos</li>
+    <li>Registo de episódios de violência ou agressão, mesmo sem lesão física</li>
+    <li>Procedimento pós-exposição documentado e conhecido pelos profissionais</li>
+  </div>
+
+  <h4>3 · Ergonomia e movimentação de doentes</h4>
+  <div class="checklist">
+    <li>Equipamento de apoio à transferência disponível quando aplicável (gruas, cintos)</li>
+    <li>Formação documentada em técnicas seguras de movimentação</li>
+  </div>
+
+  <h4>4 · Prevenção de violência</h4>
+  <div class="checklist">
+    <li>Plano de prevenção de violência documentado, reforçado em urgência e psiquiatria</li>
+    <li>Meios de alerta disponíveis em postos de maior risco</li>
+    <li>Formação em desescalada para profissionais com contacto directo</li>
+  </div>
+
+  <h3>Coimas aplicáveis — valores reais</h3>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Infracção</th><th>Classificação</th><th>Coima (pessoa colectiva)</th><th>Diploma</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Ausência de EPI adequado a risco biológico</strong></td><td class="badge" style="color:var(--bordeaux)">Muito Grave</td><td>2 040 € a 9 690 € / trabalhador</td><td class="mono">DL 84/97</td></tr>
+      <tr><td><strong>Ausência de formação SST</strong></td><td class="badge" style="color:var(--bordeaux)">Muito Grave</td><td>2 040 € a 9 690 € / trabalhador</td><td class="mono">Lei 102/2009</td></tr>
+      <tr><td><strong>Ausência de avaliação de riscos (incl. biológicos e violência)</strong></td><td class="badge" style="color:var(--bordeaux)">Muito Grave</td><td>2 040 € a 9 690 €</td><td class="mono">Lei 102/2009</td></tr>
+      <tr><td><strong>Contentores de cortoperfurantes inadequados</strong></td><td class="badge" style="color:#6b5124">Grave</td><td>1 020 € a 4 845 €</td><td class="mono">DL 84/97</td></tr>
+      <tr><td><strong>Obstaculização à inspecção</strong></td><td class="badge" style="color:var(--bordeaux)">Muito Grave</td><td>2 040 € a 9 690 € + participação criminal</td><td class="mono">Lei 102/2009</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="cta-inline">
+    <div><strong>A sua unidade regista todas as exposições biológicas e episódios de violência?</strong><p>Diagnóstico de conformidade sem compromisso.</p></div>
+    <a href="/#contacto" class="btn-primary">Pedir diagnóstico</a>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ III</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="equipamentos">
+  <span class="section-eyebrow">§ III · Equipamentos e Instalações</span>
+  <h2>Certificação de equipamentos em clínicas e lares</h2>
+  <p class="lead">O equipamento crítico de SST em saúde não são máquinas de produção — são dispositivos de protecção biológica e equipamento de apoio à mobilidade, cuja falha tem consequência directa e imediata para quem presta cuidados.</p>
+
+  <div class="equip-grid">
+    <div class="equip-card">
+      <div class="equip-card-title"><span class="equip-idx">EQ · 01</span><h5>Gruas e equipamento de transferência de doentes</h5></div>
+      <div class="equip-detail">
+        <div class="equip-detail-item"><div class="equip-detail-label">Periodicidade</div><div class="equip-detail-value"><strong>Inspecção anual</strong> por pessoa competente, verificação visual antes de cada uso</div></div>
+        <div class="equip-detail-item" style="grid-column:1/-1"><div class="equip-detail-label">O que verifica</div><div class="equip-detail-value">Sistema de elevação, cintos e arneses sem desgaste, capacidade de carga adequada ao doente</div></div>
+      </div>
+    </div>
+    <div class="equip-card">
+      <div class="equip-card-title"><span class="equip-idx">EQ · 02</span><h5>Contentores de material cortoperfurante</h5></div>
+      <div class="equip-detail">
+        <div class="equip-detail-item"><div class="equip-detail-label">Substituição</div><div class="equip-detail-value">Antes de atingir o limite de enchimento indicado (tipicamente 3/4 da capacidade)</div></div>
+        <div class="equip-detail-item" style="grid-column:1/-1"><div class="equip-detail-label">O que verifica</div><div class="equip-detail-value">Conformidade da embalagem, disponibilidade em todos os pontos de uso, recolha por operador licenciado de resíduos hospitalares</div></div>
+      </div>
+    </div>
+    <div class="equip-card">
+      <div class="equip-card-title"><span class="equip-idx">EQ · 03</span><h5>Sistemas de alerta e videovigilância em áreas de risco</h5></div>
+      <div class="equip-detail">
+        <div class="equip-detail-item"><div class="equip-detail-label">Verificação</div><div class="equip-detail-value">Funcional em urgências, psiquiatria e outros postos de maior exposição a violência</div></div>
+        <div class="equip-detail-item" style="grid-column:1/-1"><div class="equip-detail-label">Enquadramento RGPD</div><div class="equip-detail-value">Videovigilância sujeita a informação prévia aos trabalhadores e enquadramento próprio de protecção de dados</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ IV</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="documentacao">
+  <span class="section-eyebrow">§ IV · Documentação Legal</span>
+  <h2>Documentação obrigatória: quando, o quê, onde e por quanto tempo</h2>
+  <p class="lead">Em saúde, a documentação de SST tem uma particularidade: cruza-se com dados de saúde de trabalhadores (vacinação, exposições biológicas) sujeitos a regras próprias de confidencialidade, além das obrigações gerais de conservação.</p>
+
+  <div class="doc-grid">
+    <div class="doc-card"><h5>Avaliação de riscos biológicos e de violência</h5><div class="doc-card-detail">Específica por serviço — não é a mesma para ambulatório e para urgência.<strong>Disponível na unidade</strong></div></div>
+    <div class="doc-card"><h5>Registo de exposições biológicas</h5><div class="doc-card-detail">Cada exposição, mesmo sem sintomas, com procedimento pós-exposição documentado.<strong>Conservar mín. 5 anos; agentes específicos podem exigir mais</strong></div></div>
+    <div class="doc-card"><h5>Registo de vacinação de trabalhadores expostos</h5><div class="doc-card-detail">Hepatite B e outras vacinas relevantes, dado de saúde sensível.<strong>Confidencial, gerido pela saúde ocupacional</strong></div></div>
+    <div class="doc-card"><h5>Registo de episódios de violência</h5><div class="doc-card-detail">Incluindo agressão verbal, com medidas tomadas em resposta.<strong>Conservar mín. 5 anos</strong></div></div>
+    <div class="doc-card"><h5>Plano de prevenção de violência</h5><div class="doc-card-detail">Reforçado para serviços de maior risco.<strong>Conhecido por todos os profissionais</strong></div></div>
+    <div class="doc-card"><h5>Certificação ACT do técnico de SST</h5><div class="doc-card-detail">Comprovativo TSST/TSSST com registo e validade.<strong>Disponível na unidade</strong></div></div>
+  </div>
+
+  <div class="box box-pratica">
+    <span class="box-label">Dois arquivos, não um</span>
+    <p>Os registos de exposição biológica e vacinação de trabalhadores são dados de saúde, sujeitos a RGPD e segredo profissional — devem ficar num arquivo confidencial de saúde ocupacional, separado do dossier geral de SST/RH, com acesso restrito ao médico do trabalho e à direcção clínica.</p>
+  </div>
+
+  <div class="cta-inline">
+    <div><strong>Todas as exposições biológicas e episódios de violência estão registados?</strong><p>Diagnóstico de conformidade sem compromisso.</p></div>
+    <a href="/#contacto" class="btn-primary">Pedir diagnóstico</a>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ V</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="mais">
+  <span class="section-eyebrow">§ V · Aspectos críticos adicionais</span>
+  <h2>O que mais é crítico saber em SST de saúde e cuidados</h2>
+
+  <h3>A subnotificação como problema legal, não só cultural</h3>
+  <p>Estudos em instituições portuguesas mostram que a maioria das exposições biológicas, sobretudo as mucocutâneas, nunca chega a ser formalmente registada — por percepção de baixo risco ou por burocracia do processo de participação. O problema não é apenas cultural: sem registo, a instituição não tem forma de demonstrar cumprimento das suas obrigações de prevenção numa eventual inspecção, e o trabalhador perde a ligação documental entre a exposição e um eventual problema de saúde posterior.</p>
+
+  <h3>Violência em urgência e psiquiatria — risco estrutural, não incidente isolado</h3>
+  <p>A investigação disponível confirma que os serviços de urgência e psiquiatria concentram desproporcionalmente os episódios de violência contra profissionais de saúde. Tratar cada episódio como um caso isolado, sem análise de padrão, impede a identificação de medidas estruturais — reforço de segurança em horários específicos, formação diferenciada por serviço, ou alteração de layout físico do espaço de atendimento.</p>
+
+  <h3>Lares e cuidados continuados — movimentação manual diária</h3>
+  <p>Ao contrário de um hospital com maior disponibilidade de equipamento de apoio, muitos lares operam com rácios de pessoal mais apertados e equipamento de transferência insuficiente para o volume de utentes com mobilidade reduzida. A lesão lombar cumulativa em auxiliares de acção directa é uma das causas mais comuns de baixa prolongada no sector, e é directamente prevenível com equipamento adequado e formação em técnica de transferência.</p>
+
+  <h3>Vigilância da saúde do próprio profissional de saúde</h3>
+  <p>É comum, e paradoxal, que unidades de saúde sejam menos rigorosas na vigilância da saúde dos seus próprios profissionais do que seriam esperados de qualquer outra empresa — a lógica de "eles sabem cuidar de si próprios" não substitui a obrigação legal de exames periódicos, vacinação documentada e vigilância específica para exposição biológica e trabalho por turnos.</p>
+
+  <div class="box box-alerta">
+    <span class="box-label">"Faz parte do trabalho" não é enquadramento legal válido</span>
+    <p>A normalização de agressão verbal ou de exposições biológicas menores como "parte inerente à profissão de saúde" não tem correspondência na lei — a obrigação de prevenção e registo aplica-se da mesma forma, independentemente de quão comum o risco pareça ser dentro da cultura do sector.</p>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ VI</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="defesa">
+  <span class="section-eyebrow">§ VI · Quando a conformidade falha</span>
+  <h2>Auto de notícia, contra-ordenação e defesa jurídica</h2>
+  <p class="lead">Em saúde, um processo de contra-ordenação frequentemente coexiste com processos noutras frentes — investigação da Entidade Reguladora da Saúde, eventual processo disciplinar de ordem profissional, ou processo civil por parte do trabalhador afectado. Coordenar estas frentes exige leitura jurídica desde o início.</p>
+
+  <div class="steps">
+    <div class="step-item"><div class="step-num">01</div><div class="step-content"><h5>Auto de notícia ou queixa</h5><p>Pode originar-se numa exposição biológica mal gerida, num episódio de violência sem resposta institucional, ou em denúncia de profissional.</p></div></div>
+    <div class="step-item"><div class="step-num">02</div><div class="step-content"><h5>Investigação e recolha de prova</h5><p>Registos de exposição, procedimentos pós-exposição aplicados (ou não), e histórico de formação são centrais na avaliação de responsabilidade.</p></div></div>
+    <div class="step-item"><div class="step-num">03</div><div class="step-content"><h5>Defesa escrita</h5><p>Circunstâncias atenuantes — resposta imediata ao incidente, medidas correctivas já implementadas — podem reduzir substancialmente a coima.</p></div></div>
+    <div class="step-item"><div class="step-num">04</div><div class="step-content"><h5>Recurso judicial, se necessário</h5><p>Da decisão da ACT cabe recurso para o tribunal do trabalho competente.</p></div></div>
+  </div>
+
+  <div class="box box-legal">
+    <span class="box-label">Exposição biológica sem resposta adequada — o cenário mais grave</span>
+    <p style="color:#5c1a26;margin:0">Quando uma exposição biológica não tem procedimento pós-exposição aplicado a tempo — lavagem imediata, avaliação de risco, eventual profilaxia — e o trabalhador desenvolve infecção subsequente, a exposição da instituição vai muito além da coima administrativa: entra em território de responsabilidade civil por danos à saúde, com o registo (ou ausência dele) do procedimento aplicado a decidir o desfecho.</p>
+  </div>
+
+  <h3>Checklist final de conformidade</h3>
+  <div class="checklist">
+    <li>Avaliação de riscos biológicos, ergonómicos e de violência, actualizada por serviço</li>
+    <li>Todos os profissionais com formação de base antes de contacto directo com doentes</li>
+    <li>Procedimento pós-exposição biológica documentado, conhecido e efectivamente aplicado</li>
+    <li>Contentores de cortoperfurantes conformes e nunca sobrelotados</li>
+    <li>Registo de todas as exposições biológicas, mesmo sem sintomas imediatos</li>
+    <li>Plano de prevenção de violência reforçado em urgência e psiquiatria</li>
+    <li>Equipamento de transferência de doentes disponível e em bom estado</li>
+    <li>Vacinação de trabalhadores expostos disponibilizada e documentada</li>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ VII</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="faq">
+  <span class="section-eyebrow">§ VII · Perguntas Frequentes</span>
+  <h2>Dúvidas recorrentes de direcções clínicas e responsáveis de lares</h2>
+
+  <h3>Uma picada de agulha sem sintomas precisa mesmo de ser registada?</h3>
+  <p>Sim, sempre — o risco de transmissão não se avalia pela presença de sintomas imediatos, que tipicamente não existem numa exposição recente. O registo e o procedimento pós-exposição (lavagem, avaliação, eventual profilaxia) têm de ser aplicados independentemente de o profissional "sentir que não foi nada".</p>
+
+  <h3>Um episódio de agressão verbal de um doente, sem lesão física, conta como acidente de trabalho?</h3>
+  <p>Pode contar, se resultar em dano psicológico documentável, e deve ser registado como incidente de qualquer forma, independentemente de configurar formalmente acidente de trabalho reparável. O registo é o que permite identificar padrões e fundamentar reforço de prevenção — sem ele, cada episódio fica isolado e invisível estatisticamente.</p>
+
+  <h3>Um lar pequeno, sem enfermeiro permanente, tem as mesmas obrigações que um hospital?</h3>
+  <p>As obrigações de SST aplicam-se proporcionalmente à dimensão e ao risco real da actividade, não há isenção por pequena escala. Um lar com utentes de mobilidade reduzida tem obrigações de formação em movimentação manual e de equipamento de apoio adequado, independentemente de não ter a complexidade clínica de um hospital.</p>
+
+  <h3>Que diferença faz ter advogada e TSST na mesma pessoa, numa unidade de saúde?</h3>
+  <p>Nas situações mais delicadas do sector — uma exposição biológica com desfecho grave, um episódio de violência com lesão relevante — a resposta imediata da instituição tem implicações simultâneas em SST, em responsabilidade civil e, nalguns casos, em processo disciplinar de ordem profissional. Ter estas competências reunidas permite coordenar a resposta desde a primeira hora, em vez de accionar profissionais diferentes que desconhecem o histórico técnico completo do caso.</p>
+</div>
+
+</article>
+
+<aside class="sidebar">
+  <div class="toc-title">Índice do Guia</div>
+  <ul class="toc">
+    <li class="toc-section"><a href="#formacao"><span class="toc-num">I</span>Formação Obrigatória</a>
+      <ul class="toc-sub"><li><a href="#formacao">Plano 1 — Base para todos</a></li><li><a href="#formacao">Plano 2 — Por actividade</a></li><li><a href="#formacao">Plano 3 — Responsáveis e técnicos</a></li></ul></li>
+    <li class="toc-section"><a href="#fiscalizacao"><span class="toc-num">II</span>Fiscalização da ACT</a></li>
+    <li class="toc-section"><a href="#equipamentos"><span class="toc-num">III</span>Equipamentos e Instalações</a></li>
+    <li class="toc-section"><a href="#documentacao"><span class="toc-num">IV</span>Documentação Legal</a></li>
+    <li class="toc-section"><a href="#mais"><span class="toc-num">V</span>Aspectos Críticos</a>
+      <ul class="toc-sub"><li><a href="#mais">Subnotificação</a></li><li><a href="#mais">Violência</a></li><li><a href="#mais">Movimentação de doentes</a></li></ul></li>
+    <li class="toc-section"><a href="#defesa"><span class="toc-num">VI</span>Defesa Jurídica</a></li>
+  </ul>
+
+  <div class="sidebar-box">
+    <div class="sidebar-box-title">Precisa de apoio?</div>
+    <p><strong>Diagnóstico de conformidade sem compromisso.</strong> Analisamos a situação da sua clínica ou lar, incluindo riscos biológicos e de violência.</p>
+    <a href="/#contacto" class="btn-primary">Pedir diagnóstico</a>
+  </div>
+
+  <div class="sidebar-law">
+    <div class="sidebar-law-title">Base legal principal</div>
+    <ul>
+      <li>Lei n.º 102/2009 — SST geral</li>
+      <li>DL n.º 84/97 — Agentes biológicos</li>
+      <li>DL n.º 330/1993 — Locais de trabalho</li>
+      <li>CT art.º 131.º — Formação</li>
+    </ul>
+  </div>
+</aside>
+
+</div>
+
+<section class="cta-final" style="background:var(--ink);color:var(--paper);padding:70px 0;text-align:center" id="contacto">
+  <div class="wrap" style="max-width:720px">
+    <h2 style="color:var(--paper);font-size:clamp(26px,3.6vw,42px);margin-bottom:18px">A sua unidade está pronta para uma visita da ACT amanhã?</h2>
+    <p style="color:rgba(244,239,230,0.72);font-size:16px;margin-bottom:30px">Da exposição biológica à prevenção de violência, com a leitura jurídica que protege profissionais e instituição. Diagnóstico sem compromisso.</p>
+    <a href="/#contacto" class="btn-primary" style="background:var(--brass);color:var(--ink);padding:14px 30px;font-size:14px">Marcar Consulta</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="mono">SST PORTUGAL · sstportugal.pt · © 2026</div>
+    <div class="mono">Cédula OA 56666P · TSST nv.6</div>
+  </div>
+</footer>
+
+</body>
+</html>
