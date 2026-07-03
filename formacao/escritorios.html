@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Segurança e Saúde no Trabalho em Escritório: Guia Completo 2026 | SST Portugal</title>
+<meta name="description" content="Guia completo de SST em escritório em Portugal: ergonomia, riscos psicossociais, formação obrigatória, fiscalização da ACT e documentação legal — com a leitura jurídica que falta na maioria dos guias técnicos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0E1B2C;
+    --paper: #F4EFE6;
+    --paper-deep: #EAE3D5;
+    --bordeaux: #7A2233;
+    --bordeaux-tint: #F7ECEE;
+    --sage: #4C5B4A;
+    --sage-tint: #EEF1EE;
+    --brass: #B08A3E;
+    --brass-tint: #FAF3E6;
+    --rule: rgba(14,27,44,0.16);
+    --ink-70: rgba(14,27,44,0.72);
+    --ink-55: rgba(14,27,44,0.55);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    font-size: 16.5px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { font-family: 'Fraunces', serif; font-weight: 500; letter-spacing: -0.01em; line-height: 1.1; color: var(--ink); }
+  em { font-style: italic; color: var(--bordeaux); }
+  a { color: inherit; text-decoration: none; }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+  .label-tech { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-55); }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+  .rule-h { height: 1px; background: var(--rule); width: 100%; }
+  p { color: var(--ink-70); margin-bottom: 18px; }
+  p strong { color: var(--ink); font-weight: 600; }
+
+  /* HEADER — same system as homepage */
+  header { background: var(--paper); border-bottom: 1px solid var(--rule); position: sticky; top: 0; z-index: 100; }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand-text { line-height: 1.2; }
+  .brand-name { font-family: 'Fraunces', serif; font-size: 16px; color: var(--ink); }
+  .brand-tag { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; color: var(--ink-55); }
+  nav ul { list-style: none; display: flex; gap: 28px; font-size: 13.5px; }
+  nav a:hover { color: var(--bordeaux); }
+  .btn-nav { background: var(--ink); color: var(--paper); padding: 9px 18px; font-size: 12.5px; font-weight: 500; border-radius: 2px; }
+  .btn-nav:hover { background: var(--bordeaux); }
+  .nav-links-desktop { display: flex; align-items: center; gap: 28px; }
+  .crumb { font-size: 12px; color: var(--ink-55); padding: 10px 0; border-bottom: 1px solid var(--rule); }
+  .crumb a:hover { color: var(--bordeaux); }
+
+  /* HERO */
+  .hero { border-bottom: 1px solid var(--rule); padding: 54px 0 44px; }
+  .hero-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+  .hero-tag { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.06em; color: var(--bordeaux); border: 1px solid rgba(122,34,51,0.3); padding: 4px 10px; }
+  .hero h1 { font-size: clamp(30px, 4vw, 48px); max-width: 18ch; }
+  .hero-sub { font-size: 16.5px; color: var(--ink-70); max-width: 70ch; margin: 22px 0 0; }
+  .hero-meta { display: flex; gap: 22px; flex-wrap: wrap; font-size: 12.5px; color: var(--ink-55); border-top: 1px solid var(--rule); padding-top: 20px; margin-top: 28px; }
+  .hero-meta .mono { font-size: 12px; }
+
+  /* STATS */
+  .stats-section { padding: 46px 0 6px; }
+  .stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin: 28px 0 36px; }
+  .stat-item { background: var(--paper); padding: 24px 20px; }
+  .stat-number { font-family: 'Fraunces', serif; font-size: 34px; font-weight: 600; color: var(--bordeaux); line-height: 1; display: block; margin-bottom: 8px; }
+  .stat-label { font-size: 12px; color: var(--ink-70); line-height: 1.4; }
+  .pull-quote { border-left: 2px solid var(--bordeaux); padding: 20px 28px; background: var(--bordeaux-tint); margin: 32px 0; }
+  .pull-quote p { font-family: 'Fraunces', serif; font-style: italic; font-size: clamp(16px, 1.8vw, 20px); color: var(--ink); margin: 0; }
+
+  /* LAYOUT */
+  .page-wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: 1fr 300px; gap: 56px; align-items: start; }
+  article { padding: 50px 0 20px; }
+
+  /* SIDEBAR */
+  .sidebar { position: sticky; top: 76px; padding: 50px 0; }
+  .toc-title { font-size: 10.5px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-55); margin-bottom: 14px; font-family: 'JetBrains Mono', monospace; }
+  .toc { list-style: none; }
+  .toc-section { margin-bottom: 2px; }
+  .toc-section > a { display: flex; gap: 10px; padding: 9px 0; font-size: 13px; font-weight: 600; color: var(--ink); text-decoration: none; border-top: 1px solid var(--rule); line-height: 1.4; }
+  .toc-section > a:hover { color: var(--bordeaux); }
+  .toc-num { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: var(--bordeaux); min-width: 18px; padding-top: 2px; }
+  .toc-sub { list-style: none; padding-left: 28px; }
+  .toc-sub li a { display: block; font-size: 12px; color: var(--ink-55); padding: 4px 0; }
+  .toc-sub li a:hover { color: var(--bordeaux); }
+  .sidebar-box { background: var(--ink); color: var(--paper); padding: 22px; margin-top: 30px; }
+  .sidebar-box-title { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brass); margin-bottom: 10px; font-family: 'JetBrains Mono', monospace; }
+  .sidebar-box p { font-size: 12.5px; color: rgba(244,239,230,0.72); margin-bottom: 14px; }
+  .sidebar-box a.btn-primary { display: block; text-align: center; }
+  .sidebar-law { background: var(--sage-tint); border: 1px solid rgba(76,91,74,0.2); padding: 18px; margin-top: 18px; }
+  .sidebar-law-title { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin-bottom: 10px; font-family: 'JetBrains Mono', monospace; }
+  .sidebar-law ul { list-style: none; }
+  .sidebar-law ul li { font-size: 11.5px; color: var(--sage); padding: 4px 0; border-bottom: 1px solid rgba(76,91,74,0.12); }
+
+  /* SECTIONS */
+  .section { margin-bottom: 72px; }
+  .section-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--bordeaux); display: block; margin-bottom: 10px; }
+  h2 { font-size: clamp(24px, 2.8vw, 34px); margin-bottom: 12px; }
+  h3 { font-size: clamp(18px, 2vw, 23px); font-weight: 600; margin: 36px 0 14px; }
+  h4 { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink); margin: 26px 0 10px; padding-bottom: 8px; border-bottom: 1px solid var(--rule); }
+  .lead { font-size: clamp(15.5px, 1.6vw, 17.5px); color: var(--ink-70); max-width: 74ch; margin-bottom: 30px; }
+  .section-sep { display: flex; align-items: center; gap: 16px; margin: 64px 0 46px; }
+  .section-sep-line { flex: 1; height: 1px; background: var(--rule); }
+  .section-sep-tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-55); white-space: nowrap; }
+
+  /* BOXES */
+  .box { border-left: 3px solid; padding: 20px 24px; margin: 28px 0; position: relative; }
+  .box-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; display: block; }
+  .box p:last-child { margin-bottom: 0; }
+  .box-legal { border-color: var(--bordeaux); background: var(--bordeaux-tint); }
+  .box-legal .box-label { color: var(--bordeaux); }
+  .box-legal p { color: #5c1a26; }
+  .box-legal ul { list-style: none; margin-top: 6px; }
+  .box-legal ul li { font-size: 13.5px; color: #5c1a26; padding: 4px 0 4px 16px; position: relative; }
+  .box-legal ul li::before { content: '§'; position: absolute; left: 0; font-weight: 700; }
+  .box-alerta { border-color: var(--ink); background: var(--paper-deep); }
+  .box-alerta .box-label { color: var(--ink); }
+  .box-alerta p { color: var(--ink); }
+  .box-pratica { border-color: var(--sage); background: var(--sage-tint); }
+  .box-pratica .box-label { color: var(--sage); }
+  .box-pratica p { color: #2e392c; }
+  .box-nota { border-color: var(--brass); background: var(--brass-tint); }
+  .box-nota .box-label { color: var(--brass); }
+  .box-nota p { color: #6b5124; }
+
+  /* LISTS */
+  ul.styled, ol.styled { list-style: none; padding: 0; margin: 18px 0 26px; }
+  ul.styled li { position: relative; padding-left: 20px; margin-bottom: 9px; color: var(--ink-70); }
+  ul.styled li::before { content: '—'; position: absolute; left: 0; color: var(--bordeaux); font-weight: 700; }
+  ul.styled li strong { color: var(--ink); }
+  ol.styled { counter-reset: item; }
+  ol.styled li { position: relative; padding-left: 36px; margin-bottom: 12px; color: var(--ink-70); counter-increment: item; }
+  ol.styled li::before { content: counter(item, decimal-leading-zero); position: absolute; left: 0; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; color: var(--bordeaux); top: 3px; }
+  ol.styled li strong { color: var(--ink); }
+  .checklist { list-style: none; margin: 18px 0; }
+  .checklist li { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--rule); font-size: 14.5px; color: var(--ink-70); align-items: flex-start; }
+  .checklist li::before { content: '□'; color: var(--ink-55); font-size: 15px; flex-shrink: 0; line-height: 1.6; }
+
+  /* TABLES */
+  .table-wrap { overflow-x: auto; margin: 28px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  thead th { background: var(--ink); color: var(--paper); font-weight: 600; font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; padding: 12px 14px; text-align: left; font-family: 'JetBrains Mono', monospace; }
+  tbody tr { border-bottom: 1px solid var(--rule); }
+  tbody tr:nth-child(even) { background: var(--paper-deep); }
+  td { padding: 12px 14px; color: var(--ink-70); vertical-align: top; line-height: 1.5; }
+  td strong { color: var(--ink); }
+  td.badge { font-size: 10.5px; font-weight: 700; letter-spacing: 0.05em; white-space: nowrap; font-family: 'JetBrains Mono', monospace; }
+
+  /* CARD GRIDS reused across sections */
+  .doc-grid, .equip-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin: 28px 0; }
+  .equip-grid { grid-template-columns: repeat(2, 1fr); }
+  .doc-card, .equip-card { background: var(--paper); padding: 22px; }
+  .doc-card h5, .equip-card h5 { font-family: 'Fraunces', serif; font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
+  .doc-card-detail, .equip-detail-value { font-size: 12.5px; color: var(--ink-70); line-height: 1.55; }
+  .doc-card-detail strong { color: var(--bordeaux); display: block; margin-top: 8px; font-size: 10.5px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; font-family: 'JetBrains Mono', monospace; }
+  .equip-card-title { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+  .equip-idx { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--ink-55); }
+  .equip-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 4px; }
+  .equip-detail-item { background: var(--paper-deep); padding: 10px 12px; }
+  .equip-detail-label { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-55); margin-bottom: 4px; }
+
+  /* FORMAÇÃO CARDS */
+  .formacao-card { border: 1px solid var(--rule); background: var(--paper); padding: 30px; margin-bottom: 22px; }
+  .formacao-card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 6px; flex-wrap: wrap; }
+  .formacao-card h3 { font-size: 21px; margin: 8px 0 6px; }
+  .formacao-badge { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 11px; white-space: nowrap; }
+  .badge-obrig { background: var(--bordeaux); color: var(--paper); }
+  .badge-cargo { background: var(--sage); color: var(--paper); }
+  .badge-horas { background: var(--ink); color: var(--paper); }
+  .formacao-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 18px; }
+  .formacao-col h6 { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-55); margin-bottom: 10px; }
+  .formacao-col ul { list-style: none; padding: 0; }
+  .formacao-col ul li { font-size: 13px; color: var(--ink-70); padding: 5px 0; border-bottom: 1px solid var(--rule); display: flex; gap: 8px; }
+  .formacao-col ul li::before { content: '→'; color: var(--bordeaux); font-size: 11px; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+  .formacao-col ul li strong { color: var(--ink); }
+
+  /* TIMELINE */
+  .fisca-timeline { margin: 28px 0; }
+  .fisca-item { display: flex; gap: 22px; position: relative; }
+  .fisca-item::before { content: ''; position: absolute; left: 18px; top: 44px; bottom: -28px; width: 1px; background: var(--rule); }
+  .fisca-item:last-child::before { display: none; }
+  .fisca-dot { width: 38px; height: 38px; border: 1px solid var(--ink); background: var(--paper); color: var(--ink); font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 500; display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 1; }
+  .fisca-content { flex: 1; padding-bottom: 30px; }
+  .fisca-content h5 { font-family: 'Fraunces', serif; font-size: 16.5px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+  .fisca-content p { font-size: 13.5px; margin: 0 0 6px; }
+  .fisca-tag { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 10px; margin-top: 4px; }
+  .fisca-tag-a { background: var(--bordeaux-tint); color: var(--bordeaux); }
+  .fisca-tag-b { background: var(--brass-tint); color: #6b5124; }
+  .fisca-tag-c { background: var(--sage-tint); color: var(--sage); }
+
+  /* STEPS */
+  .steps { display: flex; flex-direction: column; margin: 28px 0; }
+  .step-item { display: flex; gap: 22px; padding: 20px 0; border-bottom: 1px solid var(--rule); }
+  .step-num { font-family: 'Fraunces', serif; font-size: 32px; font-weight: 600; color: rgba(122,34,51,0.18); line-height: 1; flex-shrink: 0; min-width: 44px; }
+  .step-content h5 { font-family: 'Fraunces', serif; font-size: 15.5px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+  .step-content p { font-size: 13.5px; margin: 0; }
+
+  /* CTA INLINE */
+  .cta-inline { background: var(--ink); color: var(--paper); padding: 28px 32px; margin: 44px 0; display: flex; justify-content: space-between; align-items: center; gap: 22px; flex-wrap: wrap; }
+  .cta-inline p { color: rgba(244,239,230,0.72); font-size: 14px; margin: 0; }
+  .cta-inline strong { display: block; font-family: 'Fraunces', serif; font-size: 18px; font-weight: 600; margin-bottom: 6px; color: var(--paper); }
+  .btn-primary { display: inline-block; background: var(--ink); color: var(--paper); font-size: 13px; font-weight: 500; padding: 12px 22px; white-space: nowrap; border-radius: 2px; }
+  .btn-primary:hover { background: var(--bordeaux); }
+  .cta-inline .btn-primary { background: var(--brass); color: var(--ink); }
+
+  footer { background: var(--paper); border-top: 1px solid var(--rule); padding: 32px 0; }
+  .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+  .footer-inner .mono { font-size: 12px; color: var(--ink-55); }
+
+  @media (max-width: 900px) {
+    .page-wrap { grid-template-columns: 1fr; }
+    .sidebar { display: none; }
+    .formacao-grid, .equip-grid, .doc-grid, .stat-row { grid-template-columns: 1fr; }
+    .nav-links-desktop { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <a href="/" class="brand">
+      <svg width="28" height="28" viewBox="0 0 40 40" aria-hidden="true">
+        <rect x="4" y="4" width="32" height="32" rx="3" fill="none" stroke="#0E1B2C" stroke-width="1.1"/>
+        <line x1="20" y1="4" x2="20" y2="36" stroke="#0E1B2C" stroke-width="0.7"/>
+        <line x1="9" y1="13" x2="17" y2="13" stroke="#0E1B2C" stroke-width="1.3"/>
+        <line x1="9" y1="18" x2="16" y2="18" stroke="#0E1B2C" stroke-width="1.3"/>
+        <line x1="9" y1="23" x2="17" y2="23" stroke="#0E1B2C" stroke-width="1.3"/>
+        <line x1="9" y1="28" x2="14" y2="28" stroke="#0E1B2C" stroke-width="1.3"/>
+        <circle cx="25" cy="13" r="1.2" fill="#0E1B2C"/><circle cx="30" cy="13" r="1.2" fill="#0E1B2C"/>
+        <circle cx="25" cy="19" r="1.2" fill="#0E1B2C"/><circle cx="30" cy="19" r="1.2" fill="#0E1B2C"/>
+        <circle cx="25" cy="25" r="1.2" fill="#0E1B2C"/><circle cx="30" cy="25" r="1.2" fill="#0E1B2C"/>
+      </svg>
+      <div class="brand-text">
+        <div class="brand-name">SST Portugal</div>
+        <div class="brand-tag">DIREITO &middot; T&Eacute;CNICA</div>
+      </div>
+    </a>
+    <div class="nav-links-desktop">
+      <nav><ul>
+        <li><a href="/#servicos">Serviços</a></li>
+        <li><a href="/#sectores">Sectores</a></li>
+        <li><a href="/#guia">Guia SST</a></li>
+        <li><a href="/#sobre">Sobre</a></li>
+      </ul></nav>
+      <a href="/#contacto" class="btn-nav">Marcar Consulta</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap crumb">
+  <a href="/">Início</a> / <a href="/#sectores">Formação por Sector</a> / <span class="mono" style="color:var(--ink)">Escritórios</span>
+</div>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-tags">
+      <span class="hero-tag">Lei 102/2009</span>
+      <span class="hero-tag">Código do Trabalho</span>
+      <span class="hero-tag">DL 220/2008 (SCIE)</span>
+      <span class="hero-tag">Guia 2026</span>
+    </div>
+    <h1>Segurança e Saúde no Trabalho em <em>Escritório</em>: o guia completo</h1>
+    <p class="hero-sub">Ergonomia, riscos psicossociais, formação obrigatória, fiscalização da ACT em ambiente administrativo e documentação legal — e o que acontece juridicamente quando algo corre mal. Escrito por quem lê a legislação e aplica o processo no terreno.</p>
+    <div class="hero-meta">
+      <span class="mono">≈ 3 200 PALAVRAS</span>
+      <span class="mono">ACTUALIZADO 2026</span>
+      <span class="mono">SECTOR: ESCRITÓRIOS</span>
+      <span class="mono">LEGISLAÇÃO PORTUGUESA</span>
+    </div>
+  </div>
+</section>
+
+<section class="stats-section">
+  <div class="wrap">
+    <span class="section-eyebrow">Contexto · Portugal</span>
+    <h2 style="max-width: 26ch;">O escritório não tem quedas de andaime — tem um custo que não aparece nas estatísticas de acidentes</h2>
+    <p class="lead">O risco em ambiente administrativo raramente é um acontecimento súbito. É cumulativo — lesão musculoesquelética por postura prolongada, e sobretudo saúde psicológica, uma área que a Lei 102/2009 obriga expressamente a avaliar e que a maioria das empresas de escritório em Portugal ainda não avalia formalmente.</p>
+
+    <div class="stat-row">
+      <div class="stat-item"><span class="stat-number">2/10</span><span class="stat-label">trabalhadores em Portugal reportam problemas de saúde psicológica relacionados com o trabalho, segundo a Ordem dos Psicólogos</span></div>
+      <div class="stat-item"><span class="stat-number">329M€</span><span class="stat-label">custo anual estimado para as empresas portuguesas em perda de produtividade por saúde psicológica</span></div>
+      <div class="stat-item"><span class="stat-number">13,6€</span><span class="stat-label">retorno estimado por cada 1€ investido em prevenção de riscos psicossociais</span></div>
+      <div class="stat-item"><span class="stat-number">2017</span><span class="stat-label">ano em que o stress psicológico passou a ser obrigatoriamente considerado na legislação laboral portuguesa</span></div>
+    </div>
+
+    <div class="pull-quote"><p>A avaliação de riscos psicossociais não é uma boa prática opcional de RH — é uma obrigação expressa do art.º 5.º da Lei 102/2009, tão vinculativa como a avaliação de risco químico numa fábrica. A diferença é que quase ninguém a trata como tal.</p></div>
+
+    <p>A ACT fiscaliza escritórios com muito menos frequência do que estaleiros ou fábricas — mas fiscaliza, sobretudo após queixas relacionadas com assédio, sobrecarga de trabalho ou ausência de avaliação ergonómica. E a exposição legal não desaparece só porque o risco é menos visível do que uma máquina sem protecção.</p>
+  </div>
+</section>
+
+<div class="page-wrap">
+<article>
+
+<div class="section" id="formacao">
+  <span class="section-eyebrow">§ I · Formação Obrigatória</span>
+  <h2>Formação em escritório: três planos, obrigações distintas</h2>
+  <p class="lead">Em ambiente administrativo, a formação obrigatória é frequentemente ignorada por parecer desnecessária — "é só um escritório". A lei não faz essa distinção: as obrigações de SST aplicam-se a qualquer local de trabalho, incluindo os que parecem mais seguros à primeira vista.</p>
+
+  <div class="box box-legal">
+    <span class="box-label">Base legal principal</span>
+    <ul>
+      <li>Lei n.º 102/2009, de 10 de setembro — lei-quadro de SST, incluindo avaliação obrigatória de riscos psicossociais (art.º 5.º)</li>
+      <li>Código do Trabalho, art.º 131.º — 40 horas anuais de formação contínua</li>
+      <li>Decreto-Lei n.º 330/1993 — prescrições mínimas de segurança e saúde nos locais de trabalho</li>
+      <li>Decreto-Lei n.º 220/2008 — Segurança Contra Incêndio em Edifícios (SCIE)</li>
+    </ul>
+  </div>
+
+  <div class="formacao-card">
+    <div class="formacao-card-header">
+      <div>
+        <span class="formacao-badge badge-obrig">Obrigatório para todos</span>
+        <h3>Plano 1 — Formação de base em SST para trabalhadores de escritório</h3>
+        <p style="font-size:13.5px;color:var(--ink-55);margin:6px 0 0">Todo o trabalhador que inicie funções em ambiente administrativo deve receber esta formação, ainda que de duração reduzida face a sectores de maior risco físico.</p>
+      </div>
+      <span class="formacao-badge badge-horas">Mínimo 4h</span>
+    </div>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Legislação de SST aplicável ao escritório (Lei 102/2009, DL 330/1993)</li>
+          <li>Ergonomia do posto de trabalho: postura, altura de ecrã, cadeira ajustável</li>
+          <li>Riscos eléctricos básicos e boas práticas com equipamento informático</li>
+          <li>Procedimentos de evacuação e emergência do edifício</li>
+          <li>Riscos psicossociais: sobrecarga, prazos, relações interpessoais no trabalho</li>
+          <li>Direitos e deveres do trabalhador em SST</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos e condições</h6>
+        <ul>
+          <li>Ministrada antes do início de funções ou nas primeiras semanas</li>
+          <li>Pode ser prestada em regime misto — módulo online mais sessão presencial de reconhecimento do espaço</li>
+          <li>Certificado individual e registo de presença</li>
+          <li>Repetida quando o trabalhador muda de edifício ou de posto com condições substancialmente diferentes</li>
+        </ul>
+      </div>
+    </div>
+    <div class="box box-nota" style="margin-top:18px">
+      <span class="box-label">Trabalho remoto e híbrido</span>
+      <p>A obrigação de formação em SST não desaparece quando o trabalho é prestado a partir de casa. O empregador mantém o dever de informar sobre ergonomia do posto doméstico e de assegurar que as condições mínimas de segurança são cumpridas, ainda que a avaliação directa do espaço seja necessariamente mais limitada do que num escritório físico.</p>
+    </div>
+  </div>
+
+  <div class="formacao-card">
+    <div class="formacao-card-header">
+      <div>
+        <span class="formacao-badge badge-obrig">Obrigatório por actividade</span>
+        <h3>Plano 2 — Formações específicas por actividade de risco</h3>
+        <p style="font-size:13.5px;color:var(--ink-55);margin:6px 0 0">Poucas em número, mas relevantes para funções específicas dentro de um escritório.</p>
+      </div>
+    </div>
+
+    <h4>Segurança contra incêndio e evacuação (SCIE)</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Categoria de risco SCIE do edifício e plano de emergência associado</li>
+          <li>Utilização de extintores; procedimento de alarme e evacuação</li>
+          <li>Pontos de encontro e apoio a pessoas com mobilidade reduzida na evacuação</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li><strong>Mínimo 3 horas</strong>, com simulacro periódico obrigatório conforme categoria de risco do edifício</li>
+          <li>Delegados e equipas de segurança designados formalmente, com formação reforçada</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Ergonomia avançada para postos com trabalho intensivo em ecrã</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Regulação de cadeira, secretária e monitor conforme antropometria individual</li>
+          <li>Pausas activas e alternância de postura em jornadas prolongadas de ecrã</li>
+          <li>Sinais de alerta de lesão musculoesquelética precoce</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li><strong>2 horas</strong>, recomendada para funções com mais de 6 horas diárias de ecrã</li>
+          <li>Avaliação individual do posto por técnico de SST em casos de queixa recorrente</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="formacao-card">
+    <div class="formacao-card-header">
+      <div>
+        <span class="formacao-badge badge-cargo">Obrigatório por cargo</span>
+        <h3>Plano 3 — Chefias, RH e técnico de SST</h3>
+        <p style="font-size:13.5px;color:var(--ink-55);margin:6px 0 0">Quem gere pessoas tem responsabilidade acrescida na prevenção de riscos psicossociais — a lei trata a chefia como parte activa da prevenção, não como observador.</p>
+      </div>
+    </div>
+
+    <h4>Chefias e gestores de equipa</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Identificação de sinais precoces de sobrecarga, burnout e conflito de equipa</li>
+          <li>Gestão de carga de trabalho e distribuição realista de prazos</li>
+          <li>Procedimento de encaminhamento em situações de assédio ou conflito</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li><strong>Duração mínima: 8 horas</strong> — sem carga horária legalmente fixada, mas cada vez mais expectativa de boa prática em auditoria</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Técnico de SST / Psicólogo do Trabalho</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Avaliação formal de riscos psicossociais (metodologia reconhecida, ex. guias da DGS)</li>
+          <li>Ergonomia de posto administrativo</li>
+          <li>Investigação de queixas e articulação com RH</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li>Certificação ACT como TSST/TSSST, ou inscrição na Ordem dos Psicólogos para funções de Psicólogo do Trabalho</li>
+          <li>Um psicólogo do trabalho está legalmente limitado a 150 horas de vigilância de saúde psicológica por mês — relevante para dimensionar o serviço em empresas maiores</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box box-legal" style="margin-top:20px">
+      <span class="box-label">Riscos psicossociais não são "só RH"</span>
+      <p style="color:#5c1a26;margin:0">É comum tratar-se sobrecarga de trabalho e conflitos interpessoais como assunto exclusivo de recursos humanos, fora do âmbito de SST. Legalmente, não é assim: a Lei 102/2009 integra os factores psicossociais na mesma obrigação de avaliação e prevenção de qualquer outro risco profissional. Tratar o tema apenas como RH, sem avaliação formal de SST, é uma lacuna que a ACT já começa a identificar em fiscalização, sobretudo após denúncia.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ II</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="fiscalizacao">
+  <span class="section-eyebrow">§ II · Fiscalização da ACT</span>
+  <h2>O que a ACT verifica em escritório — e quando aparece</h2>
+  <p class="lead">A fiscalização em ambiente de escritório é menos frequente do que em sectores de maior risco físico, mas cresce de forma consistente em duas frentes: condições ergonómicas e — cada vez mais — ausência de avaliação de riscos psicossociais.</p>
+
+  <h3>Quando e como a ACT inspecciona</h3>
+  <div class="fisca-timeline">
+    <div class="fisca-item">
+      <div class="fisca-dot">01</div>
+      <div class="fisca-content">
+        <h5>Por denúncia — a via mais comum em escritório</h5>
+        <p>Queixas relacionadas com assédio moral, sobrecarga de trabalho sistemática ou condições ergonómicas inadequadas são a via de entrada mais frequente da ACT em ambiente administrativo.</p>
+        <span class="fisca-tag fisca-tag-a">Sem aviso prévio · Urgente</span>
+      </div>
+    </div>
+    <div class="fisca-item">
+      <div class="fisca-dot">02</div>
+      <div class="fisca-content">
+        <h5>Após baixa médica prolongada associada a stress laboral</h5>
+        <p>Um padrão de baixas médicas por burnout ou stress numa mesma equipa pode desencadear atenção da ACT, sobretudo se articulado com queixa formal de um trabalhador ou representante sindical.</p>
+        <span class="fisca-tag fisca-tag-b">Reactiva a padrão identificado</span>
+      </div>
+    </div>
+    <div class="fisca-item">
+      <div class="fisca-dot">03</div>
+      <div class="fisca-content">
+        <h5>Inspecção conjunta com segurança contra incêndio</h5>
+        <p>Em edifícios de escritórios de maior dimensão, a fiscalização de SST cruza-se com verificação de condições SCIE — saídas desobstruídas, sinalética, extintores válidos.</p>
+        <span class="fisca-tag fisca-tag-b">Conjunta ou articulada com bombeiros/autarquia</span>
+      </div>
+    </div>
+    <div class="fisca-item">
+      <div class="fisca-dot">04</div>
+      <div class="fisca-content">
+        <h5>Inspecção de seguimento</h5>
+        <p>Após intimação com prazo para corrigir, segue-se segunda visita. Persistindo, aplicam-se coimas agravadas.</p>
+        <span class="fisca-tag fisca-tag-b">No prazo fixado na intimação anterior</span>
+      </div>
+    </div>
+  </div>
+
+  <h3>O que verificam — em detalhe</h3>
+
+  <h4>1 · Avaliação de riscos, incluindo psicossociais</h4>
+  <div class="checklist">
+    <li>Avaliação de riscos formal e actualizada, cobrindo explicitamente factores psicossociais</li>
+    <li>Metodologia reconhecida utilizada — não uma impressão genérica sem instrumento de avaliação</li>
+    <li>Medidas correctivas implementadas para riscos identificados, não apenas diagnosticados</li>
+  </div>
+
+  <h4>2 · Ergonomia dos postos de trabalho</h4>
+  <div class="checklist">
+    <li>Cadeiras ajustáveis e secretárias adequadas à função</li>
+    <li>Monitores posicionados correctamente; iluminação adequada ao trabalho de ecrã</li>
+    <li>Pausas previstas para trabalho intensivo de ecrã</li>
+  </div>
+
+  <h4>3 · Formação e documentação</h4>
+  <div class="checklist">
+    <li>Certificados de formação de base de todos os trabalhadores</li>
+    <li>Registo de simulacros de evacuação</li>
+    <li>Modalidade de organização de SST documentada</li>
+  </div>
+
+  <h4>4 · Segurança contra incêndio e instalações</h4>
+  <div class="checklist">
+    <li>Extintores dentro da validade; saídas de emergência desobstruídas</li>
+    <li>Instalações eléctricas verificadas periodicamente</li>
+    <li>Iluminação de emergência operacional</li>
+  </div>
+
+  <h3>Coimas aplicáveis — valores reais</h3>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Infracção</th><th>Classificação</th><th>Coima (pessoa colectiva)</th><th>Diploma</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Ausência de avaliação de riscos (incl. psicossociais)</strong></td><td class="badge" style="color:var(--bordeaux)">Muito Grave</td><td>2 040 € a 9 690 €</td><td class="mono">Lei 102/2009</td></tr>
+      <tr><td><strong>Ausência de formação SST</strong></td><td class="badge" style="color:var(--bordeaux)">Muito Grave</td><td>2 040 € a 9 690 € / trabalhador</td><td class="mono">Lei 102/2009</td></tr>
+      <tr><td><strong>Saída de emergência obstruída</strong></td><td class="badge" style="color:var(--bordeaux)">Muito Grave</td><td>2 040 € a 9 690 € + suspensão</td><td class="mono">DL 220/2008</td></tr>
+      <tr><td><strong>Ausência de plano de emergência / simulacro</strong></td><td class="badge" style="color:#6b5124">Grave</td><td>1 020 € a 4 845 €</td><td class="mono">DL 220/2008</td></tr>
+      <tr><td><strong>Obstaculização à inspecção</strong></td><td class="badge" style="color:var(--bordeaux)">Muito Grave</td><td>2 040 € a 9 690 € + participação criminal</td><td class="mono">Lei 102/2009</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="cta-inline">
+    <div><strong>O seu escritório tem avaliação de riscos psicossociais documentada?</strong><p>Diagnóstico de conformidade sem compromisso.</p></div>
+    <a href="/#contacto" class="btn-primary">Pedir diagnóstico</a>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ III</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="equipamentos">
+  <span class="section-eyebrow">§ III · Equipamentos e Instalações</span>
+  <h2>Certificação de instalações e equipamento de escritório</h2>
+  <p class="lead">O escritório não tem gruas nem prensas, mas tem obrigações de certificação próprias — sobretudo em segurança contra incêndio e instalações eléctricas, os dois pontos que a ACT mais verifica quando visita um espaço administrativo.</p>
+
+  <div class="box box-legal">
+    <span class="box-label">Base legal para instalações</span>
+    <ul>
+      <li>DL n.º 220/2008 — Segurança Contra Incêndio em Edifícios (SCIE)</li>
+      <li>DL n.º 330/1993 — prescrições mínimas de segurança nos locais de trabalho</li>
+      <li>RTIEBT — Regras Técnicas das Instalações Eléctricas de Baixa Tensão</li>
+    </ul>
+  </div>
+
+  <div class="equip-grid">
+    <div class="equip-card">
+      <div class="equip-card-title"><span class="equip-idx">EQ · 01</span><h5>Extintores e sistemas de detecção de incêndio</h5></div>
+      <div class="equip-detail">
+        <div class="equip-detail-item"><div class="equip-detail-label">Periodicidade</div><div class="equip-detail-value"><strong>Manutenção anual</strong> obrigatória, com verificação trimestral recomendada</div></div>
+        <div class="equip-detail-item"><div class="equip-detail-label">Quem realiza</div><div class="equip-detail-value">Empresa certificada de manutenção de meios de extinção</div></div>
+        <div class="equip-detail-item" style="grid-column:1/-1"><div class="equip-detail-label">O que verifica</div><div class="equip-detail-value">Pressão, validade, acessibilidade e sinalização de cada extintor; funcionamento de detectores de fumo e central de incêndio</div></div>
+      </div>
+    </div>
+    <div class="equip-card">
+      <div class="equip-card-title"><span class="equip-idx">EQ · 02</span><h5>Instalações eléctricas e quadros</h5></div>
+      <div class="equip-detail">
+        <div class="equip-detail-item"><div class="equip-detail-label">Inspecção inicial</div><div class="equip-detail-value">Antes de entrada em serviço do espaço, por técnico qualificado</div></div>
+        <div class="equip-detail-item"><div class="equip-detail-label">Periodicidade</div><div class="equip-detail-value">Verificação periódica conforme RTIEBT e idade da instalação</div></div>
+        <div class="equip-detail-item" style="grid-column:1/-1"><div class="equip-detail-label">O que verifica</div><div class="equip-detail-value">Diferenciais residuais, sobrecarga de tomadas múltiplas, estado de cablagem visível</div></div>
+      </div>
+    </div>
+    <div class="equip-card">
+      <div class="equip-card-title"><span class="equip-idx">EQ · 03</span><h5>Iluminação de emergência</h5></div>
+      <div class="equip-detail">
+        <div class="equip-detail-item"><div class="equip-detail-label">Periodicidade</div><div class="equip-detail-value">Teste funcional mensal; autonomia verificada anualmente</div></div>
+        <div class="equip-detail-item"><div class="equip-detail-label">O que verifica</div><div class="equip-detail-value">Acendimento automático em corte de energia, autonomia mínima de 1 hora, cobertura de rotas de evacuação</div></div>
+      </div>
+    </div>
+    <div class="equip-card">
+      <div class="equip-card-title"><span class="equip-idx">EQ · 04</span><h5>Mobiliário ergonómico</h5></div>
+      <div class="equip-detail">
+        <div class="equip-detail-item"><div class="equip-detail-label">Verificação</div><div class="equip-detail-value">Não sujeita a certificação periódica formal, mas a avaliação ergonómica deve confirmar adequação</div></div>
+        <div class="equip-detail-item"><div class="equip-detail-label">O que verifica</div><div class="equip-detail-value">Cadeiras com regulação funcional, secretárias à altura correcta, apoios de pés quando necessário</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="box box-nota">
+    <span class="box-label">Espaços partilhados e coworking</span>
+    <p>Em edifícios de escritórios partilhados ou espaços de coworking, a responsabilidade pelas instalações comuns (extintores, iluminação de emergência, saídas) é normalmente do gestor do edifício — mas a empresa ocupante mantém a obrigação de avaliar o posto de trabalho concreto dos seus trabalhadores e de confirmar, por escrito, que as condições gerais do edifício cumprem os requisitos mínimos.</p>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ IV</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="documentacao">
+  <span class="section-eyebrow">§ IV · Documentação Legal</span>
+  <h2>Documentação obrigatória: quando, o quê, onde e por quanto tempo</h2>
+  <p class="lead">Em caso de inspecção, é a documentação que decide se a empresa estava em conformidade. Em escritório, a avaliação de riscos psicossociais é frequentemente o documento em falta — não por má vontade, mas por desconhecimento de que é uma obrigação formal, não uma boa prática opcional.</p>
+
+  <h3>A — Organização e avaliação de risco</h3>
+  <div class="doc-grid">
+    <div class="doc-card"><h5>Avaliação de riscos, incluindo psicossociais</h5><div class="doc-card-detail">Cobrindo ergonomia, carga de trabalho, relações interpessoais e organização do trabalho.<strong>Disponível no local</strong></div></div>
+    <div class="doc-card"><h5>Plano de emergência SCIE</h5><div class="doc-card-detail">Procedimentos de evacuação, contactos e ponto de encontro.<strong>Afixado e conhecido por todos</strong></div></div>
+    <div class="doc-card"><h5>Registo de simulacros</h5><div class="doc-card-detail">Data, participantes, duração e observações.<strong>Conservar 3 anos</strong></div></div>
+    <div class="doc-card"><h5>Modalidade de organização de SST</h5><div class="doc-card-detail">Serviço interno, comum ou externo, com responsável identificado.<strong>Disponível para apresentação imediata</strong></div></div>
+    <div class="doc-card"><h5>Registo de queixas e ocorrências</h5><div class="doc-card-detail">Situações reportadas de assédio, sobrecarga ou conflito, com medidas tomadas.<strong>Conservar 5 anos</strong></div></div>
+  </div>
+
+  <h3>B — Formação e pessoal</h3>
+  <div class="doc-grid">
+    <div class="doc-card"><h5>Certificados de formação SST</h5><div class="doc-card-detail">Individuais, incluindo módulos de ergonomia e psicossociais.<strong>Conservar mín. 5 anos</strong></div></div>
+    <div class="doc-card"><h5>Formação de chefias</h5><div class="doc-card-detail">Sobre gestão de sobrecarga e prevenção de conflito.<strong>Registo no dossier de SST</strong></div></div>
+    <div class="doc-card"><h5>Certificação do técnico de SST / psicólogo</h5><div class="doc-card-detail">Comprovativo TSST/TSSST ou inscrição na Ordem dos Psicólogos.<strong>Disponível no local</strong></div></div>
+  </div>
+
+  <h3>Prazos de conservação</h3>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Documento</th><th>Prazo</th><th>Onde conservar</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Avaliação de riscos</strong></td><td>Enquanto vigente + histórico de 5 anos</td><td>Arquivo da empresa</td></tr>
+      <tr><td><strong>Registos de formação</strong></td><td>Mín. 5 anos</td><td>Arquivo da empresa</td></tr>
+      <tr><td><strong>Registo de queixas e ocorrências</strong></td><td>Mín. 5 anos</td><td>Arquivo confidencial de RH/SST</td></tr>
+      <tr><td><strong>Registos de simulacros SCIE</strong></td><td>3 anos</td><td>Dossier de SST</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="box box-pratica">
+    <span class="box-label">Confidencialidade dos dados de saúde psicológica</span>
+    <p>Os registos de vigilância de saúde psicológica são dados de saúde sensíveis, sujeitos a segredo profissional e RGPD — só acessíveis ao psicólogo do trabalho, ao médico do trabalho e, de forma agregada e não individualizada, à empresa. Misturar estes registos com o dossier geral de RH é um erro de conformidade que expõe a empresa a dois problemas em simultâneo: SST e protecção de dados.</p>
+  </div>
+
+  <div class="cta-inline">
+    <div><strong>A avaliação de riscos psicossociais do seu escritório existe, ou só a pretende ter?</strong><p>Diagnóstico de conformidade sem compromisso.</p></div>
+    <a href="/#contacto" class="btn-primary">Pedir diagnóstico</a>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ V</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="mais">
+  <span class="section-eyebrow">§ V · Aspectos críticos adicionais</span>
+  <h2>O que mais é crítico saber em SST de escritório</h2>
+
+  <h3>Riscos psicossociais — a obrigação que a maioria das empresas ignora</h3>
+  <p>A Lei 102/2009 é explícita: a avaliação de riscos profissionais tem de assegurar que a exposição a factores de risco psicossocial não constitui perigo para a segurança e saúde do trabalhador — a mesma obrigação que se aplica a um agente químico ou físico. Desde 2017, o stress psicológico passou a ser obrigatoriamente considerado na legislação laboral, e a lei prevê hoje a figura do Psicólogo do Trabalho, com funções de avaliação e vigilância da saúde psicológica.</p>
+  <p>Os factores mais frequentemente identificados em avaliação incluem carga de trabalho excessiva sem controlo real sobre prazos, ambiguidade de funções, relações interpessoais conflituosas não geridas, insegurança laboral e trabalho por turnos ou horário nocturno quando aplicável a funções de apoio. Nenhum destes factores desaparece por não estar documentado — só a exposição legal da empresa em caso de queixa ou baixa prolongada é que aumenta.</p>
+
+  <h3>Ergonomia — para além da cadeira</h3>
+  <p>A ergonomia de escritório é frequentemente reduzida à escolha de uma cadeira "ergonómica" comprada em catálogo, sem avaliação individual. A avaliação correcta considera a estatura e características de cada trabalhador, a distância e altura do ecrã, a disposição do teclado e rato, e a frequência de pausas em trabalho intensivo de ecrã — sem isto, mesmo o melhor mobiliário do mercado não elimina o risco de lesão musculoesquelética cumulativa.</p>
+
+  <h3>Trabalho remoto e híbrido — a obrigação que se estende para fora do escritório</h3>
+  <p>O trabalho remoto não retira ao empregador a obrigação de SST — apenas a torna mais difícil de verificar directamente. Boas práticas incluem: questionário de auto-avaliação do posto doméstico, disponibilização de equipamento ergonómico adequado (cadeira, elevador de monitor), e formação específica sobre organização do posto em casa, incluindo separação entre tempo de trabalho e descanso, particularmente relevante para prevenção de sobrecarga em regime remoto onde as fronteiras horárias se tornam mais difusas.</p>
+
+  <h3>Assédio moral e sexual — quando o risco psicossocial se torna ilícito</h3>
+  <p>É importante distinguir sobrecarga de trabalho mal gerida — um risco psicossocial a prevenir — de assédio moral ou sexual, que é ilícito nos termos do Código do Trabalho e pode configurar simultaneamente contra-ordenação laboral e ilícito criminal. Uma empresa sem procedimento interno de denúncia e sem código de conduta documentado está duplamente exposta: à responsabilidade por omissão de prevenção de riscos psicossociais, e à responsabilidade directa pelo próprio assédio se não tiver actuado perante uma queixa.</p>
+
+  <div class="box box-alerta">
+    <span class="box-label">Cultura de "estar sempre disponível"</span>
+    <p>A normalização de resposta a emails e mensagens fora de horário, sobretudo com equipas em regime remoto ou híbrido, é um factor de risco psicossocial identificável e documentável — e cada vez mais reconhecido como tal em avaliações formais. O direito a desligar não é apenas uma discussão de cultura organizacional; tem enquadramento legal directo.</p>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ VI</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="defesa">
+  <span class="section-eyebrow">§ VI · Quando a conformidade falha</span>
+  <h2>Auto de notícia, contra-ordenação e defesa jurídica</h2>
+  <p class="lead">Em escritório, os processos mais delicados raramente envolvem uma máquina ou um andaime — envolvem uma queixa de assédio, uma baixa prolongada por burnout, ou uma denúncia de sobrecarga sistemática. Estes casos exigem, mais do que em qualquer outro sector, uma leitura jurídica cuidadosa desde o primeiro momento.</p>
+
+  <div class="steps">
+    <div class="step-item"><div class="step-num">01</div><div class="step-content"><h5>Queixa ou auto de notícia</h5><p>Pode originar-se numa denúncia interna, numa queixa à ACT, ou num processo judicial movido directamente pelo trabalhador.</p></div></div>
+    <div class="step-item"><div class="step-num">02</div><div class="step-content"><h5>Investigação e recolha de prova</h5><p>Em casos de assédio ou riscos psicossociais, a prova é maioritariamente testemunhal e documental — emails, registos de avaliação de desempenho, comunicações internas.</p></div></div>
+    <div class="step-item"><div class="step-num">03</div><div class="step-content"><h5>Defesa escrita e negociação</h5><p>A resposta a uma contra-ordenação ou a uma queixa formal exige coordenação entre a leitura técnica de SST (o que foi ou não avaliado e prevenido) e a leitura jurídica-laboral (que responsabilidade daí decorre).</p></div></div>
+    <div class="step-item"><div class="step-num">04</div><div class="step-content"><h5>Processo judicial, se aplicável</h5><p>Casos de assédio comprovado podem envolver processo-crime em paralelo com o processo laboral — dois enquadramentos jurídicos distintos a gerir simultaneamente.</p></div></div>
+  </div>
+
+  <div class="box box-legal">
+    <span class="box-label">Prevenção como defesa</span>
+    <p style="color:#5c1a26;margin:0">Numa eventual queixa de riscos psicossociais ou assédio, a existência de avaliação formal prévia, medidas correctivas documentadas e um procedimento interno de denúncia funcional são, em si mesmos, elementos de defesa da empresa — demonstram que a obrigação legal de prevenção foi tomada a sério antes do incidente, não é uma resposta reactiva construída depois de a queixa chegar.</p>
+  </div>
+
+  <h3>Checklist final de conformidade</h3>
+  <div class="checklist">
+    <li>Avaliação de riscos formal, incluindo factores psicossociais explicitamente</li>
+    <li>Todos os trabalhadores com formação de base, incluindo remotos e híbridos</li>
+    <li>Postos de trabalho avaliados individualmente do ponto de vista ergonómico</li>
+    <li>Plano de emergência SCIE afixado, com simulacro registado</li>
+    <li>Procedimento interno de denúncia de assédio funcional e conhecido</li>
+    <li>Chefias com formação em gestão de carga de trabalho e prevenção de conflito</li>
+    <li>Extintores e iluminação de emergência dentro da validade</li>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ VII</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="faq">
+  <span class="section-eyebrow">§ VII · Perguntas Frequentes</span>
+  <h2>Dúvidas recorrentes de gestores de RH e responsáveis de escritório</h2>
+
+  <h3>Uma empresa de 5 pessoas em escritório precisa mesmo de avaliação de riscos psicossociais formal?</h3>
+  <p>Sim — a obrigação da Lei 102/2009 não tem um limiar mínimo de dimensão de empresa. Pode ser proporcional à escala (não precisa do mesmo aparato de uma multinacional), mas tem de existir, ser documentada e resultar em medidas concretas, não apenas numa lista de boas intenções.</p>
+
+  <h3>O trabalho remoto elimina a responsabilidade da empresa em SST?</h3>
+  <p>Não. Reduz a capacidade de verificação directa do empregador, mas não elimina a obrigação. Boas práticas — questionário de auto-avaliação, disponibilização de equipamento adequado, formação sobre organização do posto doméstico — são a forma de cumprir a obrigação dentro das limitações reais do regime remoto.</p>
+
+  <h3>Uma queixa de sobrecarga de trabalho é sempre um risco psicossocial "grave"?</h3>
+  <p>Nem sempre — a gravidade depende da persistência, da ausência de medidas correctivas após identificação, e do impacto documentado na saúde do trabalhador. O que transforma uma sobrecarga pontual (gerível) numa não-conformidade séria é a ausência de resposta da empresa depois de o problema ser identificado ou reportado.</p>
+
+  <h3>Que diferença faz ter advogada e TSST na mesma pessoa, num caso de assédio ou burnout?</h3>
+  <p>Um caso de assédio ou de burnout prolongado raramente é apenas uma questão técnica de SST ou apenas uma questão jurídica-laboral — é as duas coisas ao mesmo tempo, com prazos e riscos que se cruzam (contra-ordenação, processo civil, eventualmente processo-crime). Ter estas competências reunidas evita que a empresa receba conselhos técnicos e jurídicos desalinhados de duas fontes diferentes, num momento em que a coerência da resposta é decisiva.</p>
+</div>
+
+</article>
+
+<aside class="sidebar">
+  <div class="toc-title">Índice do Guia</div>
+  <ul class="toc">
+    <li class="toc-section"><a href="#formacao"><span class="toc-num">I</span>Formação Obrigatória</a>
+      <ul class="toc-sub"><li><a href="#formacao">Plano 1 — Base para todos</a></li><li><a href="#formacao">Plano 2 — Por actividade</a></li><li><a href="#formacao">Plano 3 — Chefias e técnicos</a></li></ul></li>
+    <li class="toc-section"><a href="#fiscalizacao"><span class="toc-num">II</span>Fiscalização da ACT</a>
+      <ul class="toc-sub"><li><a href="#fiscalizacao">Quando e como aparecem</a></li><li><a href="#fiscalizacao">Tabela de coimas</a></li></ul></li>
+    <li class="toc-section"><a href="#equipamentos"><span class="toc-num">III</span>Equipamentos e Instalações</a></li>
+    <li class="toc-section"><a href="#documentacao"><span class="toc-num">IV</span>Documentação Legal</a></li>
+    <li class="toc-section"><a href="#mais"><span class="toc-num">V</span>Aspectos Críticos</a>
+      <ul class="toc-sub"><li><a href="#mais">Riscos psicossociais</a></li><li><a href="#mais">Trabalho remoto</a></li><li><a href="#mais">Assédio</a></li></ul></li>
+    <li class="toc-section"><a href="#defesa"><span class="toc-num">VI</span>Defesa Jurídica</a></li>
+  </ul>
+
+  <div class="sidebar-box">
+    <div class="sidebar-box-title">Precisa de apoio?</div>
+    <p><strong>Diagnóstico de conformidade sem compromisso.</strong> Analisamos a situação do seu escritório, incluindo riscos psicossociais.</p>
+    <a href="/#contacto" class="btn-primary">Pedir diagnóstico</a>
+  </div>
+
+  <div class="sidebar-law">
+    <div class="sidebar-law-title">Base legal principal</div>
+    <ul>
+      <li>Lei n.º 102/2009 — SST geral</li>
+      <li>DL n.º 330/1993 — Locais de trabalho</li>
+      <li>DL n.º 220/2008 — SCIE</li>
+      <li>CT art.º 131.º — Formação</li>
+      <li>Código do Trabalho — Assédio</li>
+    </ul>
+  </div>
+</aside>
+
+</div>
+
+<section class="cta-final" style="background:var(--ink);color:var(--paper);padding:70px 0;text-align:center" id="contacto">
+  <div class="wrap" style="max-width:720px">
+    <h2 style="color:var(--paper);font-size:clamp(26px,3.6vw,42px);margin-bottom:18px">A avaliação de riscos psicossociais do seu escritório existe?</h2>
+    <p style="color:rgba(244,239,230,0.72);font-size:16px;margin-bottom:30px">Da ergonomia à prevenção de assédio, com a leitura jurídica que protege a empresa desde o primeiro dia. Diagnóstico sem compromisso.</p>
+    <a href="/#contacto" class="btn-primary" style="background:var(--brass);color:var(--ink);padding:14px 30px;font-size:14px">Marcar Consulta</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="mono">SST PORTUGAL · sstportugal.pt · © 2026</div>
+    <div class="mono">Cédula OA 56666P · TSST nv.6</div>
+  </div>
+</footer>
+
+</body>
+</html>
