@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Segurança em Hotelaria e Restauração em Portugal: Guia Completo 2026 | SST Portugal</title>
+<meta name="description" content="Guia completo de segurança em hotelaria e restauração em Portugal: cozinha, HACCP, formação obrigatória, fiscalização da ACT, certificação de equipamentos e documentação legal — com a leitura jurídica que falta na maioria dos guias técnicos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0E1B2C;
+    --paper: #F4EFE6;
+    --paper-deep: #EAE3D5;
+    --bordeaux: #7A2233;
+    --bordeaux-tint: #F7ECEE;
+    --sage: #4C5B4A;
+    --sage-tint: #EEF1EE;
+    --brass: #B08A3E;
+    --brass-tint: #FAF3E6;
+    --rule: rgba(14,27,44,0.16);
+    --ink-70: rgba(14,27,44,0.72);
+    --ink-55: rgba(14,27,44,0.55);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    font-size: 16.5px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { font-family: 'Fraunces', serif; font-weight: 500; letter-spacing: -0.01em; line-height: 1.1; color: var(--ink); }
+  em { font-style: italic; color: var(--bordeaux); }
+  a { color: inherit; text-decoration: none; }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+  .label-tech { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-55); }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+  .rule-h { height: 1px; background: var(--rule); width: 100%; }
+  p { color: var(--ink-70); margin-bottom: 18px; }
+  p strong { color: var(--ink); font-weight: 600; }
+
+  /* HEADER — same system as homepage */
+  header { background: var(--paper); border-bottom: 1px solid var(--rule); position: sticky; top: 0; z-index: 100; }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand-text { line-height: 1.2; }
+  .brand-name { font-family: 'Fraunces', serif; font-size: 16px; color: var(--ink); }
+  .brand-tag { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; color: var(--ink-55); }
+  nav ul { list-style: none; display: flex; gap: 28px; font-size: 13.5px; }
+  nav a:hover { color: var(--bordeaux); }
+  .btn-nav { background: var(--ink); color: var(--paper); padding: 9px 18px; font-size: 12.5px; font-weight: 500; border-radius: 2px; }
+  .btn-nav:hover { background: var(--bordeaux); }
+  .nav-links-desktop { display: flex; align-items: center; gap: 28px; }
+  .crumb { font-size: 12px; color: var(--ink-55); padding: 10px 0; border-bottom: 1px solid var(--rule); }
+  .crumb a:hover { color: var(--bordeaux); }
+
+  /* HERO */
+  .hero { border-bottom: 1px solid var(--rule); padding: 54px 0 44px; }
+  .hero-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+  .hero-tag { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.06em; color: var(--bordeaux); border: 1px solid rgba(122,34,51,0.3); padding: 4px 10px; }
+  .hero h1 { font-size: clamp(30px, 4vw, 48px); max-width: 18ch; }
+  .hero-sub { font-size: 16.5px; color: var(--ink-70); max-width: 70ch; margin: 22px 0 0; }
+  .hero-meta { display: flex; gap: 22px; flex-wrap: wrap; font-size: 12.5px; color: var(--ink-55); border-top: 1px solid var(--rule); padding-top: 20px; margin-top: 28px; }
+  .hero-meta .mono { font-size: 12px; }
+
+  /* STATS */
+  .stats-section { padding: 46px 0 6px; }
+  .stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin: 28px 0 36px; }
+  .stat-item { background: var(--paper); padding: 24px 20px; }
+  .stat-number { font-family: 'Fraunces', serif; font-size: 34px; font-weight: 600; color: var(--bordeaux); line-height: 1; display: block; margin-bottom: 8px; }
+  .stat-label { font-size: 12px; color: var(--ink-70); line-height: 1.4; }
+  .pull-quote { border-left: 2px solid var(--bordeaux); padding: 20px 28px; background: var(--bordeaux-tint); margin: 32px 0; }
+  .pull-quote p { font-family: 'Fraunces', serif; font-style: italic; font-size: clamp(16px, 1.8vw, 20px); color: var(--ink); margin: 0; }
+
+  /* LAYOUT */
+  .page-wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: 1fr 300px; gap: 56px; align-items: start; }
+  article { padding: 50px 0 20px; }
+
+  /* SIDEBAR */
+  .sidebar { position: sticky; top: 76px; padding: 50px 0; }
+  .toc-title { font-size: 10.5px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-55); margin-bottom: 14px; font-family: 'JetBrains Mono', monospace; }
+  .toc { list-style: none; }
+  .toc-section { margin-bottom: 2px; }
+  .toc-section > a { display: flex; gap: 10px; padding: 9px 0; font-size: 13px; font-weight: 600; color: var(--ink); text-decoration: none; border-top: 1px solid var(--rule); line-height: 1.4; }
+  .toc-section > a:hover { color: var(--bordeaux); }
+  .toc-num { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: var(--bordeaux); min-width: 18px; padding-top: 2px; }
+  .toc-sub { list-style: none; padding-left: 28px; }
+  .toc-sub li a { display: block; font-size: 12px; color: var(--ink-55); padding: 4px 0; }
+  .toc-sub li a:hover { color: var(--bordeaux); }
+  .sidebar-box { background: var(--ink); color: var(--paper); padding: 22px; margin-top: 30px; }
+  .sidebar-box-title { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brass); margin-bottom: 10px; font-family: 'JetBrains Mono', monospace; }
+  .sidebar-box p { font-size: 12.5px; color: rgba(244,239,230,0.72); margin-bottom: 14px; }
+  .sidebar-box a.btn-primary { display: block; text-align: center; }
+  .sidebar-law { background: var(--sage-tint); border: 1px solid rgba(76,91,74,0.2); padding: 18px; margin-top: 18px; }
+  .sidebar-law-title { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin-bottom: 10px; font-family: 'JetBrains Mono', monospace; }
+  .sidebar-law ul { list-style: none; }
+  .sidebar-law ul li { font-size: 11.5px; color: var(--sage); padding: 4px 0; border-bottom: 1px solid rgba(76,91,74,0.12); }
+
+  /* SECTIONS */
+  .section { margin-bottom: 72px; }
+  .section-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--bordeaux); display: block; margin-bottom: 10px; }
+  h2 { font-size: clamp(24px, 2.8vw, 34px); margin-bottom: 12px; }
+  h3 { font-size: clamp(18px, 2vw, 23px); font-weight: 600; margin: 36px 0 14px; }
+  h4 { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink); margin: 26px 0 10px; padding-bottom: 8px; border-bottom: 1px solid var(--rule); }
+  .lead { font-size: clamp(15.5px, 1.6vw, 17.5px); color: var(--ink-70); max-width: 74ch; margin-bottom: 30px; }
+  .section-sep { display: flex; align-items: center; gap: 16px; margin: 64px 0 46px; }
+  .section-sep-line { flex: 1; height: 1px; background: var(--rule); }
+  .section-sep-tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-55); white-space: nowrap; }
+
+  /* BOXES */
+  .box { border-left: 3px solid; padding: 20px 24px; margin: 28px 0; position: relative; }
+  .box-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; display: block; }
+  .box p:last-child { margin-bottom: 0; }
+  .box-legal { border-color: var(--bordeaux); background: var(--bordeaux-tint); }
+  .box-legal .box-label { color: var(--bordeaux); }
+  .box-legal p { color: #5c1a26; }
+  .box-legal ul { list-style: none; margin-top: 6px; }
+  .box-legal ul li { font-size: 13.5px; color: #5c1a26; padding: 4px 0 4px 16px; position: relative; }
+  .box-legal ul li::before { content: '§'; position: absolute; left: 0; font-weight: 700; }
+  .box-alerta { border-color: var(--ink); background: var(--paper-deep); }
+  .box-alerta .box-label { color: var(--ink); }
+  .box-alerta p { color: var(--ink); }
+  .box-pratica { border-color: var(--sage); background: var(--sage-tint); }
+  .box-pratica .box-label { color: var(--sage); }
+  .box-pratica p { color: #2e392c; }
+  .box-nota { border-color: var(--brass); background: var(--brass-tint); }
+  .box-nota .box-label { color: var(--brass); }
+  .box-nota p { color: #6b5124; }
+
+  /* LISTS */
+  ul.styled, ol.styled { list-style: none; padding: 0; margin: 18px 0 26px; }
+  ul.styled li { position: relative; padding-left: 20px; margin-bottom: 9px; color: var(--ink-70); }
+  ul.styled li::before { content: '—'; position: absolute; left: 0; color: var(--bordeaux); font-weight: 700; }
+  ul.styled li strong { color: var(--ink); }
+  ol.styled { counter-reset: item; }
+  ol.styled li { position: relative; padding-left: 36px; margin-bottom: 12px; color: var(--ink-70); counter-increment: item; }
+  ol.styled li::before { content: counter(item, decimal-leading-zero); position: absolute; left: 0; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; color: var(--bordeaux); top: 3px; }
+  ol.styled li strong { color: var(--ink); }
+  .checklist { list-style: none; margin: 18px 0; }
+  .checklist li { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--rule); font-size: 14.5px; color: var(--ink-70); align-items: flex-start; }
+  .checklist li::before { content: '□'; color: var(--ink-55); font-size: 15px; flex-shrink: 0; line-height: 1.6; }
+
+  /* TABLES */
+  .table-wrap { overflow-x: auto; margin: 28px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  thead th { background: var(--ink); color: var(--paper); font-weight: 600; font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; padding: 12px 14px; text-align: left; font-family: 'JetBrains Mono', monospace; }
+  tbody tr { border-bottom: 1px solid var(--rule); }
+  tbody tr:nth-child(even) { background: var(--paper-deep); }
+  td { padding: 12px 14px; color: var(--ink-70); vertical-align: top; line-height: 1.5; }
+  td strong { color: var(--ink); }
+  td.badge { font-size: 10.5px; font-weight: 700; letter-spacing: 0.05em; white-space: nowrap; font-family: 'JetBrains Mono', monospace; }
+
+  /* CARD GRIDS reused across sections */
+  .doc-grid, .equip-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin: 28px 0; }
+  .equip-grid { grid-template-columns: repeat(2, 1fr); }
+  .doc-card, .equip-card { background: var(--paper); padding: 22px; }
+  .doc-card h5, .equip-card h5 { font-family: 'Fraunces', serif; font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
+  .doc-card-detail, .equip-detail-value { font-size: 12.5px; color: var(--ink-70); line-height: 1.55; }
+  .doc-card-detail strong { color: var(--bordeaux); display: block; margin-top: 8px; font-size: 10.5px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; font-family: 'JetBrains Mono', monospace; }
+  .equip-card-title { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+  .equip-idx { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--ink-55); }
+  .equip-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 4px; }
+  .equip-detail-item { background: var(--paper-deep); padding: 10px 12px; }
+  .equip-detail-label { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-55); margin-bottom: 4px; }
+
+  /* FORMAÇÃO CARDS */
+  .formacao-card { border: 1px solid var(--rule); background: var(--paper); padding: 30px; margin-bottom: 22px; }
+  .formacao-card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 6px; flex-wrap: wrap; }
+  .formacao-card h3 { font-size: 21px; margin: 8px 0 6px; }
+  .formacao-badge { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 11px; white-space: nowrap; }
+  .badge-obrig { background: var(--bordeaux); color: var(--paper); }
+  .badge-cargo { background: var(--sage); color: var(--paper); }
+  .badge-horas { background: var(--ink); color: var(--paper); }
+  .formacao-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 18px; }
+  .formacao-col h6 { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-55); margin-bottom: 10px; }
+  .formacao-col ul { list-style: none; padding: 0; }
+  .formacao-col ul li { font-size: 13px; color: var(--ink-70); padding: 5px 0; border-bottom: 1px solid var(--rule); display: flex; gap: 8px; }
+  .formacao-col ul li::before { content: '→'; color: var(--bordeaux); font-size: 11px; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+  .formacao-col ul li strong { color: var(--ink); }
+
+  /* TIMELINE */
+  .fisca-timeline { margin: 28px 0; }
+  .fisca-item { display: flex; gap: 22px; position: relative; }
+  .fisca-item::before { content: ''; position: absolute; left: 18px; top: 44px; bottom: -28px; width: 1px; background: var(--rule); }
+  .fisca-item:last-child::before { display: none; }
+  .fisca-dot { width: 38px; height: 38px; border: 1px solid var(--ink); background: var(--paper); color: var(--ink); font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 500; display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 1; }
+  .fisca-content { flex: 1; padding-bottom: 30px; }
+  .fisca-content h5 { font-family: 'Fraunces', serif; font-size: 16.5px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+  .fisca-content p { font-size: 13.5px; margin: 0 0 6px; }
+  .fisca-tag { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 10px; margin-top: 4px; }
+  .fisca-tag-a { background: var(--bordeaux-tint); color: var(--bordeaux); }
+  .fisca-tag-b { background: var(--brass-tint); color: #6b5124; }
+  .fisca-tag-c { background: var(--sage-tint); color: var(--sage); }
+
+  /* STEPS */
+  .steps { display: flex; flex-direction: column; margin: 28px 0; }
+  .step-item { display: flex; gap: 22px; padding: 20px 0; border-bottom: 1px solid var(--rule); }
+  .step-num { font-family: 'Fraunces', serif; font-size: 32px; font-weight: 600; color: rgba(122,34,51,0.18); line-height: 1; flex-shrink: 0; min-width: 44px; }
+  .step-content h5 { font-family: 'Fraunces', serif; font-size: 15.5px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+  .step-content p { font-size: 13.5px; margin: 0; }
+
+  /* CTA INLINE */
+  .cta-inline { background: var(--ink); color: var(--paper); padding: 28px 32px; margin: 44px 0; display: flex; justify-content: space-between; align-items: center; gap: 22px; flex-wrap: wrap; }
+  .cta-inline p { color: rgba(244,239,230,0.72); font-size: 14px; margin: 0; }
+  .cta-inline strong { display: block; font-family: 'Fraunces', serif; font-size: 18px; font-weight: 600; margin-bottom: 6px; color: var(--paper); }
+  .btn-primary { display: inline-block; background: var(--ink); color: var(--paper); font-size: 13px; font-weight: 500; padding: 12px 22px; white-space: nowrap; border-radius: 2px; }
+  .btn-primary:hover { background: var(--bordeaux); }
+  .cta-inline .btn-primary { background: var(--brass); color: var(--ink); }
+
+  footer { background: var(--paper); border-top: 1px solid var(--rule); padding: 32px 0; }
+  .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+  .footer-inner .mono { font-size: 12px; color: var(--ink-55); }
+
+  @media (max-width: 900px) {
+    .page-wrap { grid-template-columns: 1fr; }
+    .sidebar { display: none; }
+    .formacao-grid, .equip-grid, .doc-grid, .stat-row { grid-template-columns: 1fr; }
+    .nav-links-desktop { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <a href="/" class="brand">
+      <svg width="28" height="28" viewBox="0 0 40 40" aria-hidden="true">
+        <rect x="4" y="4" width="32" height="32" rx="3" fill="none" stroke="#0E1B2C" stroke-width="1.1"/>
+        <line x1="20" y1="4" x2="20" y2="36" stroke="#0E1B2C" stroke-width="0.7"/>
+        <line x1="9" y1="13" x2="17" y2="13" stroke="#0E1B2C" stroke-width="1.3"/>
+        <line x1="9" y1="18" x2="16" y2="18" stroke="#0E1B2C" stroke-width="1.3"/>
+        <line x1="9" y1="23" x2="17" y2="23" stroke="#0E1B2C" stroke-width="1.3"/>
+        <line x1="9" y1="28" x2="14" y2="28" stroke="#0E1B2C" stroke-width="1.3"/>
+        <circle cx="25" cy="13" r="1.2" fill="#0E1B2C"/><circle cx="30" cy="13" r="1.2" fill="#0E1B2C"/>
+        <circle cx="25" cy="19" r="1.2" fill="#0E1B2C"/><circle cx="30" cy="19" r="1.2" fill="#0E1B2C"/>
+        <circle cx="25" cy="25" r="1.2" fill="#0E1B2C"/><circle cx="30" cy="25" r="1.2" fill="#0E1B2C"/>
+      </svg>
+      <div class="brand-text">
+        <div class="brand-name">SST Portugal</div>
+        <div class="brand-tag">DIREITO &middot; T&Eacute;CNICA</div>
+      </div>
+    </a>
+    <div class="nav-links-desktop">
+      <nav><ul>
+        <li><a href="/#servicos">Serviços</a></li>
+        <li><a href="/#sectores">Sectores</a></li>
+        <li><a href="/#guia">Guia SST</a></li>
+        <li><a href="/#sobre">Sobre</a></li>
+      </ul></nav>
+      <a href="/#contacto" class="btn-nav">Marcar Consulta</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap crumb">
+  <a href="/">Início</a> / <a href="/#sectores">Formação por Sector</a> / <span class="mono" style="color:var(--ink)">Hotelaria e Restauração</span>
+</div>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-tags">
+      <span class="hero-tag">Lei 102/2009</span>
+      <span class="hero-tag">DL 220/2008 (SCIE)</span>
+      <span class="hero-tag">Regulamento HACCP</span>
+      <span class="hero-tag">Guia 2026</span>
+    </div>
+    <h1>Segurança em Hotelaria e Restauração: <em>o guia completo</em> para 2026</h1>
+    <p class="hero-sub">Cozinha, sala e recepção: formação obrigatória por plano, fiscalização da ACT, certificação de equipamentos e documentação legal — e o que acontece juridicamente quando algo corre mal. Escrito por quem lê a legislação e aplica o processo no terreno.</p>
+    <div class="hero-meta">
+      <span class="mono">≈ 2 800 PALAVRAS</span>
+      <span class="mono">ACTUALIZADO 2026</span>
+      <span class="mono">SECTOR: HOTELARIA E RESTAURAÇÃO</span>
+      <span class="mono">LEGISLAÇÃO PORTUGUESA</span>
+    </div>
+  </div>
+</section>
+
+<section class="stats-section">
+  <div class="wrap">
+    <span class="section-eyebrow">Contexto · Portugal</span>
+    <h2 style="max-width: 26ch;">Um sector jovem, de rotação elevada, com o pior registo de subnotificação</h2>
+    <p class="lead">A hotelaria e restauração emprega sobretudo mão-de-obra jovem em pequenas empresas — e é também, segundo estudos académicos portugueses, o sector onde a subnotificação de acidentes é mais acentuada, o que distorce a percepção real do risco.</p>
+
+    <div class="stat-row">
+      <div class="stat-item"><span class="stat-number">25%</span><span class="stat-label">dos acidentes identificados num estudo do sector chegaram efectivamente a ser participados a seguradoras ou entidades oficiais</span></div>
+      <div class="stat-item"><span class="stat-number">17</span><span class="stat-label">mortes no sector de alojamento e restauração em Portugal entre 2009 e 2014</span></div>
+      <div class="stat-item"><span class="stat-number">48%</span><span class="stat-label">dos trabalhadores do sector têm menos de 35 anos — o mais jovem entre os grandes sectores de serviços</span></div>
+      <div class="stat-item"><span class="stat-number">&lt; 10</span><span class="stat-label">trabalhadores é a dimensão típica da maioria das empresas do sector em Portugal</span></div>
+    </div>
+
+    <div class="pull-quote"><p>Cortes e queimaduras nos membros superiores são as lesões mais comuns em cozinha — na maioria dos casos, tratadas informalmente e nunca registadas. Um sector jovem, com rotação elevada e formação frequentemente informal ("aprende-se a fazer vendo"), é também o sector onde a lacuna entre risco real e risco documentado é maior.</p></div>
+
+    <p>A dimensão pequena da maioria dos estabelecimentos não reduz a obrigação legal — reduz apenas a probabilidade de existir uma estrutura formal de SST sem apoio externo, precisamente o que a ACT mais frequentemente encontra em falta numa inspecção a restaurantes e unidades de alojamento de pequena escala.</p>
+  </div>
+</section>
+
+<div class="page-wrap">
+<article>
+
+<div class="section" id="formacao">
+  <span class="section-eyebrow">§ I · Formação Obrigatória</span>
+  <h2>Formação em hotelaria e restauração: três planos, obrigações distintas</h2>
+  <p class="lead">Entre a cozinha, a sala e a recepção, os riscos são muito diferentes — e a "formação vendo o colega fazer", comum no sector, não substitui a obrigação legal de formação documentada.</p>
+
+  <div class="box box-legal">
+    <span class="box-label">Base legal principal</span>
+    <ul>
+      <li>Lei n.º 102/2009, de 10 de setembro — lei-quadro de SST</li>
+      <li>Código do Trabalho, art.º 131.º — 40 horas anuais de formação contínua</li>
+      <li>Decreto-Lei n.º 220/2008 — Segurança Contra Incêndio em Edifícios (SCIE)</li>
+      <li>Regulamento (CE) n.º 852/2004 — higiene dos géneros alimentícios (HACCP), com interligação directa a SST em cozinha</li>
+    </ul>
+  </div>
+
+  <div class="formacao-card">
+    <div class="formacao-card-header">
+      <div>
+        <span class="formacao-badge badge-obrig">Obrigatório para todos</span>
+        <h3>Plano 1 — Formação de base em SST para hotelaria e restauração</h3>
+        <p style="font-size:13.5px;color:var(--ink-55);margin:6px 0 0">Todo o trabalhador, seja de cozinha, sala ou recepção, deve receber esta formação antes de iniciar funções.</p>
+      </div>
+      <span class="formacao-badge badge-horas">Mínimo 6h</span>
+    </div>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Legislação de SST aplicável ao sector (Lei 102/2009)</li>
+          <li>Riscos de piso escorregadio, cortes e queimaduras — os três mais comuns do sector</li>
+          <li>Movimentação manual de cargas: caixas, engradados, tabuleiros</li>
+          <li>Procedimentos de emergência e evacuação com clientes presentes</li>
+          <li>EPIs adequados por função: luvas anticorte em cozinha, calçado antiderrapante</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos e condições</h6>
+        <ul>
+          <li>Ministrada antes do início de funções ou nas primeiras 48 horas</li>
+          <li>Particularmente relevante dada a rotação elevada e o peso de contratos sazonais no sector</li>
+          <li>Certificado individual e registo de presença</li>
+        </ul>
+      </div>
+    </div>
+    <div class="box box-nota" style="margin-top:18px">
+      <span class="box-label">"Aprende-se vendo" não é formação válida</span>
+      <p>É prática comum no sector que um trabalhador novo aprenda observando um colega mais experiente, sem formação formal documentada. Para efeitos de fiscalização, isto equivale a ausência de formação — independentemente de o trabalhador estar, na prática, familiarizado com as tarefas.</p>
+    </div>
+  </div>
+
+  <div class="formacao-card">
+    <div class="formacao-card-header">
+      <div>
+        <span class="formacao-badge badge-obrig">Obrigatório por actividade</span>
+        <h3>Plano 2 — Formações específicas por actividade de risco</h3>
+        <p style="font-size:13.5px;color:var(--ink-55);margin:6px 0 0">A cozinha concentra a maioria dos riscos físicos do sector; a sala e a recepção têm riscos próprios de contacto com público.</p>
+      </div>
+    </div>
+
+    <h4>Segurança em cozinha industrial</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Manuseamento seguro de facas e equipamento de corte</li>
+          <li>Utilização de fritadeiras, fogões e fornos industriais — risco de queimadura e de incêndio</li>
+          <li>Movimentação de líquidos quentes e panelas de grande volume</li>
+          <li>Prevenção de escorregões em piso com gordura ou água</li>
+          <li>Interligação entre segurança alimentar (HACCP) e SST — por exemplo, produtos de desinfecção e seu manuseamento seguro</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li><strong>Duração mínima: 8 horas</strong>, com componente prática na própria cozinha</li>
+          <li>EPI específico: luvas anticorte, luvas térmicas, calçado antiderrapante certificado</li>
+          <li>Formação sobre extintores de classe F (gorduras e óleos) — diferente do extintor genérico</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Produtos químicos de limpeza e desinfecção</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Fichas de Dados de Segurança dos produtos de limpeza e desinfecção alimentar</li>
+          <li>Incompatibilidades entre produtos — nunca misturar lixívia com detergentes ácidos</li>
+          <li>Ventilação durante limpeza profunda de cozinha</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li><strong>2 a 4 horas</strong>, integrada ou autónoma</li>
+          <li>Armazenamento separado por classe de perigo, fora do alcance de zonas de preparação alimentar</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Segurança contra incêndio (SCIE) — crítica em cozinha</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Categoria de risco SCIE do estabelecimento, agravada pela presença de fontes de calor em cozinha</li>
+          <li>Utilização de extintores de classe F e mantas de incêndio</li>
+          <li>Evacuação com clientes presentes, incluindo em espaços de restauração com lotação elevada</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li><strong>Mínimo 4 horas</strong>, com simulacro periódico obrigatório</li>
+          <li>Sistema de extinção automática em exaustores de cozinha, quando aplicável, verificado periodicamente</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Atendimento ao público e gestão de conflito</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Desescalada verbal em situações de conflito com clientes, frequentemente associadas a consumo de álcool</li>
+          <li>Procedimento de recusa de serviço e acompanhamento até à saída em segurança</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li><strong>2 a 4 horas</strong>, reforçada em estabelecimentos com serviço de bebidas alcoólicas em horário nocturno</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="formacao-card">
+    <div class="formacao-card-header">
+      <div>
+        <span class="formacao-badge badge-cargo">Obrigatório por cargo</span>
+        <h3>Plano 3 — Chefe de cozinha, gerente e técnico de SST</h3>
+        <p style="font-size:13.5px;color:var(--ink-55);margin:6px 0 0">Quem gere a operação diária tem responsabilidade acrescida, sobretudo pela sobreposição entre segurança alimentar e segurança do trabalhador.</p>
+      </div>
+    </div>
+
+    <h4>Chefe de cozinha / gerente de estabelecimento</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Gestão de equipa em picos de afluência e contratação sazonal</li>
+          <li>Coordenação do plano de emergência e simulacros SCIE</li>
+          <li>Investigação e registo de acidentes, mesmo os informalmente resolvidos</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li><strong>Duração mínima: 16 horas</strong></li>
+          <li>Registo em ficha individual e no dossier de SST do estabelecimento</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Técnico de SST</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Avaliação de riscos específica de cozinha e sala</li>
+          <li>Articulação com o responsável de segurança alimentar (HACCP)</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li>Certificação ACT como TSST ou TSSST — obrigatória para exercer</li>
+          <li>Renovação: mínimo 48 horas em 5 anos (TSST) ou 60 horas (TSSST)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box box-legal" style="margin-top:20px">
+      <span class="box-label">HACCP não substitui SST</span>
+      <p style="color:#5c1a26;margin:0">É comum confundir-se a certificação HACCP (segurança alimentar) com cumprimento de SST — são obrigações distintas, com objectivos diferentes: uma protege o consumidor final, a outra protege o trabalhador. Um estabelecimento pode ter HACCP impecável e estar em incumprimento total de SST, e vice-versa.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ II</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="fiscalizacao">
+  <span class="section-eyebrow">§ II · Fiscalização da ACT</span>
+  <h2>O que a ACT verifica em cozinha e sala — e quando aparece</h2>
+  <p class="lead">A pequena dimensão típica dos estabelecimentos não reduz a fiscalização — reduz apenas a probabilidade de existir estrutura formal de SST, que é precisamente o que a ACT mais frequentemente encontra em falta.</p>
+
+  <h3>Quando e como a ACT inspecciona</h3>
+  <div class="fisca-timeline">
+    <div class="fisca-item">
+      <div class="fisca-dot">01</div>
+      <div class="fisca-content">
+        <h5>Inspecções programadas em época alta</h5>
+        <p>Verão, período natalício e outras épocas de maior afluência concentram fiscalização, dado o aumento de contratação sazonal e de ritmo de trabalho.</p>
+        <span class="fisca-tag fisca-tag-b">Sazonal · Sem aviso prévio obrigatório</span>
+      </div>
+    </div>
+    <div class="fisca-item">
+      <div class="fisca-dot">02</div>
+      <div class="fisca-content">
+        <h5>Após acidente de trabalho</h5>
+        <p>Acidente com incapacidade superior a 3 dias úteis obriga a comunicar em 24-48h. No sector, os mais investigados envolvem queimaduras graves e cortes profundos em cozinha.</p>
+        <span class="fisca-tag fisca-tag-a">Obrigatória em 24-48h após acidente grave</span>
+      </div>
+    </div>
+    <div class="fisca-item">
+      <div class="fisca-dot">03</div>
+      <div class="fisca-content">
+        <h5>Por denúncia de trabalhador</h5>
+        <p>Frequentemente relacionada com horários excessivos, falta de formação documentada de trabalhadores sazonais, ou ausência de EPI em cozinha.</p>
+        <span class="fisca-tag fisca-tag-a">Sem aviso prévio · Urgente</span>
+      </div>
+    </div>
+    <div class="fisca-item">
+      <div class="fisca-dot">04</div>
+      <div class="fisca-content">
+        <h5>Inspecção conjunta com segurança alimentar e SCIE</h5>
+        <p>Numa mesma visita, é comum cruzarem-se fiscalização de SST, ASAE (segurança alimentar) e condições de segurança contra incêndio.</p>
+        <span class="fisca-tag fisca-tag-b">Conjunta ou articulada com outras entidades</span>
+      </div>
+    </div>
+  </div>
+
+  <h3>O que verificam — em detalhe</h3>
+
+  <h4>1 · Formação e documentação</h4>
+  <div class="checklist">
+    <li>Certificados de formação de base, incluindo trabalhadores sazonais e temporários</li>
+    <li>Formação específica de cozinha para quem manuseia equipamento de corte e fontes de calor</li>
+    <li>Registo de simulacros de evacuação</li>
+  </div>
+
+  <h4>2 · EPI e condições em cozinha</h4>
+  <div class="checklist">
+    <li>Luvas anticorte e térmicas disponíveis e efectivamente usadas</li>
+    <li>Calçado antiderrapante certificado</li>
+    <li>Pisos com tratamento antiderrapante em zonas de maior risco</li>
+  </div>
+
+  <h4>3 · Segurança contra incêndio</h4>
+  <div class="checklist">
+    <li>Extintores de classe F em cozinha, dentro da validade</li>
+    <li>Sistema de extinção automática em exaustores, quando aplicável</li>
+    <li>Saídas de emergência desobstruídas, incluindo em salas com mesas próximas de saídas</li>
+  </div>
+
+  <h3>Coimas aplicáveis — valores reais</h3>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Infracção</th><th>Classificação</th><th>Coima (pessoa colectiva)</th><th>Diploma</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Ausência de formação SST</strong></td><td class="badge" style="color:var(--bordeaux)">Muito Grave</td><td>2 040 € a 9 690 € / trabalhador</td><td class="mono">Lei 102/2009</td></tr>
+      <tr><td><strong>Ausência de EPI em cozinha</strong></td><td class="badge" style="color:var(--bordeaux)">Muito Grave</td><td>2 040 € a 9 690 € / trabalhador</td><td class="mono">Lei 102/2009</td></tr>
+      <tr><td><strong>Saída de emergência obstruída</strong></td><td class="badge" style="color:var(--bordeaux)">Muito Grave</td><td>2 040 € a 9 690 € + suspensão</td><td class="mono">DL 220/2008</td></tr>
+      <tr><td><strong>Ausência de extintor de classe F em cozinha</strong></td><td class="badge" style="color:#6b5124">Grave</td><td>1 020 € a 4 845 €</td><td class="mono">DL 220/2008</td></tr>
+      <tr><td><strong>Obstaculização à inspecção</strong></td><td class="badge" style="color:var(--bordeaux)">Muito Grave</td><td>2 040 € a 9 690 € + participação criminal</td><td class="mono">Lei 102/2009</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="cta-inline">
+    <div><strong>A sua cozinha aguenta uma visita da ACT amanhã?</strong><p>Diagnóstico de conformidade sem compromisso.</p></div>
+    <a href="/#contacto" class="btn-primary">Pedir diagnóstico</a>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ III</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="equipamentos">
+  <span class="section-eyebrow">§ III · Equipamentos e Instalações</span>
+  <h2>Certificação de equipamento de cozinha e instalações</h2>
+  <p class="lead">Fogões, fritadeiras e sistemas de exaustão industriais têm requisitos de manutenção próprios, frequentemente ignorados até uma inspecção — ou até um incêndio.</p>
+
+  <div class="equip-grid">
+    <div class="equip-card">
+      <div class="equip-card-title"><span class="equip-idx">EQ · 01</span><h5>Fritadeiras e equipamento de fritura</h5></div>
+      <div class="equip-detail">
+        <div class="equip-detail-item"><div class="equip-detail-label">Periodicidade</div><div class="equip-detail-value">Verificação periódica de termóstatos e sistema de corte de gás/electricidade</div></div>
+        <div class="equip-detail-item" style="grid-column:1/-1"><div class="equip-detail-label">O que verifica</div><div class="equip-detail-value">Estado do óleo, funcionamento do termóstato de segurança, ausência de fugas em ligações de gás</div></div>
+      </div>
+    </div>
+    <div class="equip-card">
+      <div class="equip-card-title"><span class="equip-idx">EQ · 02</span><h5>Sistema de exaustão e extinção automática</h5></div>
+      <div class="equip-detail">
+        <div class="equip-detail-item"><div class="equip-detail-label">Periodicidade</div><div class="equip-detail-value"><strong>Limpeza periódica</strong> de condutas de gordura; manutenção do sistema de extinção conforme fabricante</div></div>
+        <div class="equip-detail-item" style="grid-column:1/-1"><div class="equip-detail-label">O que verifica</div><div class="equip-detail-value">Acumulação de gordura nas condutas — causa frequente de propagação de incêndio de cozinha</div></div>
+      </div>
+    </div>
+    <div class="equip-card">
+      <div class="equip-card-title"><span class="equip-idx">EQ · 03</span><h5>Equipamento de gás</h5></div>
+      <div class="equip-detail">
+        <div class="equip-detail-item"><div class="equip-detail-label">Periodicidade</div><div class="equip-detail-value">Verificação periódica por técnico certificado, conforme regulamentação de gás</div></div>
+        <div class="equip-detail-item" style="grid-column:1/-1"><div class="equip-detail-label">O que verifica</div><div class="equip-detail-value">Estanquicidade das ligações, ventilação adequada do espaço, funcionamento de detectores de gás quando instalados</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ IV</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="documentacao">
+  <span class="section-eyebrow">§ IV · Documentação Legal</span>
+  <h2>Documentação obrigatória: quando, o quê, onde e por quanto tempo</h2>
+  <p class="lead">Num sector de pequenas empresas e rotação elevada, a documentação de SST é frequentemente a primeira coisa a ficar em atraso quando a operação diária absorve toda a atenção da gestão.</p>
+
+  <div class="doc-grid">
+    <div class="doc-card"><h5>Avaliação de riscos</h5><div class="doc-card-detail">Específica por área — cozinha, sala, recepção.<strong>Disponível no estabelecimento</strong></div></div>
+    <div class="doc-card"><h5>Plano de emergência SCIE</h5><div class="doc-card-detail">Procedimentos de evacuação com clientes presentes.<strong>Afixado e conhecido por todos</strong></div></div>
+    <div class="doc-card"><h5>Registo de simulacros</h5><div class="doc-card-detail">Data, participantes e observações.<strong>Conservar 3 anos</strong></div></div>
+    <div class="doc-card"><h5>Certificados de formação</h5><div class="doc-card-detail">Individuais, incluindo trabalhadores sazonais e temporários.<strong>Conservar mín. 5 anos</strong></div></div>
+    <div class="doc-card"><h5>Registo de manutenção de equipamento de gás e exaustão</h5><div class="doc-card-detail">Datas de verificação e resultados.<strong>Disponível no estabelecimento</strong></div></div>
+    <div class="doc-card"><h5>Registo de acidentes</h5><div class="doc-card-detail">Incluindo cortes e queimaduras tratados informalmente.<strong>Conservar 5 anos</strong></div></div>
+  </div>
+
+  <div class="box box-pratica">
+    <span class="box-label">Época sazonal, checklist antecipada</span>
+    <p>Antes de cada pico sazonal, vale a pena rever a documentação de formação de novos contratados, a validade dos extintores e a manutenção do sistema de exaustão — os três pontos mais frequentemente em falta quando a operação acelera de repente.</p>
+  </div>
+
+  <div class="cta-inline">
+    <div><strong>A documentação do seu estabelecimento está pronta para a época alta?</strong><p>Diagnóstico de conformidade sem compromisso.</p></div>
+    <a href="/#contacto" class="btn-primary">Pedir diagnóstico</a>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ V</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="mais">
+  <span class="section-eyebrow">§ V · Aspectos críticos adicionais</span>
+  <h2>O que mais é crítico saber em segurança de hotelaria e restauração</h2>
+
+  <h3>Trabalho sazonal — o mesmo padrão de risco do comércio, mais intenso</h3>
+  <p>O recurso a trabalho temporário e sazonal é ainda mais acentuado em hotelaria e restauração do que no comércio, sobretudo em destinos turísticos com picos de Verão muito marcados. A pressão para colocar pessoal na linha de frente rapidamente — muitas vezes sem formação formal completa — é o principal factor de risco identificado em auditorias do sector.</p>
+
+  <h3>Trabalho por turnos e horário nocturno</h3>
+  <p>Bares, discotecas e restaurantes com serviço nocturno prolongado implicam turnos que se estendem para além da meia-noite, com fadiga acumulada e menor disponibilidade de apoio (menos colegas, menos supervisão) precisamente nas horas de maior risco de conflito com clientes alcoolizados. A escala de turnos deve prever descansos compensatórios adequados, e a formação em gestão de conflito é particularmente relevante nestes horários.</p>
+
+  <h3>Cozinha de pequena dimensão — o mesmo risco, menos recursos</h3>
+  <p>Cozinhas pequenas, com espaço reduzido e forte pressão de produção em horas de ponta, concentram o mesmo perfil de risco de uma cozinha de hotel de grande dimensão — cortes, queimaduras, escorregões — mas com muito menos margem física para organizar fluxos de trabalho seguros. A avaliação de riscos deve reflectir esta realidade concreta, não um modelo genérico copiado de outro estabelecimento.</p>
+
+  <h3>Alojamento local e pequenas unidades — a lacuna mais comum</h3>
+  <p>Unidades de alojamento local, com poucos ou nenhum trabalhador em SST formalmente organizado, são frequentemente o ponto cego de conformidade do sector — a percepção de que "é só um apartamento com hóspedes" não corresponde à realidade legal assim que existe qualquer trabalhador contratado para limpeza, manutenção ou recepção.</p>
+
+  <div class="box box-alerta">
+    <span class="box-label">Consumo de álcool e responsabilidade do estabelecimento</span>
+    <p>A gestão de conflito com clientes alcoolizados não é apenas uma questão de atendimento ao cliente — é um risco documentável de SST para o trabalhador exposto. Um procedimento claro de recusa de serviço e acompanhamento seguro até à saída protege tanto o cliente como o trabalhador, e reduz a exposição legal do estabelecimento em caso de incidente.</p>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ VI</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="defesa">
+  <span class="section-eyebrow">§ VI · Quando a conformidade falha</span>
+  <h2>Auto de notícia, contra-ordenação e defesa jurídica</h2>
+  <p class="lead">Um auto de notícia não é uma coima definitiva — é o início de um processo com direitos processuais concretos. Em hotelaria e restauração, isto é particularmente relevante para pequenas empresas, onde uma coima elevada pode ter impacto desproporcional na viabilidade do negócio.</p>
+
+  <div class="steps">
+    <div class="step-item"><div class="step-num">01</div><div class="step-content"><h5>Auto de notícia lavrado no estabelecimento</h5><p>O inspector regista a infracção e as circunstâncias. Corre a partir daqui o prazo de defesa, normalmente 15 a 20 dias úteis.</p></div></div>
+    <div class="step-item"><div class="step-num">02</div><div class="step-content"><h5>Direito de resposta e defesa escrita</h5><p>A empresa pode contestar a tipificação da infracção e apresentar prova documental — incluindo formação entretanto regularizada.</p></div></div>
+    <div class="step-item"><div class="step-num">03</div><div class="step-content"><h5>Decisão da ACT</h5><p>Circunstâncias atenuantes — correcção imediata, ausência de antecedentes, pequena dimensão da empresa — podem reduzir substancialmente a coima.</p></div></div>
+    <div class="step-item"><div class="step-num">04</div><div class="step-content"><h5>Recurso judicial</h5><p>Da decisão cabe recurso para o tribunal do trabalho competente, com efeito suspensivo mediante garantia.</p></div></div>
+  </div>
+
+  <div class="box box-legal">
+    <span class="box-label">Acidente grave em cozinha e responsabilidade do empregador</span>
+    <p style="color:#5c1a26;margin:0">Uma queimadura grave ou um incêndio de cozinha com origem em equipamento sem manutenção documentada expõe o empregador a mais do que a coima administrativa — pode fundamentar responsabilidade civil pelos danos ao trabalhador e, em casos de negligência clara na manutenção de equipamento de risco (gás, exaustão), responsabilidade criminal.</p>
+  </div>
+
+  <h3>Checklist final de conformidade</h3>
+  <div class="checklist">
+    <li>Avaliação de riscos por área — cozinha, sala, recepção</li>
+    <li>Todos os trabalhadores, incluindo sazonais, com formação de base documentada</li>
+    <li>Equipa de cozinha com EPI adequado e formação específica de segurança em cozinha</li>
+    <li>Extintores de classe F e sistema de extinção de exaustão validados</li>
+    <li>Plano de emergência SCIE afixado, com simulacro registado</li>
+    <li>Procedimento de gestão de conflito com clientes, reforçado em horário nocturno</li>
+    <li>Equipamento de gás com verificação periódica documentada</li>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ VII</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="faq">
+  <span class="section-eyebrow">§ VII · Perguntas Frequentes</span>
+  <h2>Dúvidas recorrentes de gerentes de restaurante e alojamento</h2>
+
+  <h3>Um restaurante pequeno, com 4 funcionários, precisa mesmo de toda esta estrutura?</h3>
+  <p>Precisa, de forma proporcional. Não vai ter o mesmo aparato documental de uma cadeia hoteleira, mas a avaliação de riscos, a formação de base e o plano de emergência são obrigatórios independentemente da dimensão — a lei não isenta pequenos estabelecimentos, apenas permite que a resposta seja proporcional à escala real do risco.</p>
+
+  <h3>Um funcionário sazonal contratado por 2 meses de Verão precisa de formação completa?</h3>
+  <p>Precisa da formação de base adequada às funções concretas — se vai trabalhar em cozinha, inclui os módulos de segurança em cozinha; se é só sala, esses módulos não se aplicam. A duração do contrato não reduz a obrigação, apenas pode simplificar o âmbito conforme a função real desempenhada.</p>
+
+  <h3>Um cliente agredido por outro cliente dentro do estabelecimento gera responsabilidade para o empregador?</h3>
+  <p>A questão central de SST é a segurança do trabalhador exposto ao incidente, não a relação entre clientes. Se um trabalhador sofrer lesão ao intervir ou ao estar presente num confronto entre clientes, é acidente de trabalho para efeitos de seguro — o que reforça a importância de ter procedimento de gestão de conflito e de nunca esperar que o trabalhador intervenha fisicamente.</p>
+
+  <h3>Que diferença faz ter advogada e TSST na mesma pessoa, para um pequeno restaurante?</h3>
+  <p>Numa empresa pequena, sem departamento jurídico nem departamento de SST internos, ter as duas competências reunidas num único apoio externo significa não ter de contratar dois serviços diferentes — um técnico e um jurídico — que normalmente nem comunicam entre si, para um negócio que já tem margens apertadas e pouco tempo de gestão disponível.</p>
+</div>
+
+</article>
+
+<aside class="sidebar">
+  <div class="toc-title">Índice do Guia</div>
+  <ul class="toc">
+    <li class="toc-section"><a href="#formacao"><span class="toc-num">I</span>Formação Obrigatória</a>
+      <ul class="toc-sub"><li><a href="#formacao">Plano 1 — Base para todos</a></li><li><a href="#formacao">Plano 2 — Por actividade</a></li><li><a href="#formacao">Plano 3 — Chefes e técnicos</a></li></ul></li>
+    <li class="toc-section"><a href="#fiscalizacao"><span class="toc-num">II</span>Fiscalização da ACT</a></li>
+    <li class="toc-section"><a href="#equipamentos"><span class="toc-num">III</span>Equipamentos e Instalações</a></li>
+    <li class="toc-section"><a href="#documentacao"><span class="toc-num">IV</span>Documentação Legal</a></li>
+    <li class="toc-section"><a href="#mais"><span class="toc-num">V</span>Aspectos Críticos</a>
+      <ul class="toc-sub"><li><a href="#mais">Trabalho sazonal</a></li><li><a href="#mais">Turnos nocturnos</a></li><li><a href="#mais">Alojamento local</a></li></ul></li>
+    <li class="toc-section"><a href="#defesa"><span class="toc-num">VI</span>Defesa Jurídica</a></li>
+  </ul>
+
+  <div class="sidebar-box">
+    <div class="sidebar-box-title">Precisa de apoio?</div>
+    <p><strong>Diagnóstico de conformidade sem compromisso.</strong> Analisamos a situação do seu restaurante, hotel ou alojamento.</p>
+    <a href="/#contacto" class="btn-primary">Pedir diagnóstico</a>
+  </div>
+
+  <div class="sidebar-law">
+    <div class="sidebar-law-title">Base legal principal</div>
+    <ul>
+      <li>Lei n.º 102/2009 — SST geral</li>
+      <li>DL n.º 220/2008 — SCIE</li>
+      <li>Regulamento (CE) 852/2004 — HACCP</li>
+      <li>CT art.º 131.º — Formação</li>
+    </ul>
+  </div>
+</aside>
+
+</div>
+
+<section class="cta-final" style="background:var(--ink);color:var(--paper);padding:70px 0;text-align:center" id="contacto">
+  <div class="wrap" style="max-width:720px">
+    <h2 style="color:var(--paper);font-size:clamp(26px,3.6vw,42px);margin-bottom:18px">A sua cozinha está pronta para a época alta?</h2>
+    <p style="color:rgba(244,239,230,0.72);font-size:16px;margin-bottom:30px">Da formação de temporários à defesa de um auto de notícia, se for necessário. Diagnóstico sem compromisso.</p>
+    <a href="/#contacto" class="btn-primary" style="background:var(--brass);color:var(--ink);padding:14px 30px;font-size:14px">Marcar Consulta</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="mono">SST PORTUGAL · sstportugal.pt · © 2026</div>
+    <div class="mono">Cédula OA 56666P · TSST nv.6</div>
+  </div>
+</footer>
+
+</body>
+</html>
