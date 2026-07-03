@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Segurança em Comércio e Retalho: Loja e Armazém em Portugal | SST Portugal</title>
+<meta name="description" content="Guia completo de segurança no comércio e retalho em Portugal: formação obrigatória por plano, fiscalização da ACT em loja e armazém, certificação de equipamentos de movimentação de cargas e documentação legal — com a leitura jurídica que falta na maioria dos guias técnicos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0E1B2C;
+    --paper: #F4EFE6;
+    --paper-deep: #EAE3D5;
+    --bordeaux: #7A2233;
+    --bordeaux-tint: #F7ECEE;
+    --sage: #4C5B4A;
+    --sage-tint: #EEF1EE;
+    --brass: #B08A3E;
+    --brass-tint: #FAF3E6;
+    --rule: rgba(14,27,44,0.16);
+    --ink-70: rgba(14,27,44,0.72);
+    --ink-55: rgba(14,27,44,0.55);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    font-size: 16.5px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { font-family: 'Fraunces', serif; font-weight: 500; letter-spacing: -0.01em; line-height: 1.1; color: var(--ink); }
+  em { font-style: italic; color: var(--bordeaux); }
+  a { color: inherit; text-decoration: none; }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+  .label-tech { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-55); }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+  .rule-h { height: 1px; background: var(--rule); width: 100%; }
+  p { color: var(--ink-70); margin-bottom: 18px; }
+  p strong { color: var(--ink); font-weight: 600; }
+
+  /* HEADER — same system as homepage */
+  header { background: var(--paper); border-bottom: 1px solid var(--rule); position: sticky; top: 0; z-index: 100; }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand-text { line-height: 1.2; }
+  .brand-name { font-family: 'Fraunces', serif; font-size: 16px; color: var(--ink); }
+  .brand-tag { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; color: var(--ink-55); }
+  nav ul { list-style: none; display: flex; gap: 28px; font-size: 13.5px; }
+  nav a:hover { color: var(--bordeaux); }
+  .btn-nav { background: var(--ink); color: var(--paper); padding: 9px 18px; font-size: 12.5px; font-weight: 500; border-radius: 2px; }
+  .btn-nav:hover { background: var(--bordeaux); }
+  .nav-links-desktop { display: flex; align-items: center; gap: 28px; }
+  .crumb { font-size: 12px; color: var(--ink-55); padding: 10px 0; border-bottom: 1px solid var(--rule); }
+  .crumb a:hover { color: var(--bordeaux); }
+
+  /* HERO */
+  .hero { border-bottom: 1px solid var(--rule); padding: 54px 0 44px; }
+  .hero-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+  .hero-tag { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.06em; color: var(--bordeaux); border: 1px solid rgba(122,34,51,0.3); padding: 4px 10px; }
+  .hero h1 { font-size: clamp(30px, 4vw, 48px); max-width: 18ch; }
+  .hero-sub { font-size: 16.5px; color: var(--ink-70); max-width: 70ch; margin: 22px 0 0; }
+  .hero-meta { display: flex; gap: 22px; flex-wrap: wrap; font-size: 12.5px; color: var(--ink-55); border-top: 1px solid var(--rule); padding-top: 20px; margin-top: 28px; }
+  .hero-meta .mono { font-size: 12px; }
+
+  /* STATS */
+  .stats-section { padding: 46px 0 6px; }
+  .stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin: 28px 0 36px; }
+  .stat-item { background: var(--paper); padding: 24px 20px; }
+  .stat-number { font-family: 'Fraunces', serif; font-size: 34px; font-weight: 600; color: var(--bordeaux); line-height: 1; display: block; margin-bottom: 8px; }
+  .stat-label { font-size: 12px; color: var(--ink-70); line-height: 1.4; }
+  .pull-quote { border-left: 2px solid var(--bordeaux); padding: 20px 28px; background: var(--bordeaux-tint); margin: 32px 0; }
+  .pull-quote p { font-family: 'Fraunces', serif; font-style: italic; font-size: clamp(16px, 1.8vw, 20px); color: var(--ink); margin: 0; }
+
+  /* LAYOUT */
+  .page-wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: 1fr 300px; gap: 56px; align-items: start; }
+  article { padding: 50px 0 20px; }
+
+  /* SIDEBAR */
+  .sidebar { position: sticky; top: 76px; padding: 50px 0; }
+  .toc-title { font-size: 10.5px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-55); margin-bottom: 14px; font-family: 'JetBrains Mono', monospace; }
+  .toc { list-style: none; }
+  .toc-section { margin-bottom: 2px; }
+  .toc-section > a { display: flex; gap: 10px; padding: 9px 0; font-size: 13px; font-weight: 600; color: var(--ink); text-decoration: none; border-top: 1px solid var(--rule); line-height: 1.4; }
+  .toc-section > a:hover { color: var(--bordeaux); }
+  .toc-num { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: var(--bordeaux); min-width: 18px; padding-top: 2px; }
+  .toc-sub { list-style: none; padding-left: 28px; }
+  .toc-sub li a { display: block; font-size: 12px; color: var(--ink-55); padding: 4px 0; }
+  .toc-sub li a:hover { color: var(--bordeaux); }
+  .sidebar-box { background: var(--ink); color: var(--paper); padding: 22px; margin-top: 30px; }
+  .sidebar-box-title { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brass); margin-bottom: 10px; font-family: 'JetBrains Mono', monospace; }
+  .sidebar-box p { font-size: 12.5px; color: rgba(244,239,230,0.72); margin-bottom: 14px; }
+  .sidebar-box a.btn-primary { display: block; text-align: center; }
+  .sidebar-law { background: var(--sage-tint); border: 1px solid rgba(76,91,74,0.2); padding: 18px; margin-top: 18px; }
+  .sidebar-law-title { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin-bottom: 10px; font-family: 'JetBrains Mono', monospace; }
+  .sidebar-law ul { list-style: none; }
+  .sidebar-law ul li { font-size: 11.5px; color: var(--sage); padding: 4px 0; border-bottom: 1px solid rgba(76,91,74,0.12); }
+
+  /* SECTIONS */
+  .section { margin-bottom: 72px; }
+  .section-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--bordeaux); display: block; margin-bottom: 10px; }
+  h2 { font-size: clamp(24px, 2.8vw, 34px); margin-bottom: 12px; }
+  h3 { font-size: clamp(18px, 2vw, 23px); font-weight: 600; margin: 36px 0 14px; }
+  h4 { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink); margin: 26px 0 10px; padding-bottom: 8px; border-bottom: 1px solid var(--rule); }
+  .lead { font-size: clamp(15.5px, 1.6vw, 17.5px); color: var(--ink-70); max-width: 74ch; margin-bottom: 30px; }
+  .section-sep { display: flex; align-items: center; gap: 16px; margin: 64px 0 46px; }
+  .section-sep-line { flex: 1; height: 1px; background: var(--rule); }
+  .section-sep-tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-55); white-space: nowrap; }
+
+  /* BOXES */
+  .box { border-left: 3px solid; padding: 20px 24px; margin: 28px 0; position: relative; }
+  .box-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; display: block; }
+  .box p:last-child { margin-bottom: 0; }
+  .box-legal { border-color: var(--bordeaux); background: var(--bordeaux-tint); }
+  .box-legal .box-label { color: var(--bordeaux); }
+  .box-legal p { color: #5c1a26; }
+  .box-legal ul { list-style: none; margin-top: 6px; }
+  .box-legal ul li { font-size: 13.5px; color: #5c1a26; padding: 4px 0 4px 16px; position: relative; }
+  .box-legal ul li::before { content: '§'; position: absolute; left: 0; font-weight: 700; }
+  .box-alerta { border-color: var(--ink); background: var(--paper-deep); }
+  .box-alerta .box-label { color: var(--ink); }
+  .box-alerta p { color: var(--ink); }
+  .box-pratica { border-color: var(--sage); background: var(--sage-tint); }
+  .box-pratica .box-label { color: var(--sage); }
+  .box-pratica p { color: #2e392c; }
+  .box-nota { border-color: var(--brass); background: var(--brass-tint); }
+  .box-nota .box-label { color: var(--brass); }
+  .box-nota p { color: #6b5124; }
+
+  /* LISTS */
+  ul.styled, ol.styled { list-style: none; padding: 0; margin: 18px 0 26px; }
+  ul.styled li { position: relative; padding-left: 20px; margin-bottom: 9px; color: var(--ink-70); }
+  ul.styled li::before { content: '—'; position: absolute; left: 0; color: var(--bordeaux); font-weight: 700; }
+  ul.styled li strong { color: var(--ink); }
+  ol.styled { counter-reset: item; }
+  ol.styled li { position: relative; padding-left: 36px; margin-bottom: 12px; color: var(--ink-70); counter-increment: item; }
+  ol.styled li::before { content: counter(item, decimal-leading-zero); position: absolute; left: 0; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; color: var(--bordeaux); top: 3px; }
+  ol.styled li strong { color: var(--ink); }
+  .checklist { list-style: none; margin: 18px 0; }
+  .checklist li { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--rule); font-size: 14.5px; color: var(--ink-70); align-items: flex-start; }
+  .checklist li::before { content: '□'; color: var(--ink-55); font-size: 15px; flex-shrink: 0; line-height: 1.6; }
+
+  /* TABLES */
+  .table-wrap { overflow-x: auto; margin: 28px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  thead th { background: var(--ink); color: var(--paper); font-weight: 600; font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; padding: 12px 14px; text-align: left; font-family: 'JetBrains Mono', monospace; }
+  tbody tr { border-bottom: 1px solid var(--rule); }
+  tbody tr:nth-child(even) { background: var(--paper-deep); }
+  td { padding: 12px 14px; color: var(--ink-70); vertical-align: top; line-height: 1.5; }
+  td strong { color: var(--ink); }
+  td.badge { font-size: 10.5px; font-weight: 700; letter-spacing: 0.05em; white-space: nowrap; font-family: 'JetBrains Mono', monospace; }
+
+  /* CARD GRIDS reused across sections */
+  .doc-grid, .equip-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin: 28px 0; }
+  .equip-grid { grid-template-columns: repeat(2, 1fr); }
+  .doc-card, .equip-card { background: var(--paper); padding: 22px; }
+  .doc-card h5, .equip-card h5 { font-family: 'Fraunces', serif; font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
+  .doc-card-detail, .equip-detail-value { font-size: 12.5px; color: var(--ink-70); line-height: 1.55; }
+  .doc-card-detail strong { color: var(--bordeaux); display: block; margin-top: 8px; font-size: 10.5px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; font-family: 'JetBrains Mono', monospace; }
+  .equip-card-title { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+  .equip-idx { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--ink-55); }
+  .equip-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 4px; }
+  .equip-detail-item { background: var(--paper-deep); padding: 10px 12px; }
+  .equip-detail-label { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-55); margin-bottom: 4px; }
+
+  /* FORMAÇÃO CARDS */
+  .formacao-card { border: 1px solid var(--rule); background: var(--paper); padding: 30px; margin-bottom: 22px; }
+  .formacao-card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 6px; flex-wrap: wrap; }
+  .formacao-card h3 { font-size: 21px; margin: 8px 0 6px; }
+  .formacao-badge { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 11px; white-space: nowrap; }
+  .badge-obrig { background: var(--bordeaux); color: var(--paper); }
+  .badge-cargo { background: var(--sage); color: var(--paper); }
+  .badge-horas { background: var(--ink); color: var(--paper); }
+  .formacao-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 18px; }
+  .formacao-col h6 { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-55); margin-bottom: 10px; }
+  .formacao-col ul { list-style: none; padding: 0; }
+  .formacao-col ul li { font-size: 13px; color: var(--ink-70); padding: 5px 0; border-bottom: 1px solid var(--rule); display: flex; gap: 8px; }
+  .formacao-col ul li::before { content: '→'; color: var(--bordeaux); font-size: 11px; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+  .formacao-col ul li strong { color: var(--ink); }
+
+  /* TIMELINE */
+  .fisca-timeline { margin: 28px 0; }
+  .fisca-item { display: flex; gap: 22px; position: relative; }
+  .fisca-item::before { content: ''; position: absolute; left: 18px; top: 44px; bottom: -28px; width: 1px; background: var(--rule); }
+  .fisca-item:last-child::before { display: none; }
+  .fisca-dot { width: 38px; height: 38px; border: 1px solid var(--ink); background: var(--paper); color: var(--ink); font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 500; display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 1; }
+  .fisca-content { flex: 1; padding-bottom: 30px; }
+  .fisca-content h5 { font-family: 'Fraunces', serif; font-size: 16.5px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+  .fisca-content p { font-size: 13.5px; margin: 0 0 6px; }
+  .fisca-tag { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 10px; margin-top: 4px; }
+  .fisca-tag-a { background: var(--bordeaux-tint); color: var(--bordeaux); }
+  .fisca-tag-b { background: var(--brass-tint); color: #6b5124; }
+  .fisca-tag-c { background: var(--sage-tint); color: var(--sage); }
+
+  /* STEPS */
+  .steps { display: flex; flex-direction: column; margin: 28px 0; }
+  .step-item { display: flex; gap: 22px; padding: 20px 0; border-bottom: 1px solid var(--rule); }
+  .step-num { font-family: 'Fraunces', serif; font-size: 32px; font-weight: 600; color: rgba(122,34,51,0.18); line-height: 1; flex-shrink: 0; min-width: 44px; }
+  .step-content h5 { font-family: 'Fraunces', serif; font-size: 15.5px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+  .step-content p { font-size: 13.5px; margin: 0; }
+
+  /* CTA INLINE */
+  .cta-inline { background: var(--ink); color: var(--paper); padding: 28px 32px; margin: 44px 0; display: flex; justify-content: space-between; align-items: center; gap: 22px; flex-wrap: wrap; }
+  .cta-inline p { color: rgba(244,239,230,0.72); font-size: 14px; margin: 0; }
+  .cta-inline strong { display: block; font-family: 'Fraunces', serif; font-size: 18px; font-weight: 600; margin-bottom: 6px; color: var(--paper); }
+  .btn-primary { display: inline-block; background: var(--ink); color: var(--paper); font-size: 13px; font-weight: 500; padding: 12px 22px; white-space: nowrap; border-radius: 2px; }
+  .btn-primary:hover { background: var(--bordeaux); }
+  .cta-inline .btn-primary { background: var(--brass); color: var(--ink); }
+
+  footer { background: var(--paper); border-top: 1px solid var(--rule); padding: 32px 0; }
+  .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+  .footer-inner .mono { font-size: 12px; color: var(--ink-55); }
+
+  @media (max-width: 900px) {
+    .page-wrap { grid-template-columns: 1fr; }
+    .sidebar { display: none; }
+    .formacao-grid, .equip-grid, .doc-grid, .stat-row { grid-template-columns: 1fr; }
+    .nav-links-desktop { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <a href="/" class="brand">
+      <svg width="28" height="28" viewBox="0 0 40 40" aria-hidden="true">
+        <rect x="4" y="4" width="32" height="32" rx="3" fill="none" stroke="#0E1B2C" stroke-width="1.1"/>
+        <line x1="20" y1="4" x2="20" y2="36" stroke="#0E1B2C" stroke-width="0.7"/>
+        <line x1="9" y1="13" x2="17" y2="13" stroke="#0E1B2C" stroke-width="1.3"/>
+        <line x1="9" y1="18" x2="16" y2="18" stroke="#0E1B2C" stroke-width="1.3"/>
+        <line x1="9" y1="23" x2="17" y2="23" stroke="#0E1B2C" stroke-width="1.3"/>
+        <line x1="9" y1="28" x2="14" y2="28" stroke="#0E1B2C" stroke-width="1.3"/>
+        <circle cx="25" cy="13" r="1.2" fill="#0E1B2C"/><circle cx="30" cy="13" r="1.2" fill="#0E1B2C"/>
+        <circle cx="25" cy="19" r="1.2" fill="#0E1B2C"/><circle cx="30" cy="19" r="1.2" fill="#0E1B2C"/>
+        <circle cx="25" cy="25" r="1.2" fill="#0E1B2C"/><circle cx="30" cy="25" r="1.2" fill="#0E1B2C"/>
+      </svg>
+      <div class="brand-text">
+        <div class="brand-name">SST Portugal</div>
+        <div class="brand-tag">DIREITO &middot; T&Eacute;CNICA</div>
+      </div>
+    </a>
+    <div class="nav-links-desktop">
+      <nav><ul>
+        <li><a href="/#servicos">Serviços</a></li>
+        <li><a href="/#sectores">Sectores</a></li>
+        <li><a href="/#guia">Guia SST</a></li>
+        <li><a href="/#sobre">Sobre</a></li>
+      </ul></nav>
+      <a href="/#contacto" class="btn-nav">Marcar Consulta</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap crumb">
+  <a href="/">Início</a> / <a href="/#sectores">Formação por Sector</a> / <span class="mono" style="color:var(--ink)">Comércio e Retalho</span>
+</div>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-tags">
+      <span class="hero-tag">Lei 102/2009</span>
+      <span class="hero-tag">DL 50/2005</span>
+      <span class="hero-tag">DL 220/2008 (SCIE)</span>
+      <span class="hero-tag">Guia 2026</span>
+    </div>
+    <h1>Segurança em Comércio e Retalho: <em>loja e armazém</em>, o guia completo</h1>
+    <p class="hero-sub">Formação obrigatória por plano, fiscalização da ACT em espaço de venda ao público e em armazém, certificação de equipamentos de movimentação de cargas, documentação legal com prazos — e o que acontece juridicamente quando algo corre mal. Escrito por quem lê a legislação e aplica o processo no terreno.</p>
+    <div class="hero-meta">
+      <span class="mono">≈ 4 700 PALAVRAS</span>
+      <span class="mono">ACTUALIZADO 2026</span>
+      <span class="mono">SECTOR: COMÉRCIO E RETALHO</span>
+      <span class="mono">LEGISLAÇÃO PORTUGUESA</span>
+    </div>
+  </div>
+</section>
+
+<section class="stats-section">
+  <div class="wrap">
+    <span class="section-eyebrow">Contexto · Portugal 2023</span>
+    <h2 style="max-width: 26ch;">O comércio raramente aparece nos títulos — mas acumula sinistralidade todos os dias</h2>
+    <p class="lead">Os dados do Gabinete de Estratégia e Planeamento (GEP) mostram um sector que não faz manchetes como a construção, mas que representa uma fatia constante e significativa da sinistralidade laboral em Portugal, sobretudo por lesões musculoesqueléticas, quedas e acidentes de movimentação de cargas em armazém.</p>
+
+    <div class="stat-row">
+      <div class="stat-item"><span class="stat-number">184 607</span><span class="stat-label">acidentes de trabalho em Portugal em 2023 — o comércio está sistematicamente entre os 3 sectores com mais casos</span></div>
+      <div class="stat-item"><span class="stat-number">~13%</span><span class="stat-label">do total de acidentes concentrados no comércio por grosso e a retalho, segundo dados regionais recentes da GEP</span></div>
+      <div class="stat-item"><span class="stat-number">3 655</span><span class="stat-label">acidentes por 100 000 trabalhadores — a incidência nacional média em 2023</span></div>
+      <div class="stat-item"><span class="stat-number">38,6</span><span class="stat-label">dias de trabalho perdidos, em média, por acidente com baixa em Portugal</span></div>
+    </div>
+
+    <div class="pull-quote"><p>No comércio, o acidente típico não é a queda de um andaime — é a entorse ao levantar uma caixa mal, o escorregão numa zona molhada, ou o esmagamento ao operar um porta-paletes sem formação. Precisamente por parecer menos grave à partida, é o sector onde a prevenção é mais frequentemente negligenciada.</p></div>
+
+    <p>A ACT não fiscaliza o comércio com a mesma intensidade programada da construção — mas fiscaliza, e cada vez mais, sobretudo em armazéns de grande superfície, onde a concentração de equipamentos de movimentação e de trabalhadores por metro quadrado eleva o risco. E ao contrário da construção, o comércio tem uma particularidade que a maioria dos empresários subestima: o espaço de venda está aberto ao público, o que acrescenta obrigações de segurança contra incêndio e de evacuação que não existem num estaleiro fechado.</p>
+  </div>
+</section>
+
+<div class="page-wrap">
+<article>
+
+<div class="section" id="formacao">
+  <span class="section-eyebrow">§ I · Formação Obrigatória</span>
+  <h2>Formação em comércio e retalho: três planos, obrigações distintas</h2>
+  <p class="lead">A formação em comércio não é uniforme entre a loja e o armazém. O que é obrigatório para um operador de caixa é diferente do que é exigido a quem opera um porta-paletes eléctrico ou a quem gere a segurança de um espaço aberto ao público. Esta distinção é a primeira coisa que a ACT verifica.</p>
+
+  <div class="box box-legal">
+    <span class="box-label">Base legal principal</span>
+    <ul>
+      <li>Lei n.º 102/2009, de 10 de setembro — lei-quadro de SST (art.º 20.º, formação específica)</li>
+      <li>Código do Trabalho, art.º 131.º — 40 horas anuais de formação contínua</li>
+      <li>Decreto-Lei n.º 50/2005, de 25 de fevereiro — utilização de equipamentos de trabalho</li>
+      <li>Decreto-Lei n.º 220/2008 — Segurança Contra Incêndio em Edifícios (SCIE), aplicável a espaços comerciais</li>
+      <li>Decreto-Lei n.º 24/2012 — protecção contra riscos de agentes químicos, relevante para produtos de limpeza e manutenção</li>
+    </ul>
+  </div>
+
+  <div class="formacao-card">
+    <div class="formacao-card-header">
+      <div>
+        <span class="formacao-badge badge-obrig">Obrigatório para todos</span>
+        <h3>Plano 1 — Formação de base em SST para trabalhadores de loja e armazém</h3>
+        <p style="font-size:13.5px;color:var(--ink-55);margin:6px 0 0">Todo o trabalhador que entre em funções, seja em loja ou em armazém, deve receber esta formação antes de iniciar actividade.</p>
+      </div>
+      <span class="formacao-badge badge-horas">Mínimo 6h</span>
+    </div>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Legislação de SST aplicável ao comércio (Lei 102/2009, Código do Trabalho)</li>
+          <li>Riscos específicos do espaço de venda e armazém: quedas ao mesmo nível, cortes, esmagamento, sobrecarga postural</li>
+          <li>Organização do espaço: áreas de circulação, sinalização de pavimento molhado, saídas de emergência</li>
+          <li>Movimentação manual de cargas: técnicas correctas de levantamento, limites de peso</li>
+          <li>EPIs adequados a cada função — luvas de corte para reposição, calçado antiderrapante</li>
+          <li>Procedimentos de emergência: evacuação com público presente, ponto de encontro, primeiros socorros básicos</li>
+          <li>Riscos psicossociais: como reagir a clientes agressivos, procedimento em caso de assalto ou furto</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos e condições</h6>
+        <ul>
+          <li>Ministrada antes do início de funções ou nas primeiras 48 horas</li>
+          <li>Formador com Certificado de Competências Pedagógicas (CCP) válido</li>
+          <li>Certificado individual com formador, data, conteúdos e duração</li>
+          <li>Registo em folha de presença assinada pelo trabalhador</li>
+          <li>Repetida sempre que o trabalhador mude para uma função com riscos substancialmente diferentes — por exemplo, de caixa para armazém</li>
+          <li>Prestada em língua que o trabalhador compreenda efectivamente</li>
+        </ul>
+      </div>
+    </div>
+    <div class="box box-nota" style="margin-top:18px">
+      <span class="box-label">Trabalho sazonal e temporário</span>
+      <p>O comércio recorre intensamente a contratação temporária em picos sazonais — Natal, saldos, campanhas. A formação de base é obrigatória mesmo para contratos de poucas semanas, e a rotação elevada de pessoal é precisamente o que a ACT mais associa a lacunas de formação não documentadas.</p>
+    </div>
+  </div>
+
+  <div class="formacao-card">
+    <div class="formacao-card-header">
+      <div>
+        <span class="formacao-badge badge-obrig">Obrigatório por actividade</span>
+        <h3>Plano 2 — Formações específicas por actividade de risco</h3>
+        <p style="font-size:13.5px;color:var(--ink-55);margin:6px 0 0">Determinadas actividades em loja ou armazém exigem formação certificada específica, além da formação de base.</p>
+      </div>
+    </div>
+
+    <h4>Operação de porta-paletes eléctrico e empilhador</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>DL 50/2005 e normas EN aplicáveis a equipamentos de movimentação de cargas</li>
+          <li>Leitura da placa de capacidade de carga e distribuição de peso na plataforma</li>
+          <li>Inspecção diária antes de utilização; check-list obrigatória</li>
+          <li>Circulação segura em corredores, cruzamentos e zonas com peões</li>
+          <li>Empilhamento seguro de racks e paletes — altura máxima, estabilidade da carga</li>
+          <li>Procedimentos de emergência e de paragem imediata</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li><strong>Duração mínima: 8 horas</strong> para empilhador com condutor a bordo, com componente prática obrigatória</li>
+          <li><strong>4 horas</strong> para porta-paletes eléctrico sem plataforma de condução</li>
+          <li>Formação específica por tipo de equipamento — não é transferível entre modelos substancialmente diferentes</li>
+          <li>Autorização escrita do empregador após formação</li>
+          <li>Reciclagem recomendada a cada 3 anos, ou após qualquer incidente</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Reposição em altura — escadotes e plataformas de reposição</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Selecção do equipamento adequado à altura — escadote vs. plataforma de reposição</li>
+          <li>Verificação de estabilidade antes de subir; nunca em piso irregular ou molhado</li>
+          <li>Distribuição de peso e postura segura durante a reposição</li>
+          <li>Proibição de improviso — nunca usar prateleiras ou caixas como apoio</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li><strong>Duração: integrada na formação de base ou módulo de 2 a 4 horas</strong></li>
+          <li>Equipamento certificado CE, inspeccionado periodicamente</li>
+          <li>Acima de 2 metros de altura de trabalho, aplica-se o mesmo enquadramento de trabalho em altura de outros sectores</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Produtos de limpeza e manutenção</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Fichas de Dados de Segurança (FDS) dos produtos utilizados</li>
+          <li>Pictogramas CLP/GHS e incompatibilidades entre produtos — nunca misturar lixívia com amoníaco</li>
+          <li>Selecção de EPI adequado: luvas resistentes a químicos, protecção ocular</li>
+          <li>Armazenamento seguro e separado por classe de perigo</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li><strong>2 a 4 horas</strong>, integrada ou autónoma</li>
+          <li>FDS de todos os produtos acessível aos trabalhadores que os manuseiam</li>
+          <li>Armazém de produtos de limpeza sinalizado e com ventilação adequada</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Prevenção e actuação em caso de incêndio (SCIE)</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Plano de segurança contra incêndio do estabelecimento e categoria de risco atribuída</li>
+          <li>Utilização de extintores e bocas-de-incêndio; procedimento de alarme</li>
+          <li>Evacuação de espaço aberto ao público — prioridades, pontos de encontro, gestão de pânico</li>
+          <li>Papel do delegado de segurança e da equipa de intervenção em caso de emergência</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li><strong>Mínimo 4 horas</strong>, com simulacro periódico obrigatório conforme a categoria de risco SCIE do estabelecimento</li>
+          <li>Formação de delegados e equipas de segurança pode exigir carga horária superior, conforme dimensão do espaço</li>
+          <li>Registo dos simulacros realizados, obrigatório para apresentação em inspecção</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="formacao-card">
+    <div class="formacao-card-header">
+      <div>
+        <span class="formacao-badge badge-cargo">Obrigatório por cargo</span>
+        <h3>Plano 3 — Responsáveis de loja, de armazém e técnico de SST</h3>
+        <p style="font-size:13.5px;color:var(--ink-55);margin:6px 0 0">Quem gere a operação diária tem responsabilidade acrescida — a ACT trata a ausência de formação de gestão como agravante, não como omissão isolada.</p>
+      </div>
+    </div>
+
+    <h4>Responsável de loja / gerente de estabelecimento</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Obrigações legais do empregador em SST aplicadas ao comércio</li>
+          <li>Gestão de equipa em picos de afluência e de contratação sazonal</li>
+          <li>Coordenação do plano de emergência e simulacros</li>
+          <li>Registo e investigação de acidentes e near-misses</li>
+          <li>Gestão de fornecedores de manutenção e prestadores externos (limpeza, segurança)</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li><strong>Duração mínima: 16 horas</strong> — sem carga horária legalmente fixada, mas indispensável na prática de gestão de risco</li>
+          <li>Registo em ficha individual e no dossier de SST do estabelecimento</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Responsável de armazém</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Organização segura do layout de armazém: corredores, zonas de carga, altura de racks</li>
+          <li>Supervisão de operadores de equipamentos de movimentação</li>
+          <li>Gestão de inspecções periódicas de racks, empilhadores e porta-paletes</li>
+          <li>Procedimentos de carga e descarga em cais, incluindo veículos de terceiros</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li><strong>Duração mínima: 16 horas</strong></li>
+          <li>Formação específica em segurança de armazenagem recomendada, sobretudo em armazéns com racks acima de 4 metros</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Técnico de SST</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Avaliação de riscos específica de comércio: ergonomia, agressão de terceiros, movimentação de cargas</li>
+          <li>Elaboração do plano de prevenção e do plano de emergência SCIE</li>
+          <li>Investigação de acidentes e interacção com a ACT</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li>Certificação ACT como TSST ou TSSST — obrigatória para exercer</li>
+          <li>Renovação: mínimo 48 horas em 5 anos (TSST) ou 60 horas (TSSST)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box box-legal" style="margin-top:20px">
+      <span class="box-label">Serviço interno, comum ou externo?</span>
+      <p style="color:#5c1a26;margin:0">Cadeias com múltiplas lojas frequentemente optam por serviço interno de SST centralizado ou serviço externo contratado, cobrindo todos os estabelecimentos. Uma loja isolada de pequena dimensão pode recorrer a serviço externo pontual. A escolha do modelo tem de estar documentada e é um dos primeiros pontos verificados numa auditoria — não existe "não decidimos ainda" como resposta válida perante a ACT.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ II</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="fiscalizacao">
+  <span class="section-eyebrow">§ II · Fiscalização da ACT</span>
+  <h2>O que a ACT verifica em loja e armazém — e quando aparece</h2>
+  <p class="lead">A fiscalização no comércio é menos mediática do que na construção, mas segue a mesma lógica: programada, por denúncia, e sempre após acidente grave. A diferença está no que os inspectores procuram — aqui, o foco desloca-se de EPIs de obra para ergonomia, movimentação de cargas e segurança contra incêndio em espaço público.</p>
+
+  <h3>Quando e como a ACT inspecciona</h3>
+  <div class="fisca-timeline">
+    <div class="fisca-item">
+      <div class="fisca-dot">01</div>
+      <div class="fisca-content">
+        <h5>Inspecções programadas a grandes superfícies e cadeias</h5>
+        <p>A ACT organiza campanhas sectoriais que incluem hipermercados, cadeias de retalho e armazéns logísticos, com particular atenção a horários de trabalho, trabalho temporário e condições de movimentação de cargas.</p>
+        <span class="fisca-tag fisca-tag-b">Periódica · Sem aviso prévio obrigatório</span>
+      </div>
+    </div>
+    <div class="fisca-item">
+      <div class="fisca-dot">02</div>
+      <div class="fisca-content">
+        <h5>Após acidente de trabalho</h5>
+        <p>Acidente mortal ou com incapacidade superior a 3 dias úteis obriga a comunicar à ACT em 24 horas. No comércio, os acidentes mais frequentemente investigados envolvem quedas ao mesmo nível, queda de material armazenado em altura e esmagamento por equipamento de movimentação.</p>
+        <span class="fisca-tag fisca-tag-a">Obrigatória em 24-48h após acidente grave</span>
+      </div>
+    </div>
+    <div class="fisca-item">
+      <div class="fisca-dot">03</div>
+      <div class="fisca-content">
+        <h5>Por denúncia de trabalhador</h5>
+        <p>A elevada rotatividade de pessoal no comércio, sobretudo em contratos temporários e sazonais, é um factor associado a maior número de denúncias — muitas vezes relacionadas com falta de formação documentada ou horários que não respeitam descansos obrigatórios.</p>
+        <span class="fisca-tag fisca-tag-a">Sem aviso prévio · Urgente</span>
+      </div>
+    </div>
+    <div class="fisca-item">
+      <div class="fisca-dot">04</div>
+      <div class="fisca-content">
+        <h5>Inspecção conjunta com segurança contra incêndio</h5>
+        <p>Em espaços de grande afluência de público, a fiscalização de SST cruza-se frequentemente com a verificação de condições SCIE — saídas de emergência desobstruídas, sinalética, extintores em dia.</p>
+        <span class="fisca-tag fisca-tag-b">Conjunta ou articulada com bombeiros/autarquia</span>
+      </div>
+    </div>
+    <div class="fisca-item">
+      <div class="fisca-dot">05</div>
+      <div class="fisca-content">
+        <h5>Inspecção de seguimento</h5>
+        <p>Após intimação com prazo para corrigir não-conformidades, segue-se segunda visita. Persistindo a infracção, aplicam-se coimas agravadas.</p>
+        <span class="fisca-tag fisca-tag-b">No prazo fixado na intimação anterior</span>
+      </div>
+    </div>
+  </div>
+
+  <h3>O que verificam — em detalhe</h3>
+
+  <h4>1 · Documentação e organização de SST</h4>
+  <div class="checklist">
+    <li>Modalidade de organização de serviço de SST (interno, comum ou externo) documentada</li>
+    <li>Avaliação de riscos actualizada, específica para loja e para armazém, quando aplicável</li>
+    <li>Plano de emergência e registo de simulacros realizados</li>
+    <li>Registo de acidentes e near-misses</li>
+    <li>Apólices de seguro de acidentes de trabalho de todos os trabalhadores, incluindo temporários e sazonais</li>
+  </div>
+
+  <h4>2 · Formação dos trabalhadores</h4>
+  <div class="checklist">
+    <li>Certificados de formação de base de cada trabalhador, incluindo temporários</li>
+    <li>Formação específica para operadores de porta-paletes e empilhador</li>
+    <li>Formação em segurança contra incêndio e evacuação, com registo de simulacro</li>
+    <li>Certificação ACT do técnico de SST responsável</li>
+  </div>
+
+  <h4>3 · Ergonomia e movimentação de cargas</h4>
+  <div class="checklist">
+    <li>Avaliação dos postos de caixa: altura de bancada, cadeira ajustável, rotação de tarefas</li>
+    <li>Limites de peso para movimentação manual respeitados, com meios mecânicos disponíveis para cargas superiores</li>
+    <li>Procedimento documentado para levantamento seguro de cargas</li>
+  </div>
+
+  <h4>4 · Equipamentos e instalações</h4>
+  <div class="checklist">
+    <li>Porta-paletes e empilhadores com inspecção periódica válida e manual em português</li>
+    <li>Racks de armazenagem com certificação de carga e inspecção visual periódica</li>
+    <li>Instalações eléctricas verificadas; quadros e diferenciais em conformidade</li>
+    <li>Extintores e bocas-de-incêndio dentro do prazo de manutenção</li>
+    <li>Saídas de emergência sinalizadas e desobstruídas — nunca usadas como zona de arrumação</li>
+  </div>
+
+  <h3>Poderes dos inspectores em loja e armazém</h3>
+  <ul class="styled">
+    <li><strong>Acesso livre</strong> a qualquer momento do horário de funcionamento, sem aviso prévio</li>
+    <li><strong>Identificação individual</strong> de trabalhadores e verificação da sua formação</li>
+    <li><strong>Exigir documentação</strong> no acto da visita</li>
+    <li><strong>Entrevistar trabalhadores separadamente</strong>, com garantia de confidencialidade</li>
+    <li><strong>Lavrar auto de notícia</strong> imediatamente e no local</li>
+    <li><strong>Determinar suspensão imediata</strong> de uma actividade específica em caso de perigo grave e iminente — por exemplo, um empilhador sem inspecção válida</li>
+  </ul>
+
+  <h3>Coimas aplicáveis — valores reais</h3>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Infracção</th><th>Classificação</th><th>Coima (pessoa colectiva)</th><th>Diploma</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Ausência de avaliação de riscos</strong></td><td class="badge" style="color:var(--bordeaux)">Muito Grave</td><td>2 040 € a 9 690 €</td><td class="mono">Lei 102/2009</td></tr>
+      <tr><td><strong>Ausência de formação SST</strong></td><td class="badge" style="color:var(--bordeaux)">Muito Grave</td><td>2 040 € a 9 690 € / trabalhador</td><td class="mono">Lei 102/2009</td></tr>
+      <tr><td><strong>Operador de empilhador sem habilitação</strong></td><td class="badge" style="color:var(--bordeaux)">Muito Grave</td><td>2 040 € a 9 690 €</td><td class="mono">DL 50/2005</td></tr>
+      <tr><td><strong>Equipamento sem inspecção válida</strong></td><td class="badge" style="color:#6b5124">Grave</td><td>1 020 € a 4 845 €</td><td class="mono">DL 50/2005</td></tr>
+      <tr><td><strong>Saída de emergência obstruída</strong></td><td class="badge" style="color:var(--bordeaux)">Muito Grave</td><td>2 040 € a 9 690 € + suspensão</td><td class="mono">DL 220/2008</td></tr>
+      <tr><td><strong>Ausência de plano de emergência / simulacro</strong></td><td class="badge" style="color:#6b5124">Grave</td><td>1 020 € a 4 845 €</td><td class="mono">DL 220/2008</td></tr>
+      <tr><td><strong>Obstaculização à inspecção</strong></td><td class="badge" style="color:var(--bordeaux)">Muito Grave</td><td>2 040 € a 9 690 € + participação criminal</td><td class="mono">Lei 102/2009</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="box box-pratica">
+    <span class="box-label">Reincidência</span>
+    <p>As coimas são agravadas em 50% em caso de reincidência no prazo de 2 anos. Em cadeias com múltiplas lojas, uma infracção repetida em estabelecimentos diferentes pode ser tratada como padrão organizacional, agravando a resposta da ACT ao grupo como um todo.</p>
+  </div>
+
+  <div class="cta-inline">
+    <div><strong>A sua loja ou armazém aguenta uma visita da ACT amanhã?</strong><p>Diagnóstico de conformidade sem compromisso.</p></div>
+    <a href="/#contacto" class="btn-primary">Pedir diagnóstico</a>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ III</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="equipamentos">
+  <span class="section-eyebrow">§ III · Certificação de Equipamentos</span>
+  <h2>Certificação e inspecção de equipamentos em loja e armazém</h2>
+  <p class="lead">No comércio, o risco de equipamento não certificado concentra-se em armazém — porta-paletes, empilhadores e estruturas de armazenagem (racks). Um rack mal inspeccionado é tão perigoso como uma grua mal inspeccionada; a diferença é que ninguém pensa nisso até acontecer.</p>
+
+  <div class="box box-legal">
+    <span class="box-label">Base legal para equipamentos</span>
+    <ul>
+      <li>DL n.º 50/2005 — prescrições mínimas de segurança na utilização de equipamentos de trabalho</li>
+      <li>DL n.º 103/2008 — colocação no mercado de máquinas (Directiva Máquinas 2006/42/CE)</li>
+      <li>EN 15512 e EN 15635 — projecto e utilização segura de sistemas de armazenagem em racks de aço</li>
+    </ul>
+  </div>
+
+  <h3>Tipos de equipamento e requisitos de certificação</h3>
+  <div class="equip-grid">
+    <div class="equip-card">
+      <div class="equip-card-title"><span class="equip-idx">EQ · 01</span><h5>Empilhadores</h5></div>
+      <div class="equip-detail">
+        <div class="equip-detail-item"><div class="equip-detail-label">Inspecção inicial</div><div class="equip-detail-value">Antes de entrar em serviço</div></div>
+        <div class="equip-detail-item"><div class="equip-detail-label">Periodicidade</div><div class="equip-detail-value"><strong>Anual</strong>, por pessoa competente ou organismo acreditado</div></div>
+        <div class="equip-detail-item" style="grid-column:1/-1"><div class="equip-detail-label">O que verifica</div><div class="equip-detail-value">Sistema de travagem, garfos, mastro, bateria, cinto de segurança do operador, buzina e sinal sonoro de marcha-atrás</div></div>
+        <div class="equip-detail-item" style="grid-column:1/-1"><div class="equip-detail-label">Operador</div><div class="equip-detail-value">Formação obrigatória e autorização escrita — nunca operado por trabalhador sem formação, mesmo "só por um minuto"</div></div>
+      </div>
+    </div>
+    <div class="equip-card">
+      <div class="equip-card-title"><span class="equip-idx">EQ · 02</span><h5>Porta-paletes eléctrico</h5></div>
+      <div class="equip-detail">
+        <div class="equip-detail-item"><div class="equip-detail-label">Inspecção inicial</div><div class="equip-detail-value">Antes de entrada em serviço</div></div>
+        <div class="equip-detail-item"><div class="equip-detail-label">Periodicidade</div><div class="equip-detail-value"><strong>Anual</strong>, conforme manual do fabricante</div></div>
+        <div class="equip-detail-item" style="grid-column:1/-1"><div class="equip-detail-label">O que verifica</div><div class="equip-detail-value">Sistema de elevação hidráulico, rodas, travão de emergência, indicador de carga da bateria</div></div>
+        <div class="equip-detail-item" style="grid-column:1/-1"><div class="equip-detail-label">Verificação diária</div><div class="equip-detail-value">Check-list simples pelo operador antes do primeiro uso do dia — anomalia = fora de serviço</div></div>
+      </div>
+    </div>
+    <div class="equip-card">
+      <div class="equip-card-title"><span class="equip-idx">EQ · 03</span><h5>Racks e estanterias de armazenagem</h5></div>
+      <div class="equip-detail">
+        <div class="equip-detail-item"><div class="equip-detail-label">Inspecção inicial</div><div class="equip-detail-value">Após montagem, por instalador ou pessoa competente</div></div>
+        <div class="equip-detail-item"><div class="equip-detail-label">Periodicidade</div><div class="equip-detail-value"><strong>Inspecção visual semanal</strong> pelo responsável de armazém; <strong>inspecção formal anual</strong> por pessoa competente (EN 15635)</div></div>
+        <div class="equip-detail-item" style="grid-column:1/-1"><div class="equip-detail-label">O que verifica</div><div class="equip-detail-value">Deformação de montantes e vigas, ancoragem ao pavimento, protecções anti-impacto nas bases, placa de capacidade de carga</div></div>
+        <div class="equip-detail-item" style="grid-column:1/-1"><div class="equip-detail-label">Placa obrigatória</div><div class="equip-detail-value">Capacidade máxima de carga por nível e por vão, bem visível — ausência é incumprimento imediato</div></div>
+      </div>
+    </div>
+    <div class="equip-card">
+      <div class="equip-card-title"><span class="equip-idx">EQ · 04</span><h5>Instalações eléctricas e sistemas de incêndio</h5></div>
+      <div class="equip-detail">
+        <div class="equip-detail-item"><div class="equip-detail-label">Inspecção inicial</div><div class="equip-detail-value">Antes de entrada em serviço, por técnico qualificado</div></div>
+        <div class="equip-detail-item"><div class="equip-detail-label">Periodicidade</div><div class="equip-detail-value">Extintores: <strong>manutenção anual</strong>; sistemas automáticos de detecção: conforme DL 220/2008</div></div>
+        <div class="equip-detail-item" style="grid-column:1/-1"><div class="equip-detail-label">O que verifica</div><div class="equip-detail-value">Validade da manutenção dos extintores, funcionamento de detectores de fumo, iluminação de emergência operacional</div></div>
+        <div class="equip-detail-item" style="grid-column:1/-1"><div class="equip-detail-label">Atenção</div><div class="equip-detail-value">Extintor fora de validade equivale, para efeitos de inspecção, a ausência de extintor</div></div>
+      </div>
+    </div>
+  </div>
+
+  <h3>O processo de inspecção, passo a passo</h3>
+  <div class="steps">
+    <div class="step-item"><div class="step-num">01</div><div class="step-content"><h5>Inventário de equipamentos de movimentação e armazenagem</h5><p>Número de série, data de instalação, última inspecção e prazo da próxima, mantido no dossier de SST do estabelecimento.</p></div></div>
+    <div class="step-item"><div class="step-num">02</div><div class="step-content"><h5>Verificar CE e manual em português antes de colocar em serviço</h5><p>Equipamento novo ou usado sem estes documentos não pode entrar em funcionamento.</p></div></div>
+    <div class="step-item"><div class="step-num">03</div><div class="step-content"><h5>Inspecção inicial após montagem de racks</h5><p>Sistemas de armazenagem verificados por pessoa competente após instalação e após qualquer reconfiguração do layout.</p></div></div>
+    <div class="step-item"><div class="step-num">04</div><div class="step-content"><h5>Inspecções periódicas documentadas</h5><p>Relatório com resultado, anomalias e data da próxima inspecção, para empilhadores, porta-paletes e racks.</p></div></div>
+    <div class="step-item"><div class="step-num">05</div><div class="step-content"><h5>Verificação diária pelo operador</h5><p>Check-list simples antes de operar equipamento de movimentação — registada mesmo que de forma breve.</p></div></div>
+  </div>
+
+  <div class="box box-alerta">
+    <span class="box-label">Sobrecarga de racks — o risco invisível</span>
+    <p>Uma das causas mais comuns de colapso de estruturas de armazenagem é a sobrecarga progressiva: paletes mais pesadas do que o previsto, colocadas ao longo de meses sem revisão da capacidade declarada. O colapso raramente é súbito sem aviso — mas os avisos (deformação visível, ruído estrutural) são frequentemente ignorados até ao acidente.</p>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ IV</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="documentacao">
+  <span class="section-eyebrow">§ IV · Documentação Legal</span>
+  <h2>Documentação obrigatória: quando, o quê, onde e por quanto tempo</h2>
+  <p class="lead">Em caso de inspecção ou acidente, é a documentação que decide se a empresa estava em conformidade. No comércio, a rotatividade de pessoal torna a gestão documental particularmente exigente — cada entrada e saída de trabalhador é um novo ciclo de formação e registo.</p>
+
+  <h3>A — Organização e avaliação de risco</h3>
+  <div class="doc-grid">
+    <div class="doc-card"><h5>Avaliação de riscos</h5><div class="doc-card-detail">Específica por posto de trabalho — caixa, reposição, armazém — actualizada sempre que muda o layout ou a actividade.<strong>Disponível no estabelecimento</strong></div></div>
+    <div class="doc-card"><h5>Plano de emergência</h5><div class="doc-card-detail">Integra procedimentos de evacuação com público, contactos de emergência e papel de cada função na resposta.<strong>Afixado e conhecido por todos os trabalhadores</strong></div></div>
+    <div class="doc-card"><h5>Registo de simulacros SCIE</h5><div class="doc-card-detail">Data, participantes, duração e observações de cada simulacro realizado.<strong>Conservar 3 anos</strong></div></div>
+    <div class="doc-card"><h5>Modalidade de organização de SST</h5><div class="doc-card-detail">Declaração de serviço interno, comum ou externo, com identificação do responsável técnico.<strong>Disponível para apresentação imediata</strong></div></div>
+    <div class="doc-card"><h5>Registo de acidentes e near-misses</h5><div class="doc-card-detail">Data, descrição, causas apuradas, medidas correctivas — incluindo pequenos incidentes sem baixa.<strong>Conservar 5 anos</strong></div></div>
+    <div class="doc-card"><h5>Registo de subcontratados</h5><div class="doc-card-detail">Empresas de limpeza, segurança e manutenção que operam no espaço, com prova de informação sobre riscos do local.<strong>Actualizado a cada novo contrato</strong></div></div>
+  </div>
+
+  <h3>B — Formação e pessoal</h3>
+  <div class="doc-grid">
+    <div class="doc-card"><h5>Certificados de formação SST</h5><div class="doc-card-detail">Individuais, incluindo trabalhadores temporários e sazonais.<strong>Conservar mín. 5 anos</strong></div></div>
+    <div class="doc-card"><h5>Folhas de presença</h5><div class="doc-card-detail">Assinadas por cada participante em cada acção de formação.<strong>Conservar com o certificado</strong></div></div>
+    <div class="doc-card"><h5>Habilitação de operadores de equipamento</h5><div class="doc-card-detail">Formação certificada e autorização escrita, específica por tipo de empilhador ou porta-paletes.<strong>Disponível em armazém</strong></div></div>
+    <div class="doc-card"><h5>Certificação ACT do técnico de SST</h5><div class="doc-card-detail">Comprovativo TSST/TSSST com número de registo e validade.<strong>Disponível no estabelecimento</strong></div></div>
+  </div>
+
+  <h3>C — Equipamentos e instalações</h3>
+  <div class="doc-grid">
+    <div class="doc-card"><h5>Declarações de Conformidade CE</h5><div class="doc-card-detail">Para empilhadores, porta-paletes e outros equipamentos com marcação CE.<strong>No dossier do equipamento</strong></div></div>
+    <div class="doc-card"><h5>Relatórios de inspecção periódica</h5><div class="doc-card-detail">Empilhadores, porta-paletes e racks — anomalias, correcções e próxima data.<strong>Conservar durante a vida útil</strong></div></div>
+    <div class="doc-card"><h5>Manutenção de extintores</h5><div class="doc-card-detail">Certificado de manutenção anual de cada extintor, com data de validade visível.<strong>Junto ao equipamento</strong></div></div>
+    <div class="doc-card"><h5>Verificação eléctrica</h5><div class="doc-card-detail">Por técnico qualificado, antes de entrada em serviço e após alterações.<strong>No dossier de SST</strong></div></div>
+  </div>
+
+  <h3>O que deve estar afixado — e onde</h3>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Documento</th><th>Onde afixar</th><th>Quando actualizar</th><th>Base legal</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Plano de evacuação e ponto de encontro</strong></td><td>Zonas de circulação, junto às saídas</td><td>Alteração do layout</td><td class="mono">DL 220/2008</td></tr>
+      <tr><td><strong>Contactos de emergência</strong></td><td>Local de primeiros socorros e zona de gestão</td><td>Mudança de contactos</td><td class="mono">Lei 102/2009</td></tr>
+      <tr><td><strong>Capacidade de carga dos racks</strong></td><td>Bem visível em cada módulo de armazenagem</td><td>Após cada inspecção</td><td class="mono">EN 15635</td></tr>
+      <tr><td><strong>Identificação do responsável de SST</strong></td><td>Zona administrativa</td><td>Mudança de pessoa</td><td class="mono">Lei 102/2009</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Prazos de conservação</h3>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Documento</th><th>Prazo</th><th>Onde conservar</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Avaliação de riscos e plano de emergência</strong></td><td>Enquanto vigente + histórico de 5 anos</td><td>Arquivo da empresa</td></tr>
+      <tr><td><strong>Registos de formação SST</strong></td><td>Mín. 5 anos</td><td>Arquivo da empresa</td></tr>
+      <tr><td><strong>Registos de acidentes</strong></td><td>Mín. 5 anos</td><td>Arquivo da empresa</td></tr>
+      <tr><td><strong>Certificados de inspecção de equipamento</strong></td><td>Vida útil do equipamento</td><td>Dossier do equipamento</td></tr>
+      <tr><td><strong>Registos de simulacros SCIE</strong></td><td>3 anos</td><td>Dossier de SST</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="box box-pratica">
+    <span class="box-label">Múltiplas lojas, um único sistema</span>
+    <p>Para cadeias com vários estabelecimentos, um sistema centralizado de gestão documental — com alertas automáticos por loja para renovações de formação, inspecções de equipamento e simulacros — evita que cada gerente local fique sujeito a lacunas que só aparecem numa inspecção.</p>
+  </div>
+
+  <div class="cta-inline">
+    <div><strong>A documentação de todas as suas lojas está em ordem?</strong><p>Diagnóstico de conformidade documental antes que a ACT o faça primeiro.</p></div>
+    <a href="/#contacto" class="btn-primary">Pedir diagnóstico</a>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ V</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="mais">
+  <span class="section-eyebrow">§ V · Aspectos críticos adicionais</span>
+  <h2>O que mais é crítico saber em segurança no comércio</h2>
+
+  <h3>Ergonomia no posto de caixa — o risco que ninguém regista como acidente</h3>
+  <p>A lesão musculoesquelética por movimento repetitivo é o risco mais subestimado do comércio, precisamente porque não resulta de um evento único. Um operador de caixa realiza milhares de movimentos de rotação de tronco e preensão por turno; ao longo de anos, isto traduz-se em patologias da coluna e do punho que só são reconhecidas como doença profissional depois de instaladas.</p>
+  <ul class="styled">
+    <li><strong>Altura da bancada e da cadeira:</strong> ajustável à estatura de cada trabalhador, não uma medida-padrão fixa</li>
+    <li><strong>Rotação de tarefas:</strong> alternar caixa com reposição ou apoio ao cliente reduz a exposição repetitiva</li>
+    <li><strong>Pausas:</strong> intervalos regulares em turnos de caixa prolongados, previstos no plano de prevenção</li>
+    <li><strong>Leitor de código de barras e disposição de produtos:</strong> posicionados para minimizar torção do tronco e alcance excessivo</li>
+  </ul>
+
+  <h3>Riscos psicossociais — agressão de clientes e furto</h3>
+  <p>O comércio é dos poucos sectores onde o trabalhador está exposto, de forma estruturalmente inevitável, ao público — e com isso, a um risco de agressão verbal ou física que não existe num estaleiro ou numa fábrica. A abordagem legal correcta não é ignorar este risco por ser "da natureza do negócio", mas geri-lo com o mesmo rigor de qualquer outro.</p>
+  <ul class="styled">
+    <li><strong>Procedimento documentado</strong> para situações de conflito com cliente, incluindo quando recuar e quando accionar apoio</li>
+    <li><strong>Formação específica</strong> em desescalada verbal para funções de atendimento directo</li>
+    <li><strong>Botão de pânico ou meio de alerta silencioso</strong> em postos de caixa, sobretudo em horário nocturno ou de menor afluência</li>
+    <li><strong>Registo de incidentes de agressão</strong> — mesmo sem lesão física, o registo é relevante para efeitos de vigilância da saúde psicológica e para decisões de reforço de segurança</li>
+    <li><strong>Procedimento de furto:</strong> instrução clara de nunca confrontar fisicamente um suspeito — a segurança do trabalhador prevalece sobre a recuperação da mercadoria</li>
+  </ul>
+
+  <h3>Trabalho por turnos e horário alargado</h3>
+  <p>Lojas com horário alargado, hipermercados com funcionamento nocturno para reposição, e armazéns logísticos com turnos rotativos acrescentam obrigações específicas: vigilância da saúde reforçada para trabalhadores nocturnos habituais, gestão de fadiga na escala de turnos, e reforço dos meios de segurança pessoal fora do horário de maior afluência, quando a presença de colegas e de clientes é menor.</p>
+
+  <h3>Trabalho temporário e sazonal — a lacuna mais comum</h3>
+  <p>O recurso a empresas de trabalho temporário em picos sazonais não transfere a responsabilidade de SST para a empresa de trabalho temporário na íntegra — a empresa utilizadora mantém obrigações de informação sobre os riscos do local de trabalho concreto, independentemente de quem processa o contrato de trabalho. Um trabalhador temporário sem formação de base documentada é, para efeitos de fiscalização, exactamente a mesma infracção que um trabalhador permanente sem formação.</p>
+
+  <div class="box box-alerta">
+    <span class="box-label">Época de maior risco</span>
+    <p>Os picos de campanha — Natal, saldos, Black Friday — combinam volume máximo de trabalhadores temporários, ritmo mais intenso de movimentação de cargas e maior afluência de público. É precisamente neste período que o risco acumulado é mais alto, e é também quando a pressão comercial mais tenta empurrar a formação para segundo plano.</p>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ VI</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="defesa">
+  <span class="section-eyebrow">§ VI · Quando a conformidade falha</span>
+  <h2>Auto de notícia, contra-ordenação e defesa jurídica</h2>
+  <p class="lead">Um auto de notícia não é uma coima definitiva — é o início de um processo com direitos processuais concretos. No comércio, isto é particularmente relevante em cadeias com múltiplas lojas, onde uma infracção detectada num estabelecimento pode ser usada para justificar fiscalização alargada a toda a rede.</p>
+
+  <div class="steps">
+    <div class="step-item"><div class="step-num">01</div><div class="step-content"><h5>Auto de notícia lavrado no estabelecimento</h5><p>O inspector regista a infracção, a norma violada e as circunstâncias. Corre a partir daqui o prazo de defesa, normalmente 15 a 20 dias úteis.</p></div></div>
+    <div class="step-item"><div class="step-num">02</div><div class="step-content"><h5>Direito de resposta e defesa escrita</h5><p>A empresa pode contestar a tipificação da infracção e apresentar prova documental. Um erro na descrição dos factos ou na norma citada é fundamento de anulação.</p></div></div>
+    <div class="step-item"><div class="step-num">03</div><div class="step-content"><h5>Decisão da ACT</h5><p>Circunstâncias atenuantes — correcção imediata, ausência de antecedentes, colaboração na inspecção — podem reduzir substancialmente o valor da coima.</p></div></div>
+    <div class="step-item"><div class="step-num">04</div><div class="step-content"><h5>Recurso judicial</h5><p>Da decisão cabe recurso para o tribunal do trabalho competente, com efeito suspensivo mediante garantia.</p></div></div>
+  </div>
+
+  <div class="box box-legal">
+    <span class="box-label">Responsabilidade em cadeias de lojas</span>
+    <p style="color:#5c1a26;margin:0">Quando a mesma não-conformidade se repete em várias lojas de uma cadeia, a ACT pode tratar o padrão como falha organizacional da empresa-mãe, e não apenas do estabelecimento individual — o que muda a estratégia de defesa: já não basta corrigir uma loja, é preciso demonstrar um sistema de gestão de SST replicável e efectivamente aplicado em toda a rede.</p>
+  </div>
+
+  <h3>Checklist final de conformidade</h3>
+  <div class="checklist">
+    <li>Avaliação de riscos actualizada para cada tipo de posto de trabalho</li>
+    <li>Modalidade de organização de SST definida e documentada</li>
+    <li>Todos os trabalhadores, incluindo temporários, com formação de base antes de iniciar funções</li>
+    <li>Operadores de porta-paletes e empilhador com formação certificada e autorização escrita</li>
+    <li>Racks de armazenagem com placa de capacidade de carga e inspecção actualizada</li>
+    <li>Extintores dentro da validade e saídas de emergência desobstruídas</li>
+    <li>Plano de emergência afixado e simulacro realizado e registado</li>
+    <li>Procedimento documentado para agressão de clientes e furto</li>
+    <li>Apólices de seguro de acidentes de trabalho verificadas para todos, incluindo sazonais</li>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ VII</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="faq">
+  <span class="section-eyebrow">§ VII · Perguntas Frequentes</span>
+  <h2>Dúvidas recorrentes de gerentes de loja e responsáveis de armazém</h2>
+
+  <h3>Um trabalhador temporário contratado por 3 semanas precisa mesmo de formação completa?</h3>
+  <p>Precisa da formação de base adequada às funções que vai desempenhar — não precisa necessariamente de todos os módulos específicos se não for operar equipamentos de risco. Mas a formação de base (riscos do espaço, EPIs, procedimentos de emergência, movimentação manual) é obrigatória independentemente da duração do contrato. A ACT não faz distinção entre "é só três semanas" e um contrato permanente para efeitos desta obrigação.</p>
+
+  <h3>Se o furto ou a agressão de um cliente resultar em lesão do trabalhador, é acidente de trabalho?</h3>
+  <p>Sim. Um acidente de trabalho não exige que a causa seja interna à empresa — uma agressão sofrida no exercício de funções, incluindo por terceiros, é acidente de trabalho para efeitos de seguro e, se grave, para efeitos de comunicação obrigatória à ACT. É por isto que o registo destes incidentes, mesmo sem lesão física imediata, importa: um padrão de agressões documentadas fundamenta a necessidade de reforço de segurança, e protege a empresa numa eventual reclamação por omissão de medidas preventivas.</p>
+
+  <h3>Uma loja pequena, com 3 trabalhadores, precisa de plano de emergência formal?</h3>
+  <p>Sim, ainda que simplificado face ao de um hipermercado. A obrigação de plano de emergência decorre da segurança contra incêndio (DL 220/2008) e aplica-se a qualquer espaço com público, independentemente da dimensão da equipa — a categoria de risco SCIE do edifício, não o número de trabalhadores, é que determina o grau de exigência.</p>
+
+  <h3>Que diferença faz ter advogada e TSST na mesma pessoa, para uma cadeia de lojas?</h3>
+  <p>Significa que, quando uma não-conformidade detectada numa loja ameaça escalar para uma investigação a toda a rede, a mesma pessoa que fez o diagnóstico técnico consegue também estruturar a resposta jurídica sem repetir o histórico do caso a um terceiro — e avaliar com precisão se a exposição é pontual (coima de estabelecimento) ou sistémica (risco reputacional e contra-ordenacional para toda a cadeia).</p>
+</div>
+
+</article>
+
+<aside class="sidebar">
+  <div class="toc-title">Índice do Guia</div>
+  <ul class="toc">
+    <li class="toc-section"><a href="#formacao"><span class="toc-num">I</span>Formação Obrigatória</a>
+      <ul class="toc-sub"><li><a href="#formacao">Plano 1 — Base para todos</a></li><li><a href="#formacao">Plano 2 — Por actividade de risco</a></li><li><a href="#formacao">Plano 3 — Responsáveis e técnicos</a></li></ul></li>
+    <li class="toc-section"><a href="#fiscalizacao"><span class="toc-num">II</span>Fiscalização da ACT</a>
+      <ul class="toc-sub"><li><a href="#fiscalizacao">Quando e como aparecem</a></li><li><a href="#fiscalizacao">Tabela de coimas</a></li></ul></li>
+    <li class="toc-section"><a href="#equipamentos"><span class="toc-num">III</span>Certificação de Equipamentos</a>
+      <ul class="toc-sub"><li><a href="#equipamentos">Empilhadores e porta-paletes</a></li><li><a href="#equipamentos">Racks de armazenagem</a></li></ul></li>
+    <li class="toc-section"><a href="#documentacao"><span class="toc-num">IV</span>Documentação Legal</a>
+      <ul class="toc-sub"><li><a href="#documentacao">O que afixar e onde</a></li><li><a href="#documentacao">Prazos de conservação</a></li></ul></li>
+    <li class="toc-section"><a href="#mais"><span class="toc-num">V</span>Aspectos Críticos</a>
+      <ul class="toc-sub"><li><a href="#mais">Ergonomia e riscos psicossociais</a></li><li><a href="#mais">Trabalho sazonal</a></li></ul></li>
+    <li class="toc-section"><a href="#defesa"><span class="toc-num">VI</span>Defesa Jurídica</a>
+      <ul class="toc-sub"><li><a href="#defesa">Auto de notícia e recurso</a></li><li><a href="#defesa">Checklist final</a></li></ul></li>
+  </ul>
+
+  <div class="sidebar-box">
+    <div class="sidebar-box-title">Precisa de apoio?</div>
+    <p><strong>Diagnóstico de conformidade sem compromisso.</strong> Analisamos a situação da sua loja ou armazém e dizemos exactamente o que falta regularizar.</p>
+    <a href="/#contacto" class="btn-primary">Pedir diagnóstico</a>
+  </div>
+
+  <div class="sidebar-law">
+    <div class="sidebar-law-title">Base legal principal</div>
+    <ul>
+      <li>Lei n.º 102/2009 — SST geral</li>
+      <li>DL n.º 50/2005 — Equipamentos</li>
+      <li>DL n.º 220/2008 — SCIE</li>
+      <li>DL n.º 24/2012 — Agentes químicos</li>
+      <li>CT art.º 131.º — Formação</li>
+      <li>EN 15635 — Armazenagem em racks</li>
+    </ul>
+  </div>
+</aside>
+
+</div>
+
+<section class="cta-final" style="background:var(--ink);color:var(--paper);padding:70px 0;text-align:center" id="contacto">
+  <div class="wrap" style="max-width:720px">
+    <h2 style="color:var(--paper);font-size:clamp(26px,3.6vw,42px);margin-bottom:18px">A sua loja está pronta para uma visita da ACT amanhã?</h2>
+    <p style="color:rgba(244,239,230,0.72);font-size:16px;margin-bottom:30px">Da avaliação de riscos à defesa de um auto de notícia, se for necessário. Diagnóstico sem compromisso.</p>
+    <a href="/#contacto" class="btn-primary" style="background:var(--brass);color:var(--ink);padding:14px 30px;font-size:14px">Marcar Consulta</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="mono">SST PORTUGAL · sstportugal.pt · © 2026</div>
+    <div class="mono">Cédula OA 56666P · TSST nv.6</div>
+  </div>
+</footer>
+
+</body>
+</html>

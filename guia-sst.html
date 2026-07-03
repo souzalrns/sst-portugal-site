@@ -1,0 +1,2443 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia Completo de Segurança do Trabalho em Portugal | 2026</title>
+<meta name="description" content="O guia mais completo de segurança e saúde no trabalho em Portugal: legislação, avaliação de riscos, EPIs, higiene ocupacional, ergonomia, emergências e muito mais.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0E1B2C;
+  --ink-mid: rgba(14,27,44,0.72);
+  --ink-light: rgba(14,27,44,0.55);
+  --paper: #F4EFE6;
+  --paper-warm: #EAE3D5;
+  --accent: #7A2233;
+  --accent-muted: #F7ECEE;
+  --rule: rgba(14,27,44,0.16);
+  --white: #FFFFFF;
+  --section-bg: #EAE3D5;
+  --green: #4C5B4A;
+  --green-bg: #EEF1EE;
+  --blue: #7A2233;
+  --blue-bg: #F7ECEE;
+  --brass: #B08A3E;
+  --brass-bg: #FAF3E6;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--ink);font-size:16.5px;line-height:1.75;-webkit-font-smoothing:antialiased}
+
+.mono{font-family:'JetBrains Mono',monospace}
+
+.top-bar{background:var(--ink);color:var(--paper);font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;text-align:center;padding:9px 24px}
+
+header{border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:100}
+.header-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:16px clamp(20px,6vw,80px);gap:16px}
+.logo{font-family:'Fraunces',serif;font-size:16px;font-weight:500;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:12px}
+.logo span{color:var(--accent);font-style:italic}
+nav{display:flex;gap:22px;flex-wrap:wrap;align-items:center}
+nav a{font-size:13px;font-weight:500;color:var(--ink-mid);text-decoration:none;transition:color .15s}
+nav a:hover{color:var(--accent)}
+.nav-cta{background:var(--ink);color:var(--paper)!important;padding:9px 18px;font-size:12.5px;border-radius:2px}
+.nav-cta:hover{background:var(--accent)!important}
+
+.hero{padding:clamp(44px,7vw,84px) 0 clamp(36px,5vw,60px);border-bottom:1px solid var(--rule);max-width:1180px;margin:0 auto}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);margin-bottom:24px}
+.hero-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--accent)}
+h1{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(32px,4.6vw,56px);line-height:1.08;letter-spacing:-.01em;color:var(--ink);max-width:820px;margin-bottom:24px}
+h1 em{font-style:italic;color:var(--accent)}
+.hero-lead{font-size:clamp(15.5px,1.7vw,18.5px);line-height:1.65;color:var(--ink-mid);max-width:680px;margin-bottom:32px}
+.hero-meta{display:flex;align-items:center;gap:18px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-light);flex-wrap:wrap}
+.reading-time{background:var(--accent);color:var(--paper);font-size:10.5px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;padding:4px 11px;border-radius:2px}
+
+.page-wrap{max-width:1180px;margin:0 auto;padding:0 clamp(20px,6vw,80px);display:grid;grid-template-columns:1fr 300px;gap:56px;align-items:start}
+
+.sidebar{position:sticky;top:76px;padding:40px 0}
+.sidebar-title{font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-light);margin-bottom:16px}
+.toc{list-style:none}
+.toc li{border-top:1px solid var(--rule)}
+.toc a{display:flex;align-items:flex-start;gap:10px;padding:9px 0;font-size:12.5px;color:var(--ink-mid);text-decoration:none;line-height:1.4;transition:color .15s}
+.toc a:hover{color:var(--accent)}
+.toc-num{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;color:var(--accent);min-width:22px;padding-top:2px;font-variant-numeric:tabular-nums}
+
+.sidebar-cta{margin-top:30px;padding:22px;background:var(--ink);color:var(--paper)}
+.sidebar-cta strong{display:block;font-family:'Fraunces',serif;font-size:17px;font-weight:500;color:var(--paper);margin-bottom:8px}
+.sidebar-cta p{font-size:12.5px;line-height:1.55;margin-bottom:16px;color:rgba(244,239,230,0.72)}
+.btn-cta{display:block;text-align:center;background:var(--brass);color:var(--ink);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:11px 16px}
+.btn-cta:hover{opacity:.85}
+
+.sidebar-law{margin-top:22px;padding:18px;border:1px solid var(--rule);background:var(--white)}
+.sidebar-law h6{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.sidebar-law ul{list-style:none}
+.sidebar-law ul li{font-size:11.5px;color:var(--ink-mid);padding:5px 0;border-bottom:1px solid var(--rule);line-height:1.4}
+
+article{padding:50px 0}
+.section{margin-bottom:76px}
+
+h2{font-family:'Fraunces',serif;font-size:clamp(24px,2.8vw,36px);font-weight:500;line-height:1.12;letter-spacing:-.01em;color:var(--ink);margin-bottom:10px;padding-top:8px}
+.section-eyebrow{font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;display:block}
+h3{font-family:'Fraunces',serif;font-size:clamp(18px,2vw,23px);font-weight:600;line-height:1.22;color:var(--ink);margin:36px 0 14px}
+h4{font-family:'Inter',sans-serif;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-mid);margin:26px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--rule)}
+h5.sub{font-family:'Inter',sans-serif;font-size:14.5px;font-weight:700;color:var(--ink);margin:20px 0 8px;letter-spacing:0;text-transform:none}
+
+p{color:var(--ink-mid);margin-bottom:18px}
+p strong{color:var(--ink);font-weight:600}
+.divider{border:none;border-top:1px solid var(--rule);margin:48px 0}
+
+.pull-quote{border-left:2px solid var(--accent);padding:20px 28px;background:var(--accent-muted);margin:36px 0}
+.pull-quote p{font-family:'Fraunces',serif;font-size:clamp(16px,1.8vw,20px);font-style:italic;font-weight:400;line-height:1.5;color:var(--ink);margin:0}
+
+.alert-box{border-left:3px solid var(--ink);padding:18px 22px;margin:28px 0;background:var(--paper-warm);position:relative}
+.alert-box::before{content:'ATENÇÃO';font-family:'JetBrains Mono',monospace;letter-spacing:.1em;display:block;color:var(--ink);font-size:10px;font-weight:500;margin-bottom:8px}
+.alert-box p{margin:0;font-size:14.5px;color:var(--ink)}
+.alert-box p strong{color:var(--ink)}
+
+.tip-box{border-left:3px solid var(--green);padding:18px 22px;margin:28px 0;background:var(--green-bg);position:relative}
+.tip-box::before{content:'BOA PRÁTICA';font-family:'JetBrains Mono',monospace;letter-spacing:.1em;display:block;color:var(--green);font-size:10px;font-weight:500;margin-bottom:8px}
+.tip-box p{margin:0;font-size:14.5px;color:#2e392c}
+
+.law-box{border-left:3px solid var(--accent);padding:18px 22px;margin:28px 0;background:var(--accent-muted);position:relative}
+.law-box::before{content:'BASE LEGAL';font-family:'JetBrains Mono',monospace;letter-spacing:.1em;display:block;color:var(--accent);font-size:10px;font-weight:500;margin-bottom:8px}
+.law-box p{margin:0;font-size:14.5px;color:#5c1a26}
+.law-box ul{list-style:none;margin:8px 0 0}
+.law-box ul li{font-size:13.5px;color:#5c1a26;padding:3px 0;padding-left:14px;position:relative}
+.law-box ul li::before{content:'§';position:absolute;left:0;color:var(--accent);font-weight:700;font-size:12px}
+
+.table-wrap{overflow-x:auto;margin:28px 0}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+thead th{background:var(--ink);color:var(--paper);font-weight:600;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;padding:12px 14px;text-align:left}
+tbody tr{border-bottom:1px solid var(--rule)}
+tbody tr:nth-child(even){background:var(--section-bg)}
+td{padding:12px 14px;color:var(--ink-mid);vertical-align:top}
+td strong{color:var(--ink)}
+
+ul.styled,ol.styled{margin:18px 0 26px;padding-left:0;list-style:none}
+ul.styled li{position:relative;padding-left:20px;margin-bottom:9px;color:var(--ink-mid)}
+ul.styled li::before{content:'—';position:absolute;left:0;color:var(--accent);font-weight:700}
+ol.styled{counter-reset:item}
+ol.styled li{position:relative;padding-left:36px;margin-bottom:12px;color:var(--ink-mid);counter-increment:item}
+ol.styled li::before{content:counter(item,decimal-leading-zero);position:absolute;left:0;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--accent);top:3px;font-variant-numeric:tabular-nums}
+
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:28px 0}
+.card{background:var(--paper);border:none;padding:20px 18px}
+.card-icon{font-size:22px;margin-bottom:10px;display:block;opacity:.7}
+.card h4{font-size:13px;font-weight:700;text-transform:none;color:var(--ink);margin:0 0 8px;letter-spacing:0;border:none;padding:0;font-family:'Fraunces',serif}
+.card p{font-size:12.5px;line-height:1.55;color:var(--ink-light);margin:0}
+
+.stat-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:32px 0}
+.stat-item{background:var(--paper);padding:24px 20px}
+.stat-number{font-family:'Fraunces',serif;font-size:36px;font-weight:600;line-height:1;color:var(--accent);display:block;margin-bottom:8px}
+.stat-label{font-size:11px;font-weight:500;color:var(--ink-light);text-transform:uppercase;letter-spacing:.05em;line-height:1.4}
+
+.checklist{list-style:none;margin:18px 0}
+.checklist li{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--rule);font-size:14.5px;color:var(--ink-mid)}
+.checklist li::before{content:'□';color:var(--ink-light);font-size:15px;flex-shrink:0;line-height:1.6}
+
+.section-sep{display:flex;align-items:center;gap:16px;margin:64px 0 46px}
+.section-sep-line{flex:1;height:1px;background:var(--rule)}
+.section-sep-tag{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-light);white-space:nowrap}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);margin:28px 0}
+.two-col-box{background:var(--paper);padding:22px}
+.two-col-box h5{font-family:'Fraunces',serif;font-size:16px;font-weight:600;color:var(--ink);margin-bottom:12px}
+.two-col-box ul{list-style:none}
+.two-col-box ul li{font-size:13.5px;color:var(--ink-mid);padding:5px 0;border-bottom:1px solid var(--rule)}
+
+.hierarchy{margin:28px 0}
+.hierarchy-item{display:flex;align-items:center;gap:16px;padding:14px 20px;margin-bottom:2px;border-left:3px solid var(--rule);background:var(--paper)}
+.hierarchy-item:nth-child(1){border-color:var(--accent)}
+.hierarchy-item:nth-child(2){border-color:var(--brass)}
+.hierarchy-item:nth-child(3){border-color:var(--brass)}
+.hierarchy-item:nth-child(4){border-color:var(--green)}
+.hierarchy-item:nth-child(5){border-color:var(--ink)}
+.hierarchy-num{font-family:'Fraunces',serif;font-size:26px;font-weight:600;color:var(--ink);opacity:.35;min-width:34px}
+.hierarchy-text strong{display:block;font-size:14px;font-weight:700;color:var(--ink);margin-bottom:2px}
+.hierarchy-text span{font-size:12.5px;color:var(--ink-light)}
+
+footer{background:var(--paper);color:var(--ink-mid);border-top:1px solid var(--rule);padding:clamp(36px,5vw,56px) clamp(20px,6vw,80px);margin-top:70px}
+.footer-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:42px}
+footer h5{font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+footer p{font-size:12.5px;color:var(--ink-light);line-height:1.65;margin:0}
+.footer-bottom{max-width:1180px;margin:32px auto 0;padding-top:20px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--ink-light);flex-wrap:wrap;gap:12px}
+
+@media(max-width:900px){
+  .page-wrap{grid-template-columns:1fr;gap:0}
+  .sidebar{display:none}
+  .footer-inner{grid-template-columns:1fr;gap:28px}
+  .two-col{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  nav{display:none}
+  .stat-row{grid-template-columns:1fr 1fr}
+  .card-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="top-bar">GUIA DE REFERÊNCIA · ACTUALIZADO 2026 · LEGISLAÇÃO PORTUGUESA E QUADRO EUROPEU</div>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <svg width="26" height="26" viewBox="0 0 40 40" aria-hidden="true">
+        <rect x="4" y="4" width="32" height="32" rx="3" fill="none" stroke="#0E1B2C" stroke-width="1.1"/>
+        <line x1="20" y1="4" x2="20" y2="36" stroke="#0E1B2C" stroke-width="0.7"/>
+        <line x1="9" y1="13" x2="17" y2="13" stroke="#0E1B2C" stroke-width="1.3"/>
+        <line x1="9" y1="18" x2="16" y2="18" stroke="#0E1B2C" stroke-width="1.3"/>
+        <line x1="9" y1="23" x2="17" y2="23" stroke="#0E1B2C" stroke-width="1.3"/>
+        <line x1="9" y1="28" x2="14" y2="28" stroke="#0E1B2C" stroke-width="1.3"/>
+        <circle cx="25" cy="13" r="1.2" fill="#0E1B2C"/><circle cx="30" cy="13" r="1.2" fill="#0E1B2C"/>
+        <circle cx="25" cy="19" r="1.2" fill="#0E1B2C"/><circle cx="30" cy="19" r="1.2" fill="#0E1B2C"/>
+        <circle cx="25" cy="25" r="1.2" fill="#0E1B2C"/><circle cx="30" cy="25" r="1.2" fill="#0E1B2C"/>
+      </svg>
+      SST Portugal
+    </a>
+    <nav>
+      <a href="#legislacao">Legislação</a>
+      <a href="#riscos">Riscos</a>
+      <a href="#higiene">Higiene</a>
+      <a href="#ergonomia">Ergonomia</a>
+      <a href="#epi">EPIs</a>
+      <a href="#gestao">Gestão</a>
+      <a href="#emergencias">Emergências</a>
+      <a href="/#contacto" class="nav-cta">Marcar Consulta</a>
+    </nav>
+  </div>
+</header>
+
+<div style="max-width:1180px;margin:0 auto;padding:0 clamp(20px,6vw,80px)">
+<div class="hero" style="padding-left:0;padding-right:0">
+  <span class="hero-eyebrow">Guia completo · Portugal · 2026</span>
+  <h1>O guia definitivo de <em>Segurança e Saúde no Trabalho</em> em Portugal</h1>
+  <p class="hero-lead">Da Lei 102/2009 às diretivas europeias, da avaliação de riscos ao controlo de energia, da ergonomia aplicada à gestão de subcontratados: tudo o que um profissional de SST precisa de saber para atuar em Portugal.</p>
+  <div class="hero-meta">
+    <span class="reading-time">~75 min de leitura</span>
+    <span class="mono">≈ 16 000 PALAVRAS</span>
+    <span class="mono">ACTUALIZADO 2026</span>
+    <span class="mono">FOCO EXCLUSIVO EM PORTUGAL</span>
+  </div>
+</div>
+</div>
+
+<div class="page-wrap">
+<article>
+
+<!-- INTRO -->
+<div class="section" id="intro">
+  <span class="section-eyebrow">Ponto de partida</span>
+  <h2>O que é Segurança e Saúde no Trabalho e por que é uma prioridade em Portugal</h2>
+
+  <p>A <strong>segurança e saúde no trabalho (SST)</strong> é o conjunto de ciências, técnicas e práticas destinadas a proteger a integridade física, psíquica e social dos trabalhadores durante o exercício das suas funções profissionais. Não se trata de uma obrigação burocrática — é uma disciplina viva, em constante evolução, que dialoga com a engenharia, a medicina, a psicologia, o direito e a gestão.</p>
+
+  <p>Em Portugal, a SST tem um enquadramento legal robusto, enraizado no direito comunitário europeu e progressivamente reforçado nas últimas décadas. A Autoridade para as Condições do Trabalho (ACT) é a entidade inspetiva responsável pela fiscalização do cumprimento da legislação laboral e de SST em todo o território nacional.</p>
+
+  <p>Os acidentes de trabalho e as doenças profissionais têm um custo humano incalculável: dor, incapacidade, perda de rendimento e, nos casos mais graves, a morte. Mas têm também custos económicos diretos e indiretos que recaem sobre empresas, sistemas de saúde e a sociedade.</p>
+
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-number">156</span>
+      <span class="stat-label">Acidentes mortais em Portugal em 2023 (GEP/MSST)</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">132K</span>
+      <span class="stat-label">Acidentes de trabalho não mortais registados por ano</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">4%</span>
+      <span class="stat-label">Do PIB europeu perdido em custos de acidentes e doenças (EU-OSHA)</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">6:1</span>
+      <span class="stat-label">Retorno médio por cada euro investido em prevenção</span>
+    </div>
+  </div>
+
+  <p>A construção civil, a indústria transformadora, a agricultura e os transportes são os setores com maior sinistralidade em Portugal. Mas os riscos ergonómicos e psicossociais afetam transversalmente todos os setores, incluindo escritórios, serviços e comércio.</p>
+
+  <div class="pull-quote">
+    <p>"A segurança não acontece por acidente. É o resultado de uma cultura organizacional, de sistemas bem desenhados e de pessoas comprometidas com a proteção mútua."</p>
+  </div>
+
+  <p>Este guia foi concebido para ser a referência mais completa disponível sobre SST em Portugal. Aborda desde os fundamentos legais até às ferramentas práticas de gestão, passando por todas as categorias de risco, a higiene ocupacional, a ergonomia aplicada, os equipamentos de proteção individual, a sinalização, a gestão de emergências e a construção de uma cultura de segurança sustentável.</p>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">Secção 01</div><div class="section-sep-line"></div></div>
+
+<!-- LEGISLAÇÃO -->
+<div class="section" id="legislacao">
+  <span class="section-eyebrow">Secção 01 · Fundamentos Legais</span>
+  <h2>Legislação e Enquadramento Jurídico em Portugal</h2>
+
+  <p>A SST em Portugal é regulada por um conjunto hierarquizado de instrumentos jurídicos: direito da União Europeia (diretivas e regulamentos), lei ordinária nacional, decretos-lei e portarias de regulamentação setorial. Compreender esta hierarquia é essencial para qualquer profissional da área.</p>
+
+  <h3>O Quadro Europeu</h3>
+
+  <p>Portugal, enquanto Estado-membro da União Europeia, está vinculado ao direito comunitário em matéria de SST. O instrumento central é a <strong>Diretiva-Quadro 89/391/CEE</strong>, do Conselho, relativa à aplicação de medidas destinadas a promover a melhoria da segurança e da saúde dos trabalhadores no trabalho. Esta diretiva estabelece os <strong>nove princípios gerais de prevenção</strong> que todos os empregadores devem aplicar:</p>
+
+  <ol class="styled">
+    <li>Evitar os riscos na fonte</li>
+    <li>Avaliar os riscos que não podem ser evitados</li>
+    <li>Combater os riscos na origem</li>
+    <li>Adaptar o trabalho ao homem — especialmente no que se refere à conceção dos postos de trabalho, à escolha dos equipamentos e dos métodos de trabalho e de produção</li>
+    <li>Ter em conta o estágio de evolução da técnica</li>
+    <li>Substituir o que é perigoso pelo que é não perigoso ou menos perigoso</li>
+    <li>Planear a prevenção como um sistema coerente que integre a técnica, a organização do trabalho, as condições de trabalho, as relações sociais e a influência dos fatores ambientais</li>
+    <li>Dar prioridade às medidas de proteção coletiva em relação às medidas de proteção individual</li>
+    <li>Dar instruções adequadas aos trabalhadores</li>
+  </ol>
+
+  <p>A Diretiva-Quadro foi complementada por múltiplas diretivas específicas, abrangendo locais de trabalho, equipamentos de trabalho, EPIs, agentes químicos, físicos (ruído, vibrações, campos eletromagnéticos) e biológicos, espaços confinados, trabalho temporário, trabalho em plataformas elevatórias, entre outros.</p>
+
+  <h3>A Lei n.º 102/2009 — Lei-Quadro de SST em Portugal</h3>
+
+  <p>O pilar central do direito português de SST é a <strong>Lei n.º 102/2009, de 10 de setembro</strong>, com as alterações introduzidas pelas Leis n.os 42/2012, 3/2014, 28/2016, 79/2019 e posteriores. Esta lei transpõe a Diretiva-Quadro e define:</p>
+
+  <ul class="styled">
+    <li>Os direitos e obrigações dos empregadores e dos trabalhadores em matéria de SST</li>
+    <li>As modalidades de organização dos serviços de SST (serviço interno, serviço comum e serviço externo)</li>
+    <li>Os requisitos de formação e certificação dos técnicos de SST</li>
+    <li>Os deveres de informação, consulta e participação dos trabalhadores</li>
+    <li>O regime contraordenacional (infrações e coimas)</li>
+    <li>O papel da ACT e dos representantes dos trabalhadores para a segurança</li>
+  </ul>
+
+  <div class="law-box">
+    <p><strong>Obrigação legal fundamental:</strong> Nos termos do artigo 15.º da Lei n.º 102/2009, o empregador é obrigado a assegurar ao trabalhador condições de segurança e de saúde em todos os aspetos do seu trabalho. Esta obrigação é pessoal e intransmissível — não é excluída nem limitada pelo facto de o empregador ter recorrido a serviços externos.</p>
+  </div>
+
+  <h3>O Código do Trabalho</h3>
+
+  <p>A <strong>Lei n.º 7/2009</strong> (Código do Trabalho) complementa a Lei 102/2009, estabelecendo no seu Título II as obrigações específicas em matéria de segurança e saúde, nomeadamente:</p>
+
+  <ul class="styled">
+    <li>Direito do trabalhador a prestar trabalho em condições de segurança e saúde (art.º 127.º)</li>
+    <li>Obrigação do empregador de organizar o trabalho nas condições técnicas necessárias para proteger a segurança e a saúde do trabalhador (art.º 127.º)</li>
+    <li>Direito de recusa de trabalho perigoso pelo trabalhador (art.º 281.º)</li>
+    <li>Vigilância da saúde dos trabalhadores</li>
+    <li>Participação dos trabalhadores na organização da SST</li>
+  </ul>
+
+  <h3>Principais Diplomas Legais Setoriais em Portugal</h3>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Diploma</th>
+        <th>Matéria</th>
+        <th>Transpõe</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>DL n.º 273/2003</strong></td>
+        <td>Segurança nos estaleiros temporários ou móveis (construção)</td>
+        <td>Diretiva 92/57/CEE</td>
+      </tr>
+      <tr>
+        <td><strong>DL n.º 182/2006</strong></td>
+        <td>Proteção dos trabalhadores contra riscos de ruído</td>
+        <td>Diretiva 2003/10/CE</td>
+      </tr>
+      <tr>
+        <td><strong>DL n.º 24/2012</strong></td>
+        <td>Proteção dos trabalhadores contra riscos de agentes químicos</td>
+        <td>Diretivas 98/24/CE e 2009/161/UE</td>
+      </tr>
+      <tr>
+        <td><strong>DL n.º 46/2006</strong></td>
+        <td>Proteção dos trabalhadores contra riscos de vibrações</td>
+        <td>Diretiva 2002/44/CE</td>
+      </tr>
+      <tr>
+        <td><strong>DL n.º 330/1993</strong></td>
+        <td>Prescrições mínimas de segurança e de saúde nos locais de trabalho</td>
+        <td>Diretiva 89/654/CEE</td>
+      </tr>
+      <tr>
+        <td><strong>DL n.º 50/2005</strong></td>
+        <td>Prescrições mínimas relativas à utilização de equipamentos de trabalho</td>
+        <td>Diretiva 2001/45/CE</td>
+      </tr>
+      <tr>
+        <td><strong>DL n.º 84/1997</strong></td>
+        <td>Proteção dos trabalhadores contra agentes biológicos</td>
+        <td>Diretiva 90/679/CEE</td>
+      </tr>
+      <tr>
+        <td><strong>DL n.º 141/1995</strong></td>
+        <td>Prescrições mínimas de sinalização de segurança e de saúde no trabalho</td>
+        <td>Diretiva 92/58/CEE</td>
+      </tr>
+      <tr>
+        <td><strong>DL n.º 128/1993</strong></td>
+        <td>Equipamentos de proteção individual (colocação no mercado)</td>
+        <td>Diretiva 89/686/CEE</td>
+      </tr>
+      <tr>
+        <td><strong>DL n.º 301/2000</strong></td>
+        <td>Proteção dos trabalhadores expostos ao amianto</td>
+        <td>Diretiva 83/477/CEE</td>
+      </tr>
+      <tr>
+        <td><strong>Lei n.º 98/2009</strong></td>
+        <td>Regime de reparação de acidentes de trabalho e doenças profissionais</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td><strong>DL n.º 110/2000</strong></td>
+        <td>Qualificação e certificação dos técnicos de SST</td>
+        <td>—</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>A Autoridade para as Condições do Trabalho (ACT)</h3>
+
+  <p>A ACT é o organismo do Estado português responsável pela promoção da melhoria das condições de trabalho e pelo cumprimento da legislação laboral, incluindo a de SST. As suas principais competências incluem:</p>
+
+  <ul class="styled">
+    <li>Fiscalização do cumprimento das normas de SST, com poder de auto e instrução de processos contraordenacionais</li>
+    <li>Emissão de orientações, guias técnicos e fichas informativas de SST</li>
+    <li>Certificação de técnicos superiores e técnicos de SST</li>
+    <li>Promoção de campanhas de prevenção e sensibilização</li>
+    <li>Recolha e tratamento de estatísticas de sinistralidade</li>
+    <li>Apreciação de participações e queixas de trabalhadores</li>
+  </ul>
+
+  <p>As inspeções da ACT podem ser programadas (com base em planos anuais de inspeção que incidem sobre setores com maior sinistralidade) ou não programadas (na sequência de acidentes de trabalho graves ou mortais, queixas ou denúncias). Os inspetores da ACT têm acesso a todas as instalações da empresa, podendo exigir a apresentação de documentos, efetuar medições e notificar a empresa para corrigir situações de perigo.</p>
+
+  <h3>Responsabilidade Civil e Criminal dos Empregadores</h3>
+
+  <p>O incumprimento das obrigações de SST pode gerar diferentes tipos de responsabilidade para a empresa e para os seus responsáveis:</p>
+
+  <ul class="styled">
+    <li><strong>Responsabilidade contraordenacional:</strong> Coimas que variam entre €1.020 e €9.690 para pessoas singulares, e entre €2.040 e €96.096 para pessoas coletivas, no caso de infrações muito graves. Publicação da sanção em caso de reincidência.</li>
+    <li><strong>Responsabilidade civil:</strong> Obrigação de indemnizar o trabalhador ou os seus familiares pelos danos patrimoniais e não patrimoniais resultantes do acidente ou doença profissional, em caso de violação das regras de segurança (culpa do empregador).</li>
+    <li><strong>Responsabilidade criminal:</strong> O Código Penal tipifica crimes de homicídio por negligência (art.º 137.º) e ofensa à integridade física por negligência (art.º 148.º), que podem ser imputados a gestores, administradores e diretores quando a violação das normas de segurança for determinante para o resultado.</li>
+  </ul>
+
+  <div class="alert-box">
+    <p><strong>Tendência crescente:</strong> A responsabilização pessoal dos dirigentes empresariais por acidentes de trabalho graves tem aumentado em Portugal nos últimos anos. O Ministério Público abre processos-crime com maior frequência, sobretudo nos casos em que a violação das normas de segurança é manifesta e reiterada.</p>
+  </div>
+
+  <h3>Organização dos Serviços de SST</h3>
+
+  <p>Nos termos da Lei n.º 102/2009, o empregador deve organizar os serviços de SST numa das seguintes modalidades:</p>
+
+  <div class="card-grid">
+    <div class="card">
+      <span class="card-icon">🏢</span>
+      <h4>Serviço Interno</h4>
+      <p>Constituído por trabalhadores da própria empresa, afetos exclusivamente a funções de SST. Obrigatório para empresas com ≥ 400 trabalhadores ou com riscos específicos elevados.</p>
+    </div>
+    <div class="card">
+      <span class="card-icon">🤝</span>
+      <h4>Serviço Comum</h4>
+      <p>Partilhado por várias empresas do mesmo grupo ou setor. Permite partilhar os custos da estrutura de SST entre entidades empregadoras.</p>
+    </div>
+    <div class="card">
+      <span class="card-icon">📋</span>
+      <h4>Serviço Externo</h4>
+      <p>Prestado por entidade autorizada pela ACT. Opção mais frequente nas PME. A responsabilidade do empregador não é transferida para o prestador externo.</p>
+    </div>
+    <div class="card">
+      <span class="card-icon">👤</span>
+      <h4>Assunção pelo Empregador</h4>
+      <p>O próprio empregador assume as atividades de SST, se a empresa tiver até 9 trabalhadores, não exercer atividade de risco elevado e o empregador tiver formação adequada.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">Secção 02</div><div class="section-sep-line"></div></div>
+
+<!-- SISTEMAS DE GESTÃO -->
+<div class="section" id="sistemas">
+  <span class="section-eyebrow">Secção 02 · Sistemas de Gestão</span>
+  <h2>Sistemas de Gestão de SST: ISO 45001 e Abordagem Sistémica</h2>
+
+  <p>A abordagem moderna de SST não se limita ao cumprimento de requisitos legais. Assenta em sistemas de gestão integrados que permitem identificar, avaliar, controlar e monitorizar continuamente os riscos profissionais. O referencial internacional dominante é a <strong>ISO 45001:2018</strong>, adotada em Portugal como <strong>NP ISO 45001:2019</strong>.</p>
+
+  <h3>ISO 45001:2018 / NP ISO 45001:2019</h3>
+
+  <p>Publicada em março de 2018 pelo ISO (International Organization for Standardization), a ISO 45001 é a primeira norma internacional para sistemas de gestão de SST. Substituiu a norma britânica OHSAS 18001:2007 como referencial de certificação e adota a <strong>Estrutura de Alto Nível (HLS)</strong> comum às normas ISO 9001 e ISO 14001, facilitando a integração de sistemas de gestão.</p>
+
+  <p>Os seus requisitos organizam-se em torno do ciclo <strong>PDCA (Plan-Do-Check-Act)</strong>:</p>
+
+  <div class="card-grid">
+    <div class="card">
+      <span class="card-icon">📋</span>
+      <h4>Plan — Planear</h4>
+      <p>Contexto organizacional, liderança e comprometimento, planeamento, avaliação de riscos e oportunidades, objetivos de SST e planeamento para os alcançar.</p>
+    </div>
+    <div class="card">
+      <span class="card-icon">⚙️</span>
+      <h4>Do — Executar</h4>
+      <p>Apoio (recursos, competência, comunicação, informação documentada), operacionalização, controlo de processos, gestão de subcontratados, resposta a emergências.</p>
+    </div>
+    <div class="card">
+      <span class="card-icon">📊</span>
+      <h4>Check — Verificar</h4>
+      <p>Monitorização, medição, análise e avaliação do desempenho, auditorias internas, revisão pela gestão.</p>
+    </div>
+    <div class="card">
+      <span class="card-icon">🔄</span>
+      <h4>Act — Agir</h4>
+      <p>Tratamento de não conformidades e ações corretivas, melhoria contínua.</p>
+    </div>
+  </div>
+
+  <h3>Elementos-Chave do Sistema</h3>
+
+  <h4>Política de SST</h4>
+  <p>Documento de alto nível, assinado pela gestão de topo, que declara o compromisso da organização com a eliminação de perigos, a prevenção de lesões e doenças, o cumprimento dos requisitos legais e a melhoria contínua do desempenho em SST. Deve ser comunicada a todos os trabalhadores e estar disponível ao público.</p>
+
+  <h4>Avaliação de Riscos e Identificação de Perigos</h4>
+  <p>O núcleo técnico do sistema. O processo envolve a identificação sistemática de todos os perigos presentes nas atividades e nos locais de trabalho, a avaliação dos riscos associados (probabilidade × gravidade) e a definição de medidas de controlo adequadas, seguindo a hierarquia de controlos.</p>
+
+  <h4>Participação e Consulta dos Trabalhadores</h4>
+  <p>A ISO 45001 é especialmente exigente neste ponto. Os trabalhadores e os seus representantes devem ser consultados e participar ativamente na identificação de perigos, na avaliação de riscos, na definição de medidas de controlo, na investigação de incidentes e na revisão do sistema. Não é aceitável um sistema de SST construído exclusivamente pelos técnicos, sem envolvimento genuíno dos trabalhadores.</p>
+
+  <div class="tip-box">
+    <p>A certificação ISO 45001 não é legalmente obrigatória em Portugal, mas é cada vez mais exigida em concursos públicos, cadeias de fornecimento de grandes empresas e por seguradoras que oferecem prémios diferenciados. Para muitas empresas, representa uma vantagem competitiva significativa e uma demonstração de maturidade em SST.</p>
+  </div>
+
+  <h3>Integração com ISO 9001 e ISO 14001</h3>
+
+  <p>A estrutura de alto nível comum facilita a integração da ISO 45001 com a ISO 9001 (Qualidade) e a ISO 14001 (Ambiente), formando um <strong>Sistema de Gestão Integrado (SGI)</strong>. Esta abordagem é cada vez mais comum em organizações de média e grande dimensão, pois elimina redundâncias, reduz a burocracia documental e promove uma visão holística da excelência operacional.</p>
+
+  <h3>O Plano de Prevenção — Obrigação Legal em Portugal</h3>
+
+  <p>Independentemente da certificação ISO 45001, a Lei n.º 102/2009 exige que o empregador elabore e mantenha atualizado um <strong>Plano de Prevenção</strong> que inclua:</p>
+
+  <ul class="styled">
+    <li>Identificação e avaliação dos riscos profissionais e das respetivas medidas de proteção e prevenção</li>
+    <li>Lista de verificação das medidas implementadas e das que estão previstas</li>
+    <li>Resultados da vigilância da saúde dos trabalhadores</li>
+    <li>Resultados das medições de agentes físicos, químicos e biológicos</li>
+    <li>Relação de acidentes de trabalho e doenças profissionais registados</li>
+    <li>Informações relativas à formação em SST</li>
+  </ul>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">Secção 03</div><div class="section-sep-line"></div></div>
+
+<!-- RISCOS PROFISSIONAIS -->
+<div class="section" id="riscos">
+  <span class="section-eyebrow">Secção 03 · Análise de Riscos</span>
+  <h2>Identificação e Classificação dos Riscos Profissionais</h2>
+
+  <p>A identificação e avaliação de riscos é o pilar técnico da segurança do trabalho. Para ser eficaz, requer uma visão sistemática e abrangente dos perigos presentes em cada posto de trabalho e em cada tarefa. A classificação em categorias ajuda a organizar a análise e a garantir que nenhuma área é negligenciada.</p>
+
+  <h3>Riscos Físicos</h3>
+
+  <p>Agentes de natureza física que, quando em concentração ou intensidade acima dos valores limite de exposição (VLE) legalmente estabelecidos em Portugal, podem causar danos à saúde dos trabalhadores.</p>
+
+  <h5 class="sub">Ruído</h5>
+  <p>O <strong>Decreto-Lei n.º 182/2006</strong> estabelece os valores limite de exposição ao ruído em Portugal, em linha com a Diretiva 2003/10/CE:</p>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>Parâmetro</th><th>Valor de ação inferior</th><th>Valor de ação superior</th><th>Valor limite de exposição</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Nível de exposição diária (L<sub>EX,8h</sub>)</td><td>80 dB(A)</td><td>85 dB(A)</td><td>87 dB(A)</td></tr>
+      <tr><td>Pressão sonora de pico (L<sub>pC,pico</sub>)</td><td>112 dB(C)</td><td>130 dB(C)</td><td>140 dB(C)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>A exposição prolongada ao ruído acima dos VLE causa <strong>perda auditiva induzida pelo ruído (PAIR)</strong>, uma doença profissional irreversível. Para além dos efeitos auditivos, o ruído excessivo aumenta o stress, perturba a comunicação, provoca fadiga e contribui para acidentes.</p>
+
+  <div class="law-box">
+    <p><strong>Obrigações legais do empregador (DL 182/2006):</strong></p>
+    <ul>
+      <li>Avaliação dos níveis de ruído a que os trabalhadores estão expostos</li>
+      <li>Eliminação ou redução dos riscos na fonte (medidas técnicas e organizativas)</li>
+      <li>Disponibilização de protetores auditivos quando o valor de ação inferior é atingido</li>
+      <li>Obrigatoriedade de uso de protetores auditivos quando o valor de ação superior é atingido</li>
+      <li>Delimitação e sinalização das zonas de risco de ruído</li>
+      <li>Vigilância audiométrica dos trabalhadores expostos</li>
+    </ul>
+  </div>
+
+  <h5 class="sub">Vibrações</h5>
+  <p>O <strong>Decreto-Lei n.º 46/2006</strong> estabelece os valores limite para vibrações transmitidas ao sistema mão-braço e ao corpo inteiro:</p>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>Tipo</th><th>Valor de ação diário</th><th>Valor limite diário</th><th>Efeitos típicos</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Mão-braço</strong></td><td>2,5 m/s²</td><td>5 m/s²</td><td>Síndrome de Raynaud, lesões vasculares e nervosas nos membros superiores</td></tr>
+      <tr><td><strong>Corpo inteiro</strong></td><td>0,5 m/s²</td><td>1,15 m/s²</td><td>Lombalgias, hérnias discais, perturbações do sistema digestivo</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h5 class="sub">Temperaturas Extremas</h5>
+  <p>Não existe em Portugal um decreto-lei específico para o calor e o frio no trabalho, mas a Lei n.º 102/2009 exige que o local de trabalho proporcione condições de temperatura adequadas. A ACT emite orientações técnicas baseadas nas normas ISO 7730 (ambientes térmicos moderados) e ISO 7933 (stress térmico por calor).</p>
+
+  <ul class="styled">
+    <li><strong>Calor extremo:</strong> Insolação, exaustão térmica, cãibras de calor, síncope. Setores de risco: siderurgia, vidro, cerâmica, fundição, padaria, construção ao ar livre no verão.</li>
+    <li><strong>Frio extremo:</strong> Hipotermia, frostbite (congelação), vasoconstrição periférica. Setores de risco: logística frigorista, pesca, silvicultura, construção no inverno.</li>
+  </ul>
+
+  <h5 class="sub">Radiações Não Ionizantes</h5>
+  <p>A Diretiva 2013/35/UE, transposta para o direito português pelo <strong>Decreto-Lei n.º 58/2015</strong>, estabelece os valores limite de exposição a campos eletromagnéticos. As radiações UV (soldadura, trabalho ao ar livre) são reguladas por orientações técnicas da ACT e da EU-OSHA.</p>
+
+  <h3>Riscos Químicos</h3>
+
+  <p>O <strong>Decreto-Lei n.º 24/2012</strong> é o principal instrumento legal português para a proteção dos trabalhadores contra os riscos de agentes químicos perigosos, transpondo as diretivas europeias 98/24/CE e 2009/161/UE.</p>
+
+  <p>Define <strong>Valores Limite de Exposição Ocupacional (VLEO)</strong> para centenas de substâncias químicas, com duas categorias:</p>
+
+  <ul class="styled">
+    <li><strong>VLE-MP (valor limite de exposição — média ponderada):</strong> Concentração média ponderada para uma exposição de 8 horas por dia e 40 horas por semana, à qual praticamente todos os trabalhadores podem ser expostos de forma repetida sem efeitos adversos para a saúde.</li>
+    <li><strong>VLE-CM (valor limite de exposição — curta duração):</strong> Concentração à qual os trabalhadores podem ser expostos durante um curto período de tempo sem sofrerem irritação, alteração tecidual crónica ou narcose irreversível.</li>
+  </ul>
+
+  <h5 class="sub">Categorias de Riscos Químicos</h5>
+  <ul class="styled">
+    <li><strong>Poeiras:</strong> Inertes, fibrogénicas (sílica cristalina — VLE-MP de 0,05 mg/m³ para a fração respirável), orgânicas (farinha, madeira de carvalho e faia — classificadas como cancerígenas), metálicas (chumbo, crómio hexavalente).</li>
+    <li><strong>Fumos:</strong> Fumos de soldadura (manganês, crómio, níquel, dependendo dos materiais), fumos metálicos (febre dos fumos de zinco), gases de combustão.</li>
+    <li><strong>Gases e vapores:</strong> Solventes orgânicos (tolueno, xileno, acetona), monóxido de carbono, amónia, cloro, ácido clorídrico, formaldeído (cancerígeno — VLE-CM 0,3 ppm).</li>
+    <li><strong>Substâncias CMR:</strong> Cancerígenas, mutagénicas e reprotóxicas — reguladas com especial rigor, sujeitas a substituição sempre que tecnicamente exequível.</li>
+    <li><strong>Amianto/Asbesto:</strong> Proibido em Portugal e na UE desde os anos 2000 (DL n.º 266/2007 para demolição/manutenção). VLE de 0,1 fibras/cm³. Qualquer trabalho com amianto existente em edifícios requer plano de trabalho aprovado pela ACT.</li>
+  </ul>
+
+  <div class="alert-box">
+    <p><strong>Regulamento CLP/GHS:</strong> O Regulamento (CE) n.º 1272/2008 (CLP — Classificação, Rotulagem e Embalagem) é diretamente aplicável em Portugal. Todos os produtos químicos perigosos devem ter rótulo conforme o CLP e ser acompanhados de Ficha de Dados de Segurança (FDS) em língua portuguesa.</p>
+  </div>
+
+  <h3>Riscos Biológicos</h3>
+
+  <p>O <strong>Decreto-Lei n.º 84/1997</strong> transpõe a Diretiva 90/679/CEE e estabelece os requisitos para a proteção dos trabalhadores contra agentes biológicos. Os agentes biológicos são classificados em 4 grupos de risco, do menor (grupo 1) para o maior (grupo 4):</p>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>Grupo</th><th>Caracterização</th><th>Exemplos</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Grupo 1</strong></td><td>Pouco provável que cause doença em humanos</td><td>Saccharomyces cerevisiae</td></tr>
+      <tr><td><strong>Grupo 2</strong></td><td>Pode causar doença; tratamento eficaz disponível</td><td>Influenza, Hepatite A, Salmonella</td></tr>
+      <tr><td><strong>Grupo 3</strong></td><td>Causa doença grave; tratamento possível</td><td>Mycobacterium tuberculosis, VIH, Hepatite C</td></tr>
+      <tr><td><strong>Grupo 4</strong></td><td>Causa doença grave; sem tratamento eficaz</td><td>Vírus Ébola, Vírus Marburg</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>Os setores mais expostos em Portugal incluem profissionais de saúde, trabalhadores de laboratório, funcionários de saneamento e recolha de resíduos, trabalhadores da indústria alimentar e agropecuária, e funcionários de serviços funerários.</p>
+
+  <h3>Riscos de Acidente</h3>
+
+  <p>Os riscos de acidente são os mais visíveis e frequentemente os mais letais. Em Portugal, as principais causas de acidente de trabalho mortal são:</p>
+
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-number">1.º</span>
+      <span class="stat-label">Quedas em altura — principal causa de morte na construção</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">2.º</span>
+      <span class="stat-label">Atropelamento e colisão com veículos — logística e estaleiros</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">3.º</span>
+      <span class="stat-label">Soterramento — escavações e colapso de estruturas</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">4.º</span>
+      <span class="stat-label">Eletrocussão — instalações elétricas e ferramentas</span>
+    </div>
+  </div>
+
+  <h3>Métodos de Avaliação de Riscos</h3>
+
+  <h4>Método Simples — Matriz de Risco</h4>
+  <p>O método mais utilizado em PME. O nível de risco é estimado como o produto da <em>probabilidade</em> de ocorrência pela <em>gravidade</em> das consequências:</p>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>Probabilidade</th><th>Gravidade Ligeira</th><th>Gravidade Moderada</th><th>Gravidade Grave</th><th>Gravidade Muito Grave</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Muito provável</strong></td><td style="background:#fff3cd">Médio</td><td style="background:#ffd6cc">Alto</td><td style="background:#ffb3a7">Muito Alto</td><td style="background:#ff8080">Intolerável</td></tr>
+      <tr><td><strong>Provável</strong></td><td style="background:#d4edda">Baixo</td><td style="background:#fff3cd">Médio</td><td style="background:#ffd6cc">Alto</td><td style="background:#ffb3a7">Muito Alto</td></tr>
+      <tr><td><strong>Pouco provável</strong></td><td style="background:#d4edda">Baixo</td><td style="background:#d4edda">Baixo</td><td style="background:#fff3cd">Médio</td><td style="background:#ffd6cc">Alto</td></tr>
+      <tr><td><strong>Improvável</strong></td><td style="background:#d4edda">Aceitável</td><td style="background:#d4edda">Aceitável</td><td style="background:#d4edda">Baixo</td><td style="background:#fff3cd">Médio</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>Métodos Avançados</h4>
+  <ul class="styled">
+    <li><strong>HAZOP (Hazard and Operability Study):</strong> Análise sistemática de desvios em processos industriais. Standard na indústria química, farmacêutica e petroquímica.</li>
+    <li><strong>FMEA (Failure Mode and Effects Analysis):</strong> Análise de modos de falha e seus efeitos. Comum na indústria automóvel e aeronáutica.</li>
+    <li><strong>Fault Tree Analysis (FTA):</strong> Parte de um evento indesejado e analisa retroativamente as combinações de falhas que poderiam ter levado à sua ocorrência.</li>
+    <li><strong>BOWTIE:</strong> Método visual que combina as perspetivas de causas (FTA) e consequências (ETA), identificando barreiras de prevenção e mitigação. Muito usado em indústrias de alto risco.</li>
+    <li><strong>Job Safety Analysis (JSA) / Task Risk Assessment (TRA):</strong> Análise de risco tarefa a tarefa. Indispensável na construção civil, manutenção industrial e trabalhos de alto risco.</li>
+  </ul>
+</div>
+
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">Secção 04</div><div class="section-sep-line"></div></div>
+
+<!-- HIGIENE OCUPACIONAL -->
+<div class="section" id="higiene">
+  <span class="section-eyebrow">Secção 04 · Higiene Ocupacional</span>
+  <h2>Higiene Ocupacional: Medição, Avaliação e Controlo de Exposições</h2>
+
+  <p>A higiene ocupacional é a ciência e a arte dedicadas à antecipação, reconhecimento, avaliação e controlo de condições ambientais originadas no ou pelo local de trabalho, que possam causar doença ou prejuízo para a saúde e bem-estar dos trabalhadores. Distingue-se da segurança do trabalho por centrar-se sobretudo em riscos de doença profissional (efeito crónico, latente) em vez de riscos de acidente (efeito imediato).</p>
+
+  <h3>O Processo de Avaliação Higiénica</h3>
+
+  <ol class="styled">
+    <li><strong>Identificação dos agentes:</strong> Inventariar todos os agentes físicos, químicos e biológicos presentes no ambiente de trabalho, com base na análise dos processos, matérias-primas, produtos intermédios e produtos finais, e nas fichas de dados de segurança.</li>
+    <li><strong>Caracterização da exposição:</strong> Determinar quais os trabalhadores expostos, com que frequência, por quanto tempo e em que concentrações ou intensidades.</li>
+    <li><strong>Medição quantitativa:</strong> Realização de medições ambientais ou biológicas para determinar os níveis reais de exposição, por comparação com os VLEO (Valores Limite de Exposição Ocupacional) ou VLE estabelecidos na legislação portuguesa.</li>
+    <li><strong>Avaliação do risco:</strong> Comparação dos níveis de exposição medidos com os valores limite legais ou de referência, para determinar se existe ou não ultrapassagem e qual o nível de risco associado.</li>
+    <li><strong>Definição de medidas de controlo:</strong> Definição e implementação de medidas para eliminar ou reduzir a exposição, seguindo a hierarquia de controlos.</li>
+    <li><strong>Monitorização:</strong> Repetição periódica das medições para verificar a eficácia das medidas e detetar eventuais alterações das condições de trabalho.</li>
+  </ol>
+
+  <h3>Medição do Ruído no Trabalho</h3>
+
+  <p>A avaliação da exposição ao ruído requer equipamento de medição calibrado e metodologia adequada. Em Portugal, as medições devem seguir a metodologia definida no DL n.º 182/2006 e nas normas EN ISO 9612:2009 (Acústica — Determinação da exposição ao ruído no trabalho) e EN 61672 (sonómetros).</p>
+
+  <h5 class="sub">Equipamentos de Medição</h5>
+  <ul class="styled">
+    <li><strong>Sonómetro integrador de classe 1 ou 2:</strong> Para medições pontuais em postos de trabalho fixos. A classe 1 é mais precisa e requerida em medições para efeitos legais em Portugal.</li>
+    <li><strong>Dosímetro pessoal:</strong> Equipamento portátil que o trabalhador usa durante o turno de trabalho, medindo a exposição real ao longo do tempo, incluindo deslocações e variações de atividade. Ideal para trabalhos móveis ou com exposição variável.</li>
+    <li><strong>Calibrador acústico:</strong> Indispensável para calibrar o sonómetro antes e após cada medição.</li>
+  </ul>
+
+  <h5 class="sub">Como Interpretar um Laudo de Ruído</h5>
+  <p>Um relatório de avaliação de ruído deve conter: identificação dos trabalhadores e postos avaliados, descrição das condições de trabalho durante a medição, os valores medidos (L<sub>EX,8h</sub> e/ou L<sub>pC,pico</sub>), a incerteza de medição, a comparação com os valores de ação e limites do DL 182/2006, e as medidas corretivas recomendadas.</p>
+
+  <div class="tip-box">
+    <p>A incerteza de medição deve sempre ser declarada e considerada na avaliação. Se L<sub>EX,8h</sub> = 84 dB(A) com incerteza de ±2 dB(A), o valor real pode atingir 86 dB(A) — acima do valor de ação superior. Esta situação exige as mesmas medidas que um valor medido acima de 85 dB(A).</p>
+  </div>
+
+  <h3>Medição de Agentes Químicos</h3>
+
+  <h5 class="sub">Estratégia de Medição</h5>
+  <p>A estratégia de medição de agentes químicos deve ser definida com base na norma EN 689:2018 (Ar nos locais de trabalho — Medição da exposição inalatória a agentes químicos), a principal norma de referência aplicável em Portugal. Esta norma define:</p>
+
+  <ul class="styled">
+    <li>Como selecionar os trabalhadores representativos de grupos de exposição semelhante (GES)</li>
+    <li>O número mínimo de medições por trabalhador e por período de amostragem</li>
+    <li>Como calcular a exposição média ponderada a partir das medições individuais</li>
+    <li>Como comparar estatisticamente os resultados com os VLEO e concluir sobre a conformidade</li>
+  </ul>
+
+  <h5 class="sub">Métodos de Amostragem</h5>
+  <ul class="styled">
+    <li><strong>Amostragem pessoal (individual):</strong> O dispositivo de amostragem é colocado na zona de respiração do trabalhador (a 30 cm da boca/nariz). É a metodologia preferida para avaliação da exposição inalatória, pois captura a exposição real durante os movimentos do trabalhador.</li>
+    <li><strong>Amostragem estacionária (ambiental):</strong> O amostrador é fixo num ponto do local de trabalho. Útil para caracterizar a contaminação geral do ambiente, mas não substitui a amostragem pessoal para avaliação de exposição individual.</li>
+    <li><strong>Amostragem com tubo colorimétrico (detector direto):</strong> Permite medições semiquantitativas rápidas no local, mas com menor precisão. Útil para triagens e situações de emergência.</li>
+  </ul>
+
+  <h5 class="sub">Monitorização Biológica</h5>
+  <p>Complementa a monitorização ambiental, avaliando a quantidade de substância ou dos seus metabolitos no organismo do trabalhador (no sangue, urina, ar expirado ou cabelo). As principais referências são os <strong>BEIs (Biological Exposure Indices)</strong> da ACGIH americanos e os <strong>BAT (Biologische Arbeitsstoff-Toleranzwerte)</strong> alemães, amplamente utilizados em Portugal na ausência de valores portugueses específicos para alguns parâmetros.</p>
+
+  <h3>Controlo de Agentes Químicos: Ventilação Industrial</h3>
+
+  <p>A ventilação industrial é uma das principais medidas de controlo de agentes químicos e poeiras no ambiente de trabalho. Distinguem-se dois tipos fundamentais:</p>
+
+  <div class="two-col">
+    <div class="two-col-box">
+      <h5>Ventilação Geral Diluidora</h5>
+      <ul>
+        <li>Dilui os contaminantes no ar ambiente com ar limpo</li>
+        <li>Adequada apenas para substâncias de baixa toxicidade e fontes dispersas</li>
+        <li>Não elimina o contaminante — apenas o dilui</li>
+        <li>Menos eficaz do que a captação localizada</li>
+        <li>Cálculo baseado em caudais de diluição necessários</li>
+      </ul>
+    </div>
+    <div class="two-col-box">
+      <h5>Captação Localizada (LEV)</h5>
+      <ul>
+        <li>Capta o contaminante junto à fonte emissora</li>
+        <li>Muito mais eficaz — remove o contaminante antes de se dispersar</li>
+        <li>Requer projeto adequado: velocidade de captura, velocidade de transporte, geometria do exaustor</li>
+        <li>Obriga a manutenção e inspeção periódica</li>
+        <li>Referência: EN 16925 e princípios da ventilação industrial (ACGIH)</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Laudos e Relatórios de Higiene Ocupacional</h3>
+
+  <p>Os relatórios de medição de higiene ocupacional são documentos técnicos formais que devem ser elaborados por técnico ou engenheiro com competência específica na área. Em Portugal, os laboratórios de higiene ocupacional devem idealmente estar acreditados pelo IPAC (Instituto Português de Acreditação) ao abrigo da norma ISO/IEC 17025, que garante a qualidade e rastreabilidade das medições.</p>
+
+  <p>Um relatório completo deve incluir:</p>
+
+  <ul class="styled">
+    <li>Identificação do cliente, data e local das medições</li>
+    <li>Descrição detalhada das condições de trabalho durante a avaliação (processo, materiais, carga horária, EPIs usados)</li>
+    <li>Metodologia utilizada, equipamentos e respetiva calibração</li>
+    <li>Resultados das medições com incerteza de medição declarada</li>
+    <li>Valores de referência legais aplicáveis (DL 182/2006 para ruído; DL 24/2012 para químicos; etc.)</li>
+    <li>Conclusão sobre a conformidade ou não conformidade com os limites legais</li>
+    <li>Recomendações de medidas corretivas (hierarquia de controlos)</li>
+    <li>Periodicidade recomendada para reavaliação</li>
+  </ul>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">Secção 05</div><div class="section-sep-line"></div></div>
+
+<!-- ERGONOMIA -->
+<div class="section" id="ergonomia">
+  <span class="section-eyebrow">Secção 05 · Ergonomia Aplicada</span>
+  <h2>Ergonomia Aplicada: Da Avaliação à Intervenção</h2>
+
+  <p>A ergonomia estuda a adaptação do trabalho ao ser humano, tendo em conta as suas características físicas, cognitivas e organizacionais. As <strong>lesões músculo-esqueléticas ligadas ao trabalho (LMELT)</strong> são a doença profissional mais prevalente na Europa e em Portugal, respondendo por mais de metade de todas as doenças profissionais reconhecidas.</p>
+
+  <p>Em Portugal, a obrigação de avaliação e controlo dos riscos ergonómicos decorre da Lei n.º 102/2009 e da Diretiva-Quadro 89/391/CEE. Especificamente para a movimentação manual de cargas, aplica-se o <strong>Decreto-Lei n.º 330/1993</strong> (locais de trabalho) e a orientação técnica da Diretiva 90/269/CEE.</p>
+
+  <h3>Fatores de Risco Ergonómico</h3>
+
+  <ul class="styled">
+    <li><strong>Movimentação manual de cargas (MMC):</strong> Levantamento, abaixamento, transporte, empurrão ou puxão de cargas.</li>
+    <li><strong>Posturas forçadas:</strong> Pescoço em flexão prolongada, tronco rodado ou inclinado, braços acima dos ombros, joelhos em carga.</li>
+    <li><strong>Movimentos repetitivos:</strong> Frequência de movimentos dos membros superiores superior a 30 ciclos/minuto, ou ciclo de trabalho inferior a 30 segundos.</li>
+    <li><strong>Aplicação de força:</strong> Força excessiva para segurar, apertar, torcer ou empurrar com as mãos.</li>
+    <li><strong>Vibração mão-braço:</strong> Uso de ferramentas vibratórias (rebarbadoras, martelos pneumáticos, motosserras).</li>
+    <li><strong>Trabalho estático:</strong> Manutenção prolongada de posições imóveis, mesmo aparentemente neutras.</li>
+    <li><strong>Fatores organizacionais:</strong> Ritmo de trabalho elevado, pausas insuficientes, trabalho noturno, pressão temporal.</li>
+  </ul>
+
+  <h3>Métodos de Avaliação Ergonómica</h3>
+
+  <h4>RULA — Rapid Upper Limb Assessment</h4>
+  <p>Método de observação desenvolvido por McAtamney e Corlett (1993), destinado à avaliação rápida dos membros superiores em atividades em que existe risco de LMELT. Avalia posturas do pescoço, tronco, membros superiores e carga muscular, gerando uma pontuação de 1 a 7:</p>
+
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Pontuação RULA</th><th>Nível de Ação</th><th>Medidas Recomendadas</th></tr></thead>
+    <tbody>
+      <tr><td>1–2</td><td>Nível 1</td><td>Postura aceitável — sem intervenção necessária</td></tr>
+      <tr><td>3–4</td><td>Nível 2</td><td>Investigação adicional recomendada — possibilidade de mudança</td></tr>
+      <tr><td>5–6</td><td>Nível 3</td><td>Investigação e mudança necessárias em breve</td></tr>
+      <tr><td>7</td><td>Nível 4</td><td>Investigação e mudança imediatas — risco muito elevado</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>REBA — Rapid Entire Body Assessment</h4>
+  <p>Desenvolvido por Hignett e McAtamney (2000), o REBA estende o RULA a todo o corpo, incluindo membros inferiores e tronco. É mais adequado para posturas imprevisíveis ou dinâmicas, como a prestação de cuidados de saúde, construção e logística. A escala e os níveis de ação são semelhantes ao RULA.</p>
+
+  <h4>Equação de NIOSH para Levantamento Manual de Cargas</h4>
+  <p>A equação de NIOSH (National Institute for Occupational Safety and Health, 1994) permite calcular o <strong>Limite de Peso Recomendado (LPR)</strong> para uma tarefa de levantamento específica e o <strong>Índice de Levantamento (IL)</strong>:</p>
+
+  <p style="font-family:monospace;background:var(--section-bg);padding:16px;font-size:14px;border-left:3px solid var(--accent)">
+    LPR = LC × HM × VM × DM × AM × FM × CM<br><br>
+    IL = Peso real da carga / LPR
+  </p>
+
+  <p>Onde: LC = constante de carga (23 kg); HM = multiplicador horizontal; VM = multiplicador vertical; DM = multiplicador de distância; AM = multiplicador de assimetria; FM = multiplicador de frequência; CM = multiplicador de pega.</p>
+
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Índice de Levantamento (IL)</th><th>Risco</th><th>Ação Recomendada</th></tr></thead>
+    <tbody>
+      <tr><td>IL ≤ 1,0</td><td>Baixo</td><td>Tarefa aceitável para a maioria dos trabalhadores</td></tr>
+      <tr><td>1,0 < IL ≤ 3,0</td><td>Moderado a elevado</td><td>Modificações na tarefa são recomendadas</td></tr>
+      <tr><td>IL > 3,0</td><td>Muito elevado</td><td>Modificações imediatas são necessárias</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>OCRA — Occupational Repetitive Actions</h4>
+  <p>Método italiano de referência europeia para avaliação do risco de movimentos repetitivos dos membros superiores. Calcula um índice de risco que combina a frequência de ações técnicas, as posturas assumidas, a força aplicada e os fatores complementares (vibração, precisão, contacto com superfícies frias). Muito utilizado em indústrias de montagem, embalagem, alimentar e têxtil.</p>
+
+  <h4>OWAS — Ovako Working Posture Analysis System</h4>
+  <p>Método de observação sistemática de posturas de trabalho, desenvolvido na indústria siderúrgica finlandesa. Classifica as posturas em categorias de risco e determina a percentagem de tempo passado em cada categoria. Particularmente útil para trabalhos com grande variedade de posturas ao longo do turno.</p>
+
+  <h3>Ergonomia do Posto de Trabalho em Escritório</h3>
+
+  <p>O trabalho com ecrãs de visualização (computadores, tablets) é regulado em Portugal pelo <strong>Decreto-Lei n.º 349/1993</strong>, que transpõe a Diretiva 90/270/CEE. Este diploma estabelece os requisitos mínimos para os postos de trabalho com ecrãs de visualização de dados (EVD).</p>
+
+  <h5 class="sub">Requisitos Mínimos do Posto de Trabalho EVD</h5>
+  <ul class="styled">
+    <li><strong>Ecrã:</strong> Caracteres bem definidos, imagem estável sem tremulações, sem reflexos, regulável em inclinação e orientação, à altura dos olhos ou ligeiramente abaixo</li>
+    <li><strong>Teclado:</strong> Inclinável e separado do ecrã, superfície mate, teclas com boa legibilidade</li>
+    <li><strong>Mesa de trabalho:</strong> Superfície pouco refletora, suficientemente grande para disposição flexível dos equipamentos, altura adequada (entre 70 e 80 cm em geral)</li>
+    <li><strong>Cadeira:</strong> Estável, regulável em altura, encosto regulável em altura e inclinação, com apoio lombar, rodas adequadas ao tipo de pavimento</li>
+    <li><strong>Repouso para os pés:</strong> Disponível quando não for possível regular a altura da mesa</li>
+    <li><strong>Apoio para os antebraços:</strong> Recomendado para trabalho intensivo com rato ou teclado</li>
+  </ul>
+
+  <h5 class="sub">Distâncias e Ângulos Ideais</h5>
+  <ul class="styled">
+    <li>Distância olho-ecrã: 50 a 70 cm (dependendo do tamanho do ecrã e da acuidade visual)</li>
+    <li>Topo do ecrã ao nível dos olhos ou 10 a 15 cm abaixo</li>
+    <li>Antebraços paralelos ao chão ou ligeiramente inclinados para baixo (ângulo cotovelo 90-110°)</li>
+    <li>Coxas paralelas ao chão, joelhos a 90°, pés bem apoiados</li>
+  </ul>
+
+  <h3>Ergonomia Cognitiva e Organizacional</h3>
+
+  <p>Além dos aspetos físicos, a ergonomia moderna incorpora dimensões cognitivas (como a sobrecarga de informação, a atenção e a tomada de decisão) e organizacionais (como o ritmo de trabalho, a autonomia, os horários e a comunicação).</p>
+
+  <p>A Análise Ergonómica do Trabalho (AET) é a metodologia de referência em ergonomia, que combina a análise da situação de trabalho prescrita (o que é suposto fazer) com a análise da atividade real (o que os trabalhadores fazem efetivamente), revelando frequentemente desvios importantes e a génese real das LMELT.</p>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">Secção 06</div><div class="section-sep-line"></div></div>
+
+<!-- RISCOS PSICOSSOCIAIS -->
+<div class="section" id="psicossociais">
+  <span class="section-eyebrow">Secção 06 · Riscos Psicossociais</span>
+  <h2>Riscos Psicossociais e Saúde Mental no Trabalho</h2>
+
+  <p>Os riscos psicossociais são reconhecidos pela EU-OSHA e pela Organização Mundial de Saúde como uma das principais fontes de doença profissional nos países europeus. Em Portugal, a sua avaliação e gestão é obrigatória nos termos da Lei n.º 102/2009, ainda que a regulamentação específica seja menos detalhada do que para os agentes físicos ou químicos.</p>
+
+  <h3>Definição e Categorias</h3>
+
+  <p>Os riscos psicossociais referem-se a aspetos da conceção, organização e gestão do trabalho, bem como ao seu contexto social e ambiental, que têm o potencial de causar dano psicológico, social ou físico ao trabalhador. As principais categorias incluem:</p>
+
+  <ul class="styled">
+    <li><strong>Stress ocupacional:</strong> Desequilíbrio percebido entre as exigências do trabalho e os recursos do trabalhador para lhes fazer face. Associado a burnout, doenças cardiovasculares, perturbações do sono, imunodepressão e deterioração da saúde mental.</li>
+    <li><strong>Burnout:</strong> Síndrome de esgotamento profissional — reconhecida pela OMS como fenómeno ocupacional na CID-11 — caracterizada por exaustão emocional, despersonalização e redução da realização pessoal.</li>
+    <li><strong>Assédio moral (mobbing):</strong> Comportamentos repetidos e sistemáticos de violência psicológica, destinados a humilhar, desestabilizar ou excluir a vítima. Em Portugal, é proibido pelo art.º 29.º do Código do Trabalho.</li>
+    <li><strong>Assédio sexual:</strong> Comportamentos indesejados de natureza sexual. Proibido pelo art.º 29.º do Código do Trabalho, com proteção específica para as vítimas.</li>
+    <li><strong>Violência no trabalho:</strong> Agressões físicas ou verbais por parte de clientes, utentes ou terceiros. Particularmente prevalente em saúde, ensino, transportes e serviços ao público.</li>
+    <li><strong>Trabalho emocional intenso:</strong> Sectores como a saúde, serviços sociais e educação exigem a gestão constante das próprias emoções, com elevado custo psicológico.</li>
+    <li><strong>Desconexão digital e teletrabalho:</strong> O Código do Trabalho português consagra o <strong>direito à desconexão</strong> (art.º 199.º-A), impedindo o empregador de contactar o trabalhador fora do horário de trabalho, exceto em casos de força maior.</li>
+  </ul>
+
+  <h3>Avaliação dos Riscos Psicossociais</h3>
+
+  <p>Portugal não tem um instrumento legal obrigatório específico para a avaliação de riscos psicossociais, mas a ACT recomenda o uso de questionários validados. Os mais utilizados em Portugal incluem:</p>
+
+  <ul class="styled">
+    <li><strong>COPSOQ (Copenhagen Psychosocial Questionnaire):</strong> Versão portuguesa validada (COPSOQ-PT). Avalia dimensões como exigências quantitativas, ritmo de trabalho, autonomia, suporte social, sentido do trabalho, previsibilidade, segurança no emprego e justiça organizacional.</li>
+    <li><strong>Job Demand-Control-Support Model (Karasek):</strong> Avalia a combinação entre as exigências do trabalho, o controlo que o trabalhador tem sobre as suas tarefas e o suporte social recebido.</li>
+    <li><strong>Effort-Reward Imbalance (ERI, Siegrist):</strong> Foca na perceção de desequilíbrio entre o esforço investido e as recompensas obtidas (salário, estima, segurança no emprego).</li>
+  </ul>
+
+  <div class="tip-box">
+    <p>A ISO 45003:2021 (Gestão de Riscos Psicossociais — Orientações) foi adotada como norma portuguesa NP ISO 45003:2022. Fornece orientações práticas para integrar a gestão dos riscos psicossociais no sistema de gestão SST existente, tornando-se o documento de referência para organizações que pretendam abordar sistematicamente este tema.</p>
+  </div>
+</div>
+
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">Secção 07</div><div class="section-sep-line"></div></div>
+
+<!-- EPI -->
+<div class="section" id="epi">
+  <span class="section-eyebrow">Secção 07 · Proteção Individual</span>
+  <h2>Equipamentos de Proteção Individual (EPIs)</h2>
+
+  <p>Os EPIs constituem a <strong>última linha de defesa</strong> na hierarquia de controlos de risco. Em Portugal, são regulados pelo <strong>Regulamento (UE) 2016/425</strong>, diretamente aplicável desde 21 de abril de 2018, que substituiu a Diretiva 89/686/CEE. Para utilização no trabalho, aplicam-se também os requisitos da Lei n.º 102/2009 e do DL n.º 348/1993.</p>
+
+  <h3>Hierarquia de Controlos — Princípio Fundamental</h3>
+
+  <div class="hierarchy">
+    <div class="hierarchy-item">
+      <div class="hierarchy-num">1</div>
+      <div class="hierarchy-text">
+        <strong>Eliminação</strong>
+        <span>Remover completamente o perigo do processo ou local de trabalho. Nível mais eficaz — elimina o risco na fonte.</span>
+      </div>
+    </div>
+    <div class="hierarchy-item">
+      <div class="hierarchy-num">2</div>
+      <div class="hierarchy-text">
+        <strong>Substituição</strong>
+        <span>Substituir a substância perigosa, o processo ou o equipamento por alternativa menos perigosa. Ex: substituir solvente orgânico por base aquosa.</span>
+      </div>
+    </div>
+    <div class="hierarchy-item">
+      <div class="hierarchy-num">3</div>
+      <div class="hierarchy-text">
+        <strong>Controlos de Engenharia</strong>
+        <span>Isolar o trabalhador do perigo com barreiras físicas: enclausuramento de máquinas, ventilação por captação localizada, cabines insonorizadas, plataformas elevadas.</span>
+      </div>
+    </div>
+    <div class="hierarchy-item">
+      <div class="hierarchy-num">4</div>
+      <div class="hierarchy-text">
+        <strong>Controlos Administrativos</strong>
+        <span>Alterar a forma como as pessoas trabalham: rotação de postos, limitação do tempo de exposição, procedimentos, formação, sinalização, permissões de trabalho.</span>
+      </div>
+    </div>
+    <div class="hierarchy-item">
+      <div class="hierarchy-num">5</div>
+      <div class="hierarchy-text">
+        <strong>Equipamento de Proteção Individual</strong>
+        <span>Último recurso: protege o trabalhador individualmente, sem eliminar o perigo. Deve ser utilizado quando as medidas acima não são suficientes.</span>
+      </div>
+    </div>
+  </div>
+
+  <h3>Requisitos Legais dos EPIs em Portugal</h3>
+
+  <p>O Regulamento (UE) 2016/425 classifica os EPIs em três categorias, com diferentes requisitos de certificação:</p>
+
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Categoria</th><th>Riscos Abrangidos</th><th>Conformidade</th><th>Exemplos</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Categoria I</strong></td><td>Riscos mínimos (lesões superficiais)</td><td>Autodeclaração do fabricante</td><td>Luvas de jardim, óculos de sol simples</td></tr>
+      <tr><td><strong>Categoria II</strong></td><td>Riscos não incluídos nas Cat. I ou III</td><td>Exame UE de tipo (Organismo Notificado)</td><td>Capacetes, luvas de proteção mecânica, óculos de segurança</td></tr>
+      <tr><td><strong>Categoria III</strong></td><td>Riscos que podem causar morte ou danos irreversíveis</td><td>Exame UE de tipo + controlo de produção (Organismo Notificado)</td><td>Aparelhos respiratórios, sistemas anticaída, proteção química, proteção contra calor extremo</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>Todos os EPIs colocados no mercado europeu devem ostentar a <strong>marcação CE</strong> e ser acompanhados de <strong>Declaração de Conformidade UE</strong> e <strong>Instruções de Utilização em língua portuguesa</strong>.</p>
+
+  <h3>Principais Categorias de EPIs e Seleção</h3>
+
+  <h4>Proteção da Cabeça — Capacetes</h4>
+  <p>Os capacetes industriais são regulados pela <strong>EN 397</strong> (capacetes para indústria) e <strong>EN 812</strong> (carapuças de proteção). A escolha deve ter em conta:</p>
+
+  <ul class="styled">
+    <li>Proteção elétrica: classe E (até 440 V) ou EE (até 20 000 V)</li>
+    <li>Resistência ao fogo: marcação "LD" para resistência à deformação lateral</li>
+    <li>Substituição obrigatória após qualquer impacto significativo, e periodicamente conforme instruções do fabricante (tipicamente 3 a 5 anos para o invólucro, 2 a 3 anos para o arnês interior)</li>
+    <li>Temperatura de armazenamento: nunca expor ao calor excessivo ou à luz UV direta prolongada</li>
+  </ul>
+
+  <h4>Proteção Auditiva</h4>
+  <p>A seleção do protetor auditivo deve ser baseada no nível de ruído medido e no valor SNR (Single Number Rating) ou HML declarado pelo fabricante, utilizando a metodologia do <strong>DL 182/2006</strong> e da norma <strong>EN 458</strong>. O objetivo é que a atenuação efetiva proporcione um nível de exposição abaixo de 80 dB(A) na zona de respiração do trabalhador.</p>
+
+  <div class="alert-box">
+    <p><strong>Erro frequente:</strong> Proteger em excesso é tão perigoso quanto sub-proteger. Um trabalhador com protetores auditivos que proporcionem atenuação excessiva fica isolado do ambiente sonoro, podendo não ouvir avisos de segurança, alarmes ou a aproximação de veículos. O objetivo é uma exposição residual entre 70 e 80 dB(A).</p>
+  </div>
+
+  <h4>Proteção Respiratória</h4>
+
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Tipo</th><th>Norma</th><th>Aplicação</th><th>Eficiência Mínima</th></tr></thead>
+    <tbody>
+      <tr><td><strong>FFP1</strong></td><td>EN 149</td><td>Poeiras e aerossóis de baixa toxicidade</td><td>80% (fuga total ≤ 22%)</td></tr>
+      <tr><td><strong>FFP2</strong></td><td>EN 149</td><td>Poeiras finas, névoas, fumos metálicos, bactérias</td><td>94% (fuga total ≤ 8%)</td></tr>
+      <tr><td><strong>FFP3</strong></td><td>EN 149</td><td>Partículas altamente tóxicas, amianto, agentes biológicos grupo 3</td><td>99% (fuga total ≤ 2%)</td></tr>
+      <tr><td><strong>Semimáscara + filtro A</strong></td><td>EN 140 + EN 14387</td><td>Vapores orgânicos (ponto de ebulição > 65 °C)</td><td>Depende da classe do filtro</td></tr>
+      <tr><td><strong>Semimáscara + filtro B</strong></td><td>EN 140 + EN 14387</td><td>Gases inorgânicos (exceto CO)</td><td>Depende da classe do filtro</td></tr>
+      <tr><td><strong>Máscara completa + ABEK P3</strong></td><td>EN 136 + EN 14387</td><td>Múltiplos agentes: orgânicos + inorgânicos + ácidos + amónia + partículas</td><td>Alta proteção</td></tr>
+      <tr><td><strong>SCBA / ARA</strong></td><td>EN 137</td><td>Ambientes IDLH, < 19,5% O₂, espaços confinados</td><td>Ar limpo comprimido</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>Proteção Anticaída</h4>
+  <p>Para trabalho em altura (acima de 2 metros, nos termos do DL 50/2005 e das normas técnicas aplicáveis), os sistemas anticaída individuais são regulados pela EN 363. Os componentes obrigatórios incluem:</p>
+
+  <ul class="styled">
+    <li><strong>Arnês anticaída (EN 361):</strong> Distribui as forças de impacto pelo tórax, ombros, ancas e coxas. Obrigatório — os cintos de posicionamento não são EPIs anticaída.</li>
+    <li><strong>Absorvedor de energia (EN 355):</strong> Limita a força de choque sobre o utilizador a um máximo de 6 kN. Deve ser combinado com o arnês.</li>
+    <li><strong>Dispositivo retrátil (EN 360):</strong> Bloqueia instantaneamente em caso de queda; permite liberdade de movimentos em condições normais.</li>
+    <li><strong>Ponto de ancoragem (EN 795):</strong> Deve ser capaz de suportar uma carga de 12 kN (ou 10 kN para ancoragem estrutural testada). Nunca ancorar em tubagens, prateleiras ou estruturas não dimensionadas.</li>
+  </ul>
+
+  <div class="tip-box">
+    <p>Todos os EPIs anticaída (categoria III) devem ser sujeitos a inspeção periódica detalhada por <em>pessoa competente</em> designada — em Portugal, tipicamente pelo próprio fabricante ou por técnico de SST com formação específica — com periodicidade mínima anual ou após qualquer ocorrência de queda detida. O resultado da inspeção deve ser registado.</p>
+  </div>
+
+  <h4>Luvas de Proteção</h4>
+  <p>A seleção de luvas é um dos processos mais complexos em matéria de EPIs, dada a diversidade de riscos e materiais. As principais normas são:</p>
+  <ul class="styled">
+    <li><strong>EN 388:</strong> Riscos mecânicos (resistência à abrasão, corte por lâmina, rasgamento, perfuração, corte por impacto)</li>
+    <li><strong>EN 374:</strong> Resistência a produtos químicos e micro-organismos. Define o tempo de permeação para cada substância/material — fator crítico na seleção para risco químico</li>
+    <li><strong>EN 407:</strong> Riscos térmicos (calor e fogo)</li>
+    <li><strong>EN 511:</strong> Riscos de frio</li>
+    <li><strong>EN 60903:</strong> Luvas elétricas isolantes (classes 00 a 4, de 500 V a 36 000 V)</li>
+  </ul>
+
+  <h3>Gestão do Programa de EPIs</h3>
+
+  <ol class="styled">
+    <li><strong>Seleção baseada em avaliação de risco:</strong> Nunca selecionar EPIs por conveniência ou custo — a base deve ser sempre a avaliação quantitativa dos riscos identificados.</li>
+    <li><strong>Consulta e aceitação pelos trabalhadores:</strong> O conforto e a aceitabilidade são determinantes para a adesão ao uso. Envolver os trabalhadores na seleção, sempre que possível com ensaios de campo.</li>
+    <li><strong>Formação obrigatória:</strong> Instrução sobre colocação, ajuste, uso, remoção, limpeza, inspeção e armazenamento correto de cada tipo de EPI.</li>
+    <li><strong>Registo de distribuição:</strong> Manter registo com nome do trabalhador, data, tipo e referência do EPI, n.º do lote, prazo de validade e assinatura de receção.</li>
+    <li><strong>Manutenção e substituição:</strong> Procedimentos claros para inspeção regular, limpeza e substituição quando danificados ou findo o prazo de vida útil.</li>
+    <li><strong>Supervisão do uso:</strong> Verificar, de forma regular e registada, que os EPIs são efetivamente utilizados nas situações obrigatórias.</li>
+  </ol>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">Secção 08</div><div class="section-sep-line"></div></div>
+
+<!-- SINALIZAÇÃO -->
+<div class="section" id="sinalizacao">
+  <span class="section-eyebrow">Secção 08 · Sinalização de Segurança</span>
+  <h2>Sinalização de Segurança no Trabalho</h2>
+
+  <p>A sinalização de segurança é uma medida de proteção coletiva complementar, que transmite informação de segurança a todos os trabalhadores e visitantes, independentemente da língua ou nível de literacia. Em Portugal, é regulada pelo <strong>Decreto-Lei n.º 141/1995, de 14 de junho</strong> (com a alteração introduzida pela Lei n.º 113/1999), que transpõe a Diretiva 92/58/CEE.</p>
+
+  <h3>Categorias de Sinais de Segurança</h3>
+
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Categoria</th><th>Forma</th><th>Cor de fundo</th><th>Pictograma</th><th>Significado</th><th>Exemplos</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Proibição</strong></td><td>Circular</td><td>Branco</td><td>Preto, orla e barra diagonal vermelhas</td><td>Comportamento proibido</td><td>Proibido fumar, Proibido entrar, Proibido utilizar água</td></tr>
+      <tr><td><strong>Advertência</strong></td><td>Triangular</td><td>Amarelo</td><td>Preto</td><td>Perigo ou risco</td><td>Perigo elétrico, Substâncias inflamáveis, Radiação laser</td></tr>
+      <tr><td><strong>Obrigação</strong></td><td>Circular</td><td>Azul</td><td>Branco</td><td>Comportamento obrigatório</td><td>Usar capacete, Usar luvas, Usar proteção auditiva</td></tr>
+      <tr><td><strong>Emergência / Salvamento</strong></td><td>Retangular ou quadrada</td><td>Verde</td><td>Branco</td><td>Saída de emergência, primeiros socorros</td><td>Saída de emergência, Ponto de encontro, Desfibrilhador</td></tr>
+      <tr><td><strong>Equipamento de combate a incêndio</strong></td><td>Retangular ou quadrada</td><td>Vermelho</td><td>Branco</td><td>Localização de equipamentos de combate a incêndio</td><td>Extintor, Boca de incêndio, Botão de alarme</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Norma ISO 7010</h3>
+
+  <p>A <strong>ISO 7010</strong> (Símbolos gráficos — Cores e sinais de segurança — Sinais de segurança registados) é a norma internacional para os pictogramas de segurança, adotada em Portugal como <strong>NP EN ISO 7010</strong>. Define um conjunto padronizado de pictogramas que transcendem barreiras linguísticas e são reconhecidos internacionalmente.</p>
+
+  <p>Exemplos de referências ISO 7010:</p>
+  <ul class="styled">
+    <li>W004 — Perigo: Substâncias inflamáveis (triângulo amarelo com chama)</li>
+    <li>W012 — Perigo: Radiação laser (triângulo amarelo com símbolo laser)</li>
+    <li>M008 — Obrigatório usar proteção respiratória (círculo azul com máscara)</li>
+    <li>E001 — Saída de emergência (fundo verde, figura branca a correr)</li>
+    <li>P003 — Proibido fumar (círculo branco com cigarro e barra vermelha)</li>
+    <li>F001 — Extintor de incêndio (fundo vermelho com extintor branco)</li>
+  </ul>
+
+  <h3>Requisitos de Localização e Dimensionamento</h3>
+
+  <ul class="styled">
+    <li>Os sinais devem ser colocados em local bem iluminado, a altura e posição adequadas para serem facilmente visíveis</li>
+    <li>A dimensão do sinal deve ser proporcional à distância de visualização (regra geral: área mínima em m² ≥ distância de observação em metros ao quadrado, dividido por 2000)</li>
+    <li>A iluminação dos sinais deve ser suficiente para garantir a leitura em condições normais e em situações de falha de iluminação (sinais fotoluminescentes ou com iluminação própria para as vias de evacuação)</li>
+    <li>Os sinais devem ser mantidos limpos, visíveis e em bom estado de conservação</li>
+    <li>A sinalização não substitui as medidas preventivas — é complementar, não substituta</li>
+  </ul>
+
+  <h3>Sinalização de Emergência e Vias de Evacuação</h3>
+
+  <p>As vias de evacuação e saídas de emergência devem estar sinalizadas com sinais fotoluminescentes (que emitem luz após carregamento pela iluminação normal, permitindo orientação em caso de falha elétrica), colocados de forma a que em qualquer ponto do edifício seja sempre visível pelo menos um sinal indicando a direção da saída mais próxima.</p>
+
+  <p>O <strong>Decreto-Lei n.º 220/2008</strong> (Regime Jurídico de Segurança contra Incêndios em Edifícios — SCIE) e as <strong>Portarias n.os 1532/2008 e 135/2020</strong> (Regulamento Técnico de SCIE) estabelecem os requisitos detalhados para a sinalização de emergência em edifícios em Portugal.</p>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">Secção 09</div><div class="section-sep-line"></div></div>
+
+<!-- TRABALHOS ESPECIAIS -->
+<div class="section" id="trabalhos-especiais">
+  <span class="section-eyebrow">Secção 09 · Trabalhos de Alto Risco</span>
+  <h2>Trabalhos de Alto Risco: Altura, Espaços Confinados e Energia Elétrica</h2>
+
+  <h3>Trabalho em Altura</h3>
+
+  <p>O trabalho em altura é uma das principais causas de acidente mortal em Portugal. Aplica-se a todo o trabalho realizado em local do qual a queda possa resultar em lesão do trabalhador, e que se situe a nível diferente do nível do chão ou de um andar, com altura superior a 2 metros (referência do DL n.º 50/2005).</p>
+
+  <h4>Medidas de Proteção Coletiva — Prioridade Absoluta</h4>
+  <ul class="styled">
+    <li><strong>Guardas periféricos:</strong> Altura mínima de 1,00 m, com travessão superior, travessão intermédio e guarda-rodapé de 0,15 m. Resistência mínima de 0,6 kN/m linear.</li>
+    <li><strong>Redes de segurança:</strong> Colocadas sob a área de trabalho para limitar a altura de queda e absorver energia. Devem estar conformes com a EN 1263.</li>
+    <li><strong>Plataformas elevatórias (MEWP):</strong> Reguladas pelo DL n.º 50/2005. O operador deve ter formação específica.</li>
+    <li><strong>Andaimes:</strong> Devem ser projetados, montados e desmontados por trabalhadores com formação específica (DL n.º 273/2003). Inspeção obrigatória antes de cada utilização e semanalmente.</li>
+  </ul>
+
+  <h4>Permissão de Trabalho em Altura</h4>
+  <p>Para trabalhos de alto risco em altura (telhados, empenas, bordas de laje sem guarda, estruturas elevadas), deve ser emitida uma <strong>Permissão de Trabalho</strong> antes do início da atividade. Este documento formaliza:</p>
+
+  <ul class="styled">
+    <li>Identificação dos trabalhadores autorizados</li>
+    <li>Descrição da tarefa e local de trabalho</li>
+    <li>Riscos identificados e medidas de controlo a implementar</li>
+    <li>EPIs anticaída obrigatórios e pontos de ancoragem aprovados</li>
+    <li>Plano de resposta a emergência (salvamento em caso de queda suspensa)</li>
+    <li>Validade da permissão e responsável pela supervisão</li>
+  </ul>
+
+  <div class="alert-box">
+    <p><strong>Síndrome de suspensão:</strong> Um trabalhador suspenso inerte num arnês (após queda detida ou perda de consciência) pode desenvolver síndrome de suspensão em apenas 10 a 30 minutos — compressão das veias femorais com acumulação de sangue nas pernas, levando ao colapso circulatório. O plano de salvamento em altura deve garantir resgate em menos de 10 minutos.</p>
+  </div>
+
+  <h3>Trabalho em Espaços Confinados</h3>
+
+  <p>Um <strong>espaço confinado</strong> é um espaço suficientemente grande para nele entrar um trabalhador e realizar determinada tarefa, com meios limitados de entrada e saída, e que não foi concebido para ocupação humana contínua. Exemplos: silos, cisternas, reservatórios, câmaras de saneamento, valas profundas, condutas.</p>
+
+  <p>Em Portugal, os espaços confinados são regulados pela <strong>Diretiva 89/654/CEE</strong> (transposta pelo DL n.º 347/1993) e pelas normas técnicas específicas de cada setor. A EN 15858 fornece orientações para a formação de trabalhadores que operam em espaços confinados.</p>
+
+  <h4>Os Principais Perigos dos Espaços Confinados</h4>
+  <ul class="styled">
+    <li><strong>Atmosfera deficiente em oxigénio:</strong> O2 abaixo de 19,5% vol. causa hipóxia; abaixo de 16% pode causar perda de consciência. Em espaços confinados, a decomposição de matéria orgânica, oxidação de metais ou presença de CO2 pode depletar o O2.</li>
+    <li><strong>Atmosfera enriquecida em oxigénio:</strong> O2 acima de 23,5% vol. aumenta drasticamente o risco de incêndio e explosão.</li>
+    <li><strong>Gases tóxicos:</strong> Sulfureto de hidrogénio (H2S — odor a ovo podre, LIE 10 ppm), monóxido de carbono (CO — inodoro, LIE 25 ppm), dióxido de carbono (CO2), entre outros.</li>
+    <li><strong>Atmosfera inflamável ou explosiva (ATEX):</strong> Presença de gases inflamáveis (metano, propano) ou poeiras em concentração entre o LIE (Limite Inferior de Explosividade) e o LSE (Limite Superior de Explosividade).</li>
+    <li><strong>Riscos físicos:</strong> Engolfamento em material a granel, afogamento, impacto com equipamento mecânico, temperatura extrema.</li>
+  </ul>
+
+  <h4>Sistema de Permissão de Entrada e Trabalho em Espaço Confinado</h4>
+
+  <div class="checklist">
+    <li>Identificar e classificar o espaço confinado (com ou sem risco imediato de vida)</li>
+    <li>Nomear um Supervisor de Espaço Confinado com formação específica</li>
+    <li>Isolar todas as fontes de energia e selagem de entradas de fluidos (LOTO)</li>
+    <li>Ventilação do espaço antes da entrada (e contínua durante o trabalho, se necessário)</li>
+    <li>Monitorização atmosférica: O2, gases inflamáveis (% LIE), CO, H2S com equipamento multifunções calibrado</li>
+    <li>Apenas entrar se: O2 entre 19,5-23,5%, gases inflamáveis < 10% LIE, CO < 25 ppm, H2S < 1 ppm</li>
+    <li>Designar um Vigia permanente no exterior — nunca deve entrar no espaço</li>
+    <li>Comunicação contínua entre os trabalhadores no interior e o Vigia</li>
+    <li>Equipamento de salvamento e ARA disponíveis e operacionais junto ao espaço</li>
+    <li>Plano de emergência e evacuação definido e testado antes do início dos trabalhos</li>
+    <li>Emitir a Permissão de Trabalho com validade definida (máximo do turno de trabalho)</li>
+    <li>Monitorização atmosférica contínua durante toda a permanência no espaço</li>
+  </div>
+
+  <h3>Segurança em Instalações Elétricas</h3>
+
+  <p>Em Portugal, a segurança elétrica nas instalações e nos trabalhos com eletricidade é regulada pelas <strong>Regras Técnicas das Instalações Elétricas de Baixa Tensão (RTIEBT)</strong>, publicadas pelo Despacho n.º 25840/2007, e pelo <strong>Regulamento de Segurança de Instalações de Utilização de Energia Elétrica (RSIUEE)</strong>, aprovado pelo DL n.º 226/2005.</p>
+
+  <h4>Trabalhos Elétricos — As Cinco Regras de Ouro</h4>
+  <p>Estas cinco regras são o fundamento da segurança na realização de trabalhos em instalações elétricas. Devem ser aplicadas sempre, em sequência, antes de qualquer intervenção em sistemas elétricos:</p>
+
+  <ol class="styled">
+    <li><strong>Cortar — Separar a instalação de todas as fontes de tensão</strong> (abertura de disjuntores, retiragem de fusíveis, abertura de seccionadores). Verificar a ausência de re-alimentação automática.</li>
+    <li><strong>Bloquear — Prevenir qualquer possibilidade de re-alimentação</strong> com dispositivos de bloqueio (cadeados) e etiquetas de aviso em todos os pontos de corte.</li>
+    <li><strong>Verificar a ausência de tensão</strong> com equipamento de detecção de tensão adequado à tensão nominal da instalação, testado antes e depois da verificação.</li>
+    <li><strong>Colocar em curto-circuito e ligar à terra</strong> os condutores da instalação, para eliminar a possibilidade de cargas capacitivas residuais e de indução.</li>
+    <li><strong>Proteger contra partes adjacentes sob tensão</strong> com barreiras ou invólucros, e delimitar e sinalizar a zona de trabalho.</li>
+  </ol>
+
+  <h4>Habilitação para Trabalhos Elétricos</h4>
+  <p>Em Portugal, os trabalhadores que realizem trabalhos em instalações elétricas devem ter habilitação específica, nos termos do RSIUEE e das regras da ordem profissional (Ordem dos Engenheiros, Ordem dos Engenheiros Técnicos). A habilitação inclui:</p>
+
+  <ul class="styled">
+    <li>Trabalhador autorizado: reconhecimento da competência para trabalhar em proximidade de partes ativas ou em sistemas elétricos sem tensão mas não postos em segurança</li>
+    <li>Trabalhador qualificado: formação e conhecimentos que lhe permitem trabalhar em sistemas elétricos e reconhecer os riscos</li>
+    <li>Trabalhador responsável pelos trabalhos: supervisão e coordenação dos trabalhos elétricos, emissão de autorizações</li>
+  </ul>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">Secção 10</div><div class="section-sep-line"></div></div>
+
+<!-- CONTROLO DE ENERGIA / LOTO -->
+<div class="section" id="loto">
+  <span class="section-eyebrow">Secção 10 · Controlo de Energia</span>
+  <h2>Controlo de Energia: Procedimento de Lock-Out/Tag-Out (LOTO)</h2>
+
+  <p>O <strong>Lock-Out/Tag-Out (LOTO)</strong> é o sistema de controlo de energias perigosas durante operações de manutenção e reparação de equipamentos, destinado a garantir que a máquina ou instalação fica completamente isolada de todas as suas fontes de energia antes de qualquer intervenção. A ausência ou falha do LOTO é uma das principais causas de acidentes graves e mortais em manutenção industrial em todo o mundo.</p>
+
+  <p>Em Portugal, a obrigação de controlo de energias perigosas decorre do <strong>Decreto-Lei n.º 50/2005</strong> (utilização de equipamentos de trabalho) e do <strong>Decreto-Lei n.º 226/2005</strong> (RSIUEE). A norma técnica de referência é a <strong>ISO 14118:2017</strong> (Safety of machinery — Prevention of unexpected start-up).</p>
+
+  <h3>Tipos de Energia a Controlar</h3>
+
+  <div class="card-grid">
+    <div class="card"><span class="card-icon">⚡</span><h4>Energia Elétrica</h4><p>Abertura de disjuntores, retiragem de fusíveis, bloqueio de quadros elétricos. Verificação de ausência de tensão obrigatória.</p></div>
+    <div class="card"><span class="card-icon">💨</span><h4>Energia Pneumática</h4><p>Fechamento de válvulas de corte, purga da pressão residual nos acumuladores e linhas, bloqueio das válvulas.</p></div>
+    <div class="card"><span class="card-icon">🌊</span><h4>Energia Hidráulica</h4><p>Fechamento e bloqueio de válvulas, alívio da pressão nos acumuladores e no circuito, suporte mecânico das partes móveis em posição elevada.</p></div>
+    <div class="card"><span class="card-icon">🔧</span><h4>Energia Mecânica</h4><p>Bloqueio de molas comprimidas, suporte de partes em posição elevada (cilindros, prensas, braços), calços e pinos de bloqueio.</p></div>
+    <div class="card"><span class="card-icon">🔥</span><h4>Energia Térmica</h4><p>Arrefecimento de superfícies quentes, purga de fluidos a alta temperatura, isolamento térmico de linhas.</p></div>
+    <div class="card"><span class="card-icon">☢️</span><h4>Energia Química / Gravítica</h4><p>Isolamento de fluxos de produtos perigosos, suporte de cargas suspensas, bloqueio de transportadores inclinados.</p></div>
+  </div>
+
+  <h3>Procedimento LOTO Passo a Passo</h3>
+
+  <div class="checklist">
+    <li><strong>Preparação:</strong> Identificar o equipamento e todas as fontes de energia a isolar. Consultar o procedimento LOTO específico do equipamento (deve existir em cada máquina).</li>
+    <li><strong>Notificação:</strong> Informar todos os trabalhadores afetados que o equipamento vai ser colocado fora de serviço.</li>
+    <li><strong>Paragem ordenada:</strong> Desligar o equipamento seguindo o procedimento normal de paragem, assegurando que todos os movimentos cessaram.</li>
+    <li><strong>Isolamento:</strong> Atuar em todos os dispositivos de isolamento de energia identificados (disjuntores, válvulas, etc.).</li>
+    <li><strong>Lock-Out:</strong> Colocar o cadeado pessoal de cada trabalhador interveniente em cada dispositivo de isolamento. Se o dispositivo só aceitar um cadeado, usar haspe múltipla (hasp).</li>
+    <li><strong>Tag-Out:</strong> Colocar etiqueta de aviso em cada ponto de isolamento identificando o trabalhador, a data, a tarefa e a proibição de reativar sem autorização.</li>
+    <li><strong>Dissipação de energias residuais:</strong> Descarregar condensadores, aliviar pressões hidráulicas e pneumáticas, deixar arrefecer, bloquear mecanicamente partes em posição elevada.</li>
+    <li><strong>Verificação:</strong> Tentar arrancar o equipamento pelos meios normais (botão de arranque) para confirmar que está efetivamente isolado. Verificar a ausência de tensão com multímetro ou detetor.</li>
+    <li><strong>Realizar a intervenção.</strong></li>
+    <li><strong>Reposição:</strong> Confirmar que todos os trabalhadores saíram da zona perigosa, ferramentas foram retiradas e proteções reinstaladas. Cada trabalhador remove o seu próprio cadeado. Repor a energia.</li>
+  </div>
+
+  <div class="alert-box">
+    <p><strong>Regra absoluta:</strong> Cada trabalhador que intervém no equipamento coloca o seu próprio cadeado pessoal e <strong>só ele pode removê-lo</strong>. Nunca um supervisor ou colega pode remover o cadeado de outro trabalhador, exceto em situação de emergência com procedimento específico documentado.</p>
+  </div>
+</div>
+
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">Secção 11</div><div class="section-sep-line"></div></div>
+
+<!-- CONSTRUÇÃO CIVIL -->
+<div class="section" id="construcao">
+  <span class="section-eyebrow">Secção 11 · Setor da Construção</span>
+  <h2>Segurança na Construção Civil: PSS, Coordenação e Estaleiros</h2>
+
+  <p>A construção civil é o setor com maior sinistralidade mortal em Portugal, respondendo por cerca de 30% dos acidentes de trabalho fatais. O enquadramento legal específico é o <strong>Decreto-Lei n.º 273/2003, de 29 de outubro</strong>, com a alteração introduzida pelo DL n.º 41/2015, que transpõe a Diretiva 92/57/CEE relativa às prescrições mínimas de segurança e saúde nos estaleiros temporários ou móveis.</p>
+
+  <h3>Figuras Obrigatórias em Obra</h3>
+
+  <div class="card-grid">
+    <div class="card"><span class="card-icon">🏗️</span><h4>Dono de Obra</h4><p>Responsável pela designação do Coordenador de Segurança e pela aprovação do PSS. Pode ser pessoa singular ou coletiva, pública ou privada.</p></div>
+    <div class="card"><span class="card-icon">📐</span><h4>Coordenador de Segurança em Projeto (CSP)</h4><p>Garante a integração da segurança no projeto. Elabora o PSS preliminar e o DCIR. Exige formação específica de 50 horas e experiência comprovada.</p></div>
+    <div class="card"><span class="card-icon">🦺</span><h4>Coordenador de Segurança em Obra (CSO)</h4><p>Supervisiona a implementação do PSS em obra. Visita regularmente o estaleiro. Pode determinar a suspensão de trabalhos. Mesmos requisitos formativos do CSP.</p></div>
+    <div class="card"><span class="card-icon">🔨</span><h4>Empreiteiro</h4><p>Responsável pela segurança dos trabalhadores sob a sua direção. Desenvolve o PSS para as suas atividades e designa um interlocutor de segurança em obra.</p></div>
+  </div>
+
+  <h3>O Plano de Segurança e Saúde (PSS)</h3>
+
+  <p>O PSS é o documento central da gestão de SST na construção. É obrigatório para obras sujeitas a notificação prévia (obras com duração superior a 30 dias e mais de 20 trabalhadores simultaneamente, ou com volume de trabalho superior a 500 homem-dia). Deve conter:</p>
+
+  <ul class="styled">
+    <li>Identificação e caracterização da obra e do estaleiro</li>
+    <li>Identificação dos riscos específicos das atividades previstas</li>
+    <li>Medidas de prevenção para cada risco identificado</li>
+    <li>Articulação com as atividades dos diferentes empreiteiros e subempreiteiros</li>
+    <li>Medidas específicas para trabalhos de risco especial (lista do Anexo II do DL 273/2003)</li>
+    <li>Organização do estaleiro (acessos, implantação de instalações sociais, gestão de resíduos)</li>
+    <li>Plano de emergência e primeiros socorros</li>
+    <li>Registos de visitas e inspeções de segurança</li>
+  </ul>
+
+  <h3>Trabalhos de Risco Especial em Obra (Anexo II do DL 273/2003)</h3>
+
+  <ul class="styled">
+    <li>Trabalhos com risco de soterramento, afundamento ou queda em altura, especialmente quando as condições de trabalho ou os processos utilizados são particularmente perigosos</li>
+    <li>Trabalhos com exposição a agentes químicos ou biológicos que apresentem riscos particulares para a segurança e a saúde dos trabalhadores</li>
+    <li>Trabalhos com radiações ionizantes que exijam a designação de zonas controladas ou supervisionadas</li>
+    <li>Trabalhos na proximidade de linhas elétricas de alta tensão</li>
+    <li>Trabalhos de mergulho com aparelho</li>
+    <li>Trabalhos em caixões de ar comprimido</li>
+    <li>Trabalhos com utilização de explosivos</li>
+    <li>Trabalhos de montagem e desmontagem de elementos prefabricados pesados</li>
+  </ul>
+
+  <h3>Comunicação Prévia à ACT</h3>
+
+  <p>Para obras sujeitas a notificação prévia, o dono de obra deve enviar à ACT uma <strong>Comunicação Prévia</strong> antes do início dos trabalhos, contendo: identificação da obra, endereço do estaleiro, identificação do dono de obra e do empreiteiro principal, data prevista de início e duração, número máximo de trabalhadores previsto, número de empreiteiros e subempreiteiros, e identificação dos coordenadores de segurança.</p>
+
+  <h3>Instalações Sociais Obrigatórias em Estaleiro</h3>
+
+  <p>O DL n.º 273/2003 e a Portaria n.º 101/1996 estabelecem as condições mínimas das instalações sociais em estaleiro, que devem incluir:</p>
+
+  <ul class="styled">
+    <li>Refeitório (dimensionado para o número máximo de trabalhadores em simultâneo)</li>
+    <li>Vestiários com cacifos individuais e separação por sexo</li>
+    <li>Instalações sanitárias (1 retrete por cada 10 trabalhadores, 1 lavatório por cada 5)</li>
+    <li>Chuveiros (em obras com exposição a substâncias perigosas ou sujidade intensa)</li>
+    <li>Local de primeiros socorros com acesso facilitado para meios de socorro</li>
+  </ul>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">Secção 12</div><div class="section-sep-line"></div></div>
+
+<!-- GESTÃO SUBCONTRATADOS -->
+<div class="section" id="subcontratados">
+  <span class="section-eyebrow">Secção 12 · Gestão de Subcontratados</span>
+  <h2>Gestão de SST de Subcontratados e Prestadores de Serviços</h2>
+
+  <p>A gestão de SST de empreiteiros e prestadores de serviços que trabalham nas instalações de uma empresa é uma das áreas mais complexas e frequentemente negligenciadas da SST. A ISO 45001 dedica-lhe requisitos específicos (cláusula 8.1.4), e a Lei n.º 102/2009 consagra a responsabilidade solidária do dono de obra e do empreiteiro principal em matéria de SST.</p>
+
+  <h3>O Problema da Interface entre Empresas</h3>
+
+  <p>Quando uma empresa contrata outra para prestar serviços nas suas instalações — manutenção, limpeza, segurança, catering, obras — criam-se interfaces entre sistemas de gestão SST diferentes, com potencial para lacunas e conflitos:</p>
+
+  <ul class="styled">
+    <li>O contratante conhece os riscos das suas instalações, mas o prestador conhece os riscos das suas atividades</li>
+    <li>Cada empresa tem os seus procedimentos, formação e EPIs próprios — que podem não ser compatíveis</li>
+    <li>As atividades simultâneas de diferentes empresas podem criar riscos adicionais não presentes quando trabalham separadamente</li>
+    <li>A pressão para concluir trabalhos rapidamente pode levar a atalhos de segurança que o contratante não consegue supervisionar</li>
+  </ul>
+
+  <h3>O Ciclo de Gestão de Prestadores em SST</h3>
+
+  <ol class="styled">
+    <li><strong>Pré-qualificação:</strong> Antes de contratar, avaliar a capacidade do prestador em matéria de SST — política, certificações, historial de acidentes, formação dos trabalhadores, EPIs, seguros.</li>
+    <li><strong>Contratualização:</strong> Incluir nos contratos cláusulas de SST com requisitos mínimos, obrigações de reporte de incidentes, direito de inspeção e de suspensão em caso de perigo grave.</li>
+    <li><strong>Acolhimento/Integração:</strong> Antes do início dos trabalhos, fornecer ao prestador informação sobre os riscos das instalações, os procedimentos de emergência, as regras de SST do local e os requisitos específicos de EPIs.</li>
+    <li><strong>Coordenação prévia:</strong> Reunião de coordenação de segurança antes do início de atividades de risco, para identificar interferências, definir áreas de trabalho, acordar procedimentos e clarificar responsabilidades.</li>
+    <li><strong>Supervisão durante os trabalhos:</strong> Visitas periódicas de inspeção de SST. Não basta confiar que o prestador cumpre — o contratante deve verificar. Em caso de situação perigosa, autoridade para suspender os trabalhos.</li>
+    <li><strong>Avaliação pós-trabalho:</strong> Registo do desempenho de SST do prestador para alimentar futuras decisões de pré-qualificação.</li>
+  </ol>
+
+  <h3>Documentação a Exigir ao Prestador</h3>
+
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Documento</th><th>Finalidade</th><th>Periodicidade</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Apólice de seguro de acidentes de trabalho</strong></td><td>Garantir cobertura dos trabalhadores do prestador</td><td>Anual / por cada contrato</td></tr>
+      <tr><td><strong>Avaliação de riscos da atividade</strong></td><td>Identificar os riscos que o prestador traz para as instalações</td><td>Por cada tipo de trabalho</td></tr>
+      <tr><td><strong>Procedimentos de trabalho seguro</strong></td><td>Garantir que o prestador tem procedimentos adequados</td><td>Por cada atividade de risco</td></tr>
+      <tr><td><strong>Registos de formação dos trabalhadores</strong></td><td>Comprovar habilitação para os trabalhos a realizar</td><td>Por cada trabalhador</td></tr>
+      <tr><td><strong>Certificados de EPIs</strong></td><td>Confirmar conformidade marcação CE e adequação ao risco</td><td>Por tipo de EPI</td></tr>
+      <tr><td><strong>Declaração de conformidade de equipamentos</strong></td><td>Garantir que os equipamentos trazidos são seguros</td><td>Por cada equipamento</td></tr>
+      <tr><td><strong>Histórico de acidentes (últimos 3 anos)</strong></td><td>Avaliar o desempenho SST do prestador</td><td>Na pré-qualificação</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="tip-box">
+    <p>Muitas grandes empresas portuguesas e multinacionais utilizam plataformas digitais de gestão de prestadores (como o Contractor Safety Management — CSM) que centralizam a documentação, automatizam alertas de expiração de documentos e registam as inspeções de segurança. Esta abordagem reduz substancialmente o risco de lacunas documentais.</p>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">Secção 13</div><div class="section-sep-line"></div></div>
+
+<!-- ACIDENTES DE TRABALHO -->
+<div class="section" id="acidentes">
+  <span class="section-eyebrow">Secção 13 · Acidentes e Incidentes</span>
+  <h2>Acidentes de Trabalho: Definição Legal, Causas e Investigação</h2>
+
+  <p>Em Portugal, o regime de reparação de acidentes de trabalho e doenças profissionais está consagrado na <strong>Lei n.º 98/2009, de 4 de setembro</strong>. Um acidente de trabalho é aquele que se verifique no local e no tempo de trabalho e produza direta ou indiretamente lesão corporal, perturbação funcional ou doença de que resulte redução na capacidade de trabalho ou de ganho ou a morte.</p>
+
+  <p>A lei portuguesa adota um conceito amplo, incluindo também os <strong>acidentes in itinere</strong> — ocorridos no trajeto normal de ida e regresso entre a residência habitual ou ocasional e o local de trabalho.</p>
+
+  <h3>Tipologia de Eventos</h3>
+
+  <div class="card-grid">
+    <div class="card"><span class="card-icon">💥</span><h4>Acidente</h4><p>Evento não planeado com consequências negativas: lesão pessoal, dano material, ambiental ou perda de processo.</p></div>
+    <div class="card"><span class="card-icon">⚡</span><h4>Incidente / Near-Miss</h4><p>Evento não planeado sem consequências, mas com potencial para as ter. Fonte de aprendizagem mais valiosa do que os acidentes.</p></div>
+    <div class="card"><span class="card-icon">⚠️</span><h4>Condição Insegura</h4><p>Estado físico ou ambiental que representa um perigo — pavimento escorregadio, proteção de máquina removida, iluminação insuficiente.</p></div>
+    <div class="card"><span class="card-icon">🚷</span><h4>Ato Inseguro</h4><p>Comportamento que viola procedimentos ou aumenta o risco — trabalhar sem EPI, ignorar sinais de perigo, desligar proteções de segurança.</p></div>
+  </div>
+
+  <h3>Notificação Legal de Acidentes em Portugal</h3>
+
+  <ul class="styled">
+    <li><strong>À seguradora:</strong> O empregador deve participar o acidente de trabalho à seguradora no prazo de 24 horas após o acidente (art.º 70.º da Lei 98/2009).</li>
+    <li><strong>À ACT:</strong> Acidentes mortais ou que resultem em incapacidade para o trabalho superior a 3 dias úteis devem ser comunicados à ACT nas 24 horas seguintes (art.º 111.º da Lei 102/2009). Esta comunicação pode ser feita através do portal da ACT.</li>
+    <li><strong>Às autoridades policiais:</strong> Em caso de acidente mortal, a GNR ou PSP deve ser contactada para assegurar a preservação do local e a eventual participação ao Ministério Público.</li>
+  </ul>
+
+  <div class="alert-box">
+    <p><strong>Preservação do local:</strong> Em caso de acidente mortal ou grave, o local deve ser preservado nas condições em que ficou após o acidente, não sendo alterado sem autorização da ACT ou das autoridades competentes, salvo para permitir o socorro às vítimas ou prevenir perigo iminente para outros trabalhadores.</p>
+  </div>
+
+  <h3>Investigação de Acidentes — Princípios e Métodos</h3>
+
+  <p>A investigação não procura culpados — procura causas, para evitar recorrências. Uma investigação eficaz deve:</p>
+
+  <ul class="styled">
+    <li>Iniciar o mais rapidamente possível (preservar evidências físicas, memória das testemunhas)</li>
+    <li>Ser conduzida por equipa multidisciplinar, incluindo trabalhadores e representantes de segurança</li>
+    <li>Distinguir causas imediatas (o que aconteceu), causas básicas (por que aconteceu) e causas raiz (falhas do sistema que permitiram que acontecesse)</li>
+    <li>Não parar na primeira causa encontrada — aprofundar até às falhas organizacionais e sistémicas</li>
+    <li>Produzir recomendações concretas, com responsável designado e prazo definido</li>
+    <li>Comunicar os resultados e lições aprendidas a toda a organização</li>
+    <li>Monitorizar a implementação das ações corretivas</li>
+  </ul>
+
+  <h4>5 Porquês</h4>
+  <p>Técnica simples e eficaz para situações de baixa a média complexidade. Consiste em questionar repetidamente "porquê?" a partir da causa imediata, até chegar à causa raiz sistémica. Exemplo simplificado: trabalhador escorregou (1) → pavimento molhado (2) → fuga de óleo da máquina (3) → vedante danificado não substituído (4) → plano de manutenção preventiva não implementado (5) → causa raiz: falta de sistema de manutenção preventiva.</p>
+
+  <h4>Diagrama de Ishikawa (Espinha de Peixe)</h4>
+  <p>Organiza visualmente as potenciais causas de um problema em categorias: Homem, Máquina, Método, Material, Medição, Meio Ambiente (6M). Facilita a análise em equipa e garante que nenhuma categoria é negligenciada.</p>
+
+  <h4>Modelo do Queijo Suíço (Reason)</h4>
+  <p>Visualiza os sistemas de defesa como fatias de queijo suíço — cada uma com "buracos" (falhas latentes e erros ativos). Um acidente ocorre quando os buracos de todas as fatias se alinham. Este modelo desvia o foco do "erro do operador" para as falhas sistémicas e latentes que criaram as condições para o erro.</p>
+
+  <h4>HFACS (Human Factors Analysis and Classification System)</h4>
+  <p>Adaptado da aviação militar americana, classifica os fatores humanos que contribuíram para o acidente em quatro níveis: atos inseguros, precondições, supervisão insegura e influências organizacionais. Muito usado em setores de alto risco como a aviação, a saúde e a energia nuclear.</p>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">Secção 14</div><div class="section-sep-line"></div></div>
+
+<!-- SAÚDE OCUPACIONAL -->
+<div class="section" id="saude">
+  <span class="section-eyebrow">Secção 14 · Saúde Ocupacional</span>
+  <h2>Saúde Ocupacional e Vigilância da Saúde em Portugal</h2>
+
+  <p>A vigilância da saúde dos trabalhadores é uma obrigação do empregador nos termos da <strong>Lei n.º 102/2009</strong> (artigos 108.º a 117.º). O médico do trabalho é um profissional com especialidade reconhecida pela Ordem dos Médicos que tem competência exclusiva para emitir fichas de aptidão e de acompanhamento clínico em contexto ocupacional.</p>
+
+  <h3>Exames de Saúde Obrigatórios</h3>
+
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Tipo de Exame</th><th>Momento</th><th>Observações</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Admissão</strong></td><td>Antes do início da atividade, ou até 15 dias após</td><td>Avalia aptidão para as funções. Linha de base para comparação futura.</td></tr>
+      <tr><td><strong>Periódico — menores de 18 anos</strong></td><td>Anualmente</td><td>Proteção especial dos trabalhadores jovens</td></tr>
+      <tr><td><strong>Periódico — 18 a 50 anos</strong></td><td>De 2 em 2 anos</td><td>Salvo indicação médica em contrário</td></tr>
+      <tr><td><strong>Periódico — maiores de 50 anos</strong></td><td>Anualmente</td><td>Maior vulnerabilidade com a idade</td></tr>
+      <tr><td><strong>Ocasional</strong></td><td>Após ausência > 30 dias por doença ou acidente; após doença profissional; quando o médico do trabalho o considerar necessário</td><td>Avalia aptidão ao regresso ao trabalho</td></tr>
+      <tr><td><strong>Desadaptação</strong></td><td>Quando houver alteração das condições de trabalho suscetível de afetar a saúde</td><td>Ex: mudança de posto, novos produtos químicos</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Doenças Profissionais em Portugal</h3>
+
+  <p>Em Portugal, a lista de doenças profissionais reconhecidas está aprovada pelo <strong>Decreto Regulamentar n.º 6/2001, de 5 de maio</strong>, com as atualizações introduzidas pelo DR n.º 76/2007. A doença constante da lista presume-se profissional se o trabalhador exerceu a atividade que constitui a causa direta da doença.</p>
+
+  <p>As doenças profissionais mais frequentemente reconhecidas em Portugal incluem:</p>
+
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Doença</th><th>Agentes / Atividades</th><th>Setores</th></tr></thead>
+    <tbody>
+      <tr><td><strong>LMELT (lesões músculo-esqueléticas)</strong></td><td>MMC, posturas forçadas, repetitividade, vibrações</td><td>Indústria, saúde, construção, comércio</td></tr>
+      <tr><td><strong>PAIR (perda auditiva)</strong></td><td>Ruído ≥ 85 dB(A) crónico</td><td>Metalurgia, construção, indústria</td></tr>
+      <tr><td><strong>Silicose</strong></td><td>Sílica cristalina inalável</td><td>Pedreiras, fundição, cerâmica, construção</td></tr>
+      <tr><td><strong>Asbestose / Mesotelioma</strong></td><td>Fibras de amianto</td><td>Construção (pré-2000), naval, isolamentos</td></tr>
+      <tr><td><strong>Dermatoses profissionais</strong></td><td>Cimento, solventes, látex, borracha, metais</td><td>Construção, saúde, indústria, cabeleireiros</td></tr>
+      <tr><td><strong>Asma profissional</strong></td><td>Isocianatos, farinha, látex, madeira, animais</td><td>Indústria, padaria, saúde, agricultura</td></tr>
+      <tr><td><strong>Perturbações neurotóxicas</strong></td><td>Solventes orgânicos (tolueno, xileno, n-hexano)</td><td>Pintura, calçado, artes gráficas</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Participação de Doença Profissional</h3>
+
+  <p>Em Portugal, a participação de doença profissional é feita pelo médico do trabalho ao Centro Nacional de Proteção contra os Riscos Profissionais (CNPRP) do Instituto da Segurança Social. O processo inclui:</p>
+
+  <ol class="styled">
+    <li>Exame clínico pelo médico do trabalho com suspeita de doença profissional</li>
+    <li>Participação ao CNPRP com relatório clínico e historial de exposição profissional</li>
+    <li>Avaliação pelo médico do CNPRP, com eventual realização de exames complementares</li>
+    <li>Visita de higiene ao local de trabalho para caracterização da exposição</li>
+    <li>Decisão de reconhecimento ou não da doença como profissional</li>
+    <li>Em caso de reconhecimento, abertura de processo de reparação</li>
+  </ol>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">Secção 15</div><div class="section-sep-line"></div></div>
+
+<!-- EMERGÊNCIAS -->
+<div class="section" id="emergencias">
+  <span class="section-eyebrow">Secção 15 · Emergências</span>
+  <h2>Preparação e Resposta a Emergências</h2>
+
+  <p>A preparação para emergências é uma obrigação legal nos termos da Lei n.º 102/2009 e dos diplomas sectoriais de segurança contra incêndios. O objetivo é minimizar as consequências de eventos inesperados, garantindo a segurança dos trabalhadores e a continuidade operacional.</p>
+
+  <h3>Segurança Contra Incêndios em Edifícios (SCIE)</h3>
+
+  <p>Em Portugal, o regime jurídico de segurança contra incêndios em edifícios (SCIE) é estabelecido pelo <strong>Decreto-Lei n.º 220/2008</strong>, com as alterações introduzidas pelo DL n.º 224/2015, e o <strong>Regulamento Técnico de SCIE</strong> aprovado pela <strong>Portaria n.º 1532/2008</strong> (com as atualizações da Portaria n.º 135/2020).</p>
+
+  <p>Os edifícios são classificados em <strong>12 utilizações-tipo</strong> (habitacionais, estacionamentos, administrativos, escolares, hospitalares, espetáculos, hoteleiros, comerciais, desportivos, industriais, etc.) e em <strong>4 categorias de risco</strong> (1ª a 4ª, da menor para a maior), determinando os requisitos de SCIE aplicáveis.</p>
+
+  <h3>Plano de Emergência Interno (PEI)</h3>
+
+  <p>O PEI é obrigatório para edifícios de 3ª e 4ª categoria de risco (e alguns de 2ª categoria, dependendo da utilização-tipo). Deve conter:</p>
+
+  <ul class="styled">
+    <li><strong>Plano de Prevenção:</strong> Medidas organizativas para reduzir o risco de incêndio — manutenção de equipamentos, gestão de cargas de incêndio, controlo de trabalhos com risco de incêndio.</li>
+    <li><strong>Plano de Atuação em Emergência:</strong> Procedimentos para cada tipo de emergência (incêndio, explosão, derrame, ameaça de bomba, evacuação médica).</li>
+    <li><strong>Plano de Evacuação:</strong> Vias de evacuação, pontos de encontro, responsabilidades, procedimentos para pessoas com mobilidade reduzida, contagem de ocupantes.</li>
+    <li><strong>Plantas de Emergência:</strong> Affixadas em pontos estratégicos, indicando a localização dos meios de intervenção, saídas de emergência e ponto de encontro.</li>
+  </ul>
+
+  <h3>Brigada de Emergência</h3>
+
+  <p>A brigada de emergência é o conjunto de trabalhadores com formação específica para intervir em situações de emergência no edifício. A sua dimensão e composição dependem da categoria de risco do edifício e do número de ocupantes. Tipicamente inclui:</p>
+
+  <ul class="styled">
+    <li><strong>Responsável de Segurança:</strong> Coordena a resposta à emergência e a interação com os serviços externos de socorro.</li>
+    <li><strong>Delegados de Segurança:</strong> Responsáveis por pisos ou zonas específicas — coordenam a evacuação da sua área.</li>
+    <li><strong>Elementos de 1.ª intervenção:</strong> Formados no uso de extintores e bocas de incêndio armadas para combate inicial ao fogo.</li>
+    <li><strong>Primeiros Socorristas:</strong> Com formação em SBV (Suporte Básico de Vida) e uso de DAE (Desfibrilhador Automático Externo).</li>
+  </ul>
+
+  <h3>Simulacros de Emergência</h3>
+
+  <p>Os simulacros são exercícios práticos de teste ao PEI. Em Portugal, a sua periodicidade é definida pelo RSCIE:</p>
+
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Categoria de Risco</th><th>Periodicidade Mínima dos Simulacros</th></tr></thead>
+    <tbody>
+      <tr><td>2.ª categoria</td><td>A cada 4 anos</td></tr>
+      <tr><td>3.ª categoria</td><td>A cada 2 anos</td></tr>
+      <tr><td>4.ª categoria</td><td>Anualmente</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>Após cada simulacro, deve ser elaborado um relatório com a avaliação do desempenho, os pontos de melhoria identificados e as ações corretivas a implementar.</p>
+
+  <h3>Primeiros Socorros no Local de Trabalho</h3>
+
+  <p>A Lei n.º 102/2009 exige que o empregador garanta primeiros socorros adequados, incluindo a existência de:</p>
+
+  <ul class="styled">
+    <li>Trabalhadores com formação em primeiros socorros (número proporcional ao efetivo e ao risco da atividade)</li>
+    <li>Material de primeiros socorros em quantidade e qualidade adequadas, de fácil acesso e devidamente sinalizado</li>
+    <li>Meios de comunicação de emergência claramente identificados</li>
+    <li>Procedimento de evacuação de acidentados para unidade hospitalar</li>
+  </ul>
+
+  <p>A presença de <strong>Desfibrilhadores Automáticos Externos (DAE)</strong> é obrigatória em determinados locais públicos (Lei n.º 36/2012) e altamente recomendada em todos os locais de trabalho. A formação em Suporte Básico de Vida e uso do DAE pode ser aprendida em 4 a 8 horas e pode salvar vidas em caso de paragem cardiorrespiratória.</p>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">Secção 16</div><div class="section-sep-line"></div></div>
+
+<!-- CUSTOS E INDICADORES -->
+<div class="section" id="gestao">
+  <span class="section-eyebrow">Secção 16 · Gestão e Indicadores</span>
+  <h2>Custos dos Acidentes, Indicadores e Gestão do Desempenho</h2>
+
+  <h3>O Custo Real dos Acidentes de Trabalho</h3>
+
+  <p>O modelo do iceberg de custos de acidentes — atribuído a Heinrich mas desenvolvido por Bird — ilustra que os custos visíveis de um acidente (indemnizações, custos médicos, danos materiais segurados) representam apenas uma fração dos custos totais. A maioria dos custos é invisível ou submersa:</p>
+
+  <div class="two-col">
+    <div class="two-col-box">
+      <h5>🔺 Custos Diretos (visíveis)</h5>
+      <ul>
+        <li>Prestações médicas e hospitalares</li>
+        <li>Indemnizações por incapacidade</li>
+        <li>Custos do seguro de acidentes</li>
+        <li>Danos materiais segurados</li>
+        <li>Coimas da ACT</li>
+      </ul>
+    </div>
+    <div class="two-col-box">
+      <h5>🔻 Custos Indiretos (submersos — 3 a 10× superiores)</h5>
+      <ul>
+        <li>Perda de produção durante e após o acidente</li>
+        <li>Tempo dos colegas na assistência e testemunho</li>
+        <li>Custo de substituição e formação do trabalhador</li>
+        <li>Danos materiais não segurados</li>
+        <li>Investigação do acidente</li>
+        <li>Horas de trabalho da gestão (relatórios, reuniões, processos)</li>
+        <li>Deterioração do moral e da produtividade da equipa</li>
+        <li>Impacto na reputação e nas relações comerciais</li>
+        <li>Custos jurídicos e processuais</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>Estudos europeus estimam que por cada €1 de custo direto de um acidente, existem entre €3 e €10 de custos indiretos. Num acidente mortal em Portugal, os custos totais podem facilmente atingir €1 a €3 milhões, entre indemnizações, processos judiciais, substituição do trabalhador e danos reputacionais.</p>
+
+  <h3>Indicadores de Desempenho em SST</h3>
+
+  <h4>Indicadores Lagging (Reativos)</h4>
+
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Indicador</th><th>Fórmula</th><th>Interpretação</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Taxa de Frequência (TF)</strong></td><td>(N.º acidentes com baixa × 10⁶) / Horas-Homem Trabalhadas</td><td>N.º de acidentes por milhão de horas trabalhadas. Standard europeu.</td></tr>
+      <tr><td><strong>Taxa de Gravidade (TG)</strong></td><td>(Dias perdidos × 10³) / HHT</td><td>Dias perdidos por mil horas trabalhadas. Mede a severidade.</td></tr>
+      <tr><td><strong>TRIR</strong></td><td>(Casos registáveis × 200 000) / HHT</td><td>Total Recordable Incident Rate. Standard internacional OSHA (EUA/multinacionais).</td></tr>
+      <tr><td><strong>LTIFR</strong></td><td>(Acidentes com baixa × 10⁶) / HHT</td><td>Lost Time Injury Frequency Rate. Equivalente à TF no standard OSHA.</td></tr>
+      <tr><td><strong>Taxa de Incidência (TI)</strong></td><td>(N.º acidentes / N.º médio de trabalhadores) × 1000</td><td>Frequência de acidentes por mil trabalhadores. Usado nas estatísticas europeias (Eurostat).</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>Indicadores Leading (Proativos) — os mais importantes</h4>
+
+  <ul class="styled">
+    <li>Taxa de cumprimento do plano de formação em SST (%)</li>
+    <li>N.º de inspeções de segurança realizadas vs. planeadas</li>
+    <li>Taxa de near-misses reportados por trabalhador e por período</li>
+    <li>Taxa de resolução de ações corretivas dentro do prazo definido (%)</li>
+    <li>N.º de reuniões de segurança (toolbox talks) realizadas</li>
+    <li>Taxa de participação nas consultas de SST (%)</li>
+    <li>N.º de sugestões de melhoria de SST submetidas pelos trabalhadores</li>
+    <li>N.º de auditorias internas de SST realizadas</li>
+    <li>Taxa de verificação periódica de EPIs e equipamentos de emergência (%)</li>
+    <li>N.º de avaliações de risco revistas e atualizadas no período</li>
+  </ul>
+
+  <div class="pull-quote">
+    <p>"Os indicadores lagging dizem-nos onde estivemos. Os indicadores leading dizem-nos para onde vamos. Uma organização que só monitoriza acidentes está a conduzir olhando para o espelho retrovisor."</p>
+  </div>
+
+  <h3>Auditorias de SST</h3>
+
+  <p>As auditorias são uma ferramenta fundamental de avaliação sistemática e independente da eficácia do sistema de gestão SST. Em Portugal, distinguem-se:</p>
+
+  <ul class="styled">
+    <li><strong>Auditorias internas (1.ª parte):</strong> Realizadas pela própria organização. Devem ser independentes das áreas auditadas. Obrigatórias para sistemas certificados ISO 45001.</li>
+    <li><strong>Auditorias de segunda parte:</strong> Realizadas por clientes, parceiros ou empresas do mesmo grupo — cada vez mais comuns em cadeias de fornecimento.</li>
+    <li><strong>Auditorias de terceira parte:</strong> Realizadas por organismos de certificação acreditados pelo IPAC (Instituto Português de Acreditação) — para obtenção e manutenção da certificação ISO 45001.</li>
+    <li><strong>Inspeções da ACT:</strong> Não são auditorias em sentido técnico, mas visitas de fiscalização que verificam a conformidade com os requisitos legais. Podem ser anunciadas ou inopinadas.</li>
+  </ul>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">Secção 17</div><div class="section-sep-line"></div></div>
+
+<!-- CULTURA DE SEGURANÇA -->
+<div class="section" id="cultura">
+  <span class="section-eyebrow">Secção 17 · Cultura de Segurança</span>
+  <h2>Cultura de Segurança, Liderança e Formação</h2>
+
+  <p>Sistemas, procedimentos e equipamentos são necessários mas insuficientes para garantir ambientes de trabalho genuinamente seguros. O elemento decisivo é a <strong>cultura de segurança</strong>: o conjunto de crenças, valores, atitudes e comportamentos partilhados pelos membros de uma organização em relação à segurança.</p>
+
+  <div class="pull-quote">
+    <p>"A cultura de segurança é o que as pessoas fazem quando ninguém está a ver. É o verdadeiro termómetro do comprometimento de uma organização com a proteção dos seus trabalhadores."</p>
+  </div>
+
+  <h3>Modelo de Maturidade da Cultura de Segurança (Hudson / HSE)</h3>
+
+  <ol class="styled">
+    <li><strong>Patológico:</strong> "Para que serve a segurança, desde que não sejamos apanhados?" A SST é apenas um risco de negócio a gerir. Acidentes são ocultados.</li>
+    <li><strong>Reativo:</strong> "Fazemos algo quando ocorre um acidente." A segurança só importa depois do dano. Ausência de proatividade.</li>
+    <li><strong>Calculista:</strong> "Temos sistemas para gerir todos os riscos." O foco está na conformidade com normas e procedimentos, não na prevenção genuína. Muita burocracia.</li>
+    <li><strong>Proativo:</strong> "Trabalhamos para identificar problemas antes de causarem dano." Liderança comprometida, indicadores proativos, aprendizagem com near-misses. A maioria das organizações aspira a este nível.</li>
+    <li><strong>Generativo:</strong> "A SST é a forma como fazemos as coisas aqui." A segurança está integrada em todas as decisões, em todos os níveis, como valor partilhado genuíno. Nível de excelência raro.</li>
+  </ol>
+
+  <h3>Liderança em Segurança</h3>
+
+  <p>Nenhum programa de segurança tem sucesso duradouro sem o compromisso genuíno da liderança. Os líderes eficazes em SST:</p>
+
+  <ul class="styled">
+    <li>Demonstram os comportamentos seguros que esperam dos outros — o famoso <em>walk the talk</em></li>
+    <li>Priorizam genuinamente a segurança em detrimento da produção quando há conflito real</li>
+    <li>Visitam regularmente os locais de trabalho e conversam com os trabalhadores sobre SST</li>
+    <li>Respondem de forma positiva e construtiva quando são reportados near-misses ou condições inseguras (não penalizam quem reporta)</li>
+    <li>Investem recursos adequados em SST, em linha com o que declaram nas políticas</li>
+    <li>Incluem a SST nas agendas de reuniões de gestão e como critério de avaliação de desempenho das chefias</li>
+  </ul>
+
+  <h3>Formação em SST — Obrigação Legal e Boa Prática</h3>
+
+  <p>Em Portugal, o Código do Trabalho estabelece que cada trabalhador tem direito a um mínimo de <strong>40 horas anuais de formação contínua</strong> (art.º 131.º), parte das quais deve incidir sobre SST. A Lei n.º 102/2009 reforça a obrigação de formação específica em SST, adequada ao posto de trabalho e aos riscos identificados.</p>
+
+  <h4>Princípios de Formação Eficaz em SST</h4>
+
+  <ul class="styled">
+    <li><strong>Relevância e especificidade:</strong> A formação deve abordar os riscos reais do posto de trabalho do formando, com exemplos concretos do seu contexto.</li>
+    <li><strong>Participação ativa:</strong> Exercícios práticos, demonstrações, simulações e discussão de casos reais são muito mais eficazes do que aulas puramente expositivas.</li>
+    <li><strong>Avaliação da eficácia:</strong> Avaliar os conhecimentos antes e depois da formação, e observar os comportamentos no local de trabalho nas semanas seguintes.</li>
+    <li><strong>Reforço periódico:</strong> O conhecimento sem reforço decai rapidamente. Toolbox talks regulares (reuniões de segurança de 5 a 10 minutos antes do turno) são altamente eficazes.</li>
+    <li><strong>Formação de chefias:</strong> As chefias intermédias têm um papel desproporcionalmente importante na cultura de segurança. Merecem formação específica em liderança de SST.</li>
+  </ul>
+
+  <h3>Participação dos Trabalhadores</h3>
+
+  <p>A Lei n.º 102/2009 garante o direito de participação dos trabalhadores na organização e desenvolvimento das atividades de SST, nomeadamente através de:</p>
+
+  <ul class="styled">
+    <li><strong>Representantes dos Trabalhadores para a Segurança, Higiene e Saúde no Trabalho:</strong> Eleitos pelos trabalhadores (1 por cada 10 a 50 trabalhadores, com mínimo de 1). Têm direito a consultar documentos de SST, acompanhar inspeções da ACT e propor medidas de prevenção.</li>
+    <li><strong>Comissões de Segurança:</strong> Em empresas de maior dimensão, comissões paritárias (empregadores e trabalhadores) que discutem e aprovam a política de SST e analisam os acidentes.</li>
+    <li><strong>Consultas obrigatórias:</strong> O empregador é obrigado a consultar os trabalhadores ou os seus representantes sobre as medidas de SST que os afetam, com tempo suficiente e possibilidade de resposta fundamentada.</li>
+  </ul>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">Secção 18</div><div class="section-sep-line"></div></div>
+
+<!-- NOVOS RISCOS E TENDÊNCIAS -->
+<div class="section" id="novos-riscos">
+  <span class="section-eyebrow">Secção 18 · Novos Riscos e Tendências</span>
+  <h2>Novos Riscos Emergentes e Tendências em SST</h2>
+
+  <h3>Transição Energética: Energias Renováveis e Novos Riscos</h3>
+
+  <p>A transição energética em Portugal — com a expansão acelerada do solar fotovoltaico e da eólica — está a criar novos contextos de risco que a regulamentação e as práticas de SST estão ainda a absorver.</p>
+
+  <h4>Instalações Fotovoltaicas</h4>
+  <ul class="styled">
+    <li><strong>Risco elétrico de corrente contínua (DC):</strong> Os painéis solares geram corrente contínua que não pode ser interrompida simplesmente desligando um disjuntor — enquanto expostos à luz, continuam a gerar tensão. As tensões em grandes instalações podem atingir centenas de volts DC, mais perigosos para o coração do que a corrente alternada equivalente.</li>
+    <li><strong>Trabalho em altura:</strong> Instalação e manutenção em telhados com painéis requerem sistemas robustos de proteção anticaída.</li>
+    <li><strong>Incêndio de instalações DC:</strong> O combate a incêndio em instalações fotovoltaicas requer procedimentos especiais — os painéis mantêm-se energizados mesmo com o sistema desligado da rede.</li>
+    <li><strong>Peso estrutural:</strong> Verificação da capacidade de carga das coberturas onde são instalados os painéis.</li>
+  </ul>
+
+  <h4>Turbinas Eólicas</h4>
+  <ul class="styled">
+    <li><strong>Trabalho em altura extrema:</strong> Técnicos de manutenção trabalham no topo de torres a 80-150 metros de altura, com requisitos anticaída muito exigentes.</li>
+    <li><strong>Espaços confinados:</strong> O interior da nacela e da torre são espaços confinados com riscos específicos.</li>
+    <li><strong>Energias de bloqueio múltiplas:</strong> Sistemas elétrico, hidráulico e mecânico de rotação das pás — o LOTO em turbinas eólicas é particularmente complexo.</li>
+    <li><strong>Isolamento em locais remotos:</strong> Muitos parques eólicos estão em zonas de difícil acesso, com comunicações limitadas e tempo de resposta dos serviços de emergência elevado.</li>
+  </ul>
+
+  <h4>Baterias de Iões de Lítio (Li-ion)</h4>
+  <ul class="styled">
+    <li><strong>Thermal runaway:</strong> Em caso de dano mecânico, sobreaquecimento ou sobrecarga, as baterias Li-ion podem entrar em <em>thermal runaway</em> — reação exotérmica autossustentada que libera gases tóxicos e inflamáveis e pode resultar em fogo violento extremamente difícil de extinguir.</li>
+    <li><strong>Risco em armazéns de última milha:</strong> Com a proliferação de veículos elétricos de carga, bicicletas e trotinetas elétricas, os riscos de incêndio de baterias Li-ion são cada vez mais relevantes em armazéns logísticos.</li>
+    <li><strong>Extinção especializada:</strong> Incêndios de baterias Li-ion requerem grandes volumes de água para arrefecimento prolongado — os extintores convencionais são insuficientes.</li>
+  </ul>
+
+  <h3>Digitalização e Inteligência Artificial em SST</h3>
+
+  <ul class="styled">
+    <li><strong>Plataformas digitais de gestão SST:</strong> Centralização de avaliações de risco, registos de formação, relatórios de incidentes, inspeções e não-conformidades em plataformas integradas (ex: iAuditor, Intelex, Cority, SAP EHS).</li>
+    <li><strong>Apps móveis de reporte:</strong> Permitir que qualquer trabalhador reporte near-misses, condições inseguras ou sugestões de melhoria diretamente do smartphone, com foto e geolocalização, reduz drasticamente a barreira de reporte.</li>
+    <li><strong>Wearables de SST:</strong> Sensores integrados em EPIs (capacetes, coletes) que monitorizam frequência cardíaca, temperatura corporal, exposição a ruído ou gases, e a localização do trabalhador em tempo real. Alertam o trabalhador e a supervisão em caso de exposição excessiva ou queda.</li>
+    <li><strong>Visão computacional (IA):</strong> Sistemas de câmara com IA que detetam automaticamente trabalhadores sem EPI, veículos em zonas pedonais, posturas ergonómicas de risco ou acesso não autorizado a zonas perigosas, gerando alertas em tempo real.</li>
+    <li><strong>Análise preditiva:</strong> Modelos de <em>machine learning</em> que cruzam dados históricos de acidentes, condições meteorológicas, carga de trabalho e outros fatores para prever períodos ou locais de maior risco, permitindo intervenção preventiva.</li>
+    <li><strong>Realidade aumentada e virtual (AR/VR) para formação:</strong> Simulação de cenários de risco e treino de procedimentos de emergência em ambiente virtual, sem exposição real ao perigo. Especialmente eficaz para trabalhos de alto risco raros.</li>
+  </ul>
+
+  <h3>Trabalho Híbrido e Plataformas Digitais</h3>
+
+  <p>O trabalho híbrido (presencial + teletrabalho) e os novos modelos de trabalho em plataformas digitais (gig economy) colocam desafios novos à SST em Portugal:</p>
+
+  <ul class="styled">
+    <li>Avaliação do posto de trabalho em casa — obrigação do empregador nos termos do DL n.º 84/2021 (regime do teletrabalho)</li>
+    <li>Direito à desconexão — art.º 199.º-A do Código do Trabalho, introduzido pela Lei n.º 83/2021</li>
+    <li>Riscos psicossociais específicos do teletrabalho: isolamento, presentismo digital, dificuldade em separar vida profissional e pessoal</li>
+    <li>Trabalhadores de plataformas (estafetas, motoristas): riscos rodoviários, ergonómicos e psicossociais, com enquadramento legal ainda em evolução após a Diretiva Europeia sobre Trabalho em Plataformas (2024)</li>
+  </ul>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">Secção 19</div><div class="section-sep-line"></div></div>
+
+<!-- CARREIRA SST -->
+<div class="section" id="carreira">
+  <span class="section-eyebrow">Secção 19 · Carreira em SST</span>
+  <h2>Profissão e Carreira em Segurança e Saúde no Trabalho em Portugal</h2>
+
+  <p>A SST é uma área profissional em crescimento em Portugal, impulsionada pelo reforço da regulamentação, pelo aumento da consciencialização das empresas e pela crescente integração nos critérios ESG (Environmental, Social, Governance) que as organizações têm de reportar.</p>
+
+  <h3>Qualificações Obrigatórias em Portugal</h3>
+
+  <p>A qualificação e certificação dos técnicos de SST em Portugal é regulada pelo <strong>Decreto-Lei n.º 110/2000, de 30 de junho</strong>, com a alteração introduzida pela <strong>Lei n.º 42/2012, de 28 de agosto</strong>. Existem dois níveis:</p>
+
+  <div class="card-grid">
+    <div class="card">
+      <span class="card-icon">🎓</span>
+      <h4>Técnico de SST (TSST)</h4>
+      <p>Nível 5 do QNQ. Curso de especialização tecnológica (CET) ou equivalente, com certificação pela ACT após exame. Pode exercer funções de SST em empresas de menor risco.</p>
+    </div>
+    <div class="card">
+      <span class="card-icon">🏅</span>
+      <h4>Técnico Superior de SST (TSSST)</h4>
+      <p>Nível 6 ou 7 do QNQ. Licenciatura ou mestrado em engenharia de segurança ou área afim, com certificação pela ACT após exame específico. Pode exercer em qualquer empresa.</p>
+    </div>
+    <div class="card">
+      <span class="card-icon">🩺</span>
+      <h4>Médico do Trabalho</h4>
+      <p>Especialidade médica reconhecida pela Ordem dos Médicos. Competência exclusiva para emissão de fichas de aptidão e acompanhamento clínico ocupacional.</p>
+    </div>
+    <div class="card">
+      <span class="card-icon">🔬</span>
+      <h4>Higienista do Trabalho</h4>
+      <p>Especialista em medição e avaliação quantitativa de agentes físicos, químicos e biológicos. Em Portugal, tipicamente com formação em engenharia ou ciências, com especialização em higiene ocupacional.</p>
+    </div>
+  </div>
+
+  <h3>Certificação pela ACT</h3>
+
+  <p>Para obter o certificado de TSST ou TSSST, é necessário:</p>
+
+  <ol class="styled">
+    <li>Possuir as habilitações académicas exigidas para o nível pretendido</li>
+    <li>Candidatar-se à ACT e aguardar convocação para exame</li>
+    <li>Realizar o exame de certificação (prova escrita de conhecimentos técnicos e legais)</li>
+    <li>Após aprovação, registar-se na ACT como técnico certificado</li>
+    <li>Manter a certificação ativa através de formação contínua comprovada (mínimo 48 horas em 5 anos para TSST; 60 horas para TSSST)</li>
+  </ol>
+
+  <h3>Associações Profissionais</h3>
+
+  <ul class="styled">
+    <li><strong>APTSHT</strong> (Associação Portuguesa dos Técnicos de Segurança e Higiene no Trabalho) — a principal associação profissional dos técnicos de SST em Portugal, com formação, eventos e publicações especializadas</li>
+    <li><strong>APSEI</strong> (Associação Portuguesa de Segurança) — foco em sistemas de segurança, deteção e combate a incêndio, controlo de acessos e videovigilância</li>
+    <li><strong>SPMMT</strong> (Sociedade Portuguesa de Medicina do Trabalho) — associação científica dos médicos do trabalho portugueses</li>
+    <li><strong>ISSA</strong> (International Social Security Association) — organização internacional da qual Portugal é membro, com publicações e eventos globais de SST</li>
+  </ul>
+
+  <h3>Remuneração e Mercado de Trabalho</h3>
+
+  <p>O mercado de trabalho para profissionais de SST em Portugal tem-se mantido dinâmico, com procura crescente sobretudo nos setores da construção, indústria, saúde, logística e energia. Os salários variam significativamente com o nível de qualificação, o setor e a dimensão da empresa:</p>
+
+  <ul class="styled">
+    <li>TSST em início de carreira: €1 200 a €1 600 brutos/mês</li>
+    <li>TSSST com 3 a 5 anos de experiência: €1 600 a €2 200 brutos/mês</li>
+    <li>TSSST sénior ou com certificação ISO 45001 Auditor: €2 000 a €3 000 brutos/mês</li>
+    <li>Responsável/Diretor de SST em grande empresa: €3 000 a €5 000+ brutos/mês</li>
+    <li>Consultores/prestadores externos: tipicamente €35 a €70/hora, dependendo da especialização</li>
+  </ul>
+</div>
+
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">Secção 20</div><div class="section-sep-line"></div></div>
+
+<!-- ATEX -->
+<div class="section" id="atex">
+  <span class="section-eyebrow">Secção 20 · Atmosferas Explosivas</span>
+  <h2>ATEX — Proteção contra Atmosferas Explosivas</h2>
+
+  <p>Uma <strong>atmosfera explosiva (ATEX)</strong> é uma mistura com o ar, em condições atmosféricas, de substâncias inflamáveis sob a forma de gases, vapores, névoas ou poeiras, na qual, após ignição, a combustão se propaga à mistura não queimada restante. Em Portugal, a proteção dos trabalhadores em atmosferas potencialmente explosivas é regulada pelo <strong>Decreto-Lei n.º 236/2003, de 30 de setembro</strong>, que transpõe a Diretiva 1999/92/CE (ATEX 137, também designada ATEX Utilizadores). Os equipamentos a utilizar nestas zonas são regulados pela Diretiva 2014/34/UE (ATEX Produtos).</p>
+
+  <h3>Setores com Risco ATEX em Portugal</h3>
+
+  <ul class="styled">
+    <li>Refinação e distribuição de combustíveis (Sines, Matosinhos)</li>
+    <li>Indústria química e farmacêutica</li>
+    <li>Indústria de tintas, vernizes e solventes</li>
+    <li>Indústria alimentar (farinhas, açúcar, leite em pó — poeiras explosivas)</li>
+    <li>Indústria de madeira e mobiliário (poeiras de madeira)</li>
+    <li>Armazenagem e distribuição de GPL e gases inflamáveis</li>
+    <li>Estações de tratamento de águas residuais (biogás)</li>
+    <li>Minas e pedreiras (gases de mina, poeiras de carvão)</li>
+    <li>Instalações agrícolas (silos de cereais)</li>
+  </ul>
+
+  <h3>Classificação de Zonas ATEX</h3>
+
+  <p>O primeiro passo na gestão do risco ATEX é a classificação das zonas onde pode existir atmosfera explosiva:</p>
+
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Zona</th><th>Descrição</th><th>Frequência</th><th>Tipo de Atmosfera</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Zona 0</strong></td><td>Atmosfera explosiva de gases/vapores presente de forma contínua, durante longos períodos ou frequentemente</td><td>Contínua (&gt;1000 h/ano)</td><td>Gases/vapores</td></tr>
+      <tr><td><strong>Zona 1</strong></td><td>Atmosfera explosiva de gases/vapores suscetível de se formar ocasionalmente em condições normais de funcionamento</td><td>Intermitente (10–1000 h/ano)</td><td>Gases/vapores</td></tr>
+      <tr><td><strong>Zona 2</strong></td><td>Atmosfera explosiva de gases/vapores não suscetível de se formar em condições normais; se se formar, subsiste apenas durante curtos períodos</td><td>Rara (&lt;10 h/ano)</td><td>Gases/vapores</td></tr>
+      <tr><td><strong>Zona 20</strong></td><td>Atmosfera explosiva de poeiras presente de forma contínua, durante longos períodos ou frequentemente</td><td>Contínua</td><td>Poeiras</td></tr>
+      <tr><td><strong>Zona 21</strong></td><td>Atmosfera explosiva de poeiras suscetível de se formar ocasionalmente em condições normais</td><td>Intermitente</td><td>Poeiras</td></tr>
+      <tr><td><strong>Zona 22</strong></td><td>Atmosfera explosiva de poeiras não suscetível de se formar em condições normais; se se formar, subsiste apenas durante curtos períodos</td><td>Rara</td><td>Poeiras</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Documento de Proteção contra Explosões (DPE)</h3>
+
+  <p>O DL n.º 236/2003 exige que o empregador elabore e mantenha atualizado um <strong>Documento de Proteção contra Explosões (DPE)</strong>, que deve conter:</p>
+
+  <ul class="styled">
+    <li>Identificação e avaliação dos riscos de explosão</li>
+    <li>Classificação das zonas ATEX (com plantas)</li>
+    <li>Locais em que se aplicam as prescrições mínimas do DL</li>
+    <li>Medidas tomadas para cumprimento dos objetivos de segurança</li>
+    <li>Identificação dos locais de trabalho e dos equipamentos de trabalho em zonas ATEX</li>
+    <li>Medidas de coordenação quando várias empresas operam no mesmo local</li>
+  </ul>
+
+  <h3>Equipamentos em Zonas ATEX</h3>
+
+  <p>Todos os equipamentos (elétricos e não elétricos) utilizados em zonas ATEX devem ser certificados segundo a Diretiva 2014/34/UE e pertencer ao grupo e categoria adequados à zona:</p>
+
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Categoria do Equipamento</th><th>Zona de Utilização</th><th>Nível de Proteção</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Categoria 1G</strong> (gases)</td><td>Zona 0, 1 e 2</td><td>Muito alto — mantém proteção mesmo em caso de avaria rara</td></tr>
+      <tr><td><strong>Categoria 2G</strong> (gases)</td><td>Zona 1 e 2</td><td>Alto — mantém proteção em caso de avaria frequente</td></tr>
+      <tr><td><strong>Categoria 3G</strong> (gases)</td><td>Zona 2 apenas</td><td>Normal — mantém proteção em condições normais de funcionamento</td></tr>
+      <tr><td><strong>Categoria 1D</strong> (poeiras)</td><td>Zona 20, 21 e 22</td><td>Muito alto</td></tr>
+      <tr><td><strong>Categoria 2D</strong> (poeiras)</td><td>Zona 21 e 22</td><td>Alto</td></tr>
+      <tr><td><strong>Categoria 3D</strong> (poeiras)</td><td>Zona 22 apenas</td><td>Normal</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="alert-box">
+    <p><strong>Fontes de ignição a controlar em zonas ATEX:</strong> Superfícies quentes, chamas e gases quentes, faíscas de origem mecânica, equipamentos elétricos, correntes vagabundas e proteção catódica, eletricidade estática, raios, ondas de rádio de alta frequência, radiações ionizantes, ultrassons, compressão adiabática e ondas de choque, e reações exotérmicas. Cada uma requer medidas de controlo específicas.</p>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">Secção 21</div><div class="section-sep-line"></div></div>
+
+<!-- SEGURANÇA DE MÁQUINAS -->
+<div class="section" id="maquinas">
+  <span class="section-eyebrow">Secção 21 · Segurança de Máquinas</span>
+  <h2>Segurança de Máquinas e Equipamentos de Trabalho</h2>
+
+  <p>As máquinas e equipamentos de trabalho são uma das principais fontes de acidentes graves e mortais na indústria portuguesa. Em Portugal, a segurança de máquinas é regulada por dois instrumentos complementares: o <strong>Decreto-Lei n.º 50/2005</strong> (utilização de equipamentos de trabalho pelos trabalhadores, transpondo a Diretiva 2009/104/CE) e o <strong>Decreto-Lei n.º 103/2008</strong> (colocação no mercado de máquinas, transpondo a Diretiva Máquinas 2006/42/CE — em transição para o Regulamento EU 2023/1230 a partir de 2027).</p>
+
+  <h3>Marcação CE e Declaração de Conformidade</h3>
+
+  <p>Qualquer máquina colocada no mercado europeu após 1995 deve ostentar a marcação CE e ser acompanhada de:</p>
+
+  <ul class="styled">
+    <li><strong>Declaração de Conformidade UE</strong> — documento que atesta que a máquina cumpre os Requisitos Essenciais de Segurança e Saúde (RESS) da Diretiva Máquinas</li>
+    <li><strong>Manual de Instruções em língua portuguesa</strong> — obrigatório para máquinas vendidas em Portugal; deve incluir instruções de utilização, manutenção, riscos residuais e EPIs recomendados</li>
+    <li><strong>Marcação CE</strong> — aposta de forma visível, legível e indelével na máquina</li>
+  </ul>
+
+  <div class="alert-box">
+    <p><strong>Atenção ao mercado de segunda mão:</strong> Uma máquina usada, importada de fora da UE ou significativamente modificada pode ser considerada uma "nova máquina" para efeitos da Diretiva, exigindo nova avaliação de conformidade. A responsabilidade recai sobre o importador ou sobre quem realiza a modificação substancial.</p>
+  </div>
+
+  <h3>Principais Proteções de Máquinas</h3>
+
+  <div class="card-grid">
+    <div class="card"><span class="card-icon">🛡️</span><h4>Resguardos Fixos</h4><p>Barreiras físicas removíveis apenas com ferramentas. A solução mais simples e fiável. Usados quando o acesso à zona perigosa não é necessário durante o funcionamento normal.</p></div>
+    <div class="card"><span class="card-icon">🚪</span><h4>Resguardos Móveis com Interlock</h4><p>Barreiras que, quando abertas, provocam a paragem da máquina antes de ser possível aceder à zona perigosa. Obrigatório o uso de bloqueio de segurança certificado.</p></div>
+    <div class="card"><span class="card-icon">👁️</span><h4>Barreiras Imateriais (Cortinas de Luz)</h4><p>Sistemas optoelectrónicos que detetam a presença de uma pessoa ou membro na zona perigosa e ordenam a paragem. Permitem acesso frequente sem abrir resguardos.</p></div>
+    <div class="card"><span class="card-icon">🔴</span><h4>Tapetes de Segurança</h4><p>Detetam a presença de uma pessoa em zonas de risco pelo peso. Utilizados em torno de robôs e prensas quando o acesso frequente é necessário.</p></div>
+    <div class="card"><span class="card-icon">⏹️</span><h4>Botão de Paragem de Emergência</h4><p>Obrigatório em todas as máquinas. Deve ser de fácil acesso, cor vermelha sobre fundo amarelo, ação direta de abertura, com retenção (não rearma automaticamente). Norma EN ISO 13850.</p></div>
+    <div class="card"><span class="card-icon">🔑</span><h4>Comando de Validação (Enabling Device)</h4><p>Dispositivo de três posições (largado, premido, premido a fundo) que permite o movimento da máquina apenas enquanto premido na posição intermédia. Usado em modo de setup e manutenção.</p></div>
+  </div>
+
+  <h3>Avaliação de Risco de Máquinas — ISO 12100</h3>
+
+  <p>A norma <strong>EN ISO 12100:2010</strong> (Safety of machinery — General principles for design) é a norma mãe de segurança de máquinas. Define o processo iterativo de avaliação e redução do risco:</p>
+
+  <ol class="styled">
+    <li>Determinação dos limites da máquina (uso previsto, utilizadores, ciclo de vida)</li>
+    <li>Identificação de perigos e situações perigosas</li>
+    <li>Estimativa do risco (gravidade × probabilidade)</li>
+    <li>Avaliação do risco — é suficientemente reduzido?</li>
+    <li>Redução do risco pela estratégia de 3 passos: medidas de conceção intrínsecamente segura → proteções e dispositivos de proteção → informação para utilização (manual, sinais de aviso)</li>
+    <li>Reavaliação do risco após as medidas aplicadas</li>
+  </ol>
+
+  <h3>Inspeções de Equipamentos de Trabalho (DL 50/2005)</h3>
+
+  <p>O DL n.º 50/2005 exige que o empregador garanta a adequação e a manutenção dos equipamentos de trabalho. As inspeções e verificações periódicas são obrigatórias, com periodicidade e por quem definidas pela legislação específica ou pelo fabricante:</p>
+
+  <ul class="styled">
+    <li><strong>Equipamentos de elevação de cargas (gruas, pontes rolantes, empilhadeiras):</strong> Inspeção periódica obrigatória por organismo acreditado ou pessoa competente — tipicamente anual</li>
+    <li><strong>Equipamentos sob pressão (compressores, autoclaves, caldeiras):</strong> Sujeitos ao DL n.º 90/2010 e ao Regulamento de Equipamentos Sob Pressão — inspeções por Organismo de Inspeção acreditado</li>
+    <li><strong>Plataformas elevatórias de pessoas (MEWP):</strong> Inspeção anual obrigatória por entidade competente</li>
+    <li><strong>Todos os equipamentos:</strong> Manutenção preventiva conforme as instruções do fabricante, com registos documentados</li>
+  </ul>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">Secção 22</div><div class="section-sep-line"></div></div>
+
+<!-- MOVIMENTAÇÃO MECÂNICA DE CARGAS -->
+<div class="section" id="movimentacao">
+  <span class="section-eyebrow">Secção 22 · Movimentação Mecânica</span>
+  <h2>Movimentação Mecânica de Cargas: Empilhadeiras, Gruas e Pontes Rolantes</h2>
+
+  <p>Os acidentes com equipamentos de movimentação mecânica de cargas — em particular empilhadeiras — estão entre os mais graves e frequentes nos ambientes industriais e logísticos portugueses. Atropelamentos, colisões, tombamentos e queda de cargas são as principais tipologias de acidente.</p>
+
+  <h3>Empilhadeiras (Contrabalançadas e Retrácteis)</h3>
+
+  <h4>Requisitos do Operador</h4>
+  <ul class="styled">
+    <li>Formação específica e certificação obrigatória nos termos do DL n.º 50/2005 — o operador deve ter formação teórica e prática documentada, com exame final</li>
+    <li>Autorização escrita do empregador para cada tipo de empilhadeira (contrabalançada, retráctil, stacker, etc.)</li>
+    <li>Avaliação de aptidão médica, incluindo acuidade visual e auditiva</li>
+    <li>Reciclagem periódica da formação — recomendada a cada 3 a 5 anos ou após acidente</li>
+  </ul>
+
+  <h4>Inspeção Diária Antes da Utilização</h4>
+  <div class="checklist">
+    <li>Verificar o nível de fluidos (combustível/carga da bateria, óleo hidráulico, água do radiador)</li>
+    <li>Inspecionar os pneus (pressão, desgaste, danos)</li>
+    <li>Testar os travões (serviço e estacionamento)</li>
+    <li>Verificar o sistema de direção (folga, resposta)</li>
+    <li>Testar os garfos (fissuras, deformações, desgaste nas ancas)</li>
+    <li>Verificar o mastro e as cadeias de elevação (desgaste, lubrificação)</li>
+    <li>Testar o sistema de elevação e inclinação</li>
+    <li>Verificar o sinal sonoro de marcha-atrás e a luz giratória</li>
+    <li>Confirmar a placa de carga e o centro de gravidade</li>
+    <li>Verificar o cinto de segurança e o arco de proteção do operador (ROPS/FOPS)</li>
+    <li>Registar qualquer anomalia e reportar antes de utilizar</li>
+  </div>
+
+  <h4>Regras de Segurança na Operação</h4>
+  <ul class="styled">
+    <li>Nunca transportar pessoas nos garfos ou no mastro</li>
+    <li>Circular com os garfos a 15-30 cm do chão e o mastro inclinado para trás</li>
+    <li>Nunca ultrapassar a carga máxima indicada na placa de carga</li>
+    <li>Adaptar a velocidade ao estado do pavimento, visibilidade e carga transportada</li>
+    <li>Buzinar e abrandar em cruzamentos, portas e zonas de passagem de peões</li>
+    <li>Nunca estacionar em rampas — em caso de necessidade, calçar as rodas</li>
+    <li>Baixar os garfos, desligar o motor e aplicar o travão de estacionamento ao abandonar a empilhadeira</li>
+  </ul>
+
+  <h3>Separação Físico-Operacional entre Peões e Veículos</h3>
+
+  <p>A causa mais frequente de acidentes graves com empilhadeiras é o conflito entre peões e veículos. As medidas de separação incluem:</p>
+
+  <ul class="styled">
+    <li>Corredores pedonais claramente demarcados com pintura e barreiras físicas (guardas, separadores)</li>
+    <li>Zonas de cruzamento com espelhos convexos, sinais de STOP e semáforos</li>
+    <li>Sistemas de deteção de presença em cruzamentos cegos (sensores, câmaras)</li>
+    <li>Limitação de velocidade com lomba redutora ou sistema eletrónico de geofencing</li>
+    <li>Formação dos peões sobre comportamento seguro em áreas com veículos</li>
+    <li>Coletes de alta visibilidade obrigatórios em todas as áreas de circulação de veículos</li>
+  </ul>
+
+  <h3>Gruas e Pontes Rolantes</h3>
+
+  <ul class="styled">
+    <li>Inspeção periódica obrigatória por organismo acreditado — tipicamente anual para gruas móveis e pontes rolantes com mais de 1 000 kg de capacidade</li>
+    <li>O operador de grua deve ter formação e certificação específica</li>
+    <li>Sinalizador (slinger) deve ser formado para preparação e supervisão das manobras de elevação</li>
+    <li>Plano de elevação obrigatório para manobras complexas ou de alto risco</li>
+    <li>Verificação dos acessórios de elevação (eslingas, ganchos, manilhas) antes de cada utilização — substituição imediata em caso de deformação, fissura ou corrosão</li>
+    <li>Nunca passar cargas suspensas por cima de pessoas</li>
+    <li>Verificar a capacidade de carga do solo para gruas móveis sobre pneus ou rastos</li>
+  </ul>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">Secção 23</div><div class="section-sep-line"></div></div>
+
+<!-- TRABALHO NOTURNO E POR TURNOS -->
+<div class="section" id="turnos">
+  <span class="section-eyebrow">Secção 23 · Trabalho Noturno e Turnos</span>
+  <h2>Trabalho Noturno e por Turnos: Riscos e Requisitos Legais</h2>
+
+  <p>O trabalho por turnos e o trabalho noturno são prevalentes em Portugal em setores como a saúde, a indústria, a logística, a hotelaria, a segurança e os transportes. Representam um fator de risco significativo para a saúde dos trabalhadores, com impactos documentados a nível físico, psicológico e social.</p>
+
+  <h3>Definições Legais (Código do Trabalho)</h3>
+
+  <ul class="styled">
+    <li><strong>Trabalho noturno:</strong> O prestado no período entre as 22h00 e as 07h00 (art.º 223.º do CT)</li>
+    <li><strong>Trabalhador noturno:</strong> Quem presta normalmente, durante o período noturno, pelo menos 3 horas do seu tempo de trabalho diário normal ou uma parte do seu tempo de trabalho anual não inferior a um terço (art.º 224.º do CT)</li>
+    <li><strong>Trabalho por turnos:</strong> Qualquer organização do trabalho em equipa em que os trabalhadores ocupam sucessivamente os mesmos postos de trabalho, a um determinado ritmo, incluindo o rotatório (art.º 220.º do CT)</li>
+  </ul>
+
+  <h3>Direitos Específicos dos Trabalhadores Noturnos</h3>
+
+  <ul class="styled">
+    <li>Direito a avaliação de saúde gratuita antes do início do trabalho noturno e periodicamente (pelo menos de 2 em 2 anos)</li>
+    <li>Direito a transferência para trabalho diurno quando o médico do trabalho determinar que o trabalho noturno é prejudicial para a sua saúde</li>
+    <li>Período normal de trabalho não superior a 8 horas por dia em média, calculado em período de referência de 3 meses</li>
+    <li>Acréscimo de retribuição (trabalho suplementar noturno tem acréscimo de 25% sobre o normal)</li>
+    <li>Proteção especial das trabalhadoras grávidas, puérperas e lactantes — dispensa do trabalho noturno mediante atestado médico</li>
+  </ul>
+
+  <h3>Efeitos na Saúde do Trabalho por Turnos</h3>
+
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Sistema / Órgão</th><th>Efeitos Documentados</th><th>Mecanismo</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Sono e ritmo circadiano</strong></td><td>Insónia, privação de sono, sonolência diurna excessiva</td><td>Disrupção do ciclo sono-vigília e da secreção de melatonina</td></tr>
+      <tr><td><strong>Cardiovascular</strong></td><td>Aumento do risco de doença coronária (RR ~1,4), hipertensão, AVC</td><td>Disrupção do ritmo circadiano, privação de sono, stress</td></tr>
+      <tr><td><strong>Gastrointestinal</strong></td><td>Dispepsia, gastrite, síndrome do intestino irritável, úlcera péptica</td><td>Alteração dos padrões alimentares e do ritmo gastrointestinal</td></tr>
+      <tr><td><strong>Metabólico</strong></td><td>Maior risco de diabetes tipo 2, obesidade, dislipidemia</td><td>Disrupção do metabolismo da glicose e da insulina</td></tr>
+      <tr><td><strong>Mental</strong></td><td>Depressão, ansiedade, burnout, irritabilidade</td><td>Privação de sono, isolamento social, conflito trabalho-família</td></tr>
+      <tr><td><strong>Oncológico</strong></td><td>Trabalho noturno classificado como "possível cancerígeno" (grupo 2A, IARC)</td><td>Supressão da melatonina, disrupção circadiana</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Boas Práticas de Gestão do Trabalho por Turnos</h3>
+
+  <ul class="styled">
+    <li>Preferir rotações para a frente (manhã → tarde → noite) às rotações para trás — mais fáceis de adaptar biologicamente</li>
+    <li>Minimizar o número de turnos nocturnos consecutivos (máximo 3 a 4)</li>
+    <li>Garantir pelo menos 11 horas de descanso entre turnos (obrigação legal do CT)</li>
+    <li>Disponibilizar refeições quentes e saudáveis durante o turno da noite</li>
+    <li>Garantir luminosidade adequada no local de trabalho noturno (combate à sonolência)</li>
+    <li>Envolver os trabalhadores na conceção dos horários de turnos — autonomia reduz o impacto negativo</li>
+    <li>Programa de vigilância médica específico para trabalhadores noturnos, com rastreio de factores de risco cardiovascular e metabólico</li>
+  </ul>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">Secção 24</div><div class="section-sep-line"></div></div>
+
+<!-- RADIAÇÕES IONIZANTES -->
+<div class="section" id="radiacoes">
+  <span class="section-eyebrow">Secção 24 · Radiações Ionizantes</span>
+  <h2>Radiações Ionizantes no Trabalho em Portugal</h2>
+
+  <p>As radiações ionizantes (raios X, raios gama, partículas alfa, beta e neutrões) têm capacidade de ionizar a matéria, causando danos no ADN celular com potencial carcinogénico, mutagénico e reprotóxico. Em Portugal, a proteção radiológica dos trabalhadores é regulada pelo <strong>Decreto-Lei n.º 108/2018, de 29 de novembro</strong>, que transpõe a Diretiva 2013/59/Euratom (normas de segurança de base em matéria de proteção contra os perigos resultantes da exposição a radiações ionizantes).</p>
+
+  <h3>Setores Expostos em Portugal</h3>
+
+  <ul class="styled">
+    <li><strong>Saúde:</strong> Radiologia diagnóstica (RX, TAC, fluoroscopia), medicina nuclear (PET, cintigrafia), radioterapia. O setor com maior número de trabalhadores expostos em Portugal.</li>
+    <li><strong>Indústria:</strong> Gamagrafia industrial (ensaios não destrutivos em soldaduras e estruturas), medidores de nível com fontes radioativas, irradiação de produtos.</li>
+    <li><strong>Investigação e educação:</strong> Laboratórios com fontes radioativas ou aceleradores de partículas.</li>
+    <li><strong>Radão:</strong> Exposição natural a radão em espaços interiores — relevante em Portugal, especialmente no Centro e Norte do país (granitos).</li>
+  </ul>
+
+  <h3>Entidade Reguladora</h3>
+
+  <p>A autoridade competente em matéria de proteção radiológica em Portugal é a <strong>Direção-Geral da Saúde (DGS)</strong>, através do Departamento de Proteção e Saúde Radiológica. As instalações que utilizam fontes de radiação ionizante devem obter licença de funcionamento junto da DGS antes de iniciar atividade.</p>
+
+  <h3>Limites de Dose para Trabalhadores Expostos</h3>
+
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Grandeza</th><th>Limite de Dose Anual</th><th>Observações</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Dose efetiva (corpo inteiro)</strong></td><td>20 mSv/ano (média em 5 anos, com máximo de 50 mSv em qualquer ano)</td><td>Para trabalhadores expostos (categoria A)</td></tr>
+      <tr><td><strong>Dose equivalente no cristalino</strong></td><td>20 mSv/ano</td><td>Reduzido de 150 mSv pela Diretiva 2013/59</td></tr>
+      <tr><td><strong>Dose equivalente na pele</strong></td><td>500 mSv/ano</td><td>Média em qualquer 1 cm² de pele</td></tr>
+      <tr><td><strong>Dose equivalente extremidades</strong></td><td>500 mSv/ano</td><td>Mãos, antebraços, pés, tornozelos</td></tr>
+      <tr><td><strong>Trabalhadora grávida</strong></td><td>1 mSv para o embrião/feto durante a gravidez</td><td>Após declaração de gravidez</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Obrigações do Empregador em Proteção Radiológica</h3>
+
+  <ul class="styled">
+    <li>Designar um <strong>Perito Qualificado em Proteção Radiológica (PQPR)</strong> — obrigatório para instalações de categoria I e II</li>
+    <li>Classificar os trabalhadores em <strong>Categoria A</strong> (dose anual > 6 mSv) ou <strong>Categoria B</strong> (dose anual entre 1 e 6 mSv)</li>
+    <li>Realizar <strong>dosimetria individual</strong> para todos os trabalhadores de Categoria A (dosímetros pessoais — TLD ou OSL)</li>
+    <li>Manter <strong>fichas de exposição individual</strong> durante pelo menos 30 anos após o fim da exposição</li>
+    <li>Garantir vigilância médica periódica específica para trabalhadores de Categoria A</li>
+    <li>Delimitar e sinalizar zonas controladas e zonas supervisionadas</li>
+    <li>Elaborar regras de trabalho e procedimentos de segurança radiológica</li>
+  </ul>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">Secção 25</div><div class="section-sep-line"></div></div>
+
+<!-- AGENTES QUÍMICOS DETALHADO -->
+<div class="section" id="quimicos-detalhe">
+  <span class="section-eyebrow">Secção 25 · Agentes Químicos em Detalhe</span>
+  <h2>Gestão Prática de Agentes Químicos Perigosos</h2>
+
+  <p>A gestão de agentes químicos perigosos vai muito além de conhecer os VLEOs. Requer um sistema integrado que começa na seleção de produtos e termina na gestão de resíduos, passando pelo inventário, avaliação de exposição, controlo, vigilância da saúde e preparação para emergências.</p>
+
+  <h3>Inventário Químico e Gestão das FDS</h3>
+
+  <p>O ponto de partida obrigatório é o inventário de todos os produtos químicos utilizados na empresa. Para cada produto, a <strong>Ficha de Dados de Segurança (FDS)</strong> — em língua portuguesa, com 16 secções obrigatórias nos termos do Regulamento (CE) n.º 1907/2006 (REACH) e do Regulamento (CE) n.º 453/2010 — é o documento de referência para a gestão do risco.</p>
+
+  <p>As secções mais relevantes das FDS para a gestão de SST:</p>
+
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Secção FDS</th><th>Informação Relevante para SST</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Secção 2</strong> — Identificação de perigos</td><td>Classificação CLP/GHS, pictogramas, advertências de perigo (H) e conselhos de prudência (P)</td></tr>
+      <tr><td><strong>Secção 4</strong> — Primeiros socorros</td><td>Procedimentos de emergência por via de exposição (inalação, contacto cutâneo, ingestão, ocular)</td></tr>
+      <tr><td><strong>Secção 5</strong> — Medidas de combate a incêndio</td><td>Agentes extintores adequados e inadequados; produtos de combustão perigosos</td></tr>
+      <tr><td><strong>Secção 6</strong> — Medidas em caso de fuga acidental</td><td>Procedimentos de contenção e limpeza de derrames</td></tr>
+      <tr><td><strong>Secção 8</strong> — Controlo da exposição / proteção individual</td><td>VLEOs aplicáveis, EPIs recomendados (incluindo tipo de luva e filtro respiratório)</td></tr>
+      <tr><td><strong>Secção 11</strong> — Informação toxicológica</td><td>Vias de absorção, efeitos agudos e crónicos, cancerigenicidade, mutagenicidade, reprotoxicidade</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Substâncias Prioritárias em Portugal: VLEOs de Referência</h3>
+
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Substância</th><th>VLE-MP (DL 24/2012)</th><th>Classificação CMR</th><th>Setores de Risco</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Sílica cristalina (fração respirável)</strong></td><td>0,05 mg/m³</td><td>Cancerígeno Cat. 1A</td><td>Construção, pedreiras, cerâmica, fundição</td></tr>
+      <tr><td><strong>Formaldeído</strong></td><td>0,3 ppm (VLE-CM)</td><td>Cancerígeno Cat. 1B</td><td>Saúde, indústria madeira, laboratórios</td></tr>
+      <tr><td><strong>Benzeno</strong></td><td>0,5 ppm</td><td>Cancerígeno Cat. 1A</td><td>Petroquímica, artes gráficas, laboratórios</td></tr>
+      <tr><td><strong>Chumbo e compostos</strong></td><td>0,05 mg/m³</td><td>Reprotóxico Cat. 1A</td><td>Construção (remoção tintas), metalurgia</td></tr>
+      <tr><td><strong>Isocianatos (TDI, MDI)</strong></td><td>0,005 ppm</td><td>Sensibilizante respiratório</td><td>Indústria espumas, tintas, isolamentos</td></tr>
+      <tr><td><strong>Monóxido de carbono</strong></td><td>20 ppm</td><td>—</td><td>Garagens, incêndios, motores combustão</td></tr>
+      <tr><td><strong>Tolueno</strong></td><td>50 ppm</td><td>Reprotóxico Cat. 2</td><td>Tintas, adesivos, limpeza industrial</td></tr>
+      <tr><td><strong>Pó de madeira de carvalho e faia</strong></td><td>2 mg/m³</td><td>Cancerígeno Cat. 1A</td><td>Indústria madeira, carpintaria, mobiliário</td></tr>
+      <tr><td><strong>Crómio hexavalente</strong></td><td>0,01 mg/m³</td><td>Cancerígeno Cat. 1A</td><td>Galvanoplastia, soldadura de inoxidável</td></tr>
+      <tr><td><strong>Sulfureto de hidrogénio (H₂S)</strong></td><td>1 ppm</td><td>—</td><td>Espaços confinados, ETAR, exploração petrolífera</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Gestão de Derrames e Emergências Químicas</h3>
+
+  <ul class="styled">
+    <li><strong>Kits de contenção de derrames:</strong> Devem estar disponíveis nas áreas de armazenamento e utilização de produtos perigosos, dimensionados para o maior contentor presente. Conteúdo mínimo: material absorvente adequado ao produto (almofadas, granulados), recipiente de recolha, EPIs para limpeza (luvas resistentes ao químico, óculos panorâmicos, avental).</li>
+    <li><strong>Bacias de retenção:</strong> Obrigatórias para armazenamento de líquidos perigosos, com capacidade ≥ 110% do maior recipiente ou ≥ 25% do volume total armazenado (o maior valor).</li>
+    <li><strong>Chuveiro e lava-olhos de emergência:</strong> Obrigatórios em áreas com produtos químicos corrosivos ou muito tóxicos. Devem ser testados semanalmente e estar a menos de 10 segundos do ponto de risco.</li>
+    <li><strong>Plano de emergência para derrames:</strong> Procedimentos específicos para os produtos mais perigosos, com identificação do responsável pela contenção e dos meios disponíveis.</li>
+  </ul>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">Secção 26</div><div class="section-sep-line"></div></div>
+
+<!-- FERRAMENTAS PRÁTICAS -->
+<div class="section" id="ferramentas">
+  <span class="section-eyebrow">Secção 26 · Ferramentas Práticas</span>
+  <h2>Ferramentas Práticas: Templates, Checklists e Relatório de Investigação</h2>
+
+  <p>Um sistema de gestão SST eficaz requer não apenas conhecimento técnico, mas também ferramentas práticas que os técnicos e as chefias possam usar no dia a dia. Esta secção apresenta templates adaptáveis às necessidades de qualquer organização a operar em Portugal.</p>
+
+  <h3>Checklist de Inspeção de Segurança Geral</h3>
+
+  <p>A inspeção de segurança é uma visita sistemática ao local de trabalho com o objetivo de identificar condições inseguras, verificar a conformidade com os procedimentos e detetar riscos não previstos na avaliação inicial. Deve ser realizada periodicamente (sugerido: mensalmente pelas chefias, trimestralmente pelo técnico de SST) e os resultados registados e comunicados.</p>
+
+  <h4>Área: Organização e Housekeeping</h4>
+  <div class="checklist">
+    <li>Vias de circulação e saídas de emergência livres e sinalizadas</li>
+    <li>Materiais e produtos armazenados de forma segura (não em excesso, não em altura instável)</li>
+    <li>Resíduos depositados nos contentores adequados e recolhidos regularmente</li>
+    <li>Pavimentos limpos, sem derrames, sem materiais abandonados</li>
+    <li>Iluminação adequada em todas as áreas de trabalho</li>
+    <li>Sinalização de segurança visível, limpa e em bom estado</li>
+    <li>Armários e cacifos em bom estado e devidamente identificados</li>
+  </div>
+
+  <h4>Área: Equipamentos e Máquinas</h4>
+  <div class="checklist">
+    <li>Proteções de máquinas instaladas e em bom estado</li>
+    <li>Botões de paragem de emergência visíveis, acessíveis e funcionais</li>
+    <li>Equipamentos com registos de manutenção atualizados</li>
+    <li>Ferramentas manuais em bom estado (sem cabos partidos, cabeças frouxas, corrosão)</li>
+    <li>Quadros elétricos fechados, sem danos, com sinalização de perigo elétrico</li>
+    <li>Extensões elétricas em bom estado (sem danos no isolamento, sobrecarregadas, no chão)</li>
+    <li>Equipamentos de elevação com prazo de inspeção válido</li>
+  </div>
+
+  <h4>Área: Incêndio e Emergência</h4>
+  <div class="checklist">
+    <li>Extintores na localização prevista, sinalizados, prazo de validade válido</li>
+    <li>Plantas de emergência afixadas em pontos estratégicos e legíveis</li>
+    <li>Caminhos de evacuação e saídas de emergência desobstruídos</li>
+    <li>Iluminação de emergência funcional (testar mensalmente)</li>
+    <li>Detetor de incêndio / alarme em bom estado (sem luzes de avaria)</li>
+    <li>Kit de primeiros socorros completo e dentro da validade</li>
+    <li>DAE presente, sinalizado e com bateria/elétrodos em validade</li>
+    <li>Números de emergência afixados junto aos telefones</li>
+  </div>
+
+  <h4>Área: EPIs e Higiene Ocupacional</h4>
+  <div class="checklist">
+    <li>Trabalhadores a usar os EPIs obrigatórios para a tarefa que executam</li>
+    <li>EPIs em bom estado, sem danos visíveis, dentro do prazo de validade</li>
+    <li>EPIs armazenados corretamente (não expostos a produtos químicos, UV, calor)</li>
+    <li>Ventilação por captação localizada (LEV) em funcionamento e sem obstruções</li>
+    <li>Dosímetros de ruído / gases calibrados e dentro do prazo (se aplicável)</li>
+    <li>Chuveiro e lava-olhos de emergência testados e funcionais (se aplicável)</li>
+    <li>FDS dos produtos químicos disponíveis e acessíveis no local de utilização</li>
+  </div>
+
+  <h4>Área: Trabalhos Especiais (verificar quando aplicável)</h4>
+  <div class="checklist">
+    <li>Permissões de trabalho emitidas e nos postos de trabalho (altura, EC, quente, elétrico)</li>
+    <li>Equipamentos anticaída inspecionados e em bom estado</li>
+    <li>Pontos de ancoragem identificados e aprovados para trabalho em altura</li>
+    <li>Cadeados LOTO instalados nos equipamentos em manutenção</li>
+    <li>Medições atmosféricas realizadas antes de entrada em espaço confinado</li>
+    <li>Vigia presente e com comunicação estabelecida com equipa no interior</li>
+  </div>
+
+  <h3>Template: Relatório de Investigação de Acidente / Near-Miss</h3>
+
+  <div class="law-box">
+    <p><strong>Estrutura recomendada para o relatório de investigação:</strong></p>
+    <ul>
+      <li><strong>1. Identificação:</strong> Data, hora, local, nome da vítima/envolvidos, tipo de evento (acidente / near-miss / condição insegura), gravidade real e gravidade potencial</li>
+      <li><strong>2. Descrição do evento:</strong> O que aconteceu, sequência de eventos, testemunhas, condições ambientais no momento</li>
+      <li><strong>3. Causas imediatas:</strong> Condições inseguras e atos inseguros que diretamente contribuíram para o evento</li>
+      <li><strong>4. Causas básicas:</strong> Fatores pessoais (formação insuficiente, fadiga, distração) e fatores de trabalho (procedimento inadequado, manutenção deficiente, EPI inadequado)</li>
+      <li><strong>5. Causas raiz:</strong> Falhas sistémicas e organizacionais que permitiram que as causas básicas existissem (ausência de avaliação de risco, cultura de segurança deficiente, pressão de produção)</li>
+      <li><strong>6. Plano de ação corretiva:</strong> Para cada causa identificada: ação específica, responsável designado, data de conclusão, forma de verificação da eficácia</li>
+      <li><strong>7. Lições aprendidas:</strong> O que esta organização (e potencialmente outras) pode aprender com este evento</li>
+      <li><strong>8. Aprovação:</strong> Assinaturas do investigador, do responsável da área e do técnico de SST</li>
+    </ul>
+  </div>
+
+  <h3>Escala de Gravidade Potencial para Classificação de Near-Misses</h3>
+
+  <p>Nem todos os near-misses têm a mesma importância. Para priorizar a investigação, usar uma escala de gravidade potencial:</p>
+
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Nível</th><th>Gravidade Potencial</th><th>Ação Requerida</th><th>Prazo de Investigação</th></tr></thead>
+    <tbody>
+      <tr><td><strong>4 — Crítico</strong></td><td>Poderia ter causado morte ou incapacidade permanente</td><td>Investigação formal completa pela equipa de SST e gestão</td><td>48 horas</td></tr>
+      <tr><td><strong>3 — Grave</strong></td><td>Poderia ter causado lesão grave ou incapacidade temporária prolongada</td><td>Investigação formal com análise de causas raiz</td><td>72 horas</td></tr>
+      <tr><td><strong>2 — Moderado</strong></td><td>Poderia ter causado lesão leve ou dano material significativo</td><td>Análise de causas e definição de ação corretiva</td><td>1 semana</td></tr>
+      <tr><td><strong>1 — Baixo</strong></td><td>Probabilidade baixa de lesão; dano material reduzido</td><td>Registo e ação corretiva simples</td><td>1 mês</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="tip-box">
+    <p>Organizações com culturas de segurança maduras têm taxas de reporte de near-misses muito superiores às organizações menos maduras — não porque ocorram mais near-misses, mas porque os trabalhadores confiam que o reporte é valorizado e não penalizado. Monitorize a evolução do n.º de near-misses reportados como indicador leading de maturidade da cultura de segurança.</p>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">Conclusão</div><div class="section-sep-line"></div></div>
+
+<!-- CONCLUSÃO -->
+<div class="section" id="conclusao">
+  <span class="section-eyebrow">Conclusão</span>
+  <h2>Construir Ambientes de Trabalho Genuinamente Seguros em Portugal</h2>
+
+  <p>A segurança e saúde no trabalho é, no seu âmago, uma questão de respeito pela dignidade humana. Cada trabalhador tem o direito fundamental de regressar a casa ao fim do dia de trabalho sem ter sofrido lesão, doença ou trauma. Em Portugal, esse direito é consagrado na Constituição da República (art.º 59.º, n.º 1, alínea c) e na Lei n.º 102/2009 — mas o direito consagrado em papel só se converte em realidade quando há sistemas eficazes, liderança comprometida e uma cultura genuína de prevenção.</p>
+
+  <p>Este guia percorreu 26 dimensões da SST em contexto exclusivamente português — da legislação às atmosferas explosivas, da higiene ocupacional à ergonomia, dos EPIs à sinalização, dos espaços confinados ao LOTO, da segurança de máquinas à movimentação mecânica, do trabalho noturno às radiações ionizantes, dos agentes químicos às ferramentas práticas de investigação. Mas um guia, por mais completo que seja, é apenas um ponto de partida.</p>
+
+  <div class="pull-quote">
+    <p>"Zero acidentes não é uma utopia — é uma escolha. Uma escolha que as organizações mais seguras do mundo fazem todos os dias, em cada decisão, em cada procedimento, em cada conversa sobre segurança."</p>
+  </div>
+
+  <p>A aplicação eficaz destes princípios requer o conhecimento profundo do contexto específico de cada organização, o compromisso genuíno de todos os níveis hierárquicos, a participação ativa dos trabalhadores e a disposição para aprender continuamente — tanto com os acidentes e near-misses que ocorrem como com as boas práticas que evitam que ocorram.</p>
+
+  <p>Investir em SST é investir nas pessoas. E as organizações que investem genuinamente nas suas pessoas são, invariavelmente, mais produtivas, mais resilientes, mais atrativas para talentos e mais sustentáveis a longo prazo.</p>
+
+  <hr class="divider">
+
+  <h3>Recursos e Referências Essenciais</h3>
+
+  <ul class="styled">
+    <li><strong>ACT — Autoridade para as Condições do Trabalho</strong> — <em>act.gov.pt</em> — Legislação atualizada, guias técnicos, fichas informativas e estatísticas de sinistralidade.</li>
+    <li><strong>EU-OSHA — Agência Europeia para a Segurança e Saúde no Trabalho</strong> — <em>osha.europa.eu</em> — Publicações técnicas, estudos europeus, ferramentas de avaliação de riscos.</li>
+    <li><strong>CNPRP — Centro Nacional de Proteção contra os Riscos Profissionais</strong> — <em>cnprp.gov.pt</em> — Doenças profissionais, prestações e reconhecimento em Portugal.</li>
+    <li><strong>DGS — Direção-Geral da Saúde</strong> — <em>dgs.pt</em> — Orientações de saúde ocupacional, programas de saúde no trabalho.</li>
+    <li><strong>IPAC — Instituto Português de Acreditação</strong> — <em>ipac.pt</em> — Lista de laboratórios acreditados para medições de higiene ocupacional em Portugal.</li>
+    <li><strong>NP ISO 45001:2019</strong> — Disponível no Instituto Português da Qualidade (IPQ) — <em>ipq.pt</em>.</li>
+    <li><strong>NP ISO 45003:2022</strong> — Gestão de riscos psicossociais — Disponível no IPQ.</li>
+    <li><strong>APTSHT</strong> — <em>aptsht.pt</em> — Formação, eventos e publicações para profissionais de SST em Portugal.</li>
+    <li><strong>NIOSH (EUA)</strong> — <em>cdc.gov/niosh</em> — Publicações técnicas internacionais de referência, incluindo a equação NIOSH e os TLVs/BEIs da ACGIH.</li>
+    <li><strong>OIT — Organização Internacional do Trabalho</strong> — <em>ilo.org</em> — Convenções, recomendações e publicações internacionais de SST.</li>
+  </ul>
+</div>
+
+</article>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sidebar-title">Índice do Guia</div>
+  <ul class="toc">
+    <li><a href="#intro"><span class="toc-num">00</span>Introdução e contexto português</a></li>
+    <li><a href="#legislacao"><span class="toc-num">01</span>Legislação e enquadramento jurídico</a></li>
+    <li><a href="#sistemas"><span class="toc-num">02</span>ISO 45001 e sistemas de gestão SST</a></li>
+    <li><a href="#riscos"><span class="toc-num">03</span>Identificação e classificação de riscos</a></li>
+    <li><a href="#higiene"><span class="toc-num">04</span>Higiene ocupacional e medições</a></li>
+    <li><a href="#ergonomia"><span class="toc-num">05</span>Ergonomia aplicada (RULA, REBA, NIOSH)</a></li>
+    <li><a href="#psicossociais"><span class="toc-num">06</span>Riscos psicossociais e saúde mental</a></li>
+    <li><a href="#epi"><span class="toc-num">07</span>EPIs: seleção e gestão</a></li>
+    <li><a href="#sinalizacao"><span class="toc-num">08</span>Sinalização de segurança (ISO 7010)</a></li>
+    <li><a href="#trabalhos-especiais"><span class="toc-num">09</span>Altura, espaços confinados, elétrico</a></li>
+    <li><a href="#loto"><span class="toc-num">10</span>Controlo de energia (LOTO)</a></li>
+    <li><a href="#construcao"><span class="toc-num">11</span>Construção civil: PSS e coordenação</a></li>
+    <li><a href="#subcontratados"><span class="toc-num">12</span>Gestão de subcontratados</a></li>
+    <li><a href="#acidentes"><span class="toc-num">13</span>Acidentes: notificação e investigação</a></li>
+    <li><a href="#saude"><span class="toc-num">14</span>Saúde ocupacional e doenças profissionais</a></li>
+    <li><a href="#emergencias"><span class="toc-num">15</span>Emergências e SCIE</a></li>
+    <li><a href="#gestao"><span class="toc-num">16</span>Custos, indicadores e auditorias</a></li>
+    <li><a href="#cultura"><span class="toc-num">17</span>Cultura de segurança e formação</a></li>
+    <li><a href="#novos-riscos"><span class="toc-num">18</span>Novos riscos: solar, eólica, Li-ion, IA</a></li>
+    <li><a href="#carreira"><span class="toc-num">19</span>Carreira e certificação ACT</a></li>
+    <li><a href="#atex"><span class="toc-num">20</span>ATEX — atmosferas explosivas</a></li>
+    <li><a href="#maquinas"><span class="toc-num">21</span>Segurança de máquinas (CE, ISO 12100)</a></li>
+    <li><a href="#movimentacao"><span class="toc-num">22</span>Empilhadeiras, gruas e pontes rolantes</a></li>
+    <li><a href="#turnos"><span class="toc-num">23</span>Trabalho noturno e por turnos</a></li>
+    <li><a href="#radiacoes"><span class="toc-num">24</span>Radiações ionizantes</a></li>
+    <li><a href="#quimicos-detalhe"><span class="toc-num">25</span>Agentes químicos: VLEOs e FDS</a></li>
+    <li><a href="#ferramentas"><span class="toc-num">26</span>Checklists e template de investigação</a></li>
+    <li><a href="#conclusao"><span class="toc-num">—</span>Conclusão e recursos</a></li>
+  </ul>
+
+  <div class="sidebar-cta">
+    <strong>Precisa de apoio em SST?</strong>
+    <p>Consultoria, avaliações de risco, formação certificada e defesa jurídica em processos com a ACT — advogada e TSST na mesma equipa.</p>
+    <a href="/#contacto" class="btn-cta">Marcar Consulta</a>
+  </div>
+
+  <div class="sidebar-law">
+    <h6>Base Legal Principal</h6>
+    <ul>
+      <li>Lei n.º 102/2009 — Lei-quadro SST</li>
+      <li>Lei n.º 7/2009 — Código do Trabalho</li>
+      <li>Lei n.º 98/2009 — Acidentes de trabalho</li>
+      <li>DL n.º 182/2006 — Ruído</li>
+      <li>DL n.º 24/2012 — Agentes químicos</li>
+      <li>DL n.º 273/2003 — Estaleiros</li>
+      <li>DL n.º 220/2008 — SCIE</li>
+      <li>DL n.º 110/2000 — Técnicos SST</li>
+      <li>NP ISO 45001:2019</li>
+      <li>NP ISO 45003:2022</li>
+    </ul>
+  </div>
+</aside>
+
+</div><!-- /page-wrap -->
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h5>SST Portugal</h5>
+      <p>Consultoria e formação em Segurança e Saúde no Trabalho, com a leitura jurídica que a maioria das consultoras técnicas não tem. Conteúdos baseados na legislação portuguesa e no quadro regulatório europeu.</p>
+    </div>
+    <div>
+      <h5>Temas Abordados</h5>
+      <p>Lei 102/2009 · ISO 45001 · Riscos profissionais · Higiene ocupacional · Ergonomia · EPIs · Sinalização · Espaços confinados · LOTO · Construção civil · Saúde ocupacional · SCIE · Cultura de segurança · Carreira em SST</p>
+    </div>
+    <div>
+      <h5>Nota Legal</h5>
+      <p>Este guia tem natureza informativa e não substitui aconselhamento jurídico ou técnico especializado. A legislação está sujeita a alterações; verifique sempre as versões atualizadas em act.gov.pt e no Diário da República Eletrónico (dre.pt).</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="mono">SST PORTUGAL · sstportugal.pt · © 2026</span>
+    <span class="mono">Guia Completo de SST em Portugal · Edição 2026</span>
+  </div>
+</footer>
+
+</body>
+</html>
