@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Segurança em Logística e Armazenagem Frigorífica: Guia Completo 2026 | SST Portugal</title>
+<meta name="description" content="Guia completo de segurança em logística e armazenagem sob temperatura controlada: formação por função, fiscalização da ACT, risco de amónia em sistemas de frio, empilhadores e docas, e segurança rodoviária de motoristas — com a leitura jurídica que falta na maioria dos guias técnicos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0E1B2C;
+    --paper: #F4EFE6;
+    --paper-deep: #EAE3D5;
+    --bordeaux: #7A2233;
+    --bordeaux-tint: #F7ECEE;
+    --sage: #4C5B4A;
+    --sage-tint: #EEF1EE;
+    --brass: #B08A3E;
+    --brass-tint: #FAF3E6;
+    --rule: rgba(14,27,44,0.16);
+    --ink-70: rgba(14,27,44,0.72);
+    --ink-55: rgba(14,27,44,0.55);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    font-size: 16.5px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { font-family: 'Fraunces', serif; font-weight: 500; letter-spacing: -0.01em; line-height: 1.1; color: var(--ink); }
+  em { font-style: italic; color: var(--bordeaux); }
+  a { color: inherit; text-decoration: none; }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+  .label-tech { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-55); }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+  .rule-h { height: 1px; background: var(--rule); width: 100%; }
+  p { color: var(--ink-70); margin-bottom: 18px; }
+  p strong { color: var(--ink); font-weight: 600; }
+
+  /* HEADER — same system as homepage */
+  header { background: var(--paper); border-bottom: 1px solid var(--rule); position: sticky; top: 0; z-index: 100; }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand-text { line-height: 1.2; }
+  .brand-name { font-family: 'Fraunces', serif; font-size: 16px; color: var(--ink); }
+  .brand-tag { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; color: var(--ink-55); }
+  nav ul { list-style: none; display: flex; gap: 28px; font-size: 13.5px; }
+  nav a:hover { color: var(--bordeaux); }
+  .btn-nav { background: var(--ink); color: var(--paper); padding: 9px 18px; font-size: 12.5px; font-weight: 500; border-radius: 2px; }
+  .btn-nav:hover { background: var(--bordeaux); }
+  .nav-links-desktop { display: flex; align-items: center; gap: 28px; }
+  .crumb { font-size: 12px; color: var(--ink-55); padding: 10px 0; border-bottom: 1px solid var(--rule); }
+  .crumb a:hover { color: var(--bordeaux); }
+
+  /* HERO */
+  .hero { border-bottom: 1px solid var(--rule); padding: 54px 0 44px; }
+  .hero-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+  .hero-tag { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.06em; color: var(--bordeaux); border: 1px solid rgba(122,34,51,0.3); padding: 4px 10px; }
+  .hero h1 { font-size: clamp(30px, 4vw, 48px); max-width: 18ch; }
+  .hero-sub { font-size: 16.5px; color: var(--ink-70); max-width: 70ch; margin: 22px 0 0; }
+  .hero-meta { display: flex; gap: 22px; flex-wrap: wrap; font-size: 12.5px; color: var(--ink-55); border-top: 1px solid var(--rule); padding-top: 20px; margin-top: 28px; }
+  .hero-meta .mono { font-size: 12px; }
+
+  /* STATS */
+  .stats-section { padding: 46px 0 6px; }
+  .stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin: 28px 0 36px; }
+  .stat-item { background: var(--paper); padding: 24px 20px; }
+  .stat-number { font-family: 'Fraunces', serif; font-size: 34px; font-weight: 600; color: var(--bordeaux); line-height: 1; display: block; margin-bottom: 8px; }
+  .stat-label { font-size: 12px; color: var(--ink-70); line-height: 1.4; }
+  .pull-quote { border-left: 2px solid var(--bordeaux); padding: 20px 28px; background: var(--bordeaux-tint); margin: 32px 0; }
+  .pull-quote p { font-family: 'Fraunces', serif; font-style: italic; font-size: clamp(16px, 1.8vw, 20px); color: var(--ink); margin: 0; }
+
+  /* LAYOUT */
+  .page-wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: 1fr 300px; gap: 56px; align-items: start; }
+  article { padding: 50px 0 20px; }
+
+  /* SIDEBAR */
+  .sidebar { position: sticky; top: 76px; padding: 50px 0; }
+  .toc-title { font-size: 10.5px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-55); margin-bottom: 14px; font-family: 'JetBrains Mono', monospace; }
+  .toc { list-style: none; }
+  .toc-section { margin-bottom: 2px; }
+  .toc-section > a { display: flex; gap: 10px; padding: 9px 0; font-size: 13px; font-weight: 600; color: var(--ink); text-decoration: none; border-top: 1px solid var(--rule); line-height: 1.4; }
+  .toc-section > a:hover { color: var(--bordeaux); }
+  .toc-num { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: var(--bordeaux); min-width: 18px; padding-top: 2px; }
+  .toc-sub { list-style: none; padding-left: 28px; }
+  .toc-sub li a { display: block; font-size: 12px; color: var(--ink-55); padding: 4px 0; }
+  .toc-sub li a:hover { color: var(--bordeaux); }
+  .sidebar-box { background: var(--ink); color: var(--paper); padding: 22px; margin-top: 30px; }
+  .sidebar-box-title { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brass); margin-bottom: 10px; font-family: 'JetBrains Mono', monospace; }
+  .sidebar-box p { font-size: 12.5px; color: rgba(244,239,230,0.72); margin-bottom: 14px; }
+  .sidebar-box a.btn-primary { display: block; text-align: center; }
+  .sidebar-law { background: var(--sage-tint); border: 1px solid rgba(76,91,74,0.2); padding: 18px; margin-top: 18px; }
+  .sidebar-law-title { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin-bottom: 10px; font-family: 'JetBrains Mono', monospace; }
+  .sidebar-law ul { list-style: none; }
+  .sidebar-law ul li { font-size: 11.5px; color: var(--sage); padding: 4px 0; border-bottom: 1px solid rgba(76,91,74,0.12); }
+
+  /* SECTIONS */
+  .section { margin-bottom: 72px; }
+  .section-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--bordeaux); display: block; margin-bottom: 10px; }
+  h2 { font-size: clamp(24px, 2.8vw, 34px); margin-bottom: 12px; }
+  h3 { font-size: clamp(18px, 2vw, 23px); font-weight: 600; margin: 36px 0 14px; }
+  h4 { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink); margin: 26px 0 10px; padding-bottom: 8px; border-bottom: 1px solid var(--rule); }
+  .lead { font-size: clamp(15.5px, 1.6vw, 17.5px); color: var(--ink-70); max-width: 74ch; margin-bottom: 30px; }
+  .section-sep { display: flex; align-items: center; gap: 16px; margin: 64px 0 46px; }
+  .section-sep-line { flex: 1; height: 1px; background: var(--rule); }
+  .section-sep-tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-55); white-space: nowrap; }
+
+  /* BOXES */
+  .box { border-left: 3px solid; padding: 20px 24px; margin: 28px 0; position: relative; }
+  .box-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; display: block; }
+  .box p:last-child { margin-bottom: 0; }
+  .box-legal { border-color: var(--bordeaux); background: var(--bordeaux-tint); }
+  .box-legal .box-label { color: var(--bordeaux); }
+  .box-legal p { color: #5c1a26; }
+  .box-legal ul { list-style: none; margin-top: 6px; }
+  .box-legal ul li { font-size: 13.5px; color: #5c1a26; padding: 4px 0 4px 16px; position: relative; }
+  .box-legal ul li::before { content: '§'; position: absolute; left: 0; font-weight: 700; }
+  .box-alerta { border-color: var(--ink); background: var(--paper-deep); }
+  .box-alerta .box-label { color: var(--ink); }
+  .box-alerta p { color: var(--ink); }
+  .box-pratica { border-color: var(--sage); background: var(--sage-tint); }
+  .box-pratica .box-label { color: var(--sage); }
+  .box-pratica p { color: #2e392c; }
+  .box-nota { border-color: var(--brass); background: var(--brass-tint); }
+  .box-nota .box-label { color: var(--brass); }
+  .box-nota p { color: #6b5124; }
+
+  /* LISTS */
+  ul.styled, ol.styled { list-style: none; padding: 0; margin: 18px 0 26px; }
+  ul.styled li { position: relative; padding-left: 20px; margin-bottom: 9px; color: var(--ink-70); }
+  ul.styled li::before { content: '—'; position: absolute; left: 0; color: var(--bordeaux); font-weight: 700; }
+  ul.styled li strong { color: var(--ink); }
+  ol.styled { counter-reset: item; }
+  ol.styled li { position: relative; padding-left: 36px; margin-bottom: 12px; color: var(--ink-70); counter-increment: item; }
+  ol.styled li::before { content: counter(item, decimal-leading-zero); position: absolute; left: 0; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; color: var(--bordeaux); top: 3px; }
+  ol.styled li strong { color: var(--ink); }
+  .checklist { list-style: none; margin: 18px 0; }
+  .checklist li { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--rule); font-size: 14.5px; color: var(--ink-70); align-items: flex-start; }
+  .checklist li::before { content: '□'; color: var(--ink-55); font-size: 15px; flex-shrink: 0; line-height: 1.6; }
+
+  /* TABLES */
+  .table-wrap { overflow-x: auto; margin: 28px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  thead th { background: var(--ink); color: var(--paper); font-weight: 600; font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; padding: 12px 14px; text-align: left; font-family: 'JetBrains Mono', monospace; }
+  tbody tr { border-bottom: 1px solid var(--rule); }
+  tbody tr:nth-child(even) { background: var(--paper-deep); }
+  td { padding: 12px 14px; color: var(--ink-70); vertical-align: top; line-height: 1.5; }
+  td strong { color: var(--ink); }
+  td.badge { font-size: 10.5px; font-weight: 700; letter-spacing: 0.05em; white-space: nowrap; font-family: 'JetBrains Mono', monospace; }
+
+  /* CARD GRIDS reused across sections */
+  .doc-grid, .equip-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin: 28px 0; }
+  .equip-grid { grid-template-columns: repeat(2, 1fr); }
+  .doc-card, .equip-card { background: var(--paper); padding: 22px; }
+  .doc-card h5, .equip-card h5 { font-family: 'Fraunces', serif; font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
+  .doc-card-detail, .equip-detail-value { font-size: 12.5px; color: var(--ink-70); line-height: 1.55; }
+  .doc-card-detail strong { color: var(--bordeaux); display: block; margin-top: 8px; font-size: 10.5px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; font-family: 'JetBrains Mono', monospace; }
+  .equip-card-title { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+  .equip-idx { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--ink-55); }
+  .equip-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 4px; }
+  .equip-detail-item { background: var(--paper-deep); padding: 10px 12px; }
+  .equip-detail-label { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-55); margin-bottom: 4px; }
+
+  /* FORMAÇÃO CARDS */
+  .formacao-card { border: 1px solid var(--rule); background: var(--paper); padding: 30px; margin-bottom: 22px; }
+  .formacao-card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 6px; flex-wrap: wrap; }
+  .formacao-card h3 { font-size: 21px; margin: 8px 0 6px; }
+  .formacao-badge { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 11px; white-space: nowrap; }
+  .badge-obrig { background: var(--bordeaux); color: var(--paper); }
+  .badge-cargo { background: var(--sage); color: var(--paper); }
+  .badge-horas { background: var(--ink); color: var(--paper); }
+  .formacao-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 18px; }
+  .formacao-col h6 { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-55); margin-bottom: 10px; }
+  .formacao-col ul { list-style: none; padding: 0; }
+  .formacao-col ul li { font-size: 13px; color: var(--ink-70); padding: 5px 0; border-bottom: 1px solid var(--rule); display: flex; gap: 8px; }
+  .formacao-col ul li::before { content: '→'; color: var(--bordeaux); font-size: 11px; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+  .formacao-col ul li strong { color: var(--ink); }
+
+  /* TIMELINE */
+  .fisca-timeline { margin: 28px 0; }
+  .fisca-item { display: flex; gap: 22px; position: relative; }
+  .fisca-item::before { content: ''; position: absolute; left: 18px; top: 44px; bottom: -28px; width: 1px; background: var(--rule); }
+  .fisca-item:last-child::before { display: none; }
+  .fisca-dot { width: 38px; height: 38px; border: 1px solid var(--ink); background: var(--paper); color: var(--ink); font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 500; display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 1; }
+  .fisca-content { flex: 1; padding-bottom: 30px; }
+  .fisca-content h5 { font-family: 'Fraunces', serif; font-size: 16.5px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+  .fisca-content p { font-size: 13.5px; margin: 0 0 6px; }
+  .fisca-tag { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 10px; margin-top: 4px; }
+  .fisca-tag-a { background: var(--bordeaux-tint); color: var(--bordeaux); }
+  .fisca-tag-b { background: var(--brass-tint); color: #6b5124; }
+  .fisca-tag-c { background: var(--sage-tint); color: var(--sage); }
+
+  /* STEPS */
+  .steps { display: flex; flex-direction: column; margin: 28px 0; }
+  .step-item { display: flex; gap: 22px; padding: 20px 0; border-bottom: 1px solid var(--rule); }
+  .step-num { font-family: 'Fraunces', serif; font-size: 32px; font-weight: 600; color: rgba(122,34,51,0.18); line-height: 1; flex-shrink: 0; min-width: 44px; }
+  .step-content h5 { font-family: 'Fraunces', serif; font-size: 15.5px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+  .step-content p { font-size: 13.5px; margin: 0; }
+
+  /* CTA INLINE */
+  .cta-inline { background: var(--ink); color: var(--paper); padding: 28px 32px; margin: 44px 0; display: flex; justify-content: space-between; align-items: center; gap: 22px; flex-wrap: wrap; }
+  .cta-inline p { color: rgba(244,239,230,0.72); font-size: 14px; margin: 0; }
+  .cta-inline strong { display: block; font-family: 'Fraunces', serif; font-size: 18px; font-weight: 600; margin-bottom: 6px; color: var(--paper); }
+  .btn-primary { display: inline-block; background: var(--ink); color: var(--paper); font-size: 13px; font-weight: 500; padding: 12px 22px; white-space: nowrap; border-radius: 2px; }
+  .btn-primary:hover { background: var(--bordeaux); }
+  .cta-inline .btn-primary { background: var(--brass); color: var(--ink); }
+
+  footer { background: var(--paper); border-top: 1px solid var(--rule); padding: 32px 0; }
+  .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+  .footer-inner .mono { font-size: 12px; color: var(--ink-55); }
+
+  @media (max-width: 900px) {
+    .page-wrap { grid-template-columns: 1fr; }
+    .sidebar { display: none; }
+    .formacao-grid, .equip-grid, .doc-grid, .stat-row { grid-template-columns: 1fr; }
+    .nav-links-desktop { display: none; }
+  }
+</style></head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <a href="/" class="brand">
+      <svg width="28" height="28" viewBox="0 0 40 40" aria-hidden="true">
+        <rect x="4" y="4" width="32" height="32" rx="3" fill="none" stroke="#0E1B2C" stroke-width="1.1"/>
+        <line x1="20" y1="4" x2="20" y2="36" stroke="#0E1B2C" stroke-width="0.7"/>
+        <line x1="9" y1="13" x2="17" y2="13" stroke="#0E1B2C" stroke-width="1.3"/>
+        <line x1="9" y1="18" x2="16" y2="18" stroke="#0E1B2C" stroke-width="1.3"/>
+        <line x1="9" y1="23" x2="17" y2="23" stroke="#0E1B2C" stroke-width="1.3"/>
+        <line x1="9" y1="28" x2="14" y2="28" stroke="#0E1B2C" stroke-width="1.3"/>
+        <circle cx="25" cy="13" r="1.2" fill="#0E1B2C"/><circle cx="30" cy="13" r="1.2" fill="#0E1B2C"/>
+        <circle cx="25" cy="19" r="1.2" fill="#0E1B2C"/><circle cx="30" cy="19" r="1.2" fill="#0E1B2C"/>
+        <circle cx="25" cy="25" r="1.2" fill="#0E1B2C"/><circle cx="30" cy="25" r="1.2" fill="#0E1B2C"/>
+      </svg>
+      <div class="brand-text">
+        <div class="brand-name">SST Portugal</div>
+        <div class="brand-tag">DIREITO &middot; T&Eacute;CNICA</div>
+      </div>
+    </a>
+    <div class="nav-links-desktop">
+      <nav><ul>
+        <li><a href="/#servicos">Serviços</a></li>
+        <li><a href="/#sectores">Sectores</a></li>
+        <li><a href="/#guia">Guia SST</a></li>
+        <li><a href="/#sobre">Sobre</a></li>
+      </ul></nav>
+      <a href="/#contacto" class="btn-nav">Marcar Consulta</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap crumb">
+  <a href="/">Início</a> / <a href="/#sectores">Formação por Sector</a> / <span class="mono" style="color:var(--ink)">Logística e Armazenagem</span>
+</div>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-tags">
+      <span class="hero-tag">Lei 102/2009</span>
+      <span class="hero-tag">DL 24/2012</span>
+      <span class="hero-tag">Reg. 561/2006</span>
+      <span class="hero-tag">Guia 2026</span>
+    </div>
+    <h1>Segurança em Logística e Armazenagem: <em>o guia completo</em> para 2026</h1>
+    <p class="hero-sub">Formação obrigatória por função, fiscalização da ACT em armazém e em estrada, risco químico de amónia em sistemas de frio industrial, certificação de empilhadores e docas, e segurança rodoviária de motoristas profissionais. Escrito por quem lê a legislação e aplica o processo no terreno.</p>
+    <div class="hero-meta">
+      <span class="mono">≈ 4 400 PALAVRAS</span>
+      <span class="mono">ACTUALIZADO 2026</span>
+      <span class="mono">SECTOR: LOGÍSTICA E ARMAZENAGEM</span>
+      <span class="mono">LEGISLAÇÃO PORTUGUESA</span>
+    </div>
+  </div>
+</section>
+
+<section class="stats-section">
+  <div class="wrap">
+    <span class="section-eyebrow">Contexto · Portugal e UE</span>
+    <h2 style="max-width: 28ch;">Transporte e armazenagem: o segundo sector mais afectado por acidentes mortais na UE</h2>
+    <p class="lead">Os dados do Eurostat e do Gabinete de Estratégia e Planeamento (GEP) confirmam o que a experiência de terreno já mostra: um armazém com frio industrial, movimentação mecânica de cargas e frota associada concentra riscos de naturezas muito diferentes — do químico ao rodoviário — que raramente são tratados em conjunto por um único plano de prevenção.</p>
+
+    <div class="stat-row">
+      <div class="stat-item"><span class="stat-number">16,4%</span><span class="stat-label">dos acidentes de trabalho mortais na UE em 2023 ocorreram no sector dos transportes e armazenagem — o segundo maior, logo a seguir à construção (Eurostat)</span></div>
+      <div class="stat-item"><span class="stat-number">47,0%</span><span class="stat-label">do total de acidentes de trabalho em Portugal concentram-se em empresas de 1 a 49 trabalhadores — a dimensão típica de uma plataforma logística regional (GEP, 2023)</span></div>
+      <div class="stat-item"><span class="stat-number">73,3%</span><span class="stat-label">dos acidentes de trabalho em Portugal ocorrem no interior do estabelecimento — mas nos acidentes mortais, o peso do exterior (estrada, cargas/descargas) sobe para 41,2% (GEP, 2023)</span></div>
+      <div class="stat-item"><span class="stat-number">2</span><span class="stat-label">naturezas de risco que coexistem sempre num armazém frigorífico: químico (amónia) e físico (frio, mecânico, rodoviário) — raramente geridas pelo mesmo plano de prevenção</span></div>
+    </div>
+
+    <div class="pull-quote"><p>Num armazém com câmaras frigoríficas e sistema de amónia, o risco mais grave não é o mais frequente. É o menos provável — a fuga de gás numa sala de máquinas mal ventilada — que tem o maior potencial de fatalidade múltipla. A prevenção tem de ser dimensionada pela gravidade do pior cenário, não apenas pela frequência histórica.</p></div>
+
+    <p>É por isto que a fiscalização da ACT a este sector não se limita ao armazém: estende-se à frota, aos tempos de condução dos motoristas, e à forma como a empresa articula a segurança com subcontratados de manutenção do frio — um ponto que muitas plataformas logísticas ainda tratam como zona cinzenta de responsabilidade.</p>
+  </div>
+</section>
+
+<div class="page-wrap">
+<article>
+
+<div class="section" id="formacao">
+  <span class="section-eyebrow">§ I · Formação Obrigatória</span>
+  <h2>Formação em logística e armazenagem: quatro planos, obrigações distintas</h2>
+  <p class="lead">Um armazém com frio industrial reúne perfis de trabalho muito diferentes sob o mesmo teto: motoristas, operadores de empilhador, trabalhadores de câmara fria e técnicos de manutenção do sistema de frio. Tratar todos com a mesma formação genérica é o erro mais comum — e o mais visível numa inspecção.</p>
+
+  <div class="box box-legal">
+    <span class="box-label">Base legal principal</span>
+    <ul>
+      <li>Lei n.º 102/2009, de 10 de setembro — lei-quadro de SST (art.º 20.º, formação específica)</li>
+      <li>Código do Trabalho, art.º 131.º — 40 horas anuais de formação contínua</li>
+      <li>Decreto-Lei n.º 50/2005, de 25 de fevereiro — utilização de equipamentos de trabalho (empilhadores, docas)</li>
+      <li>Decreto-Lei n.º 24/2012 — protecção contra riscos de agentes químicos (amónia)</li>
+      <li>Regulamento (CE) n.º 561/2006 e Lei n.º 27/2010 — tempos de condução e repouso de motoristas profissionais</li>
+    </ul>
+  </div>
+
+  <div class="formacao-card">
+    <div class="formacao-card-header">
+      <div>
+        <span class="formacao-badge badge-obrig">Obrigatório para todos</span>
+        <h3>Plano 1 — Formação de base em SST para trabalhadores de armazém</h3>
+        <p style="font-size:13.5px;color:var(--ink-55);margin:6px 0 0">Todo o trabalhador que entre em funções numa plataforma logística deve receber esta formação antes de aceder ao armazém, incluindo temporários e subcontratados.</p>
+      </div>
+      <span class="formacao-badge badge-horas">Mínimo 8h</span>
+    </div>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Legislação de SST aplicável ao armazém (Lei 102/2009, DL 50/2005, DL 24/2012)</li>
+          <li>Riscos específicos: circulação de empilhadores, docas de carga, zonas de temperatura controlada</li>
+          <li>Reconhecimento do alarme de emergência e procedimento geral de evacuação</li>
+          <li>Reconhecimento de cheiro anómalo como sinal de alerta — nunca "esperar para ver"</li>
+          <li>Regras de circulação pedonal vs. equipamentos mecânicos</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos e condições</h6>
+        <ul>
+          <li>Ministrada antes do início de funções, nunca depois</li>
+          <li>Formador com Certificado de Competências Pedagógicas (CCP) válido</li>
+          <li>Certificado individual e registo em folha de presença</li>
+          <li>Repetida sempre que o trabalhador mude para posto com riscos substancialmente diferentes</li>
+        </ul>
+      </div>
+    </div>
+    <div class="box box-nota" style="margin-top:18px">
+      <span class="box-label">Trabalho temporário e subcontratação</span>
+      <p>A logística recorre com frequência a trabalho temporário para gerir sazonalidade e turnos. A empresa utilizadora mantém a obrigação de garantir formação de base e informação sobre os riscos concretos do posto, independentemente de quem processa o contrato — e a estatística mostra maior sinistralidade precisamente nos primeiros dias de um trabalhador nestas condições.</p>
+    </div>
+  </div>
+
+  <div class="formacao-card">
+    <div class="formacao-card-header">
+      <div>
+        <span class="formacao-badge badge-obrig">Obrigatório por função</span>
+        <h3>Plano 2 — Formações específicas por função de risco</h3>
+        <p style="font-size:13.5px;color:var(--ink-55);margin:6px 0 0">Quatro funções concentram a maioria do risco grave numa plataforma logística de frio — cada uma exige formação certificada própria.</p>
+      </div>
+    </div>
+
+    <h4>Operadores de empilhador e porta-paletes eléctricos</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Checklist pré-uso diária do equipamento (travões, buzina, luzes, garfos, bateria)</li>
+          <li>Circulação em câmara fria: visibilidade reduzida por condensação, piso possivelmente escorregadio</li>
+          <li>Carregamento de baterias de lítio em zona ventilada — sinais de alerta de dano</li>
+          <li>Interacção segura com docas de carga e com peões</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li><strong>Certificação obrigatória</strong>, com exame teórico-prático e cartão válido</li>
+          <li>Reciclagem sempre que muda o tipo de equipamento ou após acidente/quase-acidente</li>
+          <li>Nunca operado sem cartão, mesmo "só por uns minutos"</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Trabalhadores em câmara fria e preparação de encomendas</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Sinais precoces de hipotermia e congelação localizada</li>
+          <li>Uso escalonado de EPI térmico multicamada — não é roupa de inverno comum</li>
+          <li>Tempo máximo de permanência contínua e pausas de aclimatização obrigatórias</li>
+          <li>Ergonomia do picking manual, sabendo que o EPI térmico reduz a destreza</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li><strong>Duração mínima: 4 horas</strong>, com reciclagem anual</li>
+          <li>Antecâmaras de aclimatização identificadas e conhecidas por todos</li>
+          <li>Não existe valor legal fixo de tempo-limite em Portugal — a empresa deve fixar o seu próprio critério, documentado na avaliação de risco</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Equipa técnica de manutenção do sistema de frio (amónia)</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Propriedades de perigo da amónia: tóxica, corrosiva, inflamável em certas concentrações</li>
+          <li>Procedimento de bloqueio e etiquetagem (LOTO) antes de qualquer intervenção</li>
+          <li>Uso de equipamento de protecção respiratória autónomo — não apenas máscaras filtrantes</li>
+          <li>Plano de emergência específico para fuga, com zonas de exclusão</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li><strong>Formação certificada específica em amónia</strong>, tipicamente prestada pela própria empresa fornecedora do sistema</li>
+          <li>Frequentemente subcontratada — exige coordenação de segurança formal e documentada com a empresa utilizadora</li>
+          <li>Treino periódico de utilização do equipamento de emergência, não só formação teórica</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Motoristas de veículos sob temperatura controlada</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Regulamento (CE) 561/2006 — tempos de condução, repouso, uso correcto do tacógrafo</li>
+          <li>Condução defensiva e gestão da fadiga — reconhecimento de sinais precoces</li>
+          <li>Procedimentos de carga/descarga em cliente: calços de roda, EPI de alta visibilidade</li>
+          <li>Procedimento pessoal em caso de avaria do sistema de frio em trânsito</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li>Verificação pré-viagem do veículo documentada, não apenas verbal</li>
+          <li>Primeiros socorros básicos — o motorista está frequentemente isolado, longe de apoio imediato</li>
+          <li>Procedimento claro e sem penalização para quem decide parar por cansaço</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="formacao-card">
+    <div class="formacao-card-header">
+      <div>
+        <span class="formacao-badge badge-cargo">Obrigatório por cargo</span>
+        <h3>Plano 3 — Chefias de armazém e Técnico de SST</h3>
+        <p style="font-size:13.5px;color:var(--ink-55);margin:6px 0 0">Os cargos de responsabilidade decidem quando a operação pode continuar em segurança — e são o primeiro ponto de contacto numa emergência.</p>
+      </div>
+    </div>
+
+    <h4>Chefe de turno / responsável de armazém</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Ronda diária de segurança: vias, sinalética, docas, EPI térmico</li>
+          <li>Gestão de coordenação de segurança com subcontratados presentes na instalação</li>
+          <li>Primeira resposta em caso de alarme de gás — quem faz o quê nos primeiros 5 minutos</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li><strong>Duração mínima: 16 horas</strong></li>
+          <li>Cobertura garantida em todos os turnos, incluindo noite e fim de semana</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Técnico de SST</h4>
+    <div class="formacao-grid">
+      <div class="formacao-col">
+        <h6>Matéria abordada</h6>
+        <ul>
+          <li>Avaliação de risco por zona operacional: câmara fria, sala de amónia, docas, frota</li>
+          <li>Investigação de acidentes e de quase-acidentes, incluindo rodoviários</li>
+          <li>Interacção com a ACT e articulação com o médico do trabalho para vigilância da saúde dirigida ao risco</li>
+        </ul>
+      </div>
+      <div class="formacao-col">
+        <h6>Requisitos</h6>
+        <ul>
+          <li>Certificação ACT como TSST ou TSSST — obrigatória para exercer</li>
+          <li>Renovação: mínimo 48 horas em 5 anos (TSST) ou 60 horas (TSSST)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box box-legal" style="margin-top:20px">
+      <span class="box-label">Não confundir SST com segurança alimentar</span>
+      <p style="color:#5c1a26;margin:0">Numa operação de logística alimentar, o Técnico de SST cruza-se constantemente com a equipa de qualidade e segurança alimentar (HACCP). São sistemas diferentes, com objectivos diferentes — um protege o produto, o outro protege o trabalhador — ainda que partilhem procedimentos como a limpeza de câmaras. Confundir os dois sistemas é um erro recorrente em auditorias.</p>
+    </div>
+  </div>
+</div>
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ II</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="fiscalizacao">
+  <span class="section-eyebrow">§ II · Fiscalização da ACT</span>
+  <h2>O que a ACT verifica no armazém — e na estrada</h2>
+  <p class="lead">A fiscalização a uma operação de logística de frio não se limita às instalações fixas. A ACT verifica também o cumprimento de tempos de condução da frota — através dos dados do tacógrafo — o que faz deste um dos poucos sectores onde a fiscalização de SST se estende sistematicamente para fora do estabelecimento.</p>
+
+  <h3>Quando e como a ACT inspecciona</h3>
+  <div class="fisca-timeline">
+    <div class="fisca-item">
+      <div class="fisca-dot">01</div>
+      <div class="fisca-content">
+        <h5>Inspecções programadas ao armazém</h5>
+        <p>Equipas que verificam a avaliação de riscos por zona, o sistema de detecção de gás na sala de amónia, e os registos de formação por função.</p>
+        <span class="fisca-tag fisca-tag-b">Periódica · Sem aviso prévio obrigatório</span>
+      </div>
+    </div>
+    <div class="fisca-item">
+      <div class="fisca-dot">02</div>
+      <div class="fisca-content">
+        <h5>Após acidente de trabalho — fixo ou rodoviário</h5>
+        <p>Acidente mortal ou com incapacidade superior a 3 dias úteis obriga a comunicar em 24 horas. Inclui acidentes rodoviários ocorridos no exercício da função de motorista profissional.</p>
+        <span class="fisca-tag fisca-tag-a">Obrigatória em 24-48h após acidente grave</span>
+      </div>
+    </div>
+    <div class="fisca-item">
+      <div class="fisca-dot">03</div>
+      <div class="fisca-content">
+        <h5>Verificação de tempos de condução</h5>
+        <p>A ACT pode requisitar dados do tacógrafo para confirmar cumprimento do Regulamento 561/2006 — não é preciso um acidente para esta verificação ocorrer.</p>
+        <span class="fisca-tag fisca-tag-b">Programada ou por amostragem</span>
+      </div>
+    </div>
+    <div class="fisca-item">
+      <div class="fisca-dot">04</div>
+      <div class="fisca-content">
+        <h5>Inspecção de seguimento</h5>
+        <p>Após intimação com prazo, segue-se segunda visita de verificação. Persistindo a infracção, aplicam-se coimas agravadas.</p>
+        <span class="fisca-tag fisca-tag-b">No prazo fixado na intimação anterior</span>
+      </div>
+    </div>
+  </div>
+
+  <h3>O que verificam — em detalhe</h3>
+
+  <h4>1 · Sistema de frio industrial (amónia)</h4>
+  <div class="checklist">
+    <li>Sistema de detecção de gás operacional, com dois níveis de alarme</li>
+    <li>Plano de emergência específico para fuga, com zonas de exclusão definidas</li>
+    <li>Ficha de Dados de Segurança acessível e conhecida pelos trabalhadores expostos</li>
+    <li>Certificado de inspecção periódica do sistema sob pressão em vigor</li>
+  </div>
+
+  <h4>2 · Docas de carga e circulação de empilhadores</h4>
+  <div class="checklist">
+    <li>Calços de roda e sistema de bloqueio da doca em uso efectivo, não apenas disponíveis</li>
+    <li>Empilhadores com certificado de conformidade e checklist diária preenchida</li>
+    <li>Separação clara entre percursos pedonais e corredores de circulação mecânica</li>
+  </div>
+
+  <h4>3 · Trabalho em ambiente de frio</h4>
+  <div class="checklist">
+    <li>EPI térmico disponível, em uso, e substituído por critério de desgaste</li>
+    <li>Critério documentado de tempo máximo de permanência contínua em câmara negativa</li>
+    <li>Formação específica registada para todos os trabalhadores expostos</li>
+  </div>
+
+  <h4>4 · Tempos de condução e frota</h4>
+  <div class="checklist">
+    <li>Registos de tacógrafo sem indícios de manipulação ou violação sistemática</li>
+    <li>Planeamento de rotas compatível com os tempos legais, sem margem "no limite"</li>
+    <li>Manutenção preventiva da frota documentada</li>
+  </div>
+
+  <h3>Poderes dos inspectores na plataforma logística</h3>
+  <ul class="styled">
+    <li><strong>Acesso livre</strong> à instalação em qualquer momento do horário de laboração</li>
+    <li><strong>Exigir demonstração</strong> do plano de emergência para fuga de amónia</li>
+    <li><strong>Requisitar dados do tacógrafo</strong> de qualquer veículo da frota</li>
+    <li><strong>Determinar paragem imediata</strong> de equipamento ou zona com risco grave e iminente</li>
+    <li><strong>Lavrar auto de notícia</strong> imediatamente e no local</li>
+  </ul>
+
+  <h3>Coimas aplicáveis — valores de referência</h3>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Infracção</th><th>Classificação</th><th>Coima (pessoa colectiva)</th><th>Diploma</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Ausência de plano de emergência para risco químico</strong></td><td class="badge" style="color:var(--bordeaux)">Muito Grave</td><td>2 040 € a 9 690 €</td><td class="mono">DL 24/2012</td></tr>
+      <tr><td><strong>Operador de empilhador sem certificação</strong></td><td class="badge" style="color:var(--bordeaux)">Muito Grave</td><td>2 040 € a 9 690 €</td><td class="mono">DL 50/2005</td></tr>
+      <tr><td><strong>Sistema sob pressão sem inspecção válida</strong></td><td class="badge" style="color:#6b5124">Grave</td><td>1 020 € a 4 845 €</td><td class="mono">DL 90/2010</td></tr>
+      <tr><td><strong>Violação sistemática de tempos de condução</strong></td><td class="badge" style="color:var(--bordeaux)">Muito Grave</td><td>2 040 € a 9 690 €</td><td class="mono">Lei 27/2010</td></tr>
+      <tr><td><strong>Ausência de formação de função documentada</strong></td><td class="badge" style="color:#6b5124">Grave</td><td>1 020 € a 4 845 €</td><td class="mono">Lei 102/2009</td></tr>
+      <tr><td><strong>Obstaculização à inspecção</strong></td><td class="badge" style="color:var(--bordeaux)">Muito Grave</td><td>2 040 € a 9 690 € + participação criminal</td><td class="mono">Lei 102/2009</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="box box-pratica">
+    <span class="box-label">Reincidência</span>
+    <p>As coimas são agravadas em 50% em caso de reincidência no prazo de 2 anos. Numa instalação com risco químico, uma segunda infracção relacionada com o plano de emergência é tratada com particular severidade, por indiciar prática sistemática.</p>
+  </div>
+
+  <div class="cta-inline">
+    <div><strong>A sua plataforma logística aguenta uma visita da ACT amanhã?</strong><p>Diagnóstico de conformidade sem compromisso.</p></div>
+    <a href="/#contacto" class="btn-primary">Pedir diagnóstico</a>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ III</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="frio-amonia">
+  <span class="section-eyebrow">§ III · Riscos Específicos</span>
+  <h2>Frio e amónia: os dois riscos que distinguem este sector</h2>
+  <p class="lead">Nenhum outro sector combina, no mesmo espaço, exposição continuada ao frio extremo e um gás tóxico industrial em quantidade. São riscos de naturezas opostas — um é crónico e previsível, o outro é raro mas potencialmente catastrófico — e exigem abordagens de prevenção diferentes.</p>
+
+  <h3>Trabalho em ambiente de frio</h3>
+  <p>A exposição ocupacional ao frio — tipicamente entre +4°C em refrigerados e -25°C em congelados profundos — provoca stress térmico progressivo: perda de destreza manual, queda da temperatura corporal central, e em casos extremos hipotermia e congelação localizada. Não existe em Portugal um decreto-lei com limites fixos de exposição ao frio ocupacional, ao contrário de outros riscos físicos — a obrigação assenta no dever geral de avaliação de risco da Lei 102/2009.</p>
+
+  <div class="box box-alerta">
+    <span class="box-label">Sinais de alerta a ensinar a todos os trabalhadores</span>
+    <p>Tremores intensos, perda de destreza manual, confusão ou lentidão de raciocínio, pele com aspecto esbranquiçado ou endurecido. Qualquer um destes sinais implica saída imediata da câmara e reaquecimento gradual — nunca reaquecimento brusco, que agrava lesões de congelação.</p>
+  </div>
+
+  <h3>Amónia (NH3) no sistema de frio industrial</h3>
+  <p>Entre todos os riscos de uma operação de logística de frio, a amónia do sistema de refrigeração é o único com potencial de fatalidade múltipla e rápida em caso de falha catastrófica. É um gás mais leve que o ar, com cheiro pungente detectável a concentrações muito baixas — na prática, um sistema de alerta natural que qualquer trabalhador deve saber reconhecer — corrosivo para olhos e vias respiratórias, e inflamável dentro de uma gama específica de concentração.</p>
+
+  <h4>Medidas de controlo obrigatórias</h4>
+  <ul class="styled">
+    <li><strong>Detecção fixa de gás</strong> na sala de compressores, com dois níveis de alarme — pré-alarme e evacuação</li>
+    <li><strong>Ventilação de emergência</strong> com activação automática e comando manual acessível do exterior</li>
+    <li><strong>Plano de emergência específico</strong> com zonas de exclusão predefinidas</li>
+    <li><strong>Equipamento de protecção respiratória autónomo</strong> disponível para intervenção — máscaras filtrantes comuns não bastam</li>
+    <li><strong>Procedimento de bloqueio e etiquetagem (LOTO)</strong> antes de qualquer intervenção de manutenção</li>
+    <li><strong>Inspecção periódica obrigatória</strong> do sistema sob pressão, nos termos do DL 90/2010</li>
+  </ul>
+
+  <div class="box box-legal">
+    <span class="box-label">O que fazer numa fuga suspeita — e o que nunca fazer</span>
+    <p style="color:#5c1a26;margin-bottom:8px">Acção imediata: accionar alarme, evacuar seguindo o percurso definido, dirigir-se ao ponto de reunião, aguardar contagem de presenças. Nunca: tentar confirmar visualmente a fuga entrando na zona, usar elevadores como via de fuga, ou subestimar um cheiro fraco assumindo que "deve ser só um resíduo".</p>
+  </div>
+
+  <h4>Articulação com a equipa de manutenção subcontratada</h4>
+  <p>Esta equipa é frequentemente subcontratada a uma empresa especializada. É preciso coordenação de segurança formal e documentada: procedimentos próprios validados, troca bidireccional de informação sobre riscos da instalação, um responsável único de coordenação para emergências, e formação de acolhimento antes de qualquer intervenção na instalação.</p>
+</div>
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ IV</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="equipamentos">
+  <span class="section-eyebrow">§ IV · Equipamentos e Docas</span>
+  <h2>Empilhadores, docas de carga e estruturas de armazenagem</h2>
+  <p class="lead">A interface entre um veículo pesado, uma doca niveladora e um empilhador em movimento é, em muitas estatísticas do sector logístico europeu, uma das zonas com maior concentração de acidentes graves — precisamente pela sobreposição de três elementos que se movem de forma independente.</p>
+
+  <div class="equip-grid">
+    <div class="equip-card">
+      <div class="equip-card-title"><span class="equip-idx">01</span><h5>Empilhadores eléctricos</h5></div>
+      <div class="equip-detail-value">Certificação obrigatória do operador, checklist pré-uso diária, e atenção reforçada a baterias de lítio — risco térmico específico em caso de dano físico ou sobrecarga.</div>
+      <div class="equip-detail">
+        <div class="equip-detail-item"><div class="equip-detail-label">Inspecção</div>Anual, por técnico qualificado</div>
+        <div class="equip-detail-item"><div class="equip-detail-label">Diploma</div>DL 50/2005</div>
+      </div>
+    </div>
+    <div class="equip-card">
+      <div class="equip-card-title"><span class="equip-idx">02</span><h5>Docas niveladoras</h5></div>
+      <div class="equip-detail-value">Sistema de bloqueio que impede saída do veículo durante a operação, sinalização luminosa de "doca ocupada", e calços de roda sempre em uso.</div>
+      <div class="equip-detail">
+        <div class="equip-detail-item"><div class="equip-detail-label">Verificação</div>Semanal</div>
+        <div class="equip-detail-item"><div class="equip-detail-label">Diploma</div>DL 50/2005</div>
+      </div>
+    </div>
+    <div class="equip-card">
+      <div class="equip-card-title"><span class="equip-idx">03</span><h5>Estruturas de armazenagem em altura</h5></div>
+      <div class="equip-detail-value">Inspecção visual mensal e técnica anual. Qualquer colisão de empilhador deve ser reportada de imediato, ainda que sem dano aparente — o colapso é um dos acidentes mais graves possíveis num armazém.</div>
+      <div class="equip-detail">
+        <div class="equip-detail-item"><div class="equip-detail-label">Inspecção</div>Mensal + anual</div>
+        <div class="equip-detail-item"><div class="equip-detail-label">Diploma</div>DL 50/2005</div>
+      </div>
+    </div>
+    <div class="equip-card">
+      <div class="equip-card-title"><span class="equip-idx">04</span><h5>Sistema de frio (amónia)</h5></div>
+      <div class="equip-detail-value">Equipamento sob pressão com inspecção obrigatória por entidade acreditada, complementar à manutenção periódica do sistema de detecção de gás.</div>
+      <div class="equip-detail">
+        <div class="equip-detail-item"><div class="equip-detail-label">Inspecção</div>Anual/bianual</div>
+        <div class="equip-detail-item"><div class="equip-detail-label">Diploma</div>DL 90/2010</div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Regras de circulação segura em armazém</h3>
+  <ul class="styled">
+    <li><strong>Velocidade máxima</strong> definida e sinalizada por zona, mais baixa junto a docas</li>
+    <li><strong>Separação física</strong> entre corredores de empilhadores e passagens pedonais, ou sinalização de prioridade clara</li>
+    <li><strong>Espelhos convexos</strong> em cruzamentos sem visibilidade directa</li>
+    <li><strong>Buzina obrigatória</strong> em cruzamentos e ao recuar</li>
+  </ul>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ V</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="rodoviaria">
+  <span class="section-eyebrow">§ V · Segurança Rodoviária</span>
+  <h2>A estrada como posto de trabalho</h2>
+  <p class="lead">Para uma operação cujo core é o transporte, a maior sinistralidade grave e mortal frequentemente não está no armazém, mas na estrada. A lei de SST aplica-se ao motorista profissional tanto quanto a um trabalhador de armazém — mas o ambiente é muito menos controlável directamente pela empresa.</p>
+
+  <h3>Factores de risco específicos</h3>
+  <ul class="styled">
+    <li><strong>Fadiga</strong> — agravada por entregas nocturnas e rotas longas de distribuição</li>
+    <li><strong>Pressão de prazos</strong> — janelas de entrega apertadas podem incentivar, ainda que não intencionalmente, o desrespeito aos tempos legais de condução</li>
+    <li><strong>Carga e descarga em clientes terceiros</strong> — ambiente fora do controlo directo da empresa, com docas mal concebidas ou ausência de calços</li>
+    <li><strong>Manuseamento residual de carga</strong> pelo próprio motorista em entregas de menor volume</li>
+  </ul>
+
+  <h3>Medidas de prevenção organizacional</h3>
+  <div class="checklist">
+    <li>Planeamento de rotas com margem face aos tempos legais de condução e repouso</li>
+    <li>Formação periódica de condução defensiva e gestão da fadiga</li>
+    <li>Procedimento sem penalização para quem decide parar por cansaço</li>
+    <li>Registo e análise de quase-acidentes rodoviários reportados pelos próprios motoristas</li>
+    <li>Manutenção preventiva rigorosa da frota, com check pré-viagem documentado</li>
+  </div>
+
+  <div class="box box-nota">
+    <span class="box-label">Investigação de acidentes rodoviários</span>
+    <p>Merece procedimento próprio, distinto da investigação em instalação fixa: dados do tacógrafo, condições meteorológicas e de tráfego no momento, estado de manutenção do veículo — e sempre análise sem culpabilização automática do condutor, procurando factores organizacionais que possam ter contribuído.</p>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ VI</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="documentacao">
+  <span class="section-eyebrow">§ VI · Documentação Legal</span>
+  <h2>O que manter organizado — e pronto a mostrar</h2>
+  <p class="lead">Numa inspecção da ACT a este sector, a documentação pedida cobre tanto a instalação como a frota. Ter tudo reunido antecipadamente é a diferença entre uma visita de rotina e uma exposição desnecessária a auto de notícia.</p>
+
+  <div class="doc-grid">
+    <div class="doc-card">
+      <h5>Avaliação de riscos</h5>
+      <div class="doc-card-detail">Por zona operacional — câmara fria, sala de amónia, docas, frota — actualizada após qualquer alteração relevante.<strong>Prazo de conservação</strong>Enquanto o posto existir + 5 anos</div>
+    </div>
+    <div class="doc-card">
+      <h5>Plano de emergência</h5>
+      <div class="doc-card-detail">Geral e específico para fuga de amónia, com evidência de simulacro realizado.<strong>Prazo de conservação</strong>Sempre actualizado</div>
+    </div>
+    <div class="doc-card">
+      <h5>Registos de formação</h5>
+      <div class="doc-card-detail">Por função — motorista, empilhador, câmara fria, manutenção do frio — com conteúdo, data e presenças.<strong>Prazo de conservação</strong>5 anos após cessação</div>
+    </div>
+    <div class="doc-card">
+      <h5>Certificados de inspecção</h5>
+      <div class="doc-card-detail">Sistema sob pressão, empilhadores, estruturas de armazenagem.<strong>Prazo de conservação</strong>Até à inspecção seguinte + histórico</div>
+    </div>
+    <div class="doc-card">
+      <h5>Dados de tacógrafo</h5>
+      <div class="doc-card-detail">Tempos de condução e repouso da frota, disponíveis para verificação da ACT.<strong>Prazo de conservação</strong>Conforme Reg. 561/2006</div>
+    </div>
+    <div class="doc-card">
+      <h5>Fichas de aptidão</h5>
+      <div class="doc-card-detail">Vigilância da saúde — apto/inapto/condicionado — nunca o diagnóstico clínico.<strong>Prazo de conservação</strong>Enquanto durar o vínculo + prazo legal</div>
+    </div>
+  </div>
+</div>
+
+<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-tag">§ VII</div><div class="section-sep-line"></div></div>
+
+<div class="section" id="faq">
+  <span class="section-eyebrow">§ VII · Perguntas Frequentes</span>
+  <h2>Dúvidas recorrentes de responsáveis de armazém e frota</h2>
+
+  <h3>Um cheiro fraco e estranho na zona de frio, que ninguém confirma de onde vem, justifica accionar o alarme?</h3>
+  <p>Sim, sempre. A amónia tem cheiro pungente detectável pelo olfacto humano a concentrações muito baixas — é, na prática, um sistema de detecção natural. Tratar um cheiro fraco como "deve ser só um resíduo" é um dos erros mais documentados que precede fugas mais graves. A cultura de segurança tem de proteger activamente quem decide accionar o alarme por precaução, mesmo que se revele um falso alarme.</p>
+
+  <h3>Um motorista que pára a meio de uma rota por cansaço, atrasando uma entrega, pode ser penalizado?</h3>
+  <p>Juridicamente, não deveria, e organizacionalmente também não deveria — a lei impõe ao empregador o dever de não pressionar prazos que impliquem violação dos tempos de repouso. Penalizar esta decisão, ainda que informalmente, cria um incentivo perverso que se paga em sinistralidade rodoviária.</p>
+
+  <h3>Um trabalhador subcontratado de manutenção do frio que nunca recebeu formação de acolhimento pode intervir na instalação?</h3>
+  <p>Não deveria — a responsabilidade de coordenação de segurança é da empresa utilizadora do espaço, e a ACT verifica especificamente esta articulação em auditorias a instalações com subcontratados. É um dos pontos mais frequentemente esquecidos em plataformas logísticas com forte rotação de prestadores externos.</p>
+
+  <h3>Que diferença faz ter advogada e TSST na mesma pessoa, num acidente com fuga de amónia?</h3>
+  <p>Num acidente químico grave, a investigação técnica — o que falhou na detecção, na ventilação, no procedimento — e a leitura jurídica — que responsabilidade decorre disso, para quem — normalmente correm em paralelo, com profissionais diferentes que raramente comunicam em tempo útil. Ter as duas competências na mesma pessoa significa que a análise técnica já nasce a informar a estratégia de defesa.</p>
+</div>
+
+</article>
+<aside class="sidebar">
+  <div class="toc-title">Índice do Guia</div>
+  <ul class="toc">
+    <li class="toc-section"><a href="#formacao"><span class="toc-num">I</span>Formação Obrigatória</a>
+      <ul class="toc-sub"><li><a href="#formacao">Plano 1 — Base para todos</a></li><li><a href="#formacao">Plano 2 — Por função de risco</a></li><li><a href="#formacao">Plano 3 — Chefias e TSST</a></li></ul></li>
+    <li class="toc-section"><a href="#fiscalizacao"><span class="toc-num">II</span>Fiscalização da ACT</a>
+      <ul class="toc-sub"><li><a href="#fiscalizacao">Armazém e estrada</a></li><li><a href="#fiscalizacao">Tabela de coimas</a></li></ul></li>
+    <li class="toc-section"><a href="#frio-amonia"><span class="toc-num">III</span>Frio e Amónia</a>
+      <ul class="toc-sub"><li><a href="#frio-amonia">Trabalho em frio</a></li><li><a href="#frio-amonia">Risco químico NH3</a></li></ul></li>
+    <li class="toc-section"><a href="#equipamentos"><span class="toc-num">IV</span>Equipamentos e Docas</a>
+      <ul class="toc-sub"><li><a href="#equipamentos">Empilhadores</a></li><li><a href="#equipamentos">Docas niveladoras</a></li></ul></li>
+    <li class="toc-section"><a href="#rodoviaria"><span class="toc-num">V</span>Segurança Rodoviária</a>
+      <ul class="toc-sub"><li><a href="#rodoviaria">Factores de risco</a></li><li><a href="#rodoviaria">Prevenção</a></li></ul></li>
+    <li class="toc-section"><a href="#documentacao"><span class="toc-num">VI</span>Documentação Legal</a>
+      <ul class="toc-sub"><li><a href="#documentacao">O que manter organizado</a></li></ul></li>
+    <li class="toc-section"><a href="#faq"><span class="toc-num">VII</span>Perguntas Frequentes</a></li>
+  </ul>
+
+  <div class="sidebar-box">
+    <div class="sidebar-box-title">Precisa de apoio?</div>
+    <p><strong>Diagnóstico de conformidade sem compromisso.</strong> Analisamos a situação da sua plataforma logística e dizemos exactamente o que falta regularizar.</p>
+    <a href="/#contacto" class="btn-primary">Pedir diagnóstico</a>
+  </div>
+
+  <div class="sidebar-law">
+    <div class="sidebar-law-title">Base legal principal</div>
+    <ul>
+      <li>Lei n.º 102/2009 — SST geral</li>
+      <li>DL n.º 50/2005 — Equipamentos</li>
+      <li>DL n.º 24/2012 — Agentes químicos</li>
+      <li>DL n.º 90/2010 — Equip. sob pressão</li>
+      <li>Reg. (CE) 561/2006 — Condução</li>
+      <li>CT art.º 131.º — Formação</li>
+    </ul>
+  </div>
+</aside>
+
+</div>
+
+<section class="cta-final" style="background:var(--ink);color:var(--paper);padding:70px 0;text-align:center" id="contacto">
+  <div class="wrap" style="max-width:720px">
+    <h2 style="color:var(--paper);font-size:clamp(26px,3.6vw,42px);margin-bottom:18px">A sua plataforma logística está pronta para uma visita da ACT amanhã?</h2>
+    <p style="color:rgba(244,239,230,0.72);font-size:16px;margin-bottom:30px">Do plano de emergência para a sala de amónia à defesa de um auto de notícia, se for necessário. Diagnóstico sem compromisso.</p>
+    <a href="/#contacto" class="btn-primary" style="background:var(--brass);color:var(--ink);padding:14px 30px;font-size:14px">Marcar Consulta</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="mono">SST PORTUGAL · sstportugal.pt · © 2026</div>
+    <div class="mono">Cédula OA 56666P · TSST nv.6</div>
+  </div>
+  <div class="wrap" style="border-top:1px solid var(--rule); margin-top:18px; padding-top:16px; display:flex; gap:20px; flex-wrap:wrap; justify-content:center;">
+    <a href="/informacoes-legais" class="mono" style="font-size:11.5px; color:var(--ink-55);">Informações Legais</a>
+    <a href="/privacidade" class="mono" style="font-size:11.5px; color:var(--ink-55);">Política de Privacidade</a>
+    <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener" class="mono" style="font-size:11.5px; color:var(--ink-55);">Livro de Reclamações</a>
+  </div>
+</footer>
+
+</body>
+</html>
