@@ -233,6 +233,38 @@
     .credentials-row { grid-template-columns: 1fr; gap: 14px; }
     .nav-links-desktop { display: none; }
   }
+
+  /* Responsivo (2026-10-07): menu no telemóvel, grelhas que encolhem */
+  body { overflow-wrap: break-word; }
+  /* listas: bloco normal com o marcador à esquerda (em flex, texto e <strong>/<em> viravam colunas) */
+  .servico-list li { display: block; position: relative; padding-left: 22px; }
+  .servico-list li::before { position: absolute; left: 0; top: 10px; margin: 0; }
+  @media (max-width: 900px) {
+    .hero-grid, .dualidade-grid, .sectores-head, .guia-inner, .sobre-inner,
+    .sector-grid, .servicos-grid, .credentials-row { grid-template-columns: minmax(0, 1fr); }
+    .servicos-head, .dualidade-head { flex-wrap: wrap; gap: 14px; }
+    .hero-grid { padding: 56px 0 56px; gap: 40px; }
+    .dualidade-inner, .sectores, .servicos, .guia, .sobre { padding-top: 64px; padding-bottom: 64px; }
+    .cta-final { padding: 72px 0; }
+  }
+  @media (max-width: 600px) {
+    .sobre-grid { grid-template-columns: 1fr; }
+    .hero-ctas a { flex: 1 1 100%; text-align: center; }
+  }
+  @media (max-width: 900px) {
+    /* o menu deixa de desaparecer: marca + botão na 1.ª linha, links numa 2.ª linha (scroll se não couberem) */
+    .header-inner { flex-wrap: wrap; row-gap: 6px; padding: 12px 0 0; }
+    .nav-links-desktop { display: contents; }
+    .btn-nav { order: 1; padding: 9px 14px; font-size: 12.5px; white-space: nowrap; }
+    .nav-links-desktop nav { order: 2; flex: 0 0 100%; overflow-x: auto; scrollbar-width: none; border-top: 1px solid var(--rule); }
+    .nav-links-desktop nav::-webkit-scrollbar { display: none; }
+    .nav-links-desktop nav ul { gap: 0; justify-content: space-between; min-width: max-content; }
+    .nav-links-desktop nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; white-space: nowrap; }
+    .nav-links-desktop nav li:first-child a { padding-left: 0; }
+  }
+  @media (max-width: 600px) {
+    .wrap { padding-left: 20px; padding-right: 20px; }
+  }
 </style>
 </head>
 <body>
