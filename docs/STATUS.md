@@ -31,3 +31,4 @@
 | Data | Nota |
 |------|------|
 | 19/08/2026 | STATUS inicial |
+| 07/10/2026 | Responsivo: sem scroll lateral no telemóvel (guia + 7 artigos), menu visível no telemóvel, listas sem colunas partidas; verificado em 11 páginas × 8 larguras (320–1280 px) |
